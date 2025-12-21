@@ -143,19 +143,22 @@ table {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     overflow: hidden;
+    font-size: 0.95em;
 }
 
 th, td {
     border: 2px solid #1a5fb4;
-    padding: 18px;
-    text-align: center;
+    padding: 15px 12px;
+    text-align: right;
+    vertical-align: top;
 }
 
 th {
     background-color: #e3f2fd;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     color: #1a5fb4;
+    text-align: center;
 }
 
 td {
@@ -164,6 +167,12 @@ td {
 
 tr:nth-child(even) td {
     background-color: #f8f9fa;
+}
+
+td strong {
+    color: #1a5fb4;
+    display: block;
+    margin-bottom: 5px;
 }
 
 /* لینک‌ها */
@@ -399,11 +408,19 @@ p {
     }
 
     table {
-        font-size: 14px;
+        font-size: 12px;
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
     }
 
     th, td {
-        padding: 12px;
+        padding: 10px 8px;
+        font-size: 11px;
+    }
+
+    th {
+        font-size: 12px;
     }
 
     .resource-btn {
