@@ -1,39 +1,26 @@
-/* فونت خفن Vazirmatn — شبیه ایران‌سنس اما بهتر! */
+/* فونت خفن Vazirmatn از CDN — تضمینی کار می‌کنه! */
 @import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css');
 
-/* اعمال فونت به تمام متن فارسی و انگلیسی */
+/* استایل زیبا و حرفه‌ای */
 body {
     font-family: 'Vazirmatn', sans-serif !important;
     direction: rtl;
-    line-height: 1.8;
-    font-size: 18px; /* بزرگ‌تر و خواناتر */
-    color: #333;
+    line-height: 1.9;
+    font-size: 18px;
+    color: #222;
     background-color: #fdfdfd;
-    padding: 20px;
-    max-width: 900px;
+    padding: 40px;
+    max-width: 950px;
     margin: 0 auto;
+    text-align: justify;
 }
 
-/* هدرها رو زیباتر کن */
 h1, h2, h3, h4 {
-    color: #1a5fb4; /* رنگ آبی خفن */
-    border-bottom: 2px solid #1a5fb4;
-    padding-bottom: 10px;
-}
-
-/* جدول‌ها رو قشنگ‌تر کن */
-table {
-    border-collapse: collapse;
-    width: 100%;
-}
-th, td {
-    border: 1px solid #1a5fb4;
-    padding: 12px;
-    text-align: center;
-}
-
-/* لینک‌ها */
-a {
     color: #1a5fb4;
-    text-decoration: underline;
+    border-bottom: 3px solid #1a5fb4;
+    padding-bottom: 12px;
+    margin-top: 2em;
 }
+
+a { color: #1a5fb4; text-decoration: underline; }
+blockquote { border-right: 6px solid #1a5fb4; padding: 20px; background: #f0f8ff; }

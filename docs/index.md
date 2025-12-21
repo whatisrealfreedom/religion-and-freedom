@@ -1,3 +1,8 @@
+<style>
+    @import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css');
+    body { font-family: 'Vazirmatn', sans-serif; font-size: 18px; }
+</style>
+
 # دین و آزادی: نظریه‌ای نو
 
 سلام و خوش‌آمدگویی 🌹
