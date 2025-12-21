@@ -1,6 +1,8 @@
+<link rel="stylesheet" href="style.css">
+
 <style>
     @import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css');
-    body { font-family: 'Vazirmatn', sans-serif; font-size: 18px; }
+    body { font-family: 'Vazirmatn', sans-serif !important; }
 </style>
 
 # 🕌 دین، آزادی و حقوق مالکیت مطلق
