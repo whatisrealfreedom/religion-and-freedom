@@ -56,11 +56,24 @@ body {
     border-radius: 30px;
     font-size: 16px;
     font-weight: 500;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .navbar a:hover {
     background-color: #1565c0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* برجسته کردن صفحه اصلی در منو */
+.navbar a[href="index.html"] {
+    background-color: #1565c0;
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.navbar a[href="index.html"]:hover {
+    background-color: #0d47a1;
 }
 
 /* عنوان‌های اصلی */
@@ -241,6 +254,113 @@ p {
     display: inline-block;
 }
 
+/* دکمه‌های منابع زیبا */
+.resource-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 40px 0;
+}
+
+.resource-btn {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 25px 30px;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border: 2px solid #e3f2fd;
+    border-radius: 15px;
+    text-decoration: none;
+    color: #222;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.resource-btn:hover {
+    background: linear-gradient(135deg, #e3f2fd 0%, #ffffff 100%);
+    border-color: #1a5fb4;
+    box-shadow: 0 8px 25px rgba(26, 95, 180, 0.2);
+    transform: translateY(-3px);
+}
+
+.resource-btn-primary {
+    background: linear-gradient(135deg, #1a5fb4 0%, #1565c0 100%);
+    border-color: #1a5fb4;
+    color: white;
+}
+
+.resource-btn-primary:hover {
+    background: linear-gradient(135deg, #1565c0 0%, #1a5fb4 100%);
+    box-shadow: 0 8px 25px rgba(26, 95, 180, 0.4);
+}
+
+.btn-icon {
+    font-size: 2.5em;
+    line-height: 1;
+}
+
+.btn-text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex: 1;
+}
+
+.btn-text strong {
+    font-size: 1.2em;
+    display: block;
+}
+
+.btn-text small {
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+.resource-btn-primary .btn-text small {
+    opacity: 0.9;
+}
+
+/* راهنمای تلگرام */
+.telegram-guide {
+    background: #fff9e6;
+    border-right: 4px solid #ffc107;
+    padding: 25px 30px;
+    border-radius: 12px;
+    margin: 40px 0;
+}
+
+.telegram-guide h3 {
+    color: #1a5fb4;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.telegram-guide p {
+    margin: 10px 0;
+}
+
+/* لیست کتاب‌ها */
+.book-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.book-item {
+    padding: 20px 25px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border-right: 3px solid #1a5fb4;
+    font-size: 1.05em;
+    transition: all 0.3s ease;
+}
+
+.book-item:hover {
+    background: #e3f2fd;
+    transform: translateX(-5px);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .container {
@@ -284,5 +404,22 @@ p {
 
     th, td {
         padding: 12px;
+    }
+
+    .resource-btn {
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .btn-icon {
+        font-size: 2em;
+    }
+
+    .btn-text strong {
+        font-size: 1.1em;
+    }
+
+    .telegram-guide {
+        padding: 20px;
     }
 }
