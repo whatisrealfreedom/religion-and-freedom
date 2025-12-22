@@ -3,60 +3,626 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>دین، آزادی و حقوق مالکیت مطلق — محمدعلی جنت‌خواه</title>
-    <link rel="stylesheet" href="style.css">
+    <title>سفر آزادی - Freedom Journey</title>
+    <link rel="stylesheet" href="modern-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- منوی ناوبری ثابت -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html">صفحه اصلی</a>
-            <a href="01-freedom.html">آزادی واقعی</a>
-            <a href="02-formal-system.html">نظام صوری</a>
-            <a href="03-religion-guardian.html">دین و آزادی</a>
-            <a href="04-application-iran.html">کاربرد در ایران</a>
-            <a href="resources.html">منابع</a>
-            <a href="index-en.html" style="background-color: #ff9800; margin-right: 10px;">English</a>
-        </div>
-    </nav>
-
-    <div class="container">
-        <!-- عنوان اصلی -->
-        <h1>🕌 دین، آزادی و حقوق مالکیت مطلق</h1>
-        <p style="font-size: 24px; text-align: center; color: #1a5fb4;">نظریه‌ای نو از محمدعلی جنت‌خواه — شاه‌کلید رهایی انسان</p>
-
-        <!-- تصویر بزرگ اول -->
-        <img src="images/banner-main.jpg" alt="کبوتر سفید در پرتو نور الهی — نماد روح آزاد انسان">
-
-        <!-- بلاک‌کوئوت بزرگ -->
-        <blockquote>
-            «در عمق تاریخ بشر، تنها یک نظام پایدار وجود داشته که آزادی واقعی را تضمین کرده: دینی که انسان را مالک مطلق جسم، ذهن، زمان و دارایی‌اش می‌داند. این نه شعار است، نه آرمان‌شهر — این واقعیت توحید است.»
-        </blockquote>
-
-        <!-- معرفی -->
-        <p>این سایت، دریچه‌ای است به یکی از نوآورانه‌ترین اندیشه‌های قرن: آشتی عمیق دین (به ویژه اسلام شیعی) با آزادی مدرن. محمدعلی جنت‌خواه نشان می‌دهد که اصول دین نه برای کنترل، بلکه برای <strong>حفاظت ابدی از اراده آزاد انسان</strong> طراحی شده‌اند.</p>
-
-        <!-- چرا این نظریه جهان را تغییر خواهد داد -->
-        <h2>چرا این نظریه جهان را تغییر خواهد داد؟</h2>
-        <p>چون آزادی را از مفهوم مبهم سیاسی به یک <strong>حقوق مالکیت غیرقابل نقض</strong> تبدیل می‌کند — حقی که دولت‌ها، ایدئولوژی‌ها و حتی زمان نمی‌توانند آن را سلب کنند. این نظریه، راه‌حل واقعی برای بحران‌های ایران و جهان است: پایان دولت‌سالاری، تورم، سرکوب و نقض حریم خصوصی.</p>
-
-        <!-- فهرست مطالب -->
-        <h2>فهرست مطالب</h2>
-        <ul style="font-size: 20px; line-height: 2;">
-            <li><a href="01-freedom.html">۱. آزادی واقعی چیست؟ حقوق مالکیت مطلق</a></li>
-            <li><a href="02-formal-system.html">۲. نظام صوری آکسیوماتیک — پایدارترین ساختار تاریخ</a></li>
-            <li><a href="03-religion-guardian.html">۳. دین، نگهبان واقعی آزادی</a></li>
-            <li><a href="04-application-iran.html">۴. کاربرد برای ایران: از دولت‌سالاری به جامعه آزاد</a></li>
-            <li><a href="resources.html">منابع و لینک‌ها</a></li>
-        </ul>
-
-        <p style="text-align: center; font-size: 22px;">با خواندن این صفحات، دریچه‌ای نو به سوی آزادی واقعی باز می‌شود. این راه، راه انسانیت است.</p>
-
-        <!-- منوی ناوبری پایین -->
-        <div class="nav-bottom">
-            <span></span>
-            <a href="01-freedom.html">شروع خواندن: آزادی واقعی →</a>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <div class="freedom-symbol">
+                <i class="fas fa-dove"></i>
+            </div>
+            <h2>آماده سفر آزادی هستید؟</h2>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+            <p>در حال بارگذاری مسیر آزادی...</p>
         </div>
     </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-bg">
+            <div class="particle" style="left: 10%; animation-delay: 0s;"></div>
+            <div class="particle" style="left: 20%; animation-delay: 1s;"></div>
+            <div class="particle" style="left: 30%; animation-delay: 2s;"></div>
+            <div class="particle" style="left: 40%; animation-delay: 0.5s;"></div>
+            <div class="particle" style="left: 50%; animation-delay: 1.5s;"></div>
+            <div class="particle" style="left: 60%; animation-delay: 2.5s;"></div>
+            <div class="particle" style="left: 70%; animation-delay: 0.8s;"></div>
+            <div class="particle" style="left: 80%; animation-delay: 1.8s;"></div>
+            <div class="particle" style="left: 90%; animation-delay: 2.8s;"></div>
+        </div>
+
+        <nav class="modern-navbar">
+            <div class="nav-brand">
+                <i class="fas fa-compass"></i>
+                <span>سفر آزادی</span>
+            </div>
+            <div class="nav-links">
+                <a href="#journey" class="nav-link">مسیر</a>
+                <a href="#chapters" class="nav-link">فصول</a>
+                <a href="#resources" class="nav-link">منابع</a>
+                <a href="#about" class="nav-link">درباره</a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="lang-toggle" id="langToggle">
+                    <span>EN</span>
+                </button>
+            </div>
+        </nav>
+
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="title-main">سفر به سوی</span>
+                    <span class="title-freedom">آزادی واقعی</span>
+                </h1>
+                <p class="hero-subtitle">
+                    نظریه‌ای انقلابی از محمدعلی جنت‌خواه که دین و آزادی را برای همیشه آشتی می‌دهد
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">9</span>
+                        <span class="stat-label">فصل جامع</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">∞</span>
+                        <span class="stat-label">آزادی</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">واقعی</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="freedom-tree">
+                    <div class="tree-trunk"></div>
+                    <div class="tree-branches">
+                        <div class="branch" data-freedom="جسم">
+                            <i class="fas fa-heart"></i>
+                            <span>جسم</span>
+                        </div>
+                        <div class="branch" data-freedom="ذهن">
+                            <i class="fas fa-brain"></i>
+                            <span>ذهن</span>
+                        </div>
+                        <div class="branch" data-freedom="زمان">
+                            <i class="fas fa-clock"></i>
+                            <span>زمان</span>
+                        </div>
+                        <div class="branch" data-freedom="دارایی">
+                            <i class="fas fa-coins"></i>
+                            <span>دارایی</span>
+                        </div>
+                    </div>
+                    <div class="tree-roots">
+                        <div class="root root-1"></div>
+                        <div class="root root-2"></div>
+                        <div class="root root-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-actions">
+            <button class="cta-button primary" id="startJourney">
+                <i class="fas fa-play"></i>
+                شروع سفر آزادی
+            </button>
+            <button class="cta-button secondary" id="exploreChapters">
+                <i class="fas fa-book-open"></i>
+                کاوش فصول
+            </button>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>پایین بروید</span>
+        </div>
+    </section>
+
+    <!-- Journey Section -->
+    <section id="journey" class="journey-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">مسیر آزادی شما</h2>
+                <p class="section-subtitle">سفری گام به گام به سوی درک آزادی واقعی</p>
+            </div>
+
+            <div class="journey-path">
+                <div class="journey-step active" data-step="1">
+                    <div class="step-icon">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <div class="step-content">
+                        <h3>آزادی واقعی چیست؟</h3>
+                        <p>مالکیت مطلق بر چهار حوزه اساسی وجود</p>
+                        <div class="step-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 25%"></div>
+                            </div>
+                            <span class="progress-text">25% تکمیل شده</span>
+                        </div>
+                    </div>
+                    <div class="step-arrow">
+                        <i class="fas fa-chevron-left"></i>
+                    </div>
+                </div>
+
+                <div class="journey-step" data-step="2">
+                    <div class="step-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div class="step-content">
+                        <h3>نظام آکسیوماتیک</h3>
+                        <p>چگونه دین پایدارترین نظام آزادی است</p>
+                        <div class="step-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                            <span class="progress-text">0% تکمیل شده</span>
+                        </div>
+                    </div>
+                    <div class="step-arrow">
+                        <i class="fas fa-chevron-left"></i>
+                    </div>
+                </div>
+
+                <div class="journey-step" data-step="3">
+                    <div class="step-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="step-content">
+                        <h3>دین نگهبان آزادی</h3>
+                        <p>دین واقعی دشمن دولت‌سالاری است</p>
+                        <div class="step-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                            <span class="progress-text">0% تکمیل شده</span>
+                        </div>
+                    </div>
+                    <div class="step-arrow">
+                        <i class="fas fa-chevron-left"></i>
+                    </div>
+                </div>
+
+                <div class="journey-step" data-step="4">
+                    <div class="step-icon">
+                        <i class="fas fa-flag"></i>
+                    </div>
+                    <div class="step-content">
+                        <h3>کاربرد در ایران</h3>
+                        <p>راه‌حل واقعی برای آزادی ایران</p>
+                        <div class="step-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                            <span class="progress-text">0% تکمیل شده</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="journey-actions">
+                <button class="journey-cta" id="continueJourney">
+                    <i class="fas fa-arrow-right"></i>
+                    ادامه مسیر
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chapters Preview -->
+    <section id="chapters" class="chapters-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">فصول آزادی</h2>
+                <p class="section-subtitle">۹ فصل جامع از نظریه آزادی جنت‌خواه</p>
+            </div>
+
+            <div class="chapters-grid">
+                <div class="chapter-card" data-chapter="1">
+                    <div class="chapter-header">
+                        <div class="chapter-number">۱</div>
+                        <div class="chapter-icon">
+                            <i class="fas fa-key"></i>
+                        </div>
+                    </div>
+                    <div class="chapter-content">
+                        <h3>آزادی واقعی = حقوق مالکیت مطلق</h3>
+                        <p>بازتعریف آزادی به عنوان مالکیت مطلق بر چهار حوزه: جسم، ذهن، زمان و دارایی</p>
+                        <div class="chapter-meta">
+                            <span class="chapter-pages">۱۵ صفحه</span>
+                            <span class="chapter-read-time">۱۰ دقیقه</span>
+                        </div>
+                    </div>
+                    <div class="chapter-actions">
+                        <button class="read-chapter" data-chapter="1">
+                            <i class="fas fa-book-open"></i>
+                            مطالعه
+                        </button>
+                    </div>
+                </div>
+
+                <div class="chapter-card" data-chapter="2">
+                    <div class="chapter-header">
+                        <div class="chapter-number">۲</div>
+                        <div class="chapter-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                    </div>
+                    <div class="chapter-content">
+                        <h3>نظام صوری آکسیوماتیک چیست؟</h3>
+                        <p>دین به عنوان پایدارترین نظام منطقی تاریخ برای تضمین آزادی</p>
+                        <div class="chapter-meta">
+                            <span class="chapter-pages">۲۲ صفحه</span>
+                            <span class="chapter-read-time">۱۸ دقیقه</span>
+                        </div>
+                    </div>
+                    <div class="chapter-actions">
+                        <button class="read-chapter" data-chapter="2">
+                            <i class="fas fa-book-open"></i>
+                            مطالعه
+                        </button>
+                    </div>
+                </div>
+
+                <div class="chapter-card" data-chapter="3">
+                    <div class="chapter-header">
+                        <div class="chapter-number">۳</div>
+                        <div class="chapter-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                    </div>
+                    <div class="chapter-content">
+                        <h3>دین، نگهبان واقعی آزادی</h3>
+                        <p>چگونه دین واقعی بزرگ‌ترین دشمن دولت‌سالاری و حامی آزادی است</p>
+                        <div class="chapter-meta">
+                            <span class="chapter-pages">۱۸ صفحه</span>
+                            <span class="chapter-read-time">۱۴ دقیقه</span>
+                        </div>
+                    </div>
+                    <div class="chapter-actions">
+                        <button class="read-chapter" data-chapter="3">
+                            <i class="fas fa-book-open"></i>
+                            مطالعه
+                        </button>
+                    </div>
+                </div>
+
+                <div class="chapter-card" data-chapter="4">
+                    <div class="chapter-header">
+                        <div class="chapter-number">۴</div>
+                        <div class="chapter-icon">
+                            <i class="fas fa-flag"></i>
+                        </div>
+                    </div>
+                    <div class="chapter-content">
+                        <h3>کاربرد در ایران معاصر</h3>
+                        <p>راه‌حل دینی برای پایان تورم، سرکوب و نقض حریم خصوصی</p>
+                        <div class="chapter-meta">
+                            <span class="chapter-pages">۲۵ صفحه</span>
+                            <span class="chapter-read-time">۲۰ دقیقه</span>
+                        </div>
+                    </div>
+                    <div class="chapter-actions">
+                        <button class="read-chapter" data-chapter="4">
+                            <i class="fas fa-book-open"></i>
+                            مطالعه
+                        </button>
+                    </div>
+                </div>
+
+                <div class="chapter-card featured" data-chapter="5">
+                    <div class="chapter-header">
+                        <div class="chapter-number">۵</div>
+                        <div class="chapter-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                    </div>
+                    <div class="chapter-content">
+                        <h3>تحلیل فلسفی آزادی</h3>
+                        <p>بررسی عمیق آزادی در فلسفه اسلامی و غربی</p>
+                        <div class="chapter-meta">
+                            <span class="chapter-pages">۳۲ صفحه</span>
+                            <span class="chapter-read-time">۲۸ دقیقه</span>
+                        </div>
+                    </div>
+                    <div class="chapter-actions">
+                        <button class="read-chapter" data-chapter="5">
+                            <i class="fas fa-book-open"></i>
+                            مطالعه
+                        </button>
+                        <span class="featured-badge">ویژه</span>
+                    </div>
+                </div>
+
+                <div class="chapter-card" data-chapter="6">
+                    <div class="chapter-header">
+                        <div class="chapter-number">۶</div>
+                        <div class="chapter-icon">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                    </div>
+                    <div class="chapter-content">
+                        <h3>عدل الهی و حقوق بشر</h3>
+                        <p>ارتباط اصل عدل در دین با حقوق مالکیت مطلق</p>
+                        <div class="chapter-meta">
+                            <span class="chapter-pages">۲۷ صفحه</span>
+                            <span class="chapter-read-time">۲۲ دقیقه</span>
+                        </div>
+                    </div>
+                    <div class="chapter-actions">
+                        <button class="read-chapter" data-chapter="6">
+                            <i class="fas fa-book-open"></i>
+                            مطالعه
+                        </button>
+                    </div>
+                </div>
+
+                <div class="chapter-card" data-chapter="7">
+                    <div class="chapter-header">
+                        <div class="chapter-number">۷</div>
+                        <div class="chapter-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                    </div>
+                    <div class="chapter-content">
+                        <h3>جامعه منتظر و آزادی</h3>
+                        <p>نقش امامت و مهدویت در جامعه آزاد</p>
+                        <div class="chapter-meta">
+                            <span class="chapter-pages">۲۰ صفحه</span>
+                            <span class="chapter-read-time">۱۶ دقیقه</span>
+                        </div>
+                    </div>
+                    <div class="chapter-actions">
+                        <button class="read-chapter" data-chapter="7">
+                            <i class="fas fa-book-open"></i>
+                            مطالعه
+                        </button>
+                    </div>
+                </div>
+
+                <div class="chapter-card" data-chapter="8">
+                    <div class="chapter-header">
+                        <div class="chapter-number">۸</div>
+                        <div class="chapter-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                    </div>
+                    <div class="chapter-content">
+                        <h3>آزادی در جهان مدرن</h3>
+                        <p>کاربرد نظریه در عصر دیجیتال و جهانی‌شدن</p>
+                        <div class="chapter-meta">
+                            <span class="chapter-pages">۲۴ صفحه</span>
+                            <span class="chapter-read-time">۱۹ دقیقه</span>
+                        </div>
+                    </div>
+                    <div class="chapter-actions">
+                        <button class="read-chapter" data-chapter="8">
+                            <i class="fas fa-book-open"></i>
+                            مطالعه
+                        </button>
+                    </div>
+                </div>
+
+                <div class="chapter-card" data-chapter="9">
+                    <div class="chapter-header">
+                        <div class="chapter-number">۹</div>
+                        <div class="chapter-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                    </div>
+                    <div class="chapter-content">
+                        <h3>آینده آزادی</h3>
+                        <p>چشم‌انداز جهانی آزادی بر پایه دین واقعی</p>
+                        <div class="chapter-meta">
+                            <span class="chapter-pages">۱۹ صفحه</span>
+                            <span class="chapter-read-time">۱۵ دقیقه</span>
+                        </div>
+                    </div>
+                    <div class="chapter-actions">
+                        <button class="read-chapter" data-chapter="9">
+                            <i class="fas fa-book-open"></i>
+                            مطالعه
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Quote -->
+    <section class="quote-section">
+        <div class="container">
+            <div class="quote-container">
+                <blockquote class="interactive-quote">
+                    <span class="quote-text">"آزادی واقعی، مالکیت مطلق انسان بر جسم، ذهن، زمان و دارایی خویش است"</span>
+                    <cite class="quote-author">— محمدعلی جنت‌خواه</cite>
+                </blockquote>
+                <div class="quote-actions">
+                    <button class="quote-share" id="shareQuote">
+                        <i class="fas fa-share"></i>
+                        اشتراک‌گذاری
+                    </button>
+                    <button class="quote-save" id="saveQuote">
+                        <i class="fas fa-bookmark"></i>
+                        ذخیره
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources" class="resources-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">منابع کامل آزادی</h2>
+                <p class="section-subtitle">دانلود و مطالعه ۹ فصل جامع نظریه آزادی</p>
+            </div>
+
+            <div class="resources-grid">
+                <div class="resource-card pdf-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3>مجموعه کامل ۹ فصل</h3>
+                        <p>تحلیل جامع نظریه آزادی جنت‌خواه</p>
+                        <div class="resource-meta">
+                            <span class="resource-size">۲۱۰ صفحه</span>
+                            <span class="resource-format">PDF</span>
+                        </div>
+                    </div>
+                    <div class="resource-actions">
+                        <a href="files/" class="download-btn" target="_blank">
+                            <i class="fas fa-download"></i>
+                            دانلود همه
+                        </a>
+                    </div>
+                </div>
+
+                <div class="resource-card audio-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-podcast"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3>وبینارهای صوتی</h3>
+                        <p>توضیح زنده جنت‌خواه از نظریه آزادی</p>
+                        <div class="resource-meta">
+                            <span class="resource-duration">۴ ساعت</span>
+                            <span class="resource-format">صوتی</span>
+                        </div>
+                    </div>
+                    <div class="resource-actions">
+                        <button class="listen-btn">
+                            <i class="fas fa-play"></i>
+                            گوش دادن
+                        </button>
+                    </div>
+                </div>
+
+                <div class="resource-card book-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3>کتاب‌های مرتبط</h3>
+                        <p>منابع مکمل برای درک عمیق‌تر</p>
+                        <div class="resource-meta">
+                            <span class="resource-count">۵ کتاب</span>
+                            <span class="resource-format">PDF/EPUB</span>
+                        </div>
+                    </div>
+                    <div class="resource-actions">
+                        <button class="explore-btn">
+                            <i class="fas fa-search"></i>
+                            کاوش
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="about" class="footer-section">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <i class="fas fa-dove"></i>
+                        <span>سفر آزادی</span>
+                    </div>
+                    <p class="footer-tagline">آزادی واقعی، مالکیت مطلق بر وجود خود</p>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>مسیر آزادی</h4>
+                        <ul>
+                            <li><a href="#journey">شروع سفر</a></li>
+                            <li><a href="#chapters">فصول</a></li>
+                            <li><a href="#resources">منابع</a></li>
+                            <li><a href="#about">درباره ما</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>ارتباط با ما</h4>
+                        <ul>
+                            <li><a href="https://telegram.org" target="_blank"><i class="fab fa-telegram"></i> تلگرام</a></li>
+                            <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i> توییتر</a></li>
+                            <li><a href="mailto:freedom@jannatkhah.com"><i class="fas fa-envelope"></i> ایمیل</a></li>
+                            <li><a href="https://aparat.com" target="_blank"><i class="fas fa-video"></i> آپارات</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>پشتیبانی آزادی</h4>
+                        <p>ما برای آزادی می‌جنگیم، برای مالکیت خصوصی، برای اراده آزاد انسان.</p>
+                        <div class="footer-social">
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; ۲۰۲۴ سفر آزادی. ساخته شده با ❤️ برای آزادی واقعی.</p>
+                </div>
+                <div class="footer-attribution">
+                    <p>طراحی و توسعه توسط تیم آزادی</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for Chapter Reading -->
+    <div id="chapterModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">عنوان فصل</h3>
+                <button class="modal-close" id="closeModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body" id="modalContent">
+                <!-- Chapter content will be loaded here -->
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn secondary" id="prevChapter">
+                    <i class="fas fa-chevron-right"></i>
+                    فصل قبلی
+                </button>
+                <div class="modal-progress">
+                    <span id="currentChapter">۱</span> از <span id="totalChapters">۹</span>
+                </div>
+                <button class="modal-btn primary" id="nextChapter">
+                    فصل بعدی
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="modern-script.js"></script>
 </body>
 </html>
+
