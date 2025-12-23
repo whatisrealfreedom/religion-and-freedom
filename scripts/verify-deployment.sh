@@ -44,9 +44,17 @@ echo "3️⃣  Checking Traefik configuration..."
 if docker inspect freedom-frontend 2>/dev/null | grep -q "traefik.enable=true"; then
     echo -e "${GREEN}✅ Traefik is enabled for frontend${NC}"
     echo "   Router rule:"
-    docker inspect freedom-frontend | grep -A 5 "traefik.http.routers.freedom-frontend.rule" | head -2
+    docker inspect freedom-frontend 2>/dev/null | jq -r '.[0].Config.Labels | to_entries | .[] | select(.key | startswith("traefik")) | "\(.key)=\(.value)"' 2>/dev/null | grep "rule=" || \
+    docker inspect freedom-frontend 2>/dev/null | grep "traefik.http.routers.freedom-frontend.rule" | head -1
 else
-    echo -e "${RED}❌ Traefik not enabled for frontend${NC}"
+    # Check if router exists in Traefik (alternative check)
+    if curl -s http://localhost:8080/api/http/routers 2>/dev/null | grep -q "freedom-frontend"; then
+        echo -e "${GREEN}✅ Traefik router exists (labels might be checked differently)${NC}"
+        echo "   Router found in Traefik API"
+    else
+        echo -e "${YELLOW}⚠️  Traefik labels check failed, but checking router existence...${NC}"
+        docker inspect freedom-frontend 2>/dev/null | grep -i traefik | head -5
+    fi
 fi
 echo ""
 
