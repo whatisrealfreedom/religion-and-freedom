@@ -6,8 +6,12 @@ WORKDIR /app
 # Copy package files
 COPY frontend/package*.json ./
 
-# Install dependencies (using install instead of ci for better compatibility)
+# Install dependencies
 RUN npm install --legacy-peer-deps
+
+# Install ajv@8 explicitly to fix peer dependency conflicts with ajv-keywords
+# ajv-keywords@5.1.0 requires ajv@^8.8.2, but some packages install ajv@6
+RUN npm install ajv@^8.17.0 --legacy-peer-deps --save-dev
 
 # Copy source code
 COPY frontend/ ./
