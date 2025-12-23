@@ -1,10 +1,11 @@
 name: Build and Deploy to GitHub Pages
 
 on:
+  # Only run manually or on specific branch for GitHub Pages
+  workflow_dispatch:
   push:
     branches:
-      - main
-  workflow_dispatch:
+      - gh-pages  # Only run on gh-pages branch, not main
 
 permissions:
   contents: read
