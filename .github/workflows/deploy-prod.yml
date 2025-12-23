@@ -34,9 +34,7 @@ jobs:
           exclude: |
             **/.git
             **/node_modules
-            **/.env
-            **/.env.local
-            **/.env.*.local
+            **/.env*
             **/data
             **/frontend/build
             **/.DS_Store
@@ -53,21 +51,24 @@ jobs:
           script: |
             cd /home/${{ secrets.SERVER_USERNAME }}/freedom-website
             
-            # Create .env.prod if it doesn't exist
-            if [ ! -f .env.prod ]; then
-              echo "⚠️  Creating .env.prod from example..."
-              cp .env.prod.example .env.prod
-              echo "⚠️  Please update .env.prod with correct values!"
+            # Copy .env.prod from existing location
+            if [ -f /home/${{ secrets.SERVER_USERNAME }}/freedom/.env.prod ]; then
+              echo "✅ Copying .env.prod from /home/${{ secrets.SERVER_USERNAME }}/freedom/.env.prod"
+              cp /home/${{ secrets.SERVER_USERNAME }}/freedom/.env.prod .env
+            else
+              echo "⚠️  .env.prod not found at /home/${{ secrets.SERVER_USERNAME }}/freedom/.env.prod"
+              echo "⚠️  Please create it manually with DOMAIN_FREEDOM and TRAEFIK_NETWORK"
+              exit 1
             fi
             
-            # Load environment variables
-            if [ -f .env.prod ]; then
+            # Load environment variables from .env
+            if [ -f .env ]; then
               set -a
-              source .env.prod
+              source .env
               set +a
-              echo "✅ Loaded .env.prod"
+              echo "✅ Loaded .env"
             else
-              echo "❌ .env.prod not found!"
+              echo "❌ .env not found!"
               exit 1
             fi
             
