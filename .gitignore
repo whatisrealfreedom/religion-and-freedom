@@ -52,7 +52,8 @@ logs/
 # Temporary files
 tmp/
 temp/
-
+.idea
+.idea/*
 # GitHub Pages build (don't ignore public/api as it contains static data)
 # frontend/build/
 backend/cmd/server/server
