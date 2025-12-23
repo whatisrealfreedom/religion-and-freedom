@@ -6,7 +6,7 @@ const ProgressBar: React.FC = () => {
   const { progress } = useProgress();
 
   return (
-    <div className="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
+    <div className="w-full bg-gray-200 rounded-full h-2.5 sm:h-3 overflow-hidden">
       <motion.div
         className="h-full bg-gradient-to-r from-primary-500 via-primary-600 to-primary-700 rounded-full"
         initial={{ width: 0 }}
