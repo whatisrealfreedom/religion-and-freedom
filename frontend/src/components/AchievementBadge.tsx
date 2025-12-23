@@ -16,7 +16,7 @@ const AchievementBadge: React.FC<AchievementBadgeProps> = ({
 }) => {
   return (
     <motion.div
-      className={`relative p-4 rounded-xl border-2 transition-all ${
+      className={`relative p-3 sm:p-4 rounded-lg sm:rounded-xl border-2 transition-all ${
         unlocked
           ? 'bg-gradient-to-br from-yellow-50 to-yellow-100 border-yellow-400 shadow-lg'
           : 'bg-gray-100 border-gray-300 opacity-60'
@@ -25,22 +25,22 @@ const AchievementBadge: React.FC<AchievementBadgeProps> = ({
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
     >
-      <div className="flex items-start space-x-3 space-x-reverse">
+      <div className="flex items-start space-x-2 sm:space-x-3 space-x-reverse">
         <div
-          className={`text-3xl ${unlocked ? 'animate-bounce' : 'grayscale'}`}
+          className={`text-2xl sm:text-3xl ${unlocked ? 'animate-bounce' : 'grayscale'} flex-shrink-0`}
         >
           {icon}
         </div>
-        <div className="flex-1">
+        <div className="flex-1 min-w-0">
           <h4
-            className={`font-bold mb-1 ${
+            className={`font-bold mb-1 text-sm sm:text-base ${
               unlocked ? 'text-yellow-800' : 'text-gray-500'
             }`}
           >
             {title}
           </h4>
           <p
-            className={`text-sm ${
+            className={`text-xs sm:text-sm ${
               unlocked ? 'text-yellow-700' : 'text-gray-400'
             }`}
           >
@@ -49,11 +49,11 @@ const AchievementBadge: React.FC<AchievementBadgeProps> = ({
         </div>
         {unlocked && (
           <motion.div
-            className="absolute top-2 left-2"
+            className="absolute top-1.5 left-1.5 sm:top-2 sm:left-2"
             animate={{ rotate: [0, 10, -10, 0] }}
             transition={{ duration: 0.5, repeat: Infinity, repeatDelay: 2 }}
           >
-            ⭐
+            <span className="text-sm sm:text-base">⭐</span>
           </motion.div>
         )}
       </div>
