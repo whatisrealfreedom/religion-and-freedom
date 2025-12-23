@@ -34,7 +34,9 @@ jobs:
           exclude: |
             **/.git
             **/node_modules
-            **/.env*
+            **/.env
+            **/.env.local
+            **/.env.*.local
             **/data
             **/frontend/build
             **/.DS_Store
