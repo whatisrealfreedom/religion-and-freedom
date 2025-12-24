@@ -63,14 +63,22 @@ export const chapterApi = {
       // Static JSON format (for GitHub Pages)
       return Array.isArray(response.data) ? response.data : [];
     } catch (error) {
-      // Fallback to static JSON file
-      try {
-        const staticResponse = await fetch('/api/v1/chapters.json');
-        const staticData = await staticResponse.json();
-        return Array.isArray(staticData) ? staticData : (staticData.data || []);
-      } catch {
-        throw error;
+      // Fallback to static JSON file (only for GitHub Pages, not production with backend)
+      // In production with Docker, if API fails, don't fallback to static file
+      const isProduction = process.env.NODE_ENV === 'production';
+      
+      if (!isProduction || process.env.REACT_APP_USE_STATIC_API) {
+        try {
+          const staticResponse = await fetch('/api/v1/chapters.json');
+          if (staticResponse.ok) {
+            const staticData = await staticResponse.json();
+            return Array.isArray(staticData) ? staticData : (staticData.data || []);
+          }
+        } catch {
+          // Ignore static file errors
+        }
       }
+      throw error;
     }
   },
   getById: async (id: number, locale: string = 'fa'): Promise<Chapter> => {
@@ -102,14 +110,20 @@ export const resourceApi = {
       // Static JSON format
       return Array.isArray(response.data) ? response.data : [];
     } catch (error) {
-      // Fallback to static JSON file
-      try {
-        const staticResponse = await fetch('/api/v1/resources-pdfs.json');
-        const staticData = await staticResponse.json();
-        return Array.isArray(staticData) ? staticData : (staticData.data || []);
-      } catch {
-        throw error;
+      // Fallback to static JSON file (only for GitHub Pages, not production with backend)
+      const isProduction = process.env.NODE_ENV === 'production';
+      if (!isProduction || process.env.REACT_APP_USE_STATIC_API) {
+        try {
+          const staticResponse = await fetch('/api/v1/resources-pdfs.json');
+          if (staticResponse.ok) {
+            const staticData = await staticResponse.json();
+            return Array.isArray(staticData) ? staticData : (staticData.data || []);
+          }
+        } catch {
+          // Ignore static file errors
+        }
       }
+      throw error;
     }
   },
 };
