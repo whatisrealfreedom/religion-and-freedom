@@ -5,6 +5,7 @@ import { chapterApi, Chapter, ChapterSummary } from '../services/api';
 import { useProgress } from '../hooks/useProgress';
 import AnalysisSection from '../components/AnalysisSection';
 import { ArrowRightIcon, ArrowLeftIcon } from '@heroicons/react/24/outline';
+import { useLocale } from '../i18n/LocaleProvider';
 
 const ChapterPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -13,6 +14,9 @@ const ChapterPage: React.FC = () => {
   const [allChapters, setAllChapters] = useState<ChapterSummary[]>([]);
   const [loading, setLoading] = useState(true);
   const { updateProgress } = useProgress();
+  const { t, isRTL } = useLocale();
+  const BackIcon = isRTL ? ArrowRightIcon : ArrowLeftIcon;
+  const ForwardIcon = isRTL ? ArrowLeftIcon : ArrowRightIcon;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -40,7 +44,7 @@ const ChapterPage: React.FC = () => {
       <div className="min-h-screen flex items-center justify-center px-4">
         <div className="text-center">
           <div className="inline-block animate-spin rounded-full h-10 w-10 sm:h-12 sm:w-12 border-b-2 border-primary-500"></div>
-          <p className="mt-4 text-gray-600 text-sm sm:text-base">در حال بارگذاری...</p>
+          <p className="mt-4 text-gray-600 text-sm sm:text-base">{t('common.loading')}</p>
         </div>
       </div>
     );
@@ -50,9 +54,9 @@ const ChapterPage: React.FC = () => {
     return (
       <div className="min-h-screen flex items-center justify-center px-4">
         <div className="text-center">
-          <h1 className="text-xl sm:text-2xl font-bold text-gray-800 mb-4">فصل پیدا نشد</h1>
+          <h1 className="text-xl sm:text-2xl font-bold text-gray-800 mb-4">{t('chapter.chapterNotFound')}</h1>
           <Link to="/" className="btn-primary">
-            بازگشت به صفحه اصلی
+            {t('common.backHome')}
           </Link>
         </div>
       </div>
@@ -72,11 +76,11 @@ const ChapterPage: React.FC = () => {
             to="/"
             className="inline-flex items-center text-primary-600 hover:text-primary-700 mb-4 sm:mb-6 text-sm sm:text-base"
           >
-            <ArrowRightIcon className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
-            بازگشت به صفحه اصلی
+            <BackIcon className={`w-4 h-4 sm:w-5 sm:h-5 ${isRTL ? 'ml-2' : 'mr-2'}`} />
+            {t('common.backHome')}
           </Link>
           <div className="text-xs sm:text-sm text-primary-600 font-semibold mb-2">
-            فصل {chapter.number}
+            {t('chapter.chapterLabel')} {chapter.number}
           </div>
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-3 sm:mb-4 leading-tight">
             {chapter.title}
@@ -84,10 +88,14 @@ const ChapterPage: React.FC = () => {
           <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed mb-4 sm:mb-6">
             {chapter.description}
           </p>
-          <div className="flex items-center space-x-3 sm:space-x-4 space-x-reverse text-xs sm:text-sm text-gray-500 flex-wrap gap-2">
-            <span>{chapter.read_time} دقیقه مطالعه</span>
+          <div className={`flex items-center space-x-3 sm:space-x-4 ${isRTL ? 'space-x-reverse' : ''} text-xs sm:text-sm text-gray-500 flex-wrap gap-2`}>
+            <span>
+              {chapter.read_time} {t('chapter.minutes')}
+            </span>
             <span className="hidden sm:inline">•</span>
-            <span>{chapter.pages} صفحه</span>
+            <span>
+              {chapter.pages} {t('chapter.pages')}
+            </span>
           </div>
         </motion.header>
 
@@ -116,7 +124,11 @@ const ChapterPage: React.FC = () => {
             prose-li:my-2 prose-li:sm:my-3 prose-li:marker:text-primary-500
             prose-table:w-full prose-table:text-sm prose-table:sm:text-base
             prose-code:text-sm prose-code:sm:text-base"
-          dangerouslySetInnerHTML={{ __html: chapter.content || '<p class="text-base sm:text-lg md:text-xl text-gray-600">محتوای این فصل به زودی اضافه خواهد شد.</p>' }}
+          dangerouslySetInnerHTML={{
+            __html:
+              chapter.content ||
+              `<p class="text-base sm:text-lg md:text-xl text-gray-600">${t('chapter.contentSoon')}</p>`,
+          }}
         />
       </div>
 
@@ -134,12 +146,9 @@ const ChapterPage: React.FC = () => {
             viewport={{ once: true }}
             className="bg-gradient-to-r from-primary-50 to-blue-50 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 mb-8 border border-primary-100"
           >
-            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 mb-4 sm:mb-6">
-              حالا که این فصل را خواندی، چه تغییری در زندگی‌ات ایجاد می‌شود؟
-            </h3>
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 mb-4 sm:mb-6">{t('chapter.reflectionTitle')}</h3>
             <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed mb-6 sm:mb-8">
-              این نظریه فقط برای خواندن نیست — برای <strong>تغییر</strong> است. 
-              فکر کن که چگونه می‌توانی این اصول را در زندگی روزمره‌ات به کار بگیری.
+              {t('chapter.reflectionText')}
             </p>
           </motion.div>
 
@@ -161,8 +170,8 @@ const ChapterPage: React.FC = () => {
                   to={`/chapter/${nextChapter.id}`}
                   className="inline-flex items-center gap-3 sm:gap-4 bg-primary-600 hover:bg-primary-700 text-white font-bold text-lg sm:text-xl md:text-2xl px-8 sm:px-12 md:px-16 py-4 sm:py-5 md:py-6 rounded-xl sm:rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
                 >
-                  <span>فصل بعدی: {nextChapter.title}</span>
-                  <ArrowLeftIcon className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7" />
+                  <span>{t('common.nextChapter')}: {nextChapter.title}</span>
+                  <ForwardIcon className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7" />
                 </Link>
               </motion.div>
             ) : (
@@ -173,7 +182,7 @@ const ChapterPage: React.FC = () => {
                 className="text-center bg-gradient-to-r from-yellow-50 to-orange-50 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 border border-yellow-200"
               >
                 <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 mb-4">
-                  🎉 تبریک! سفر کامل شد!
+                  🎉 {t('common.completed')}
                 </h3>
                 <p className="text-base sm:text-lg md:text-xl text-gray-700 mb-6">
                   شما همه فصول را خوانده‌اید. حالا زمان عمل است — این پیام آزادی را با دیگران به اشتراک بگذار.
@@ -182,8 +191,8 @@ const ChapterPage: React.FC = () => {
                   to="/"
                   className="inline-flex items-center gap-3 bg-primary-600 hover:bg-primary-700 text-white font-bold text-lg sm:text-xl px-8 sm:px-12 py-4 sm:py-5 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300"
                 >
-                  <span>بازگشت به صفحه اصلی</span>
-                  <ArrowRightIcon className="w-5 h-5 sm:w-6 sm:h-6" />
+                  <span>{t('common.backHome')}</span>
+                  <BackIcon className="w-5 h-5 sm:w-6 sm:h-6" />
                 </Link>
               </motion.div>
             );

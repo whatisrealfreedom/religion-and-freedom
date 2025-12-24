@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useLocale } from '../i18n/LocaleProvider';
 
 interface AchievementBadgeProps {
   icon: string;
@@ -14,6 +15,7 @@ const AchievementBadge: React.FC<AchievementBadgeProps> = ({
   description,
   unlocked,
 }) => {
+  const { isRTL } = useLocale();
   return (
     <motion.div
       className={`relative p-3 sm:p-4 rounded-lg sm:rounded-xl border-2 transition-all ${
@@ -25,7 +27,7 @@ const AchievementBadge: React.FC<AchievementBadgeProps> = ({
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
     >
-      <div className="flex items-start space-x-2 sm:space-x-3 space-x-reverse">
+      <div className={`flex items-start space-x-2 sm:space-x-3 ${isRTL ? 'space-x-reverse' : ''}`}>
         <div
           className={`text-2xl sm:text-3xl ${unlocked ? 'animate-bounce' : 'grayscale'} flex-shrink-0`}
         >
@@ -49,7 +51,7 @@ const AchievementBadge: React.FC<AchievementBadgeProps> = ({
         </div>
         {unlocked && (
           <motion.div
-            className="absolute top-1.5 left-1.5 sm:top-2 sm:left-2"
+            className={`absolute top-1.5 ${isRTL ? 'left-1.5 sm:left-2' : 'right-1.5 sm:right-2'} sm:top-2`}
             animate={{ rotate: [0, 10, -10, 0] }}
             transition={{ duration: 0.5, repeat: Infinity, repeatDelay: 2 }}
           >

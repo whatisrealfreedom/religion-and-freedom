@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { useLocale } from '../i18n/LocaleProvider';
 import {
   ChatBubbleBottomCenterTextIcon,
   ExclamationTriangleIcon,
@@ -19,7 +20,7 @@ type CriticItem = {
   howToCheck: string[];
 };
 
-const critics: CriticItem[] = [
+const criticsFa: CriticItem[] = [
   {
     id: 'definitions',
     title: '۱) «تعریف‌ها خیلی کش‌دار/مبهم‌اند»',
@@ -102,7 +103,94 @@ const critics: CriticItem[] = [
   },
 ];
 
+const criticsEn: CriticItem[] = [
+  {
+    id: 'definitions',
+    title: '1) “The definitions feel vague or too elastic”',
+    claim:
+      'A common critique is that terms like “real freedom”, “absolute ownership”, and “formal system” need precise definitions—otherwise people can interpret them however they want.',
+    whyItMatters:
+      'If definitions are unclear, the debate becomes subjective and everyday readers will feel lost.',
+    possibleResponses: [
+      'Supporters argue that “absolute ownership” is a rights-ethics boundary: body/mind/time/property are personal domains; violating them is injustice.',
+      'The key is to define what “absolute” means: absolute as a principle of non-violation, not “no conflicts or trade-offs ever exist”.',
+    ],
+    howToCheck: [
+      'Write down clear definitions (what is included, what is excluded).',
+      'Create examples + counterexamples for each definition.',
+    ],
+  },
+  {
+    id: 'godel',
+    title: '2) “Gödel: Is religion really a Gödel-type formal system?”',
+    claim:
+      'If religion is treated like a strong formal axiomatic system (like arithmetic), Gödel suggests limits: incompleteness and inability to prove consistency from within.',
+    whyItMatters:
+      'Because “complete” in a Gödel-logical sense is very different from “complete for a practical moral/political purpose”.',
+    possibleResponses: [
+      'Supporters say religion is not a purely mechanical symbolic system like arithmetic—so Gödel does not apply in the same way.',
+      'Or they define “complete” as “complete for protecting freedom”, not Gödel-complete.',
+    ],
+    howToCheck: [
+      'Clarify what “formal system” means here: strict symbolic calculus, or “principle-based framework”.',
+      'Clarify what “complete” means: complete for which output (ethical, legal, social)?',
+    ],
+  },
+  {
+    id: 'empirical',
+    title: '3) “History: hasn’t religion sometimes enabled coercion?”',
+    claim:
+      'Critics argue coercion has also happened “in the name of religion”, so “religion = guardian of freedom” needs careful distinction.',
+    whyItMatters:
+      'If we do not separate “principles” from “historical political practice”, readers will see contradiction immediately.',
+    possibleResponses: [
+      'Supporters separate core principles from political misuse; many historical abuses violate the very principles claimed.',
+      'They propose judging by “property rights / non-aggression”, not labels or titles.',
+    ],
+    howToCheck: [
+      'Classify historical cases: where are non-aggression/property rights respected vs violated?',
+      'Ask whether the claim is about religion itself or about governments.',
+    ],
+  },
+  {
+    id: 'policy',
+    title: '4) “From theory to policy: what’s the executable program?”',
+    claim:
+      'The framework sounds inspiring, but critics ask for concrete policy steps (money/inflation, censorship, conscription, taxes, etc.).',
+    whyItMatters:
+      'Without an actionable path, readers may feel it is more rhetoric than implementation.',
+    possibleResponses: [
+      'Supporters say the theory provides evaluation criteria first, then concrete policies can be derived.',
+      'They emphasize limiting coercion, strengthening private property, transparency/accountability, and reducing rent-seeking.',
+    ],
+    howToCheck: [
+      'For each real problem (inflation/censorship/coercion), identify which principle is violated and propose a concrete fix.',
+      'Use measurable indicators: inflation rate, speech restrictions, property security, privacy protections.',
+    ],
+  },
+  {
+    id: 'ai',
+    title: '5) “AI era: how do you translate principles into enforceable code?”',
+    claim:
+      'Saying “translate religion into machine-ethics” is not enough—critics want a concrete mapping into enforceable rules for AI systems.',
+    whyItMatters:
+      'In AI, vague rules produce loopholes and failure modes.',
+    possibleResponses: [
+      'Supporters propose translating principles into enforceable rights: privacy, consent, data ownership, accountability, non-discrimination.',
+      'The goal becomes an “anti-oppression constraint”: AI must not violate ownership domains.',
+    ],
+    howToCheck: [
+      'Write a list of prohibitions (e.g., accessing data without consent).',
+      'Write a list of requirements (e.g., decision logging, appeal mechanisms).',
+    ],
+  },
+];
+
 const Critics: React.FC = () => {
+  const { t, locale, isRTL } = useLocale();
+  const isEnglish = locale === 'en';
+  const critics = isEnglish ? criticsEn : criticsFa;
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 via-blue-50 to-white py-8 sm:py-12 md:py-16">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -112,8 +200,8 @@ const Critics: React.FC = () => {
             to="/"
             className="inline-flex items-center text-primary-600 hover:text-primary-700 mb-6 text-sm sm:text-base"
           >
-            <ArrowLeftIcon className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
-            بازگشت به صفحه اصلی
+            <ArrowLeftIcon className={`w-4 h-4 sm:w-5 sm:h-5 ${isRTL ? 'ml-2' : 'mr-2'}`} />
+            {t('common.backHome')}
           </Link>
 
           <div className="flex items-start gap-4">
@@ -122,11 +210,10 @@ const Critics: React.FC = () => {
             </div>
             <div>
               <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
-                منتقدان چه می‌گویند؟
+                {t('critics.title')}
               </h1>
               <p className="mt-3 text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed">
-                این صفحه «نقدهای رایج» را به زبان ساده جمع می‌کند، و برای هر نقد، یک پاسخِ احتمالی و یک راهِ بررسیِ منصفانه می‌دهد
-                تا مخاطب عادی هم بتواند خودش تصمیم بگیرد.
+                {t('critics.subtitle')}
               </p>
             </div>
           </div>
@@ -139,10 +226,9 @@ const Critics: React.FC = () => {
               <ExclamationTriangleIcon className="w-6 h-6 text-yellow-600" />
             </div>
             <div className="text-gray-800">
-              <p className="font-bold text-lg">نکته مهم</p>
+              <p className="font-bold text-lg">{t('critics.noteTitle')}</p>
               <p className="mt-2 leading-relaxed">
-                اینجا «اتهام‌زنی» و «شخصی‌سازی» نداریم. فقط <strong>نقدهای منطقیِ رایج</strong> و روش بررسی. اگر نقد مشخصی از یک
-                ویدیو/مقاله داری، لینکش را بده تا دقیقاً همان را با ارجاع اضافه کنیم.
+                {t('critics.noteText')}
               </p>
             </div>
           </div>
@@ -169,7 +255,7 @@ const Critics: React.FC = () => {
                         <ScaleIcon className="w-6 h-6 text-primary-700" />
                       </div>
                       <div>
-                        <p className="font-bold text-gray-900">نقد</p>
+                        <p className="font-bold text-gray-900">{t('critics.labels.critique')}</p>
                         <p className="mt-2 text-gray-700 leading-relaxed">{item.claim}</p>
                       </div>
                     </div>
@@ -181,7 +267,7 @@ const Critics: React.FC = () => {
                         <ExclamationTriangleIcon className="w-6 h-6 text-yellow-700" />
                       </div>
                       <div>
-                        <p className="font-bold text-gray-900">چرا مهم است؟</p>
+                        <p className="font-bold text-gray-900">{t('critics.labels.why')}</p>
                         <p className="mt-2 text-gray-700 leading-relaxed">{item.whyItMatters}</p>
                       </div>
                     </div>
@@ -193,7 +279,7 @@ const Critics: React.FC = () => {
                         <CheckCircleIcon className="w-6 h-6 text-green-700" />
                       </div>
                       <div>
-                        <p className="font-bold text-gray-900">پاسخ‌های احتمالی</p>
+                        <p className="font-bold text-gray-900">{t('critics.labels.responses')}</p>
                         <ul className="mt-2 space-y-2 text-gray-700 leading-relaxed list-disc pr-5">
                           {item.possibleResponses.map((r, i) => (
                             <li key={i}>{r}</li>
@@ -209,7 +295,7 @@ const Critics: React.FC = () => {
                         <AcademicCapIcon className="w-6 h-6 text-purple-800" />
                       </div>
                       <div>
-                        <p className="font-bold text-gray-900">چطور منصفانه بررسی کنیم؟</p>
+                        <p className="font-bold text-gray-900">{t('critics.labels.howToCheck')}</p>
                         <ul className="mt-2 space-y-2 text-gray-700 leading-relaxed list-disc pr-5">
                           {item.howToCheck.map((h, i) => (
                             <li key={i}>{h}</li>
@@ -226,16 +312,16 @@ const Critics: React.FC = () => {
 
         {/* Footer CTA */}
         <div className="mt-12 sm:mt-16 bg-gradient-to-r from-primary-600 via-primary-700 to-primary-800 rounded-2xl sm:rounded-3xl p-8 sm:p-10 text-white shadow-2xl">
-          <h3 className="text-xl sm:text-2xl md:text-3xl font-bold">می‌خواهی این بخش دقیق‌تر و مستندتر شود؟</h3>
+          <h3 className="text-xl sm:text-2xl md:text-3xl font-bold">{t('critics.ctaTitle')}</h3>
           <p className="mt-3 text-blue-100 text-base sm:text-lg leading-relaxed">
-            اگر لینک یا تایم‌استمپِ نقدهای مشخص را بدهی، همین‌جا به شکل «نقل‌قول + پاسخ + ارجاع» اضافه می‌کنیم تا کاملاً دقیق و بی‌ابهام باشد.
+            {t('critics.ctaText')}
           </p>
           <div className="mt-6">
             <Link
               to="/resources"
               className="inline-flex items-center gap-3 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-bold text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-xl shadow-xl transition-all duration-300"
             >
-              رفتن به منابع و ویدیوها
+              {t('critics.ctaButton')}
               <ArrowLeftIcon className="w-5 h-5" />
             </Link>
           </div>

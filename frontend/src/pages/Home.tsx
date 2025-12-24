@@ -5,12 +5,15 @@ import { chapterApi, ChapterSummary } from '../services/api';
 import { useProgress } from '../hooks/useProgress';
 import FreedomBird from '../components/FreedomBird';
 import AchievementBadge from '../components/AchievementBadge';
+import FireQuoteSection from '../components/FireQuote';
+import { useLocale } from '../i18n/LocaleProvider';
 import { 
   KeyIcon, 
   Cog6ToothIcon, 
   ShieldCheckIcon, 
   FlagIcon,
   ArrowLeftIcon,
+  ArrowRightIcon,
   LightBulbIcon,
   AcademicCapIcon,
   UserGroupIcon,
@@ -42,6 +45,8 @@ const Home: React.FC = () => {
   const [chapters, setChapters] = useState<ChapterSummary[]>([]);
   const [loading, setLoading] = useState(true);
   const { progress } = useProgress();
+  const { t, isRTL } = useLocale();
+  const ForwardIcon = isRTL ? ArrowLeftIcon : ArrowRightIcon;
 
   useEffect(() => {
     const fetchChapters = async () => {
@@ -59,6 +64,9 @@ const Home: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 via-blue-50 to-white">
+      {/* Fire Quote Section - First thing user sees */}
+      <FireQuoteSection />
+      
       {/* Hero Section */}
       <section className="relative overflow-hidden gradient-bg text-white py-12 sm:py-16 md:py-20 lg:py-24 xl:py-32">
         <div className="absolute inset-0 bg-black/5"></div>
@@ -93,8 +101,8 @@ const Home: React.FC = () => {
               transition={{ delay: 0.3 }}
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 md:mb-8 leading-tight px-2"
             >
-              <span className="block mb-1 sm:mb-2">سفر به سوی</span>
-              <span className="block text-yellow-300 drop-shadow-lg">آزادی واقعی</span>
+              <span className="block mb-1 sm:mb-2">{t('home.heroTitleTop')}</span>
+              <span className="block text-yellow-300 drop-shadow-lg">{t('home.heroTitleBottom')}</span>
             </motion.h1>
             
             <motion.p 
@@ -103,7 +111,7 @@ const Home: React.FC = () => {
               transition={{ delay: 0.5 }}
               className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-blue-50 mb-8 sm:mb-10 md:mb-12 max-w-4xl mx-auto leading-relaxed font-light px-4"
             >
-              نظریه‌ای انقلابی از محمدعلی جنت‌خواه که دین و آزادی را برای همیشه آشتی می‌دهد
+              {t('home.heroSubtitle')}
             </motion.p>
 
             {/* Main CTA Button */}
@@ -124,8 +132,10 @@ const Home: React.FC = () => {
                     className="bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-bold text-lg sm:text-xl md:text-2xl px-8 sm:px-12 md:px-16 py-4 sm:py-5 md:py-6 rounded-xl sm:rounded-2xl shadow-2xl border-4 border-yellow-300/50 transition-all duration-300 hover:shadow-yellow-400/50 hover:shadow-2xl"
                   >
                     <span className="flex items-center justify-center gap-2 sm:gap-3">
-                      <span>شروع سفر آزادی</span>
-                      <ArrowLeftIcon className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 group-hover:-translate-x-1 transition-transform" />
+                      <span>{t('home.heroCta')}</span>
+                      <ForwardIcon
+                        className={`w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 ${isRTL ? 'group-hover:-translate-x-1' : 'group-hover:translate-x-1'} transition-transform`}
+                      />
                     </span>
                   </motion.button>
                 </Link>
@@ -145,8 +155,8 @@ const Home: React.FC = () => {
                 whileHover={{ scale: 1.05 }}
                 className="bg-white/20 backdrop-blur-md rounded-xl sm:rounded-2xl px-4 py-3 sm:px-6 sm:py-4 md:px-8 md:py-6 shadow-xl border border-white/30 w-full sm:w-auto min-w-[120px] cursor-default"
               >
-                <div className="text-3xl sm:text-4xl md:text-5xl font-bold mb-1 sm:mb-2">9</div>
-                <div className="text-sm sm:text-base md:text-lg">فصل جامع</div>
+                <div className="text-3xl sm:text-4xl md:text-5xl font-bold mb-1 sm:mb-2">10</div>
+                <div className="text-sm sm:text-base md:text-lg">{t('home.statsChapters')}</div>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -156,7 +166,7 @@ const Home: React.FC = () => {
                 className="bg-white/20 backdrop-blur-md rounded-xl sm:rounded-2xl px-4 py-3 sm:px-6 sm:py-4 md:px-8 md:py-6 shadow-xl border border-white/30 w-full sm:w-auto min-w-[120px] cursor-default"
               >
                 <div className="text-3xl sm:text-4xl md:text-5xl font-bold mb-1 sm:mb-2">∞</div>
-                <div className="text-sm sm:text-base md:text-lg">آزادی</div>
+                <div className="text-sm sm:text-base md:text-lg">{t('home.statsFreedom')}</div>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -166,7 +176,7 @@ const Home: React.FC = () => {
                 className="bg-white/20 backdrop-blur-md rounded-xl sm:rounded-2xl px-4 py-3 sm:px-6 sm:py-4 md:px-8 md:py-6 shadow-xl border border-white/30 w-full sm:w-auto min-w-[120px] cursor-default"
               >
                 <div className="text-3xl sm:text-4xl md:text-5xl font-bold mb-1 sm:mb-2">100%</div>
-                <div className="text-sm sm:text-base md:text-lg">واقعی</div>
+                <div className="text-sm sm:text-base md:text-lg">{t('home.statsReal')}</div>
               </motion.div>
             </motion.div>
           </motion.div>
@@ -178,7 +188,7 @@ const Home: React.FC = () => {
         <section className="py-8 sm:py-10 md:py-12 bg-white border-b border-gray-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-6 sm:mb-8">
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-3 sm:mb-4">پیشرفت شما</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-3 sm:mb-4">{t('nav.progress')}</h2>
               <div className="max-w-2xl mx-auto px-2">
                 <div className="flex justify-between items-center mb-2 flex-wrap gap-2">
                   <span className="text-base sm:text-lg font-semibold text-gray-700">
@@ -228,17 +238,17 @@ const Home: React.FC = () => {
           className="text-center mb-10 sm:mb-12 md:mb-16"
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-4 sm:mb-6 px-2">
-            فصول آزادی
+            {t('home.chaptersTitle')}
           </h2>
           <p className="text-lg sm:text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
-            سفر کامل به درک آزادی واقعی از طریق 9 فصل جامع و عمیق با تحلیل‌های دقیق
+            {t('home.chaptersSubtitle')}
           </p>
         </motion.div>
 
         {loading ? (
           <div className="text-center py-12 sm:py-16 md:py-20">
             <div className="inline-block animate-spin rounded-full h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 border-b-2 border-primary-500"></div>
-            <p className="mt-4 sm:mt-6 text-gray-600 text-base sm:text-lg">در حال بارگذاری...</p>
+            <p className="mt-4 sm:mt-6 text-gray-600 text-base sm:text-lg">{t('common.loading')}</p>
           </div>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
@@ -266,7 +276,7 @@ const Home: React.FC = () => {
                   <Link to={`/chapter/${chapter.id}`} className="block h-full">
                     <motion.div 
                       whileHover={{ x: -4 }}
-                      className="flex items-start space-x-3 sm:space-x-4 space-x-reverse mb-3 sm:mb-4 h-full"
+                      className={`flex items-start space-x-3 sm:space-x-4 ${isRTL ? 'space-x-reverse' : ''} mb-3 sm:mb-4 h-full`}
                     >
                       <div className={`w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-xl sm:rounded-2xl bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center text-white shadow-xl group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 flex-shrink-0 ${
                         isRead ? 'ring-2 sm:ring-4 ring-primary-200' : ''
@@ -289,8 +299,8 @@ const Home: React.FC = () => {
                             <span>{chapter.read_time} دقیقه</span>
                           </span>
                           <span className="flex items-center text-primary-600 font-semibold group-hover:text-primary-700 transition-all group-hover:gap-2 gap-1">
-                            <span>شروع خواندن</span>
-                            <ArrowLeftIcon className="w-4 h-4 sm:w-5 sm:h-5 group-hover:-translate-x-1 transition-transform" />
+                            <span>{t('common.startReading')}</span>
+                            <ForwardIcon className={`w-4 h-4 sm:w-5 sm:h-5 ${isRTL ? 'group-hover:-translate-x-1' : 'group-hover:translate-x-1'} transition-transform`} />
                           </span>
                         </div>
                       </div>
@@ -318,12 +328,7 @@ const Home: React.FC = () => {
             className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white leading-relaxed drop-shadow-2xl px-2 mb-6 sm:mb-8"
           >
             <span className="block mb-4 sm:mb-6 text-yellow-300 text-4xl sm:text-5xl md:text-6xl leading-none">"</span>
-            <span className="block mb-4 sm:mb-6">
-              آزادی واقعی، مالکیت مطلق انسان بر جسم، ذهن، زمان و دارایی خویش است
-            </span>
-            <span className="block mt-4 sm:mt-6 text-yellow-200">
-              — و دین، تنها نظام پایدار تاریخ برای حفاظت از این مالکیت.
-            </span>
+            <span className="block mb-4 sm:mb-6">{t('home.quote')}</span>
             <span className="block mt-4 sm:mt-6 text-yellow-300 text-4xl sm:text-5xl md:text-6xl leading-none">"</span>
           </motion.blockquote>
           <motion.p
@@ -333,7 +338,7 @@ const Home: React.FC = () => {
             transition={{ delay: 0.4, duration: 0.6 }}
             className="mt-6 sm:mt-8 md:mt-10 text-lg sm:text-xl md:text-2xl text-blue-100 font-semibold"
           >
-            — محمدعلی جنت‌خواه
+            {t('home.quoteAuthor')}
           </motion.p>
         </div>
       </section>
