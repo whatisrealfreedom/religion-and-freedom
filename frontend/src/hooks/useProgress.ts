@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 export interface ProgressData {
   chaptersRead: number[];
@@ -31,7 +31,7 @@ export const useProgress = () => {
     }
   }, []);
 
-  const updateProgress = (chapterId: number, readTime: number = 0) => {
+  const updateProgress = useCallback((chapterId: number, readTime: number = 0) => {
     setProgress((prev) => {
       const newChaptersRead = prev.chaptersRead.includes(chapterId)
         ? prev.chaptersRead
@@ -55,7 +55,7 @@ export const useProgress = () => {
       if (newChaptersRead.length === 3 && !newAchievements.includes('trinity')) {
         newAchievements.push('trinity');
       }
-      if (newChaptersRead.length === 5 && !newAchievements.push('halfway')) {
+      if (newChaptersRead.length === 5 && !newAchievements.includes('halfway')) {
         newAchievements.push('halfway');
       }
       if (newChaptersRead.length === 10 && !newAchievements.includes('complete')) {
@@ -72,7 +72,7 @@ export const useProgress = () => {
 
       return newProgress;
     });
-  };
+  }, []);
 
   const resetProgress = () => {
     const emptyProgress: ProgressData = {
