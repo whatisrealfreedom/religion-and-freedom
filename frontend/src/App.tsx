@@ -4,27 +4,40 @@ import Home from './pages/Home';
 import Chapter from './pages/Chapter';
 import Resources from './pages/Resources';
 import Critics from './pages/Critics';
-import { useLocale } from './i18n/LocaleProvider';
 import LocaleLayout from './i18n/LocaleLayout';
 
+// Component to handle root redirect based on saved locale or default to 'fa'
+function RootRedirect() {
+  const savedLocale = localStorage.getItem('freedom-locale');
+  const defaultLocale = (savedLocale === 'en' || savedLocale === 'fa') ? savedLocale : 'fa';
+  return <Navigate to={`/${defaultLocale}`} replace />;
+}
+
+// Component to handle 404/fallback redirects
+function FallbackRedirect() {
+  const savedLocale = localStorage.getItem('freedom-locale');
+  const defaultLocale = (savedLocale === 'en' || savedLocale === 'fa') ? savedLocale : 'fa';
+  return <Navigate to={`/${defaultLocale}`} replace />;
+}
+
 function App() {
-  const { locale } = useLocale();
   return (
     <Router>
       <Routes>
-        {/* Redirect root to current locale */}
-        <Route path="/" element={<Navigate to={`/${locale}`} replace />} />
+        {/* Redirect root to default locale (fa) or saved locale */}
+        <Route path="/" element={<RootRedirect />} />
 
         {/* Locale-prefixed routes: /fa/... and /en/... */}
-        <Route path="/:locale(en|fa)" element={<LocaleLayout />}>
+        {/* Note: React Router v6 doesn't support regex in path, so we validate in LocaleLayout */}
+        <Route path="/:locale" element={<LocaleLayout />}>
           <Route index element={<Home />} />
           <Route path="chapter/:id" element={<Chapter />} />
           <Route path="resources" element={<Resources />} />
           <Route path="critics" element={<Critics />} />
         </Route>
 
-        {/* Fallback */}
-        <Route path="*" element={<Navigate to={`/${locale}`} replace />} />
+        {/* Fallback for any unmatched routes */}
+        <Route path="*" element={<FallbackRedirect />} />
       </Routes>
     </Router>
   );

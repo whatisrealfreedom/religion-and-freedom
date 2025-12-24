@@ -12,23 +12,42 @@ services:
       - ENV=development
       - DB_TYPE=sqlite
       - DB_PATH=/data/freedom.db
-      - CORS_ALLOWED_ORIGINS=http://localhost:3000,http://localhost:80
+      - CORS_ALLOWED_ORIGINS=http://localhost:8098,http://localhost:80
     volumes:
       - ./data:/data
       - ./backend:/app
+      - ./backend/migrations:/app/migrations
     networks:
       - freedom-network
     restart: unless-stopped
 
-  frontend:
+  frontend-builder:
     build:
       context: .
-      dockerfile: docker/frontend.Dockerfile
-    container_name: freedom-frontend
+      dockerfile: docker/frontend-builder.Dockerfile
+    container_name: freedom-frontend-builder
+    volumes:
+      - ./frontend:/app
+      - frontend-build:/app/build
+      - frontend-node-modules:/app/node_modules
+    networks:
+      - freedom-network
+    restart: unless-stopped
+    # This container stays running, you can exec into it to run npm commands
+    # Example: docker-compose exec frontend-builder npm run build
+
+  nginx:
+    build:
+      context: .
+      dockerfile: docker/nginx.Dockerfile
+    container_name: freedom-nginx
     ports:
       - "8098:80"
+    volumes:
+      - frontend-build:/usr/share/nginx/html:ro
     depends_on:
       - backend
+      - frontend-builder
     networks:
       - freedom-network
     restart: unless-stopped
@@ -39,4 +58,6 @@ networks:
 
 volumes:
   db-data:
+  frontend-build:
+  frontend-node-modules:
 

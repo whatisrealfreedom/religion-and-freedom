@@ -13,22 +13,6 @@ const FreedomBird: React.FC<FreedomBirdProps> = ({ size = 'md', animated = true 
     lg: 'w-20 h-20',
   };
 
-  const birdVariants = {
-    flying: {
-      y: [-5, 5, -5],
-      rotate: [-2, 2, -2],
-      transition: {
-        duration: 3,
-        repeat: Infinity,
-        ease: "easeInOut",
-      },
-    },
-    still: {
-      y: 0,
-      rotate: 0,
-    },
-  };
-
   return (
     <motion.div
       className={`${sizeClasses[size]} relative`}

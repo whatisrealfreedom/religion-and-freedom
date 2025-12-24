@@ -50,6 +50,13 @@ func (h *ChapterHandler) GetByID(c *gin.Context) {
 		return
 	}
 
+	// Get locale from query parameter (default to 'fa')
+	locale := c.DefaultQuery("locale", "fa")
+	if locale == "en" && chapter.ContentEn != "" {
+		// Return English content if available
+		chapter.Content = chapter.ContentEn
+	}
+
 	c.JSON(http.StatusOK, gin.H{
 		"data": chapter,
 	})

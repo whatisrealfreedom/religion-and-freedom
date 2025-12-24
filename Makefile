@@ -1,13 +1,23 @@
-.PHONY: help build run docker-up docker-down docker-logs clean
+.PHONY: help build run docker-up docker-down docker-logs clean frontend-build frontend-shell
 
 help:
 	@echo "Available commands:"
-	@echo "  make build      - Build backend and frontend"
-	@echo "  make run        - Run backend server"
-	@echo "  make docker-up  - Start with docker-compose"
-	@echo "  make docker-down - Stop docker-compose"
-	@echo "  make docker-logs - View docker logs"
-	@echo "  make clean      - Clean build artifacts"
+	@echo ""
+	@echo "Docker:"
+	@echo "  make docker-up      - Start all containers"
+	@echo "  make docker-down    - Stop all containers"
+	@echo "  make docker-logs    - View docker logs"
+	@echo ""
+	@echo "Frontend:"
+	@echo "  make frontend-build - Build frontend inside container"
+	@echo "  make frontend-shell - Open shell in frontend-builder container"
+	@echo ""
+	@echo "Build:"
+	@echo "  make build          - Build backend and frontend"
+	@echo "  make run            - Run backend server"
+	@echo ""
+	@echo "Utilities:"
+	@echo "  make clean          - Clean build artifacts"
 
 build:
 	@echo "Building backend..."
@@ -27,6 +37,15 @@ docker-down:
 
 docker-logs:
 	docker-compose logs -f
+
+# Frontend commands
+frontend-build:
+	@echo "🔨 Building frontend inside container..."
+	docker-compose exec frontend-builder npm run build
+
+frontend-shell:
+	@echo "🐚 Opening shell in frontend-builder container..."
+	docker-compose exec frontend-builder sh
 
 clean:
 	rm -rf bin/
