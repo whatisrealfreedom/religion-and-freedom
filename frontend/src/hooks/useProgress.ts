@@ -12,7 +12,7 @@ export interface ProgressData {
 export const useProgress = () => {
   const [progress, setProgress] = useState<ProgressData>({
     chaptersRead: [],
-    totalChapters: 9,
+    totalChapters: 10, // Updated to 10 for AI chapter
     progressPercent: 0,
     achievements: [],
     currentStreak: 0,
@@ -58,7 +58,7 @@ export const useProgress = () => {
       if (newChaptersRead.length === 5 && !newAchievements.push('halfway')) {
         newAchievements.push('halfway');
       }
-      if (newChaptersRead.length === 9 && !newAchievements.includes('complete')) {
+      if (newChaptersRead.length === 10 && !newAchievements.includes('complete')) {
         newAchievements.push('complete');
       }
       if (newProgress.totalReadTime >= 60 && !newAchievements.includes('scholar')) {
@@ -77,7 +77,7 @@ export const useProgress = () => {
   const resetProgress = () => {
     const emptyProgress: ProgressData = {
       chaptersRead: [],
-      totalChapters: 9,
+      totalChapters: 10, // Updated to 10 for AI chapter
       progressPercent: 0,
       achievements: [],
       currentStreak: 0,

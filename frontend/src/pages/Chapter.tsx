@@ -1,32 +1,38 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { chapterApi, Chapter } from '../services/api';
+import { chapterApi, Chapter, ChapterSummary } from '../services/api';
 import { useProgress } from '../hooks/useProgress';
 import AnalysisSection from '../components/AnalysisSection';
-import { ArrowRightIcon } from '@heroicons/react/24/outline';
+import { ArrowRightIcon, ArrowLeftIcon } from '@heroicons/react/24/outline';
 
 const ChapterPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
+  const navigate = useNavigate();
   const [chapter, setChapter] = useState<Chapter | null>(null);
+  const [allChapters, setAllChapters] = useState<ChapterSummary[]>([]);
   const [loading, setLoading] = useState(true);
   const { updateProgress } = useProgress();
 
   useEffect(() => {
-    const fetchChapter = async () => {
+    const fetchData = async () => {
       if (!id) return;
       try {
-        const data = await chapterApi.getById(parseInt(id));
-        setChapter(data);
+        const [chapterData, chaptersData] = await Promise.all([
+          chapterApi.getById(parseInt(id)),
+          chapterApi.getAll()
+        ]);
+        setChapter(chapterData);
+        setAllChapters(chaptersData);
         // Mark as read when chapter is loaded
-        updateProgress(parseInt(id), data.read_time);
+        updateProgress(parseInt(id), chapterData.read_time);
       } catch (error) {
         console.error('Failed to fetch chapter:', error);
       } finally {
         setLoading(false);
       }
     };
-    fetchChapter();
+    fetchData();
   }, [id, updateProgress]);
 
   if (loading) {
@@ -117,6 +123,72 @@ const ChapterPage: React.FC = () => {
       {/* Analysis Section */}
       {chapter && (
         <AnalysisSection chapterId={chapter.id} title={chapter.title} />
+      )}
+
+      {/* Next Chapter & Reflection Section */}
+      {chapter && (
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 sm:mt-16 md:mt-20">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="bg-gradient-to-r from-primary-50 to-blue-50 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 mb-8 border border-primary-100"
+          >
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 mb-4 sm:mb-6">
+              حالا که این فصل را خواندی، چه تغییری در زندگی‌ات ایجاد می‌شود؟
+            </h3>
+            <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed mb-6 sm:mb-8">
+              این نظریه فقط برای خواندن نیست — برای <strong>تغییر</strong> است. 
+              فکر کن که چگونه می‌توانی این اصول را در زندگی روزمره‌ات به کار بگیری.
+            </p>
+          </motion.div>
+
+          {/* Next Chapter Button */}
+          {(() => {
+            const currentIndex = allChapters.findIndex(c => c.id === chapter.id);
+            const nextChapter = currentIndex >= 0 && currentIndex < allChapters.length - 1 
+              ? allChapters[currentIndex + 1] 
+              : null;
+            
+            return nextChapter ? (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <Link
+                  to={`/chapter/${nextChapter.id}`}
+                  className="inline-flex items-center gap-3 sm:gap-4 bg-primary-600 hover:bg-primary-700 text-white font-bold text-lg sm:text-xl md:text-2xl px-8 sm:px-12 md:px-16 py-4 sm:py-5 md:py-6 rounded-xl sm:rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
+                >
+                  <span>فصل بعدی: {nextChapter.title}</span>
+                  <ArrowLeftIcon className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7" />
+                </Link>
+              </motion.div>
+            ) : (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="text-center bg-gradient-to-r from-yellow-50 to-orange-50 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 border border-yellow-200"
+              >
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 mb-4">
+                  🎉 تبریک! سفر کامل شد!
+                </h3>
+                <p className="text-base sm:text-lg md:text-xl text-gray-700 mb-6">
+                  شما همه فصول را خوانده‌اید. حالا زمان عمل است — این پیام آزادی را با دیگران به اشتراک بگذار.
+                </p>
+                <Link
+                  to="/"
+                  className="inline-flex items-center gap-3 bg-primary-600 hover:bg-primary-700 text-white font-bold text-lg sm:text-xl px-8 sm:px-12 py-4 sm:py-5 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300"
+                >
+                  <span>بازگشت به صفحه اصلی</span>
+                  <ArrowRightIcon className="w-5 h-5 sm:w-6 sm:h-6" />
+                </Link>
+              </motion.div>
+            );
+          })()}
+        </div>
       )}
     </article>
   );
