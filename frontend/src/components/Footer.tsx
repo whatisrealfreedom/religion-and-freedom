@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useLocale } from '../i18n/LocaleProvider';
+import { withLocalePath } from '../i18n/localePath';
 
 const Footer: React.FC = () => {
-  const { t } = useLocale();
+  const { t, locale } = useLocale();
   return (
     <footer className="bg-gradient-to-r from-gray-900 to-gray-800 text-white mt-12 sm:mt-16 md:mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10 md:py-12">
@@ -21,17 +22,17 @@ const Footer: React.FC = () => {
             <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">{t('nav.resources')}</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="text-sm sm:text-base text-gray-300 hover:text-white transition-colors block">
+                <Link to={withLocalePath(locale, '/')} className="text-sm sm:text-base text-gray-300 hover:text-white transition-colors block">
                   {t('nav.home')}
                 </Link>
               </li>
               <li>
-                <Link to="/resources" className="text-sm sm:text-base text-gray-300 hover:text-white transition-colors block">
+                <Link to={withLocalePath(locale, '/resources')} className="text-sm sm:text-base text-gray-300 hover:text-white transition-colors block">
                   {t('nav.resources')}
                 </Link>
               </li>
               <li>
-                <Link to="/critics" className="text-sm sm:text-base text-gray-300 hover:text-white transition-colors block">
+                <Link to={withLocalePath(locale, '/critics')} className="text-sm sm:text-base text-gray-300 hover:text-white transition-colors block">
                   {t('nav.critics')}
                 </Link>
               </li>

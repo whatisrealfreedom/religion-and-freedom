@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { useLocale } from '../i18n/LocaleProvider';
 
 interface FireQuoteProps {
   text: string;
@@ -56,15 +57,30 @@ const FireQuote: React.FC<FireQuoteProps> = ({ text, delay = 0 }) => {
 };
 
 const FireQuoteSection: React.FC = () => {
-  const mainQuote = "بزرگ‌ترین دشمن آزادی، دولت‌سالاران و چپ‌گرایان هستند که با نقاب عدالت، مالکیت خصوصی را غارت می‌کنند و انسان را به بردگی جمعی می‌کشانند. هر که حقوق مالکیت فرد را تضعیف کند، دشمن شماره یک آزادی و انسانیت است.";
+  const { locale } = useLocale();
 
-  const subQuotes = [
+  const mainQuoteFa =
+    "بزرگ‌ترین دشمن آزادی، دولت‌سالاران و چپ‌گرایان هستند که با نقاب عدالت، مالکیت خصوصی را غارت می‌کنند و انسان را به بردگی جمعی می‌کشانند. هر که حقوق مالکیت فرد را تضعیف کند، دشمن شماره یک آزادی و انسانیت است.";
+  const subQuotesFa = [
     "سوسیالیست‌ها و دولت‌پرستان، غارتگران واقعی حقوق انسانی‌اند — بزرگ‌ترین دزدان مالکیت و آزادی.",
     "هر ایدئولوژی چپ که مالکیت خصوصی را تهدید کند، نه عدالت، بلکه بردگی نوین می‌آورد.",
     "دشمن آزادی، نه دین است و نه سنت — دشمن واقعی، دولت بزرگ و چپ‌گرایانی هستند که ثمره دسترنج تو را می‌دزدند.",
     "تورم، مالیات ظالمانه و مصادره، ابزارهای چپ و دولت‌سالاران برای نابودی آزادی‌اند — و تاریخ قاضی بی‌رحم‌شان خواهد بود.",
-    "آزادی واقعی با مالکیت مطلق زنده است — و هر که این مالکیت را هدف بگیرد، دشمن آشکار انسانیت است."
+    "آزادی واقعی با مالکیت مطلق زنده است — و هر که این مالکیت را هدف بگیرد، دشمن آشکار انسانیت است.",
   ];
+
+  const mainQuoteEn =
+    "The biggest enemy of freedom is the expansion of coercive power: when politics wears the mask of justice to violate private ownership and turn citizens into instruments of the collective.";
+  const subQuotesEn = [
+    "Inflation, arbitrary taxes, and confiscation are practical tools that weaken ownership and shrink freedom.",
+    "When private property is treated as optional, liberty becomes fragile and easily overridden.",
+    "Freedom is not the absence of values—it's the protection of boundaries: body, mind, time, and property.",
+    "A society that normalizes coercion in the name of virtue will eventually normalize injustice in the name of order.",
+    "Real freedom lives where ownership is respected—and dies where it is systematically undermined.",
+  ];
+
+  const mainQuote = locale === 'en' ? mainQuoteEn : mainQuoteFa;
+  const subQuotes = locale === 'en' ? subQuotesEn : subQuotesFa;
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-gray-900 via-red-950 to-black">

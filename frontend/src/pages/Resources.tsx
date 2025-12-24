@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { resourceApi, PDFResource } from '../services/api';
 import { useLocale } from '../i18n/LocaleProvider';
+import { localizePdf } from '../i18n/contentMaps';
+import { withLocalePath } from '../i18n/localePath';
 import {
   FilmIcon,
   DocumentArrowDownIcon,
@@ -225,7 +227,7 @@ const Resources: React.FC = () => {
           className="text-center mb-10 sm:mb-12 md:mb-16"
         >
           <Link
-            to="/"
+            to={withLocalePath(locale, '/')}
             className="inline-flex items-center text-primary-600 hover:text-primary-700 mb-6 text-sm sm:text-base"
           >
             <ArrowLeftIcon className={`w-4 h-4 sm:w-5 sm:h-5 ${isRTL ? 'ml-2' : 'mr-2'}`} />
@@ -462,10 +464,10 @@ const Resources: React.FC = () => {
                       PDF {pdf.number}
                     </div>
                     <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-3 group-hover:text-primary-600 transition-colors leading-tight">
-                      {pdf.title}
+                      {localizePdf(locale, pdf.number, { title: pdf.title, description: pdf.description }).title}
                     </h3>
                     <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-4">
-                      {pdf.description}
+                      {localizePdf(locale, pdf.number, { title: pdf.title, description: pdf.description }).description}
                     </p>
                     <div className="flex items-center justify-between text-xs sm:text-sm text-gray-500">
                       <span>{pdf.pages} صفحه</span>
@@ -496,7 +498,7 @@ const Resources: React.FC = () => {
             {t('resources.ctaText')}
           </p>
           <Link
-            to="/"
+            to={withLocalePath(locale, '/')}
             className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-bold text-lg sm:text-xl px-8 sm:px-12 py-4 sm:py-5 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300"
           >
             <span>{t('common.backHome')}</span>

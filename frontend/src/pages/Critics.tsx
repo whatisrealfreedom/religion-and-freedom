@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useLocale } from '../i18n/LocaleProvider';
+import { withLocalePath } from '../i18n/localePath';
 import {
   ChatBubbleBottomCenterTextIcon,
   ExclamationTriangleIcon,
@@ -197,7 +198,7 @@ const Critics: React.FC = () => {
         {/* Header */}
         <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} className="mb-10 sm:mb-12">
           <Link
-            to="/"
+            to={withLocalePath(locale, '/')}
             className="inline-flex items-center text-primary-600 hover:text-primary-700 mb-6 text-sm sm:text-base"
           >
             <ArrowLeftIcon className={`w-4 h-4 sm:w-5 sm:h-5 ${isRTL ? 'ml-2' : 'mr-2'}`} />
@@ -318,7 +319,7 @@ const Critics: React.FC = () => {
           </p>
           <div className="mt-6">
             <Link
-              to="/resources"
+              to={withLocalePath(locale, '/resources')}
               className="inline-flex items-center gap-3 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-bold text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-xl shadow-xl transition-all duration-300"
             >
               {t('critics.ctaButton')}
