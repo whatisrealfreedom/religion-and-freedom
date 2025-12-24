@@ -8,6 +8,7 @@ type Chapter struct {
 	Slug        string `json:"slug" db:"slug"`
 	Description string `json:"description" db:"description"`
 	Content     string `json:"content" db:"content"`
+	ContentEn   string `json:"content_en" db:"content_en"`
 	Icon        string `json:"icon" db:"icon"`
 	Pages       int    `json:"pages" db:"pages"`
 	ReadTime    int    `json:"read_time" db:"read_time"` // in minutes

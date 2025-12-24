@@ -73,9 +73,9 @@ export const chapterApi = {
       }
     }
   },
-  getById: async (id: number): Promise<Chapter> => {
+  getById: async (id: number, locale: string = 'fa'): Promise<Chapter> => {
     try {
-      const response = await api.get(`/chapters/${id}`);
+      const response = await api.get(`/chapters/${id}?locale=${locale}`);
       return response.data.data;
     } catch (error) {
       // For static JSON, we need to fetch all and filter

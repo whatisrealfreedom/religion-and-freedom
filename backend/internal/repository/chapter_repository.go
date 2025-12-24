@@ -59,7 +59,7 @@ func (r *chapterRepository) GetAll() ([]models.ChapterSummary, error) {
 
 func (r *chapterRepository) GetByID(id int) (*models.Chapter, error) {
 	query := `
-		SELECT id, number, title, slug, description, content, icon, pages, read_time, featured, "order", created_at, updated_at
+		SELECT id, number, title, slug, description, content, COALESCE(content_en, '') as content_en, icon, pages, read_time, featured, "order", created_at, updated_at
 		FROM chapters
 		WHERE id = ?
 	`
@@ -72,6 +72,7 @@ func (r *chapterRepository) GetByID(id int) (*models.Chapter, error) {
 		&c.Slug,
 		&c.Description,
 		&c.Content,
+		&c.ContentEn,
 		&c.Icon,
 		&c.Pages,
 		&c.ReadTime,
@@ -92,7 +93,7 @@ func (r *chapterRepository) GetByID(id int) (*models.Chapter, error) {
 
 func (r *chapterRepository) GetBySlug(slug string) (*models.Chapter, error) {
 	query := `
-		SELECT id, number, title, slug, description, content, icon, pages, read_time, featured, "order", created_at, updated_at
+		SELECT id, number, title, slug, description, content, COALESCE(content_en, '') as content_en, icon, pages, read_time, featured, "order", created_at, updated_at
 		FROM chapters
 		WHERE slug = ?
 	`
@@ -105,6 +106,7 @@ func (r *chapterRepository) GetBySlug(slug string) (*models.Chapter, error) {
 		&c.Slug,
 		&c.Description,
 		&c.Content,
+		&c.ContentEn,
 		&c.Icon,
 		&c.Pages,
 		&c.ReadTime,

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { chapterApi, Chapter, ChapterSummary } from '../services/api';
 import { useProgress } from '../hooks/useProgress';
@@ -11,7 +11,6 @@ import { withLocalePath } from '../i18n/localePath';
 
 const ChapterPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
-  const navigate = useNavigate();
   const [chapter, setChapter] = useState<Chapter | null>(null);
   const [allChapters, setAllChapters] = useState<ChapterSummary[]>([]);
   const [loading, setLoading] = useState(true);
@@ -25,7 +24,7 @@ const ChapterPage: React.FC = () => {
       if (!id) return;
       try {
         const [chapterData, chaptersData] = await Promise.all([
-          chapterApi.getById(parseInt(id)),
+          chapterApi.getById(parseInt(id), locale),
           chapterApi.getAll()
         ]);
         setChapter(chapterData);
@@ -39,7 +38,7 @@ const ChapterPage: React.FC = () => {
       }
     };
     fetchData();
-  }, [id, updateProgress]);
+  }, [id, locale, updateProgress]);
 
   if (loading) {
     return (
