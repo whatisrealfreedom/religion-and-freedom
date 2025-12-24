@@ -1,15 +1,26 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Bars3Icon, GlobeAltIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import FreedomBird from './FreedomBird';
 import { useProgress } from '../hooks/useProgress';
 import ProgressBar from './ProgressBar';
 import { useLocale } from '../i18n/LocaleProvider';
+import { replaceLocaleInPath, withLocalePath } from '../i18n/localePath';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { progress } = useProgress();
   const { locale, setLocale, t, isRTL } = useLocale();
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const base = `/${locale}`;
+
+  const switchLanguage = (nextLocale: 'fa' | 'en') => {
+    setLocale(nextLocale);
+    const nextPath = replaceLocaleInPath(location.pathname, nextLocale);
+    navigate(`${nextPath}${location.search}${location.hash}`, { replace: true });
+  };
 
   return (
     <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-lg shadow-md border-b border-gray-100">
@@ -17,7 +28,7 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between items-center h-16 sm:h-18 md:h-20">
           {/* Logo */}
           <Link
-            to="/"
+            to={base}
             className={`flex items-center space-x-2 sm:space-x-3 ${isRTL ? 'space-x-reverse' : ''} group`}
           >
             <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-gradient-to-br from-primary-500 via-primary-600 to-primary-700 rounded-xl sm:rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
@@ -46,13 +57,13 @@ const Navbar: React.FC = () => {
 
           {/* Desktop Menu */}
           <div className={`hidden md:flex items-center space-x-3 md:space-x-4 ${isRTL ? 'space-x-reverse' : ''}`}>
-            <Link to="/" className="text-gray-700 hover:text-primary-600 font-semibold text-sm md:text-base transition-colors px-2 md:px-3 py-2 rounded-lg hover:bg-gray-50">
+            <Link to={base} className="text-gray-700 hover:text-primary-600 font-semibold text-sm md:text-base transition-colors px-2 md:px-3 py-2 rounded-lg hover:bg-gray-50">
               {t('nav.home')}
             </Link>
-            <Link to="/resources" className="text-gray-700 hover:text-primary-600 font-semibold text-sm md:text-base transition-colors px-2 md:px-3 py-2 rounded-lg hover:bg-gray-50">
+            <Link to={withLocalePath(locale, '/resources')} className="text-gray-700 hover:text-primary-600 font-semibold text-sm md:text-base transition-colors px-2 md:px-3 py-2 rounded-lg hover:bg-gray-50">
               {t('nav.resources')}
             </Link>
-            <Link to="/critics" className="text-gray-700 hover:text-primary-600 font-semibold text-sm md:text-base transition-colors px-2 md:px-3 py-2 rounded-lg hover:bg-gray-50">
+            <Link to={withLocalePath(locale, '/critics')} className="text-gray-700 hover:text-primary-600 font-semibold text-sm md:text-base transition-colors px-2 md:px-3 py-2 rounded-lg hover:bg-gray-50">
               {t('nav.critics')}
             </Link>
             <a href="#about" className="text-gray-700 hover:text-primary-600 font-semibold text-sm md:text-base transition-colors px-2 md:px-3 py-2 rounded-lg hover:bg-gray-50">
@@ -62,7 +73,7 @@ const Navbar: React.FC = () => {
             {/* Language switch */}
             <button
               type="button"
-              onClick={() => setLocale(locale === 'fa' ? 'en' : 'fa')}
+              onClick={() => switchLanguage(locale === 'fa' ? 'en' : 'fa')}
               className="inline-flex items-center gap-2 px-3 py-2 rounded-lg border border-gray-200 bg-white hover:bg-gray-50 text-gray-800 font-semibold text-sm md:text-base shadow-sm"
               aria-label={t('nav.language')}
               title={t('nav.language')}
@@ -105,21 +116,21 @@ const Navbar: React.FC = () => {
               </div>
             )}
             <Link
-              to="/"
+              to={base}
               className="block px-3 py-2.5 text-gray-700 hover:bg-gray-50 rounded-md text-base font-medium transition-colors"
               onClick={() => setIsOpen(false)}
             >
               {t('nav.home')}
             </Link>
             <Link
-              to="/resources"
+              to={withLocalePath(locale, '/resources')}
               className="block px-3 py-2.5 text-gray-700 hover:bg-gray-50 rounded-md text-base font-medium transition-colors"
               onClick={() => setIsOpen(false)}
             >
               {t('nav.resources')}
             </Link>
             <Link
-              to="/critics"
+              to={withLocalePath(locale, '/critics')}
               className="block px-3 py-2.5 text-gray-700 hover:bg-gray-50 rounded-md text-base font-medium transition-colors"
               onClick={() => setIsOpen(false)}
             >
@@ -136,7 +147,7 @@ const Navbar: React.FC = () => {
             <button
               type="button"
               onClick={() => {
-                setLocale(locale === 'fa' ? 'en' : 'fa');
+                switchLanguage(locale === 'fa' ? 'en' : 'fa');
                 setIsOpen(false);
               }}
               className="w-full flex items-center justify-between px-3 py-2.5 text-gray-800 bg-gray-50 hover:bg-gray-100 rounded-md text-base font-semibold transition-colors"

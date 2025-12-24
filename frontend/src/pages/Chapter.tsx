@@ -6,6 +6,8 @@ import { useProgress } from '../hooks/useProgress';
 import AnalysisSection from '../components/AnalysisSection';
 import { ArrowRightIcon, ArrowLeftIcon } from '@heroicons/react/24/outline';
 import { useLocale } from '../i18n/LocaleProvider';
+import { localizeChapter } from '../i18n/contentMaps';
+import { withLocalePath } from '../i18n/localePath';
 
 const ChapterPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -14,7 +16,7 @@ const ChapterPage: React.FC = () => {
   const [allChapters, setAllChapters] = useState<ChapterSummary[]>([]);
   const [loading, setLoading] = useState(true);
   const { updateProgress } = useProgress();
-  const { t, isRTL } = useLocale();
+  const { t, isRTL, locale } = useLocale();
   const BackIcon = isRTL ? ArrowRightIcon : ArrowLeftIcon;
   const ForwardIcon = isRTL ? ArrowLeftIcon : ArrowRightIcon;
 
@@ -73,7 +75,7 @@ const ChapterPage: React.FC = () => {
           className="mb-8 sm:mb-10 md:mb-12"
         >
           <Link
-            to="/"
+            to={withLocalePath(locale, '/')}
             className="inline-flex items-center text-primary-600 hover:text-primary-700 mb-4 sm:mb-6 text-sm sm:text-base"
           >
             <BackIcon className={`w-4 h-4 sm:w-5 sm:h-5 ${isRTL ? 'ml-2' : 'mr-2'}`} />
@@ -83,10 +85,10 @@ const ChapterPage: React.FC = () => {
             {t('chapter.chapterLabel')} {chapter.number}
           </div>
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-3 sm:mb-4 leading-tight">
-            {chapter.title}
+            {localizeChapter(locale, chapter.number, { title: chapter.title, description: chapter.description }).title}
           </h1>
           <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed mb-4 sm:mb-6">
-            {chapter.description}
+            {localizeChapter(locale, chapter.number, { title: chapter.title, description: chapter.description }).description}
           </p>
           <div className={`flex items-center space-x-3 sm:space-x-4 ${isRTL ? 'space-x-reverse' : ''} text-xs sm:text-sm text-gray-500 flex-wrap gap-2`}>
             <span>
@@ -167,7 +169,7 @@ const ChapterPage: React.FC = () => {
                 className="text-center"
               >
                 <Link
-                  to={`/chapter/${nextChapter.id}`}
+                  to={withLocalePath(locale, `/chapter/${nextChapter.id}`)}
                   className="inline-flex items-center gap-3 sm:gap-4 bg-primary-600 hover:bg-primary-700 text-white font-bold text-lg sm:text-xl md:text-2xl px-8 sm:px-12 md:px-16 py-4 sm:py-5 md:py-6 rounded-xl sm:rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
                 >
                   <span>{t('common.nextChapter')}: {nextChapter.title}</span>
@@ -188,7 +190,7 @@ const ChapterPage: React.FC = () => {
                   شما همه فصول را خوانده‌اید. حالا زمان عمل است — این پیام آزادی را با دیگران به اشتراک بگذار.
                 </p>
                 <Link
-                  to="/"
+                  to={withLocalePath(locale, '/')}
                   className="inline-flex items-center gap-3 bg-primary-600 hover:bg-primary-700 text-white font-bold text-lg sm:text-xl px-8 sm:px-12 py-4 sm:py-5 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300"
                 >
                   <span>{t('common.backHome')}</span>

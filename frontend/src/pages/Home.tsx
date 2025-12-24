@@ -7,6 +7,8 @@ import FreedomBird from '../components/FreedomBird';
 import AchievementBadge from '../components/AchievementBadge';
 import FireQuoteSection from '../components/FireQuote';
 import { useLocale } from '../i18n/LocaleProvider';
+import { localizeChapter } from '../i18n/contentMaps';
+import { withLocalePath } from '../i18n/localePath';
 import { 
   KeyIcon, 
   Cog6ToothIcon, 
@@ -33,20 +35,29 @@ const iconMap: { [key: string]: React.ComponentType<any> } = {
   rocket: RocketLaunchIcon,
 };
 
-const achievements = [
+const achievementsFa = [
   { id: 'first-step', icon: '🎯', title: 'اولین قدم', description: 'خواندن اولین فصل' },
   { id: 'trinity', icon: '🔺', title: 'سه‌گانه', description: 'خواندن 3 فصل' },
   { id: 'halfway', icon: '📊', title: 'نیمه راه', description: 'خواندن 5 فصل' },
   { id: 'complete', icon: '🏆', title: 'تکمیل', description: 'خواندن همه فصول' },
-  { id: 'scholar', icon: '🎓', title: 'عالم', description: '60 دقیقه مطالعه' },
+  { id: 'scholar', icon: '🎓', title: 'Scholar', description: '60 دقیقه مطالعه' },
+];
+
+const achievementsEn = [
+  { id: 'first-step', icon: '🎯', title: 'First step', description: 'Read your first chapter' },
+  { id: 'trinity', icon: '🔺', title: 'Trinity', description: 'Read 3 chapters' },
+  { id: 'halfway', icon: '📊', title: 'Halfway', description: 'Read 5 chapters' },
+  { id: 'complete', icon: '🏆', title: 'Completed', description: 'Read all chapters' },
+  { id: 'scholar', icon: '🎓', title: 'Scholar', description: '60 minutes of reading' },
 ];
 
 const Home: React.FC = () => {
   const [chapters, setChapters] = useState<ChapterSummary[]>([]);
   const [loading, setLoading] = useState(true);
   const { progress } = useProgress();
-  const { t, isRTL } = useLocale();
+  const { t, isRTL, locale } = useLocale();
   const ForwardIcon = isRTL ? ArrowLeftIcon : ArrowRightIcon;
+  const achievements = locale === 'en' ? achievementsEn : achievementsFa;
 
   useEffect(() => {
     const fetchChapters = async () => {
@@ -123,7 +134,7 @@ const Home: React.FC = () => {
                 className="mb-8 sm:mb-10 md:mb-12"
               >
                 <Link
-                  to={`/chapter/${chapters[0].id}`}
+                  to={withLocalePath(locale, `/chapter/${chapters[0].id}`)}
                   className="inline-block group"
                 >
                   <motion.button
@@ -255,6 +266,7 @@ const Home: React.FC = () => {
             {chapters.map((chapter, index) => {
               const IconComponent = iconMap[chapter.icon] || KeyIcon;
               const isRead = progress.chaptersRead.includes(chapter.id);
+              const localized = localizeChapter(locale, chapter.number, { title: chapter.title, description: chapter.description });
               
               return (
                 <motion.div
@@ -273,7 +285,7 @@ const Home: React.FC = () => {
                     </div>
                   )}
                   
-                  <Link to={`/chapter/${chapter.id}`} className="block h-full">
+                  <Link to={withLocalePath(locale, `/chapter/${chapter.id}`)} className="block h-full">
                     <motion.div 
                       whileHover={{ x: -4 }}
                       className={`flex items-start space-x-3 sm:space-x-4 ${isRTL ? 'space-x-reverse' : ''} mb-3 sm:mb-4 h-full`}
@@ -285,18 +297,20 @@ const Home: React.FC = () => {
                       </div>
                       <div className="flex-1 min-w-0 flex flex-col h-full">
                         <div className="text-xs sm:text-sm text-primary-600 font-bold mb-1 sm:mb-2">
-                          فصل {chapter.number}
+                          {t('chapter.chapterLabel')} {chapter.number}
                         </div>
                         <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-800 mb-2 sm:mb-3 group-hover:text-primary-600 transition-colors leading-tight">
-                          {chapter.title}
+                          {localized.title}
                         </h3>
                         <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-3 sm:mb-5 flex-grow">
-                          {chapter.description}
+                          {localized.description}
                         </p>
                         <div className="flex items-center justify-between text-xs sm:text-sm flex-wrap gap-2 mt-auto">
                           <span className="text-gray-500 font-medium flex items-center gap-1">
                             <span>⏱️</span>
-                            <span>{chapter.read_time} دقیقه</span>
+                            <span>
+                              {chapter.read_time} {t('chapter.minutes')}
+                            </span>
                           </span>
                           <span className="flex items-center text-primary-600 font-semibold group-hover:text-primary-700 transition-all group-hover:gap-2 gap-1">
                             <span>{t('common.startReading')}</span>
