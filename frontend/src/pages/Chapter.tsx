@@ -21,6 +21,8 @@ const ChapterPage: React.FC = () => {
   const ForwardIcon = isRTL ? ArrowLeftIcon : ArrowRightIcon;
 
   useEffect(() => {
+    let cancelled = false;
+    
     const fetchData = async () => {
       if (!id) return;
       setLoading(true);
@@ -31,20 +33,35 @@ const ChapterPage: React.FC = () => {
           chapterApi.getById(parseInt(id), locale),
           chapterApi.getAll()
         ]);
-        setChapter(chapterData);
-        setAllChapters(chaptersData);
-        // Mark as read when chapter is loaded
-        updateProgress(parseInt(id), chapterData.read_time);
+        
+        // Only update state if component is still mounted
+        if (!cancelled) {
+          setChapter(chapterData);
+          setAllChapters(chaptersData);
+          // Mark as read when chapter is loaded
+          updateProgress(parseInt(id), chapterData.read_time);
+        }
       } catch (error) {
-        console.error('Failed to fetch chapter:', error);
+        if (!cancelled) {
+          console.error('Failed to fetch chapter:', error);
+        }
       } finally {
-        setLoading(false);
-        // Ensure we're at top after content loads
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        if (!cancelled) {
+          setLoading(false);
+          // Ensure we're at top after content loads
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
       }
     };
+    
     fetchData();
-  }, [id, locale, updateProgress]);
+    
+    // Cleanup function to cancel requests if component unmounts or dependencies change
+    return () => {
+      cancelled = true;
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [id, locale]); // updateProgress is stable (memoized with useCallback), no need in deps
 
   if (loading) {
     return (
