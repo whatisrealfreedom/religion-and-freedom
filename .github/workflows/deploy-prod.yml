@@ -52,12 +52,14 @@ jobs:
             cd /home/${{ secrets.SERVER_USERNAME }}/freedom-website
             
             # Copy .env.prod from existing location
-            if [ -f /home/${{ secrets.SERVER_USERNAME }}/freedom/.env.prod ]; then
-              echo "✅ Copying .env.prod from /home/${{ secrets.SERVER_USERNAME }}/freedom/.env.prod"
-              cp /home/${{ secrets.SERVER_USERNAME }}/freedom/.env.prod .env
+            # Configure ENV_SOURCE_PATH in GitHub Secrets if needed
+            ENV_SOURCE_PATH="${ENV_SOURCE_PATH:-/home/${{ secrets.SERVER_USERNAME }}/freedom/.env.prod}"
+            if [ -f "$ENV_SOURCE_PATH" ]; then
+              echo "✅ Copying .env.prod"
+              cp "$ENV_SOURCE_PATH" .env
             else
-              echo "⚠️  .env.prod not found at /home/${{ secrets.SERVER_USERNAME }}/freedom/.env.prod"
-              echo "⚠️  Please create it manually with DOMAIN_FREEDOM and TRAEFIK_NETWORK"
+              echo "⚠️  .env.prod not found"
+              echo "⚠️  Please create .env file manually with DOMAIN_FREEDOM and TRAEFIK_NETWORK"
               exit 1
             fi
             
