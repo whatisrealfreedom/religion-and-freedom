@@ -8,6 +8,7 @@ import { ArrowRightIcon, ArrowLeftIcon } from '@heroicons/react/24/outline';
 import { useLocale } from '../i18n/LocaleProvider';
 import { localizeChapter } from '../i18n/contentMaps';
 import { withLocalePath } from '../i18n/localePath';
+import { getChapterContent } from '../i18n/content/chapters';
 
 const ChapterPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -22,6 +23,9 @@ const ChapterPage: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       if (!id) return;
+      setLoading(true);
+      // Scroll to top immediately when chapter changes (before loading)
+      window.scrollTo({ top: 0, behavior: 'auto' });
       try {
         const [chapterData, chaptersData] = await Promise.all([
           chapterApi.getById(parseInt(id), locale),
@@ -35,6 +39,8 @@ const ChapterPage: React.FC = () => {
         console.error('Failed to fetch chapter:', error);
       } finally {
         setLoading(false);
+        // Ensure we're at top after content loads
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       }
     };
     fetchData();
@@ -126,9 +132,19 @@ const ChapterPage: React.FC = () => {
             prose-table:w-full prose-table:text-sm prose-table:sm:text-base
             prose-code:text-sm prose-code:sm:text-base"
           dangerouslySetInnerHTML={{
-            __html:
-              chapter.content ||
-              `<p class="text-base sm:text-lg md:text-xl text-gray-600">${t('chapter.contentSoon')}</p>`,
+            __html: (() => {
+              // First try to get content from i18n content files (enterprise approach)
+              const i18nContent = getChapterContent(chapter.number, locale);
+              if (i18nContent) {
+                return i18nContent;
+              }
+              // Fallback to API content (for backward compatibility)
+              if (chapter.content) {
+                return chapter.content;
+              }
+              // Final fallback
+              return `<p class="text-base sm:text-lg md:text-xl text-gray-600">${t('chapter.contentSoon')}</p>`;
+            })(),
           }}
         />
       </div>

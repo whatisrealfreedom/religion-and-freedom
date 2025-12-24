@@ -5,6 +5,7 @@ import Chapter from './pages/Chapter';
 import Resources from './pages/Resources';
 import Critics from './pages/Critics';
 import LocaleLayout from './i18n/LocaleLayout';
+import ScrollToTop from './components/ScrollToTop';
 
 // Component to handle root redirect based on saved locale or default to 'fa'
 function RootRedirect() {
@@ -23,6 +24,7 @@ function FallbackRedirect() {
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         {/* Redirect root to default locale (fa) or saved locale */}
         <Route path="/" element={<RootRedirect />} />
