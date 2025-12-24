@@ -5,12 +5,22 @@
 
 @layer base {
   body {
-    @apply font-vazir antialiased;
-    direction: rtl;
+    @apply antialiased;
     font-size: 16px;
     line-height: 1.8;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Locale-driven direction + typography */
+  html[data-lang="fa"] body {
+    @apply font-vazir;
+    direction: rtl;
+  }
+
+  html[data-lang="en"] body {
+    @apply font-sans;
+    direction: ltr;
   }
   
   * {

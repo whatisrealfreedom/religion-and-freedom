@@ -6,11 +6,19 @@ import Resources from './pages/Resources';
 import Critics from './pages/Critics';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import { useLocale } from './i18n/LocaleProvider';
 
 function App() {
+  const { locale } = useLocale();
   return (
     <Router>
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+      <div
+        className={
+          locale === 'en'
+            ? 'min-h-screen bg-gradient-to-br from-slate-50 via-white to-indigo-50'
+            : 'min-h-screen bg-gradient-to-br from-gray-50 to-blue-50'
+        }
+      >
         <Navbar />
         <main>
           <Routes>

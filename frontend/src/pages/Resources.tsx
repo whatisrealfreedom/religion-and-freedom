@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { resourceApi, PDFResource } from '../services/api';
+import { useLocale } from '../i18n/LocaleProvider';
 import {
   FilmIcon,
   DocumentArrowDownIcon,
@@ -34,6 +35,7 @@ interface ExternalLink {
 const Resources: React.FC = () => {
   const [pdfs, setPdfs] = useState<PDFResource[]>([]);
   const [loading, setLoading] = useState(true);
+  const { t, locale, isRTL } = useLocale();
 
   // YouTube videos from Jannatkhah
   const jannatkhahVideos: VideoResource[] = [
@@ -105,7 +107,54 @@ const Resources: React.FC = () => {
   ];
 
   // Libertarian thinkers and resources
-  const libertarianThinkers = [
+  const libertarianThinkers = (locale === 'en')
+    ? [
+        {
+          name: 'Murray Rothbard',
+          description: 'Libertarian philosopher-economist. Known for “The Ethics of Liberty” and “Man, Economy, and State”.',
+          works: [
+            { title: 'The Ethics of Liberty', type: 'Book' },
+            { title: 'Man, Economy, and State', type: 'Book' },
+            { title: 'Class Conflict', type: 'Essay' },
+          ],
+        },
+        {
+          name: 'Ludwig von Mises',
+          description: 'Austrian School economist. Author of “Human Action”.',
+          works: [
+            { title: 'Human Action', type: 'Book' },
+            { title: 'Liberalism', type: 'Book' },
+            { title: 'Socialism', type: 'Book' },
+          ],
+        },
+        {
+          name: 'Friedrich Hayek',
+          description: 'Nobel laureate. Author of “The Road to Serfdom”.',
+          works: [
+            { title: 'The Road to Serfdom', type: 'Book' },
+            { title: 'Law, Legislation and Liberty', type: 'Book' },
+            { title: 'The Constitution of Liberty', type: 'Book' },
+          ],
+        },
+        {
+          name: 'Ayn Rand',
+          description: 'Philosopher and novelist. Founder of Objectivism.',
+          works: [
+            { title: 'Atlas Shrugged', type: 'Novel' },
+            { title: 'The Fountainhead', type: 'Novel' },
+            { title: 'The Virtue of Selfishness', type: 'Essays' },
+          ],
+        },
+        {
+          name: 'Hans-Hermann Hoppe',
+          description: 'Libertarian economist-philosopher. Author of “Democracy: The God That Failed”.',
+          works: [
+            { title: 'Democracy: The God That Failed', type: 'Book' },
+            { title: 'The Economics and Ethics of Private Property', type: 'Book' },
+          ],
+        },
+      ]
+    : [
     {
       name: 'موری روتبارد (Murray Rothbard)',
       description: 'فیلسوف و اقتصاددان لیبرتارین، نویسنده کتاب‌های "اخلاق آزادی" و "انسان، اقتصاد و دولت"',
@@ -179,14 +228,14 @@ const Resources: React.FC = () => {
             to="/"
             className="inline-flex items-center text-primary-600 hover:text-primary-700 mb-6 text-sm sm:text-base"
           >
-            <ArrowLeftIcon className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
-            بازگشت به صفحه اصلی
+            <ArrowLeftIcon className={`w-4 h-4 sm:w-5 sm:h-5 ${isRTL ? 'ml-2' : 'mr-2'}`} />
+            {t('common.backHome')}
           </Link>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-4 sm:mb-6">
-            📚 منابع و لینک‌های مفید
+            {t('resources.title')}
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            مجموعه کامل منابع برای مطالعه عمیق‌تر درباره آزادی، دین و حقوق مالکیت
+            {t('resources.subtitle')}
           </p>
         </motion.div>
 
@@ -203,10 +252,10 @@ const Resources: React.FC = () => {
             </div>
             <div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800">
-                ویدیوهای محمدعلی جنت‌خواه
+                {t('resources.videosTitle')}
               </h2>
               <p className="text-sm sm:text-base text-gray-600 mt-1">
-                وبینارها، تحلیل‌ها و صحبت‌های کامل
+                {t('resources.videosSubtitle')}
               </p>
             </div>
           </div>
@@ -241,8 +290,8 @@ const Resources: React.FC = () => {
                     {video.description}
                   </p>
                   <div className="mt-4 flex items-center text-primary-600 font-semibold text-sm sm:text-base">
-                    <span>تماشا در YouTube</span>
-                    <LinkIcon className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
+                    <span>{t('resources.watchOnYoutube')}</span>
+                    <LinkIcon className={`w-4 h-4 sm:w-5 sm:h-5 ${isRTL ? 'mr-2' : 'ml-2'}`} />
                   </div>
                 </div>
               </motion.a>
@@ -263,10 +312,10 @@ const Resources: React.FC = () => {
             </div>
             <div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800">
-                لینک‌های مفید
+                {t('resources.usefulLinksTitle')}
               </h2>
               <p className="text-sm sm:text-base text-gray-600 mt-1">
-                صفحات و منابع مهم
+                {t('resources.usefulLinksSubtitle')}
               </p>
             </div>
           </div>
@@ -318,10 +367,10 @@ const Resources: React.FC = () => {
             </div>
             <div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800">
-                اندیشمندان لیبرتارین
+                {t('resources.thinkersTitle')}
               </h2>
               <p className="text-sm sm:text-base text-gray-600 mt-1">
-                بزرگان فلسفه آزادی و اقتصاد اتریشی
+                {t('resources.thinkersSubtitle')}
               </p>
             </div>
           </div>
@@ -378,10 +427,10 @@ const Resources: React.FC = () => {
             </div>
             <div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800">
-                PDF های نظریه آزادی
+                {t('resources.pdfTitle')}
               </h2>
               <p className="text-sm sm:text-base text-gray-600 mt-1">
-                فایل‌های کامل 9 فصل نظریه جنت‌خواه
+                {t('resources.pdfSubtitle')}
               </p>
             </div>
           </div>
@@ -389,7 +438,7 @@ const Resources: React.FC = () => {
           {loading ? (
             <div className="text-center py-12">
               <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-primary-500"></div>
-              <p className="mt-4 text-gray-600">در حال بارگذاری...</p>
+              <p className="mt-4 text-gray-600">{t('common.loading')}</p>
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
@@ -425,8 +474,8 @@ const Resources: React.FC = () => {
                       )}
                     </div>
                     <div className="mt-4 flex items-center text-primary-600 font-semibold text-sm sm:text-base">
-                      <span>دانلود PDF</span>
-                      <DocumentArrowDownIcon className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
+                      <span>{t('resources.downloadPdf')}</span>
+                      <DocumentArrowDownIcon className={`w-4 h-4 sm:w-5 sm:h-5 ${isRTL ? 'mr-2' : 'ml-2'}`} />
                     </div>
                   </div>
                 </motion.a>
@@ -442,17 +491,15 @@ const Resources: React.FC = () => {
           transition={{ delay: 0.5 }}
           className="bg-gradient-to-r from-primary-600 via-primary-700 to-primary-800 rounded-2xl sm:rounded-3xl p-8 sm:p-10 md:p-12 text-center text-white shadow-2xl"
         >
-          <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
-            📖 مطالعه برای آزادی
-          </h3>
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">{t('resources.ctaTitle')}</h3>
           <p className="text-lg sm:text-xl md:text-2xl text-blue-100 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed">
-            این منابع، راهنمای شما برای درک عمیق‌تر آزادی واقعی هستند. هر کدام را با دقت بخوانید و تحلیل کنید.
+            {t('resources.ctaText')}
           </p>
           <Link
             to="/"
             className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-bold text-lg sm:text-xl px-8 sm:px-12 py-4 sm:py-5 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300"
           >
-            <span>بازگشت به صفحه اصلی</span>
+            <span>{t('common.backHome')}</span>
             <ArrowLeftIcon className="w-5 h-5 sm:w-6 sm:h-6" />
           </Link>
         </motion.div>
