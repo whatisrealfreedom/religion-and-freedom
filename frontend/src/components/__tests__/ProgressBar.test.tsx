@@ -10,7 +10,7 @@ describe('ProgressBar', () => {
     (useProgress as jest.Mock).mockReturnValue({
       progress: {
         chaptersRead: [1, 2, 3],
-        totalChapters: 9,
+        totalChapters: 10,
         progressPercent: 33.33,
         achievements: [],
         currentStreak: 3,
@@ -28,7 +28,7 @@ describe('ProgressBar', () => {
     (useProgress as jest.Mock).mockReturnValue({
       progress: {
         chaptersRead: [],
-        totalChapters: 9,
+        totalChapters: 10,
         progressPercent: 0,
         achievements: [],
         currentStreak: 0,

@@ -47,6 +47,9 @@ const Navbar: React.FC = () => {
             <Link to="/resources" className="text-gray-700 hover:text-primary-600 font-semibold text-sm md:text-base transition-colors px-2 md:px-3 py-2 rounded-lg hover:bg-gray-50">
               منابع
             </Link>
+            <Link to="/critics" className="text-gray-700 hover:text-primary-600 font-semibold text-sm md:text-base transition-colors px-2 md:px-3 py-2 rounded-lg hover:bg-gray-50">
+              منتقدان
+            </Link>
             <a href="#about" className="text-gray-700 hover:text-primary-600 font-semibold text-sm md:text-base transition-colors px-2 md:px-3 py-2 rounded-lg hover:bg-gray-50">
               درباره
             </a>
@@ -96,6 +99,13 @@ const Navbar: React.FC = () => {
               onClick={() => setIsOpen(false)}
             >
               منابع
+            </Link>
+            <Link
+              to="/critics"
+              className="block px-3 py-2.5 text-gray-700 hover:bg-gray-50 rounded-md text-base font-medium transition-colors"
+              onClick={() => setIsOpen(false)}
+            >
+              منتقدان
             </Link>
             <a
               href="#about"

@@ -76,6 +76,12 @@ const Resources: React.FC = () => {
       url: 'https://www.youtube.com/watch?v=8vR4OB0hLrc',
       description: 'بررسی مبانی فلسفی نظریه آزادی از دیدگاه جنت‌خواه',
     },
+    {
+      id: '7',
+      title: 'مصاحبه با چراز | آزادی و دین در گفتگو با جنت‌خواه',
+      url: 'https://www.youtube.com/watch?v=a_-9kRG4omI',
+      description: 'مصاحبه جذاب و عمیق با محمدعلی جنت‌خواه درباره آزادی و دین در گفتگو با چراز',
+    },
   ];
 
   // External links and resources
