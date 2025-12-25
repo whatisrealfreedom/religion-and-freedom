@@ -14,41 +14,83 @@ import { Locale } from '../messages';
 export const chapterContent: Record<Locale, Record<number, string>> = {
   fa: {
     1: `<div class="chapter-content">
-  <h2>آزادی واقعی چیست؟</h2>
-  
-  <p>جنت‌خواه آزادی را بازتعریف می‌کند: نه لیبرالیسم غربی با تناقض‌هایش، نه آنارشی با آشوبش — بلکه <strong>مالکیت پایدار و غیرقابل نقض بر چهار حوزه اساسی وجود انسان</strong>.</p>
+  <h2>پیش‌زمینه و ریشه نظریه «آزادی واقعی = حقوق مالکیت مطلق»</h2>
 
-  <h3>چهار شاخه درخت آزادی</h3>
-  
+  <p>این مفهوم هسته اصلی نظریه محمدعلی جنت‌خواه (آرمین) است که از سال‌های حدود ۲۰۲۰ به بعد، در وبینارها، پادکست‌ها و نوشته‌هایش شکل گرفت. جنت‌خواه، کارآفرین سابق (موسس سایت طرفداری) و تحلیلگر سیاسی-اقتصادی، پس از تجربیات شخصی (از جمله بازداشت‌ها به دلیل بیان دیدگاه‌ها) و مطالعه عمیق فلسفه غربی (لیبرتاریانیسم، حقوق مالکیت لاک و نوزیک) و اصول شیعه، به این نتیجه رسید که آزادی‌های سیاسی رایج (مثل لیبرالیسم یا سوسیالیسم) پر از تناقض و ناپایدارند.</p>
+
+  <p>ریشه اولیه در <strong>وبینار معروف ۴ ساعته</strong> او با عنوان «شاه‌کلید آینده ایران: نظریه‌ای نو درباره آزادی و دین» (حدود ۲۰۲۱-۲۰۲۲) است، جایی که برای اولین بار آزادی را به طور سیستماتیک به <strong>حقوق مالکیت مطلق</strong> تعریف کرد. او در پادکست‌ها و مصاحبه‌های بعدی (مثل اسپاتیفای و اپل پادکست) این ایده را گسترش داد و گفت که این تعریف از تجربیات واقعی جامعه ایران (تورم، سانسور، اجبارها) الهام گرفته شده — جایی که دولت و ایدئولوژی‌ها مدام مالکیت فرد را نقض می‌کنند.</p>
+
+  <p>در نوشته‌ها و استوری‌هایش (که اغلب در تلگرام و اینستاگرام آرشیو می‌شود)، تأکید می‌کند که این نظریه «راه سوم» است: نه دولت‌سالاری چپ، نه هرج‌ومرج آنارشیستی — بلکه یک نظام پایدار مبتنی بر اصول دینی برای حفاظت ابدی از مالکیت فرد.</p>
+
+  <p>این تعریف، نقطه شروع تمام نظریه‌اش است و بعداً به نظام صوری آکسیوماتیک دین متصل می‌شود.</p>
+
+  <hr />
+
+  <h1>آزادی واقعی = حقوق مالکیت مطلق 🗝️</h1>
+
+  <p><strong>بازتعریف بنیادین آزادی</strong> به عنوان مالکیت مطلق و غیرقابل نقض بر چهار حوزه اساسی وجود انسان</p>
+
+  <blockquote>
+    <strong>۱۰ دقیقه مطالعه</strong> • پیشرفته اما قابل فهم برای همه
+  </blockquote>
+
+  <h2>مقدمه (خوراک اولیه برای جذب)</h2>
+
+  <p>خیلی‌ها آزادی را شعار می‌دانند: آزادی بیان، آزادی انتخاب، آزادی سیاسی. اما جنت‌خواه می‌پرسد: اگر دولتی پولت را با تورم بدزدد، ذهنت را سانسور کند، بدنت را اجبار کند یا زمانت را با قوانین ظالمانه بگیرد، واقعاً آزاد هستی؟</p>
+
+  <h2>آزادی واقعی چیست؟</h2>
+
+  <p>جنت‌خواه آزادی را از مفهوم مبهم و سیاسی به یک اصل حقوقی دقیق و قابل دفاع تبدیل می‌کند: <strong>مالکیت مطلق و پایدار بر خود</strong>. این نه لیبرالیسم غربی با تناقض‌هایش (که اغلب به دولت بزرگ منجر می‌شود)، نه آنارشی با آشوب و خشونت — بلکه یک تعریف بدیهی و الهی که انسان را مالک واقعی زندگی‌اش می‌کند.</p>
+
+  <p>این تعریف، قرن‌ها جستجوی بشر برای اراده آزاد را پاسخ می‌دهد: آزادی بدون ترس از سلب مالکیت.</p>
+
+  <h2>چهار شاخه درخت آزادی (با توضیح عمیق‌تر و مثال‌های واقعی)</h2>
+
+  <p>تصور کن درختی تنومند که ریشه‌اش انسانِ خلیفه خدا است — چهار شاخه اصلی‌اش، حوزه‌های مالکیت مطلق را تشکیل می‌دهند. نقض حتی یکی از این شاخه‌ها، درخت آزادی را خشک می‌کند.</p>
+
   <div class="freedom-domains">
     <div class="domain">
-      <h4>مالکیت جسم</h4>
-      <p>هیچ‌کس حق اجبار، شکنجه یا دخالت در بدن تو را ندارد — از واکسن اجباری تا حجاب اجباری. جسم تو مقدس است و متعلق به خودت است.</p>
+      <h3>مالکیت جسم</h3>
+      <p>جسمت مقدس و متعلق به خودت است. هیچ‌کس — نه دولت، نه جامعه، نه ایدئولوژی — حق اجبار، شکنجه، واکسن اجباری، حجاب اجباری یا هر دخالت جسمانی را ندارد.</p>
+      <p><strong>مثال:</strong> در جوامع استبدادی، اجبار به خدمت سربازی یا قوانین بدنی، مستقیم مالکیت جسم را نقض می‌کند و انسان را به ابزار تبدیل می‌کند.</p>
     </div>
-    
+
     <div class="domain">
-      <h4>مالکیت ذهن</h4>
-      <p>آزادی باور، سخن و اندیشه — سانسور، بزرگ‌ترین دزدی تاریخ است. ذهن تو آزاد است برای فکر کردن، باور کردن و بیان کردن.</p>
+      <h3>مالکیت ذهن</h3>
+      <p>ذهنت قلمرو خصوصی تو است. آزادی کامل باور، اندیشه، سخن و بیان — سانسور اینترنت، ممنوعیت کتاب یا فشار اجتماعی برای فکر خاص، بزرگ‌ترین دزدی تاریخ است.</p>
+      <p><strong>مثال:</strong> رژیم‌های توتالیتر با کنترل رسانه، ذهن میلیون‌ها نفر را می‌دزدند و خلاقیت انسانی را خفه می‌کنند.</p>
     </div>
-    
+
     <div class="domain">
-      <h4>مالکیت زمان</h4>
-      <p>زمان زندگی‌ات متعلق به خودت است — نه کار اجباری، نه خدمت سربازی بی‌پایان. تو مالک لحظه‌های عمر خود هستی.</p>
+      <h3>مالکیت زمان</h3>
+      <p>زمان زندگی‌ات ثروت واقعی تو است — متعلق به خودت، نه دولت یا دیگران. کار اجباری، خدمت طولانی، قوانین کاری ظالمانه یا فشار اجتماعی برای «فداکاری»، زمانت را می‌دزدد.</p>
+      <p><strong>مثال:</strong> در سیستم‌های سوسیالیستی یا دولت‌سالار، فرد مجبور است عمرش را برای «جامعه» صرف کند، بدون انتخاب واقعی.</p>
     </div>
-    
+
     <div class="domain">
-      <h4>مالکیت دارایی</h4>
-      <p>ثمره دسترنجت مقدس است — تورم، مالیات ظالمانه و مصادره، سرقت از آزادی است. دارایی تو نتیجه کار و تلاش خودت است.</p>
+      <h3>مالکیت دارایی</h3>
+      <p>ثمره دسترنج، ارث، هدیه یا خلاقیتت مقدس است. تورم (چاپ پول دولتی)، مالیات‌های سنگین، مصادره یا مقررات اقتصادی ظالمانه، مستقیم سرقت از دارایی است.</p>
+      <p><strong>مثال:</strong> تورم مزمن در ایران، سالانه میلیاردها تومان از جیب مردم را به جیب دولت منتقل می‌کند — این غارت آشکار مالکیت است.</p>
     </div>
   </div>
 
   <blockquote>
-    «این تعریف، آزادی را از شعار به یک <strong>اصل قضایی و فلسفی قابل دفاع</strong> تبدیل می‌کند. هر نظام سیاسی که حتی یکی از این چهار مالکیت را نقض کند، ضدآزادی است — حتی اگر پرچم آزادی بر دوش داشته باشد.»
+    «این تعریف، آزادی را از شعارهای توخالی به یک اصل قضایی، فلسفی و الهی قابل دفاع تبدیل می‌کند. هر نظام سیاسی — حتی اگر پرچم آزادی بر دوش داشته باشد — که حتی یکی از این چهار مالکیت را نقض کند، ضدآزادی و ضدانسانی است.»
+    <br />
+    <strong>— محمدعلی جنت‌خواه</strong>
   </blockquote>
 
-  <h3>تحلیل عمیق</h3>
-  
-  <p>این همان چیزی است که انسان قرن‌ها در جستجویش بوده: اراده آزاد، بدون ترس از سلب مالکیت. این نظریه، آزادی را از مفهوم مبهم سیاسی به یک حقوق مالکیت غیرقابل نقض تبدیل می‌کند.</p>
+  <h2>تحلیل عمیق و چندبعدی</h2>
+
+  <p>این نظریه نه تنها فردی، بلکه اجتماعی و تاریخی است. از زاویه فلسفی، ریشه در ایده خلیفه بودن انسان (توحید) دارد و با لیبرتاریانیسم غربی هم‌خوانی دارد، اما پایدارتر است چون پایه الهی دارد. کاربردی‌اش در جامعه ایران روشن است: مشکلات امروز (تورم، سانسور، اجبارها) همه نقض مالکیت‌اند. تاریخی‌اش به پیامبران برمی‌گردد که همیشه علیه فرعون‌ها (دولت‌سالاران) قیام کردند.</p>
+
+  <p>در مقایسه با دیگر مکاتب: لیبرالیسم اغلب به دولت بزرگ می‌رسد، سوسیالیسم مالکیت جمعی را بر فرد ترجیح می‌دهد — اما این نظریه، راه سوم پایدار را نشان می‌دهد.</p>
+
+  <h2>بزرگ‌ترین دشمن آزادی کیست؟ 🔥</h2>
+
+  <p>دولت‌سالاران، چپ‌گرایان و سوسیالیست‌هایی که با نقاب «عدالت اجتماعی»، مالکیت خصوصی را غارت می‌کنند، بزرگ‌ترین دشمنان آزادی و انسانیت‌اند. آن‌ها با تورم، مالیات ظالمانه، مصادره و اجبار، انسان را به بردگی جمعی می‌کشانند. هر که حقوق مالکیت فرد را تضعیف کند، نه عدالت‌خواه، بلکه غارتگر واقعی است — و تاریخ، نابودی‌شان را ثبت خواهد کرد.</p>
+
+  <p>این تعریف بنیادین، در صفحات بعدی به نظام صوری دین متصل می‌شود — ادامه بده تا ببینی چطور دین، نگهبان ابدی این آزادی است →</p>
 </div>`,
 
     2: `
@@ -443,41 +485,83 @@ export const chapterContent: Record<Locale, Record<number, string>> = {
   },
   en: {
     1: `<div class="chapter-content">
-  <h2>What Is Real Freedom?</h2>
-  
-  <p>Jannatkhah redefines freedom: not Western liberalism with its contradictions, not anarchy with its chaos — but rather <strong>stable and inviolable ownership over four fundamental domains of human existence</strong>.</p>
+  <h2>Background and Origins of the Theory: &ldquo;True Freedom = Absolute Property Rights&rdquo;</h2>
 
-  <h3>The Four Branches of the Freedom Tree</h3>
-  
+  <p>This concept forms the core of Mohammad Ali Jannatkhah's (Armin) theory, which took shape around 2020 onward in his webinars, podcasts, and writings. Jannatkhah, a former entrepreneur (founder of the Tarafdari sports website) and political-economic analyst, arrived at this insight after personal experiences (including arrests for expressing views) and deep study of Western philosophy (libertarianism, property rights in Locke and Nozick) alongside Shia principles. He concluded that conventional political freedoms (e.g., liberalism or socialism) are riddled with contradictions and instability.</p>
+
+  <p>The initial roots lie in his renowned 4-hour webinar titled &ldquo;The Master Key to Iran's Future: A New Theory on Freedom and Religion&rdquo; (circa 2021–2022), where he systematically redefined freedom as <strong>absolute property rights</strong> for the first time. He expanded this in subsequent podcasts and interviews (e.g., on Spotify and Apple Podcasts), noting that the definition draws inspiration from real societal experiences in Iran (inflation, censorship, coercions)—where government and ideologies continually violate individual ownership.</p>
+
+  <p>In his writings and stories (often archived on Telegram and Instagram), he emphasizes that this theory offers a &ldquo;third way&rdquo;: neither left-wing statism nor anarchic chaos—but a stable system grounded in divine principles for the eternal protection of individual ownership.</p>
+
+  <p>This definition serves as the starting point of his entire theory, later connecting to the formal axiomatic system of religion.</p>
+
+  <hr />
+
+  <h1>True Freedom = Absolute Property Rights 🗝️</h1>
+
+  <p><strong>A fundamental redefinition of freedom</strong> as absolute and inviolable ownership over the four essential domains of human existence</p>
+
+  <blockquote>
+    <strong>10 minutes reading</strong> • Advanced yet accessible to all
+  </blockquote>
+
+  <h2>Introduction (Initial Hook for Engagement)</h2>
+
+  <p>Many view freedom as mere slogans: freedom of expression, choice, or politics. But Jannatkhah poses a profound question: If a government steals your wealth through inflation, censors your mind, coerces your body, or seizes your time with oppressive laws—are you truly free?</p>
+
+  <h2>What is True Freedom?</h2>
+
+  <p>Jannatkhah transforms freedom from a vague, political abstraction into a precise, defensible legal and philosophical principle: <strong>absolute and enduring ownership over oneself</strong>. This is neither Western liberalism with its inherent contradictions (often leading to expansive government), nor anarchy with its chaos and violence—but a self-evident, divine definition that renders humans the true owners of their lives.</p>
+
+  <p>This definition answers humanity's centuries-long quest for free will: freedom without fear of dispossession.</p>
+
+  <h2>The Four Branches of the Tree of Freedom (Deeper Explanation + Real-World Examples)</h2>
+
+  <p>Imagine a mighty tree whose roots lie in humanity as God's vicegerent—the four main branches constitute the domains of absolute ownership. Violating even one branch withers the entire tree of freedom.</p>
+
   <div class="freedom-domains">
     <div class="domain">
-      <h4>Ownership of Body</h4>
-      <p>No one has the right to coerce, torture, or interfere with your body — from mandatory vaccines to mandatory hijab. Your body is sacred and belongs to you.</p>
+      <h3>Ownership of the Body</h3>
+      <p>Your body is sacred and belongs solely to you. No entity—government, society, or ideology—has the right to coerce, torture, mandate vaccinations, enforce dress codes, or interfere physically.</p>
+      <p><strong>Example:</strong> In authoritarian regimes, compulsory military service or bodily regulations directly violate bodily ownership, reducing humans to mere instruments.</p>
     </div>
-    
+
     <div class="domain">
-      <h4>Ownership of Mind</h4>
-      <p>Freedom of belief, speech, and thought — censorship is the greatest theft in history. Your mind is free to think, believe, and express.</p>
+      <h3>Ownership of the Mind</h3>
+      <p>Your mind is your private domain. Complete freedom of belief, thought, speech, and expression—censorship of the internet, book bans, or social pressure for conformity represents the greatest theft in history.</p>
+      <p><strong>Example:</strong> Totalitarian regimes, by controlling media, plunder the minds of millions and stifle human creativity.</p>
     </div>
-    
+
     <div class="domain">
-      <h4>Ownership of Time</h4>
-      <p>Your life's time belongs to you — not forced labor, not endless military service. You own the moments of your life.</p>
+      <h3>Ownership of Time</h3>
+      <p>The time of your life is your true wealth—belonging to you alone, not to government or others. Forced labor, prolonged service, oppressive work laws, or societal demands for &ldquo;sacrifice&rdquo; steal your time.</p>
+      <p><strong>Example:</strong> In socialist or statist systems, individuals are compelled to devote their lives to &ldquo;society&rdquo; without genuine choice.</p>
     </div>
-    
+
     <div class="domain">
-      <h4>Ownership of Property</h4>
-      <p>The fruit of your labor is sacred — inflation, unjust taxes, and confiscation are theft of freedom. Your property is the result of your own work and effort.</p>
+      <h3>Ownership of Property</h3>
+      <p>The fruits of your labor, inheritance, gifts, or creativity are sacred. Inflation (government money printing), heavy taxation, expropriation, or oppressive economic regulations constitute direct theft of property.</p>
+      <p><strong>Example:</strong> Chronic inflation in Iran annually transfers billions from citizens' pockets to the state—this is overt plunder of ownership.</p>
     </div>
   </div>
 
   <blockquote>
-    "This definition transforms freedom from a slogan into a <strong>defensible legal and philosophical principle</strong>. Any political system that violates even one of these four ownerships is anti-freedom — even if it carries the flag of freedom."
+    &ldquo;This definition elevates freedom from empty slogans to a defensible judicial, philosophical, and divine principle. Any political system—even one waving the banner of freedom—that violates even one of these four ownerships is anti-freedom and anti-human.&rdquo;
+    <br />
+    <strong>&mdash; Mohammad Ali Jannatkhah</strong>
   </blockquote>
 
-  <h3>Deep Analysis</h3>
-  
-  <p>This is what humanity has been searching for for centuries: free will, without fear of dispossession. This theory transforms freedom from a vague political concept into an inviolable property right.</p>
+  <h2>In-Depth and Multidimensional Analysis</h2>
+
+  <p>This theory is not merely individual but societal and historical. Philosophically, it roots in the concept of human vicegerency (tawhid) and aligns with Western libertarianism, yet offers greater stability through its divine foundation. Its practical application in Iranian society is evident: today's crises (inflation, censorship, coercions) all stem from ownership violations. Historically, it traces back to prophets who rose against pharaohs (statists).</p>
+
+  <p>In comparison with other schools: Liberalism often devolves into big government; socialism prioritizes collective over individual ownership—but this theory proposes a stable third path.</p>
+
+  <h2>Who is the Greatest Enemy of Freedom? 🔥</h2>
+
+  <p>Statists, leftists, and socialists—who, under the guise of &ldquo;social justice,&rdquo; plunder private property and drag humanity into collective servitude—are the greatest enemies of freedom and humanity. Through inflation, oppressive taxation, expropriation, and coercion, they suffocate the spirit of freedom. Anyone who weakens individual property rights is not a seeker of justice but a true plunderer—and history will record their downfall.</p>
+
+  <p>This foundational definition connects in subsequent pages to religion's formal axiomatic system—continue to discover how religion serves as the eternal guardian of this freedom →</p>
 </div>`,
 
     2: `
