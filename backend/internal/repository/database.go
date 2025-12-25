@@ -32,14 +32,26 @@ func NewDatabase(cfg *config.Config) (Database, error) {
 }
 
 func newSQLiteDB(cfg *config.Config) (Database, error) {
-	// Open database first
-	db, err := sql.Open("sqlite3", cfg.DBPath+"?_foreign_keys=1&_journal_mode=WAL")
+	// Open database with proper settings for data persistence
+	// _sync=NORMAL ensures data is written to disk (safer than OFF, faster than FULL)
+	// _foreign_keys=1 enables foreign key constraints
+	// _journal_mode=WAL enables Write-Ahead Logging for better concurrency
+	db, err := sql.Open("sqlite3", cfg.DBPath+"?_foreign_keys=1&_journal_mode=WAL&_sync=NORMAL")
 	if err != nil {
 		return nil, fmt.Errorf("failed to open sqlite database: %w", err)
 	}
 
+	// Set connection pool settings
+	db.SetMaxOpenConns(1) // SQLite works best with single connection
+	db.SetMaxIdleConns(1)
+
 	if err := db.Ping(); err != nil {
 		return nil, fmt.Errorf("failed to ping database: %w", err)
+	}
+
+	// Ensure WAL mode is properly set and perform a checkpoint
+	if _, err := db.Exec("PRAGMA journal_mode=WAL; PRAGMA synchronous=NORMAL; PRAGMA foreign_keys=ON;"); err != nil {
+		return nil, fmt.Errorf("failed to set SQLite pragmas: %w", err)
 	}
 
 	// Run migrations after connection is established

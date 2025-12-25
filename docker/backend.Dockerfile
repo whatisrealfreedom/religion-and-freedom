@@ -6,6 +6,9 @@ WORKDIR /app
 # Install build dependencies
 RUN apk add --no-cache git gcc musl-dev
 
+# Set GOTOOLCHAIN to auto to allow downloading required Go version
+ENV GOTOOLCHAIN=auto
+
 # Copy go mod files
 COPY backend/go.mod backend/go.sum* ./
 RUN go mod download

@@ -19,6 +19,13 @@ type Config struct {
 	CORSAllowedOrigins string
 	JWTSecret          string
 	JWTExpiry          string
+	MailHost           string
+	MailPort           string
+	MailUsername       string
+	MailPassword       string
+	MailEncryption     string
+	MailFromAddress    string
+	MailFromName       string
 }
 
 // GetDBPath returns the database path for migration helper
@@ -42,6 +49,13 @@ func Load() *Config {
 		CORSAllowedOrigins: getEnv("CORS_ALLOWED_ORIGINS", "http://localhost:3000,http://localhost:8098"),
 		JWTSecret:          getEnv("JWT_SECRET", "change-me-in-production"),
 		JWTExpiry:          getEnv("JWT_EXPIRY", "24h"),
+		MailHost:           getEnv("MAIL_HOST", "smtp.gmail.com"),
+		MailPort:           getEnv("MAIL_PORT", "587"),
+		MailUsername:       getEnv("MAIL_USERNAME", ""),
+		MailPassword:       getEnv("MAIL_PASSWORD", ""),
+		MailEncryption:     getEnv("MAIL_ENCRYPTION", "tls"),
+		MailFromAddress:    getEnv("MAIL_FROM_ADDRESS", ""),
+		MailFromName:       getEnv("MAIL_FROM_NAME", "RealFreedom"),
 	}
 }
 
