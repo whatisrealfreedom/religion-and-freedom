@@ -241,14 +241,91 @@ export const chapterContent: Record<Locale, Record<number, string>> = {
 
   <h3>منابع برای یادگیری بیشتر (لینک مستقیم):</h3>
 
-  <ul>
-    <li><strong>ویدیو یوتیوب عالی (انگلیسی، ۱۵ دقیقه، خیلی ساده):</strong><br />
-      <a href="https://www.youtube.com/watch?v=HeQX2HjkcNo" target="_blank" rel="noopener noreferrer">Gödel's Incompleteness Theorem - Numberphile</a></li>
-    <li><strong>ویدیو فارسی ساده (۱۰ دقیقه):</strong><br />
-      <a href="https://www.aparat.com/v/5kL3M" target="_blank" rel="noopener noreferrer">قضایای ناتمامیت گودل به زبان ساده</a></li>
-    <li><strong>مقاله کوتاه و روان:</strong><br />
-      <a href="https://fa.wikipedia.org/wiki/قضیه_ناتمامیت_گودل" target="_blank" rel="noopener noreferrer">ویکی‌پدیا: قضیه ناتمامیت گودل</a></li>
-  </ul>
+  <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0;">
+    <h4 style="margin-top: 0; color: #333;">📹 ویدیوهای فارسی (ساده و قابل فهم):</h4>
+    <ul style="list-style-type: none; padding-right: 0;">
+      <li style="margin-bottom: 15px;">
+        <strong>پارادوکسی در قلب ریاضیات (TED Talk با زیرنویس فارسی، ۱۸ دقیقه):</strong><br />
+        <a href="https://tedtalks-fa.ir/the_paradox_at_the_heart_of_mathematics_godel_s_incompleteness_theorem/" target="_blank" rel="noopener noreferrer" style="color: #1a5fb4; text-decoration: underline; word-break: break-all;">
+          https://tedtalks-fa.ir/the_paradox_at_the_heart_of_mathematics_godel_s_incompleteness_theorem/
+        </a>
+      </li>
+      <li style="margin-bottom: 15px;">
+        <strong>قضایای ناتمامیت گودل: نتیجه‌ای که ریاضیات را تغییر داد (یوتیوب، فارسی روان):</strong><br />
+        <a href="https://www.youtube.com/watch?v=rGnr5js18X4" target="_blank" rel="noopener noreferrer" style="color: #1a5fb4; text-decoration: underline; word-break: break-all;">
+          https://www.youtube.com/watch?v=rGnr5js18X4
+        </a>
+      </li>
+      <li style="margin-bottom: 15px;">
+        <strong>آشنایی با قضایای ناتمامیت گودل و جنبه‌های فلسفی (سخنرانی کامل، قسمت ۱):</strong><br />
+        <a href="https://www.youtube.com/watch?v=wsHqkTCt9xA" target="_blank" rel="noopener noreferrer" style="color: #1a5fb4; text-decoration: underline; word-break: break-all;">
+          https://www.youtube.com/watch?v=wsHqkTCt9xA
+        </a>
+      </li>
+      <li style="margin-bottom: 15px;">
+        <strong>قضایای ناتمامیت گودل به زبان ساده (آپارات، کوتاه و واضح):</strong><br />
+        <a href="https://www.aparat.com/v/5kL3M" target="_blank" rel="noopener noreferrer" style="color: #1a5fb4; text-decoration: underline; word-break: break-all;">
+          https://www.aparat.com/v/5kL3M
+        </a>
+      </li>
+      <li style="margin-bottom: 15px;">
+        <strong>ویدیو فارسی دیگر (آپارات):</strong><br />
+        <a href="https://www.aparat.com/v/b286hf5" target="_blank" rel="noopener noreferrer" style="color: #1a5fb4; text-decoration: underline; word-break: break-all;">
+          https://www.aparat.com/v/b286hf5
+        </a>
+      </li>
+    </ul>
+
+    <h4 style="margin-top: 25px; color: #333;">🎬 ویدیوهای انگلیسی برتر (ساده و حرفه‌ای):</h4>
+    <ul style="list-style-type: none; padding-right: 0;">
+      <li style="margin-bottom: 15px;">
+        <strong>Gödel's Incompleteness Theorem - Numberphile (بهترین توضیح ساده، ۱۵ دقیقه):</strong><br />
+        <a href="https://www.youtube.com/watch?v=HeQX2HjkcNo" target="_blank" rel="noopener noreferrer" style="color: #1a5fb4; text-decoration: underline; word-break: break-all;">
+          https://www.youtube.com/watch?v=HeQX2HjkcNo
+        </a>
+      </li>
+      <li style="margin-bottom: 15px;">
+        <strong>Gödel's Incompleteness Theorem - Numberphile (نسخه دیگر):</strong><br />
+        <a href="https://www.youtube.com/watch?v=O4ndIDcDSGc" target="_blank" rel="noopener noreferrer" style="color: #1a5fb4; text-decoration: underline; word-break: break-all;">
+          https://www.youtube.com/watch?v=O4ndIDcDSGc
+        </a>
+      </li>
+      <li style="margin-bottom: 15px;">
+        <strong>The Paradox at the Heart of Mathematics (TED-Ed، انیمیشن عالی):</strong><br />
+        <a href="https://www.youtube.com/watch?v=I4pQbo5MQOs" target="_blank" rel="noopener noreferrer" style="color: #1a5fb4; text-decoration: underline; word-break: break-all;">
+          https://www.youtube.com/watch?v=I4pQbo5MQOs
+        </a>
+      </li>
+    </ul>
+
+    <h4 style="margin-top: 25px; color: #333;">📚 مقالات و منابع متنی:</h4>
+    <ul style="list-style-type: none; padding-right: 0;">
+      <li style="margin-bottom: 15px;">
+        <strong>ویکی‌پدیا فارسی (کامل و دقیق):</strong><br />
+        <a href="https://fa.wikipedia.org/wiki/قضیه_ناتمامیت_گودل" target="_blank" rel="noopener noreferrer" style="color: #1a5fb4; text-decoration: underline; word-break: break-all;">
+          https://fa.wikipedia.org/wiki/قضیه_ناتمامیت_گودل
+        </a>
+      </li>
+      <li style="margin-bottom: 15px;">
+        <strong>ویکی‌پدیا انگلیسی (عمیق‌تر):</strong><br />
+        <a href="https://en.wikipedia.org/wiki/G%C3%B6del%27s_incompleteness_theorems" target="_blank" rel="noopener noreferrer" style="color: #1a5fb4; text-decoration: underline; word-break: break-all;">
+          https://en.wikipedia.org/wiki/Gödel's_incompleteness_theorems
+        </a>
+      </li>
+      <li style="margin-bottom: 15px;">
+        <strong>Quanta Magazine (توضیح مدرن و روان):</strong><br />
+        <a href="https://www.quantamagazine.org/how-godels-proof-works-20200714/" target="_blank" rel="noopener noreferrer" style="color: #1a5fb4; text-decoration: underline; word-break: break-all;">
+          https://www.quantamagazine.org/how-godels-proof-works-20200714/
+        </a>
+      </li>
+      <li style="margin-bottom: 15px;">
+        <strong>Stanford Encyclopedia of Philosophy (جامع و آکادمیک):</strong><br />
+        <a href="https://plato.stanford.edu/entries/goedel-incompleteness/" target="_blank" rel="noopener noreferrer" style="color: #1a5fb4; text-decoration: underline; word-break: break-all;">
+          https://plato.stanford.edu/entries/goedel-incompleteness/
+        </a>
+      </li>
+    </ul>
+  </div>
 
   <h2>۵. دین به عنوان نظام صوری آکسیوماتیک (قلب نظریه جنت‌خواه)</h2>
 
