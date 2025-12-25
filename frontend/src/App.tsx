@@ -4,6 +4,8 @@ import Home from './pages/Home';
 import Chapter from './pages/Chapter';
 import Resources from './pages/Resources';
 import Critics from './pages/Critics';
+import Login from './pages/Login';
+import Register from './pages/Register';
 import LocaleLayout from './i18n/LocaleLayout';
 import ScrollToTop from './components/ScrollToTop';
 
@@ -36,6 +38,8 @@ function App() {
           <Route path="chapter/:id" element={<Chapter />} />
           <Route path="resources" element={<Resources />} />
           <Route path="critics" element={<Critics />} />
+          <Route path="login" element={<Login />} />
+          <Route path="register" element={<Register />} />
         </Route>
 
         {/* Fallback for any unmatched routes */}

@@ -128,5 +128,97 @@ export const resourceApi = {
   },
 };
 
+// Auth interfaces
+export interface User {
+  id: number;
+  email: string;
+  name?: string;
+  created_at: string;
+  updated_at: string;
+  telegram_id?: number;
+  language_id?: number;
+  currency_id?: number;
+  country_id?: number;
+  is_active: boolean;
+  email_verified_at?: string;
+  referral_code: string;
+  points: number;
+}
+
+export interface RegisterRequest {
+  email: string;
+  password: string;
+  name?: string;
+}
+
+export interface LoginRequest {
+  email: string;
+  password: string;
+}
+
+export interface VerifyEmailRequest {
+  email: string;
+  code: string;
+}
+
+export interface AuthResponse {
+  token: string;
+  user: User;
+}
+
+// Auth API
+export const authApi = {
+  register: async (data: RegisterRequest): Promise<{ message: string; user_id: number }> => {
+    const response = await api.post('/auth/register', data);
+    return response.data;
+  },
+
+  verifyEmail: async (data: VerifyEmailRequest): Promise<AuthResponse> => {
+    const response = await api.post('/auth/verify-email', data);
+    return response.data;
+  },
+
+  resendVerificationCode: async (email: string): Promise<{ message: string }> => {
+    const response = await api.post('/auth/resend-code', { email });
+    return response.data;
+  },
+
+  login: async (data: LoginRequest): Promise<AuthResponse> => {
+    const response = await api.post('/auth/login', data);
+    return response.data;
+  },
+
+  getMe: async (): Promise<User> => {
+    const token = localStorage.getItem('auth_token');
+    if (!token) {
+      throw new Error('No authentication token found');
+    }
+    const response = await api.get('/me', {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    return response.data.data;
+  },
+};
+
+// Helper function to set auth token
+export const setAuthToken = (token: string) => {
+  localStorage.setItem('auth_token', token);
+  api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+};
+
+// Helper function to remove auth token
+export const removeAuthToken = () => {
+  localStorage.removeItem('auth_token');
+  delete api.defaults.headers.common['Authorization'];
+};
+
+// Initialize auth token if exists
+const token = localStorage.getItem('auth_token');
+if (token) {
+  api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+}
+
 export default api;
 

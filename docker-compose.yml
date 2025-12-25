@@ -6,6 +6,8 @@ services:
     container_name: freedom-backend
     ports:
       - "8060:8080"
+    env_file:
+      - ./backend/.env
     environment:
       - SERVER_HOST=0.0.0.0
       - SERVER_PORT=8080

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Bars3Icon, GlobeAltIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import FreedomBird from './FreedomBird';
@@ -6,13 +6,40 @@ import { useProgress } from '../hooks/useProgress';
 import ProgressBar from './ProgressBar';
 import { useLocale } from '../i18n/LocaleProvider';
 import { replaceLocaleInPath, withLocalePath } from '../i18n/localePath';
+import AuthModal from './AuthModal';
+import { removeAuthToken } from '../services/api';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const { progress } = useProgress();
   const { locale, setLocale, t, isRTL } = useLocale();
   const navigate = useNavigate();
   const location = useLocation();
+
+  // Check if user is authenticated
+  useEffect(() => {
+    const checkAuth = () => {
+      const token = localStorage.getItem('auth_token');
+      setIsAuthenticated(!!token);
+    };
+    
+    checkAuth();
+    
+    // Listen for auth state changes
+    window.addEventListener('authStateChanged', checkAuth);
+    
+    return () => {
+      window.removeEventListener('authStateChanged', checkAuth);
+    };
+  }, [location]);
+
+  const handleLogout = () => {
+    removeAuthToken();
+    setIsAuthenticated(false);
+    navigate(withLocalePath(locale, '/'));
+  };
 
   const base = `/${locale}`;
 
@@ -66,9 +93,21 @@ const Navbar: React.FC = () => {
             <Link to={withLocalePath(locale, '/critics')} className="text-gray-700 hover:text-primary-600 font-semibold text-sm md:text-base transition-colors px-2 md:px-3 py-2 rounded-lg hover:bg-gray-50">
               {t('nav.critics')}
             </Link>
-            <a href="#about" className="text-gray-700 hover:text-primary-600 font-semibold text-sm md:text-base transition-colors px-2 md:px-3 py-2 rounded-lg hover:bg-gray-50">
-              {t('nav.about')}
-            </a>
+            {isAuthenticated ? (
+              <button
+                onClick={handleLogout}
+                className="bg-red-600 hover:bg-red-700 text-white font-semibold text-sm md:text-base px-4 md:px-5 py-2 rounded-lg hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200"
+              >
+                {isRTL ? 'خروج' : 'Logout'}
+              </button>
+            ) : (
+              <button
+                onClick={() => setIsAuthModalOpen(true)}
+                className="bg-gradient-to-r from-primary-600 to-primary-700 text-white font-semibold text-sm md:text-base px-4 md:px-5 py-2 rounded-lg hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200"
+              >
+                {isRTL ? 'ورود' : 'Login'}
+              </button>
+            )}
 
             {/* Language switch */}
             <button
@@ -136,13 +175,27 @@ const Navbar: React.FC = () => {
             >
               {t('nav.critics')}
             </Link>
-            <a
-              href="#about"
-              className="block px-3 py-2.5 text-gray-700 hover:bg-gray-50 rounded-md text-base font-medium transition-colors"
-              onClick={() => setIsOpen(false)}
-            >
-              {t('nav.about')}
-            </a>
+            {isAuthenticated ? (
+              <button
+                onClick={() => {
+                  handleLogout();
+                  setIsOpen(false);
+                }}
+                className="w-full text-left px-3 py-2.5 bg-red-600 hover:bg-red-700 text-white rounded-md text-base font-semibold transition-colors"
+              >
+                {isRTL ? 'خروج' : 'Logout'}
+              </button>
+            ) : (
+              <button
+                onClick={() => {
+                  setIsAuthModalOpen(true);
+                  setIsOpen(false);
+                }}
+                className="w-full text-left px-3 py-2.5 bg-gradient-to-r from-primary-600 to-primary-700 text-white rounded-md text-base font-semibold transition-colors hover:shadow-lg"
+              >
+                {isRTL ? 'ورود' : 'Login'}
+              </button>
+            )}
 
             <button
               type="button"
@@ -161,6 +214,13 @@ const Navbar: React.FC = () => {
           </div>
         </div>
       )}
+
+      {/* Auth Modal */}
+      <AuthModal
+        isOpen={isAuthModalOpen}
+        onClose={() => setIsAuthModalOpen(false)}
+        initialTab="login"
+      />
     </nav>
   );
 };

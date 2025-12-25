@@ -5,8 +5,10 @@ import (
 	"log"
 	"os"
 
+	"github.com/joho/godotenv"
 	"github.com/whatisrealfreedom/freedom-website/internal/config"
 	"github.com/whatisrealfreedom/freedom-website/internal/handlers"
+	"github.com/whatisrealfreedom/freedom-website/internal/middleware"
 	"github.com/whatisrealfreedom/freedom-website/internal/repository"
 	"github.com/whatisrealfreedom/freedom-website/internal/services"
 
@@ -14,6 +16,12 @@ import (
 )
 
 func main() {
+	// Load .env file (ignore error if file doesn't exist)
+	// This allows the app to work with environment variables set directly
+	if err := godotenv.Load(); err != nil {
+		log.Println("No .env file found, using environment variables or defaults")
+	}
+
 	// Load configuration
 	cfg := config.Load()
 
@@ -30,11 +38,13 @@ func main() {
 	// Initialize services
 	chapterService := services.NewChapterService(repo.Chapter)
 	resourceService := services.NewResourceService(repo.Resource)
+	emailService := services.NewEmailService(cfg)
 
 	// Initialize handlers
 	chapterHandler := handlers.NewChapterHandler(chapterService)
 	resourceHandler := handlers.NewResourceHandler(resourceService)
 	healthHandler := handlers.NewHealthHandler()
+	authHandler := handlers.NewAuthHandler(repo.User, emailService, cfg.JWTSecret, cfg.JWTExpiry)
 
 	// Setup router
 	if cfg.Env == "production" {
@@ -54,6 +64,22 @@ func main() {
 	{
 		// Health check
 		api.GET("/health", healthHandler.Check)
+
+		// Authentication routes (public)
+		auth := api.Group("/auth")
+		{
+			auth.POST("/register", authHandler.Register)
+			auth.POST("/verify-email", authHandler.VerifyEmail)
+			auth.POST("/resend-code", authHandler.ResendVerificationCode)
+			auth.POST("/login", authHandler.Login)
+		}
+
+		// Protected routes
+		protected := api.Group("")
+		protected.Use(middleware.AuthMiddleware())
+		{
+			protected.GET("/me", authHandler.GetMe)
+		}
 
 		// Chapters
 		chapters := api.Group("/chapters")
