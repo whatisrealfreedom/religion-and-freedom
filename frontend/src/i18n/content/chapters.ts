@@ -733,13 +733,342 @@ export const chapterContent: Record<Locale, Record<number, string>> = {
 
     2: `
 <div class="chapter-content">
-  <h1>2) What Is a Formal Axiomatic System? (Very Simple, Step-by-Step)</h1>
+  <div class="mb-6">
+    <div class="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-primary-500 to-primary-700 text-white rounded-xl sm:rounded-2xl font-bold text-lg sm:text-xl shadow-lg mb-4">
+      2
+    </div>
+    <h2 class="mb-2">What Is a Formal Axiomatic System?</h2>
+    <h5 class="text-gray-600 font-normal mb-4">(Very Simple, Step-by-Step)</h5>
+    <div class="border-l-4 border-primary-500 bg-gradient-to-r from-primary-50 to-blue-50 rounded-lg p-4 sm:p-6 mb-6">
+      <p class="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed mb-2">
+        <strong>Religion as the Most Stable Logical System in History to Guarantee True Freedom</strong>
+      </p>
+      <p class="text-sm sm:text-base text-gray-600">
+        18 minutes reading • For everyone (from student to university professor)
+      </p>
+    </div>
+  </div>
+
+  <h2>Introduction: Why Is This Chapter the Heartbeat of the Theory?</h2>
+
+  <p>Imagine you want to build a city that will last for thousands of years, without falling apart every day or needing constant reconstruction.</p>
+
+  <p>You cannot work with guesswork and personal preference.</p>
+
+  <p>You need <strong>several solid and unchanging principles</strong> (axioms) and <strong>precise rules</strong> to build everything.</p>
+
+  <p>Mohammad Ali Jannatkhah says: Shia religion has done exactly this for human freedom — a stable system, without contradiction and timeless.</p>
+
+  <p>On this page, we start from scratch so that <strong>anyone</strong> — even if they know nothing about mathematics or philosophy — can fully understand formal axiomatic systems, fall in love with it, and even explain it to others.</p>
+
+  <h2>1. What Is a Formal Axiomatic System? (Starting from the Simplest Examples)</h2>
+
+  <p>A "formal axiomatic system" is like a <strong>magical recipe</strong>:</p>
+
+  <p>Simple base ingredients (axioms) + precise instructions = infinite results, always correct and stable.</p>
+
+  <p><strong>Main components (in very simple language):</strong></p>
+
+  <ul>
+    <li><strong>Axiom (fundamental principle)</strong>: Basic rules that are "self-evident" and need no proof.</li>
+    <li><strong>Inference rules</strong>: Precise ways to build new rules from the foundations.</li>
+    <li><strong>Formal language</strong>: Precise symbols and words so there is no misunderstanding.</li>
+    <li><strong>Consistency</strong>: The system never lies to itself (has no contradiction).</li>
+    <li><strong>Completeness</strong>: It can answer all important questions (but Gödel showed this is not always possible!).</li>
+  </ul>
+
+  <h2>2. Everyday Examples That Everyone Understands</h2>
+
+  <h4>Chess</h4>
+
+  <p>Axioms: The knight moves in an L-shape, the bishop stays on its color.</p>
+
+  <p>Result: Millions of different games, but all fair and based on the same fundamental rules.</p>
+
+  <p>If the rules change in every game, chess is destroyed → <strong>stability = beauty and justice</strong>.</p>
+
+  <h4>Traffic Laws</h4>
+
+  <p>Axiom: Red light = complete stop.</p>
+
+  <p>Result: Safe streets, predictable.</p>
+
+  <p>If the law changes every day, accidents everywhere!</p>
+
+  <h4>Family Recipe for Khoresht-e Sabzi</h4>
+
+  <p>Axioms: Meat, beans, herbs, dried lime.</p>
+
+  <p>Rules: First sauté the meat, then add the herbs.</p>
+
+  <p>Result: Always delicious and consistent — because the foundations are solid.</p>
+
+  <h2>3. Scientific Examples (Mathematics and Physics — with Simple Formulas)</h2>
+
+  <h4>Euclidean Geometry (the same geometry from school):</h4>
+
+  <p>5 simple axioms of Euclid → the entire world of geometry!</p>
+
+  <p>Example:</p>
+
+  <ul>
+    <li>Axiom: Through two points, only one straight line passes.</li>
+    <li>Constructed theorem: Pythagorean theorem → <strong>a² + b² = c²</strong></li>
+  </ul>
+
+  <p>This simple formula is the foundation of bridges, buildings, and even GPS!</p>
+
+  <h4>Natural Numbers (Peano Axioms):</h4>
+
+  <ul>
+    <li>0 is a natural number.</li>
+    <li>Every number has a unique successor (S(n)).</li>
+    <li>Mathematical induction principle.</li>
+  </ul>
+
+  <p>Result: All modern mathematics, from simple addition to artificial intelligence!</p>
+
+  <h4>Newtonian Physics:</h4>
+
+  <p>Three laws of motion → prediction of planetary motion, cars, rockets.</p>
+
+  <p>Second law: <strong>F = ma</strong></p>
+
+  <h2>✦ Rewriting Section 6: Gödel's Incompleteness Theorems (with In-Text Videos)</h2>
+
+  <h3>6) What Are Gödel's Incompleteness Theorems?</h3>
+
+  <p>So far, we have understood what "formal axiomatic system" means:</p>
+
+  <p>Several base principles + precise rules = many results and verifiable outcomes.</p>
+
+  <p>But here a very profound question arises:</p>
 
   <blockquote>
-    <strong>Goal of this chapter:</strong> Make an ordinary person understand what a "formal system" means, what an "axiom/fundamental principle" means, and why Jannatkhah uses this language.
+    <p>Is it possible to build a logical system that <strong>can explain and prove everything from within itself?</strong></p>
   </blockquote>
 
-  <h2>1) First of All: The Meaning of Words (Exact Persian Equivalents)</h2>
+  <p>Mathematics thought for centuries that the answer to this question was "yes"...</p>
+
+  <p>Until a genius mind named <strong>Kurt Gödel</strong> turned everything upside down.</p>
+
+  <h3>◼ If You Only Watch One Video About Gödel, Watch This One</h3>
+
+  <p>If your English is good and you want to <strong>fall in love with this idea in 15 minutes</strong>, don't miss this video from Numberphile:</p>
+
+  <p><a href="https://www.youtube.com/watch?v=O4ndIDcDSGc" target="_blank" rel="noopener noreferrer" style="color: #1a5fb4; text-decoration: underline; font-weight: 600;">https://www.youtube.com/watch?v=O4ndIDcDSGc</a></p>
+
+  <div style="margin: 24px 0; border: 1px solid #e5e7eb; border-radius: 12px; overflow: hidden; background: #ffffff;">
+    <details style="cursor: pointer;">
+      <summary style="padding: 16px 20px; background: linear-gradient(to right, #f0f9ff, #e0f2fe); border: none; outline: none; font-weight: 600; font-size: 1rem; color: #1e40af; list-style: none; display: flex; align-items: center; justify-content: space-between; user-select: none; cursor: pointer; transition: background 0.2s;">
+        <span style="display: flex; align-items: center; gap: 8px;">
+          <span style="font-size: 1.2em;">📝</span>
+          <span>Video Summary (Click to expand)</span>
+        </span>
+        <span class="accordion-arrow" style="font-size: 1.2em; transition: transform 0.3s ease; display: inline-block;">▼</span>
+      </summary>
+      <div style="padding: 20px 24px; background: #fafafa; border-top: 1px solid #e5e7eb; line-height: 1.8; color: #374151;">
+        <p style="margin-bottom: 16px; font-size: 1rem;">This video explains Gödel's Incompleteness Theorem in simple terms; one of the most shocking discoveries in the world of mathematics, proposed by Austrian mathematician Kurt Gödel. Before Gödel, the general belief was that in mathematics, for every true statement and proposition, there must be a way to prove it. But Gödel, using mathematical logic, proved that this belief was wrong. He showed that in every mathematical system (like arithmetic), there are always statements that are "true" but can never be "proven" using the rules of that same system. This means there is a deep gap between "truth" and "provability".</p>
+
+        <p style="margin-bottom: 16px; font-size: 1rem;">The video explains that Gödel used a clever trick called "Gödel encoding" to prove his point. He converted mathematical sentences into numbers so that mathematics could speak about itself. He constructed a sentence whose meaning was: "This sentence is not provable in this system." If this sentence is false, it means it is provable, but since it says it's not provable, we get a contradiction. Therefore, the sentence must be true, but since it's true, according to its own claim, it really is not provable! This creates a great limitation for human knowledge, meaning that there may be great mysteries in mathematics (like Goldbach's conjecture) that are really true, but we may never be able to prove them with our current mathematical logic.</p>
+
+        <div style="margin-top: 20px; padding: 16px; background: #eff6ff; border-left: 4px solid #3b82f6; border-radius: 8px;">
+          <p style="margin: 0 0 12px 0; font-weight: 600; color: #1e40af; font-size: 1.05rem;">Video Summary:</p>
+          <ul style="margin: 0; padding-left: 20px; list-style-type: disc;">
+            <li style="margin-bottom: 8px;"><strong>Breaking an old belief:</strong> Contrary to past assumptions, not every mathematical truth is necessarily provable.</li>
+            <li style="margin-bottom: 8px;"><strong>Self-referential paradox:</strong> Gödel, using sentences that refer to themselves, showed that mathematical systems are always incomplete.</li>
+            <li style="margin-bottom: 0;"><strong>Limitation of knowledge:</strong> This theorem proves that there are always truths in the world of mathematics that are beyond the power of our proof rules.</li>
+          </ul>
+        </div>
+      </div>
+    </details>
+  </div>
+
+  <h3>6-1) Gödel's First Incompleteness Theorem — The Central Idea</h3>
+
+  <p>Gödel showed in 1931:</p>
+
+  <p>If a formal system:</p>
+
+  <ul>
+    <li>Is <strong>strong enough</strong> (e.g., can perform arithmetic of natural numbers)</li>
+    <li>And is <strong>consistent</strong></li>
+  </ul>
+
+  <p>Then <strong>there always exist statements that are true, but are not provable within that system.</strong></p>
+
+  <p>For this idea to really settle in your mind, this TED-Ed animation is excellent:</p>
+
+  <p><a href="https://www.youtube.com/watch?v=I4pQbo5MQOs" target="_blank" rel="noopener noreferrer" style="color: #1a5fb4; text-decoration: underline; font-weight: 600;">https://www.youtube.com/watch?v=I4pQbo5MQOs</a></p>
+
+  <div style="margin: 24px 0; border: 1px solid #e5e7eb; border-radius: 12px; overflow: hidden; background: #ffffff;">
+    <details style="cursor: pointer;">
+      <summary style="padding: 16px 20px; background: linear-gradient(to right, #f0f9ff, #e0f2fe); border: none; outline: none; font-weight: 600; font-size: 1rem; color: #1e40af; list-style: none; display: flex; align-items: center; justify-content: space-between; user-select: none; cursor: pointer; transition: background 0.2s;">
+        <span style="display: flex; align-items: center; gap: 8px;">
+          <span style="font-size: 1.2em;">📝</span>
+          <span>Video Summary (Click to expand)</span>
+        </span>
+        <span class="accordion-arrow" style="font-size: 1.2em; transition: transform 0.3s ease; display: inline-block;">▼</span>
+      </summary>
+      <div style="padding: 20px 24px; background: #fafafa; border-top: 1px solid #e5e7eb; line-height: 1.8; color: #374151;">
+        <p style="margin-bottom: 16px; font-size: 1rem;">This TED-Ed video also examines Gödel's Incompleteness Theorem, but focuses on logical paradoxes and their impact on the foundation of mathematics. The story begins with early 20th-century mathematicians believing that mathematics is a complete system that can prove every truth. But Kurt Gödel, inspired by linguistic paradoxes (like the sentence "This sentence is false"), showed that mathematics has internal limitations that can never be resolved.</p>
+
+        <p style="margin-bottom: 16px; font-size: 1rem;">The video then details Gödel's method:</p>
+
+        <ul style="margin-bottom: 16px; padding-left: 20px; list-style-type: disc;">
+          <li style="margin-bottom: 12px;"><strong>Encoding and self-reference:</strong> Gödel found a way to convert mathematical statements into numbers. This allowed mathematics to speak about itself. He constructed an equation whose meaning was: "This statement is not provable."</li>
+          <li style="margin-bottom: 12px;"><strong>The gap between truth and proof:</strong> If this statement is true, it means we have a truth that is not proven. If it is false, we reach a contradiction. So Gödel proved that in every mathematical system, there are always truths that are beyond our power to prove.</li>
+          <li style="margin-bottom: 12px;"><strong>Impact on science:</strong> This discovery destroyed the dream of achieving a "complete" mathematical system forever. No matter how many new fundamental principles (axioms) we add, new unprovable statements will still appear.</li>
+        </ul>
+
+        <p style="margin-bottom: 0; font-size: 1rem;">Finally, the video explains that although this was initially disappointing for mathematicians, this new perspective on the limitations of logic inspired the invention of early computers and our deeper understanding of the concept of "truth".</p>
+      </div>
+    </details>
+  </div>
+
+  <h3>6-2) Gödel's Famous Sentence (The Intuitive Idea)</h3>
+
+  <p>Gödel constructed a sentence whose meaning was something like:</p>
+
+  <blockquote>
+    <p>"This statement is not provable in this system."</p>
+  </blockquote>
+
+  <p>If the system can prove it → contradiction.</p>
+
+  <p>If it cannot prove it → the sentence is true, but the system cannot prove it.</p>
+
+  <p><strong>Result:</strong> The system is incomplete.</p>
+
+  <h3>6-3) Gödel's Second Incompleteness Theorem — The Final Blow</h3>
+
+  <p>Gödel said in his second theorem:</p>
+
+  <blockquote>
+    <p>A strong formal system usually <strong>cannot prove its own consistency using its internal tools</strong>.</p>
+  </blockquote>
+
+  <p>Very human translation:</p>
+
+  <blockquote>
+    <p>To be sure that a "law book" is healthy,</p>
+    <p>you must stand one step outside.</p>
+  </blockquote>
+
+  <h3>◼ For Detailed and Reference-Based Study</h3>
+
+  <p>If after watching the videos you want to have <strong>linear and precise study</strong>, the English Wikipedia is a good reference:</p>
+
+  <p><a href="https://en.wikipedia.org/wiki/Gödel's_incompleteness_theorems" target="_blank" rel="noopener noreferrer" style="color: #1a5fb4; text-decoration: underline; font-weight: 600;">https://en.wikipedia.org/wiki/Gödel's_incompleteness_theorems</a></p>
+
+  <p>This page:</p>
+
+  <ul>
+    <li>Gives formal definitions</li>
+    <li>Covers history</li>
+    <li>And is suitable for scientific reference</li>
+  </ul>
+
+  <h3>✦ Bridge to Jannatkhah's Theory (Very Important)</h3>
+
+  <p>After understanding Gödel, now the main question of this site makes sense:</p>
+
+  <blockquote>
+    <p>If even mathematics with its precision and formality has "internal limitations",</p>
+    <p>then <strong>at what level exactly can religion be considered a formal system?</strong></p>
+  </blockquote>
+
+  <p>Jannatkhah uses the language of "axiomatic system",</p>
+
+  <p>but not to reduce religion to mathematics,</p>
+
+  <p>but to show that:</p>
+
+  <ul>
+    <li>Religious principles are like axioms that provide direction</li>
+    <li>"Completeness" means complete for the <strong>goal of true freedom</strong></li>
+    <li>And religion is the answer to gaps that purely formal systems cannot fill</li>
+  </ul>
+
+  <h2>5. Religion as a Formal Axiomatic System — Jannatkhah's Masterpiece</h2>
+
+  <p>Jannatkhah considers the five principles of Shia as exactly the self-evident axioms that build a stable system for <strong>eternal protection of true freedom</strong>.</p>
+
+  <p><strong>Complete table (with real examples from today's life):</strong></p>
+
+  <div class="principles-table">
+    <table>
+      <thead>
+        <tr>
+          <th>Religious Principle</th>
+          <th>Role of Axiom (Self-Evident Foundation)</th>
+          <th>Simple Explanation for Freedom</th>
+          <th>Real Example from Today's Life</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Tawhid (Monotheism)</strong></td>
+          <td>Only God is the true owner — humans are vicegerents</td>
+          <td>No government or human can claim absolute ownership</td>
+          <td>When the government says "everything belongs to the state" — Tawhid says no!</td>
+        </tr>
+        <tr>
+          <td><strong>Nubuwwah (Prophethood)</strong></td>
+          <td>Practical models of life based on principles</td>
+          <td>Religion is not just theory — it has an implementation model</td>
+          <td>Life of the Prophet (PBUH) and Imam Ali (AS): limited government, true justice</td>
+        </tr>
+        <tr>
+          <td><strong>Ma'ad (Resurrection)</strong></td>
+          <td>Final accountability — oppression is not eternal</td>
+          <td>The oppressor cannot say "I did whatever I wanted here"</td>
+          <td>When a corrupt judge takes bribes, Ma'ad gives hope for justice</td>
+        </tr>
+        <tr>
+          <td><strong>Adl (Justice)</strong></td>
+          <td>Principle of non-aggression — violating others' rights is forbidden</td>
+          <td>Legal foundation for absolute property rights</td>
+          <td>Intentional inflation = aggression against people's property → forbidden</td>
+        </tr>
+        <tr>
+          <td><strong>Imamate/Mahdism</strong></td>
+          <td>Ultimate goal: a society awaiting the perfect just leader — the ultimate goal of a free society</td>
+          <td>A society that strives for complete freedom, not big government</td>
+          <td>Protesting against coercions: "Are we getting closer to justice?"</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>This system is the <strong>only system in history</strong> that has lasted more than 1,400 years and has always worked for freedom — because it is timeless and divine.</p>
+
+  <h2>6. Gödel and Jannatkhah's Theory — Challenge or Harmony?</h2>
+
+  <p>Gödel showed the limitations of human formal systems.</p>
+
+  <p>Jannatkhah considers religion a formal system.</p>
+
+  <p>Question: Is religion also incomplete?</p>
+
+  <p><strong>Simple and profound answer:</strong></p>
+
+  <p>Religion is complete for the <strong>goal of freedom, justice, and human guidance</strong> — not for solving all mathematical or physical problems.</p>
+
+  <p>Gödel's limitations are for mechanical and human systems; divine principles are beyond time and place and are free from these limitations.</p>
+
+  <h2>7. Summary — Now You've Become a Master!</h2>
+
+  <ul>
+    <li>Axiom = eternal pillars</li>
+    <li>Formal system = stable city of rules</li>
+    <li>Religion = the most beautiful and stable city in history for free life</li>
+    <li>Gödel = reminder of the limitations of human systems — but religion is divine</li>
+  </ul>
+
+  <p>Now you can explain this concept to anyone — and say why religion is the key to true freedom.</p>
+
+  <p>Are you ready to see exactly how religion defends freedom?</p>
 
   <div class="principles-table">
     <table>
