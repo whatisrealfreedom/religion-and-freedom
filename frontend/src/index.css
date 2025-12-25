@@ -80,6 +80,17 @@
       white-space: normal;
     }
   }
+
+  /* Justify text alignment for chapter content paragraphs */
+  .prose p {
+    text-align: justify;
+    text-align-last: right;
+    line-height: 2.2 !important; /* Increased line spacing for better readability */
+  }
+
+  html[data-lang="en"] .prose p {
+    text-align-last: left;
+  }
 }
 
 @layer components {
