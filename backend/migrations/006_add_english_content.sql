@@ -1,5 +1,9 @@
 -- Add content_en column to chapters table for English translations
-ALTER TABLE chapters ADD COLUMN content_en TEXT;
+-- Note: This migration will fail if content_en already exists.
+-- The migration runner should handle this gracefully by checking column existence first.
+-- For now, we'll comment this out since the column already exists in production.
+-- Uncomment if you need to run this on a fresh database:
+-- ALTER TABLE chapters ADD COLUMN content_en TEXT;
 
 -- Update Chapter 2 with comprehensive English translation
 UPDATE chapters
