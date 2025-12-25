@@ -91,7 +91,9 @@ export const chapterContent: Record<Locale, Record<number, string>> = {
   <p>دولت‌سالاران، چپ‌گرایان و سوسیالیست‌هایی که با نقاب «عدالت اجتماعی»، مالکیت خصوصی را غارت می‌کنند، بزرگ‌ترین دشمنان آزادی و انسانیت‌اند. آن‌ها با تورم، مالیات ظالمانه، مصادره و اجبار، انسان را به بردگی جمعی می‌کشانند. هر که حقوق مالکیت فرد را تضعیف کند، نه عدالت‌خواه، بلکه غارتگر واقعی است — و تاریخ، نابودی‌شان را ثبت خواهد کرد.</p>
 
   <p>این تعریف بنیادین، در صفحات بعدی به نظام صوری دین متصل می‌شود — ادامه بده تا ببینی چطور دین، نگهبان ابدی این آزادی است →</p>
-</div>
+</div>`,
+
+    2: `
 <div class="chapter-content">
   <div class="mb-6">
     <div class="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-primary-500 to-primary-700 text-white rounded-xl sm:rounded-2xl font-bold text-lg sm:text-xl shadow-lg mb-4">
