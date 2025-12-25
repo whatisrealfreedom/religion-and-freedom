@@ -194,42 +194,167 @@ export const chapterContent: Record<Locale, Record<number, string>> = {
 
   <p>قانون دوم: <strong>F = ma</strong></p>
 
-  <h2>۴. قضایای ناتمامیت گودل — کشف قرن (خیلی ساده و قدم‌به‌قدم)</h2>
+  <h2>۴. قضایای ناتمامیت گودل — کشف قرن</h2>
 
-  <p>کرت گودل در ۱۹۳۱ نشان داد که حتی قوی‌ترین سیستم‌های صوری محدودیت دارند.</p>
+  <p><em>(واضح، شهودی و بدون فرمول)</em></p>
 
-  <p><strong>قضیه اول (ناتمامیت):</strong></p>
+  <p>تا اینجا فهمیدیم «نظام صوری آکسیوماتیک» یعنی چه:</p>
 
-  <p>در هر نظام صوری قوی و سازگار، جمله‌هایی <strong>درست</strong> وجود دارند که سیستم نمی‌تواند اثبات کند.</p>
+  <p>چند اصل پایه + قواعد دقیق = نتایج زیاد و قابل بررسی.</p>
 
-  <p>مثال شهودی گودل: جمله‌ای ساخت که می‌گوید «من قابل اثبات نیستم».</p>
+  <p>اما اینجا یک سؤال بسیار عمیق به‌وجود می‌آید:</p>
+
+  <blockquote>
+    <p>آیا می‌شود یک سیستم منطقی ساخت که <strong>همه‌چیز را بتواند از درون خودش توضیح دهد و ثابت کند؟</strong></p>
+  </blockquote>
+
+  <p>ریاضیات قرن‌ها فکر می‌کرد جواب این سؤال «بله» است…</p>
+
+  <p>تا اینکه یک ذهن نابغه به نام <strong>کرت گودل</strong> همه‌چیز را زیر و رو کرد.</p>
+
+  <h3>◼ اگر فقط یک ویدیو درباره گودل ببینی، این را ببین</h3>
+
+  <p>اگر انگلیسی‌ات خوب است و می‌خواهی <strong>در ۱۵ دقیقه عاشق این ایده شوی</strong>، این ویدیو از Numberphile را از دست نده:</p>
+
+  <p><a href="https://www.youtube.com/watch?v=O4ndIDcDSGc" target="_blank" rel="noopener noreferrer" style="color: #1a5fb4; text-decoration: underline; font-weight: 600;">https://www.youtube.com/watch?v=O4ndIDcDSGc</a></p>
+
+  <p>این ویدیو با مثال‌های بصری، شوخ‌طبعی علمی و روایت ساده توضیح می‌دهد:</p>
 
   <ul>
-    <li>اگر اثبات شود → تناقض</li>
-    <li>اگر اثبات نشود → درست است، اما سیستم کور است!</li>
+    <li>گودل دقیقاً چه گفت</li>
+    <li>چرا حرفش انقلابی بود</li>
+    <li>و چرا هنوز بعد از نزدیک ۱۰۰ سال درباره‌اش بحث می‌شود</li>
   </ul>
 
-  <p><strong>قضیه دوم:</strong></p>
+  <blockquote>
+    <p>بسیاری از مخاطبان بعد از دیدن این ویدیو می‌گویند:</p>
+    <p>«برای اولین بار واقعاً فهمیدم گودل یعنی چه.»</p>
+  </blockquote>
 
-  <p>سیستم نمی‌تواند از داخل خودش ثابت کند که تناقض ندارد.</p>
+  <h3>۴-۱) قضیهٔ اول ناتمامیت گودل — ایدهٔ مرکزی</h3>
 
-  <p><strong>جمع‌بندی گودل:</strong> هیچ سیستم منطقی قوی‌ای نمی‌تواند همزمان <strong>کامل</strong> و <strong>بی‌تناقض از داخل خودش</strong> باشد.</p>
+  <p>گودل در سال ۱۹۳۱ نشان داد:</p>
 
-  <p><strong>برای یادگیری بیشتر، این ویدیوها و مقالات فوق‌العاده را ببینید (همه ساده و جذاب):</strong></p>
+  <p>اگر یک نظام صوری:</p>
 
   <ul>
-    <li><a href="https://www.youtube.com/watch?v=O4ndIDcDSGc" target="_blank" rel="noopener noreferrer" style="color: #1a5fb4; text-decoration: underline;">Gödel's Incompleteness Theorem - Numberphile (بهترین توضیح انگلیسی، ۱۵ دقیقه)</a></li>
-    <li><a href="https://www.youtube.com/watch?v=I4pQbo5MQOs" target="_blank" rel="noopener noreferrer" style="color: #1a5fb4; text-decoration: underline;">The Paradox at the Heart of Mathematics: Gödel's Incompleteness (TED-Ed انیمیشن عالی)</a></li>
-    <li><a href="https://tedtalks-fa.ir/the_paradox_at_the_heart_of_mathematics_godel_s_incompleteness_theorem/" target="_blank" rel="noopener noreferrer" style="color: #1a5fb4; text-decoration: underline;">پارادوکس قلب ریاضیات: قضایای ناتمامیت گودل (TED با زیرنویس فارسی)</a></li>
-    <li><a href="https://youtu.be/rGnr5js18X4" target="_blank" rel="noopener noreferrer" style="color: #1a5fb4; text-decoration: underline;">قضایای ناتمامیت گودل: نتیجه‌ای که ریاضیات را تغییر داد (فارسی روان و کامل)</a></li>
-    <li><a href="https://www.youtube.com/watch?v=hvPKpSJskUU" target="_blank" rel="noopener noreferrer" style="color: #1a5fb4; text-decoration: underline;">قضیه ناتمامیت گودل (ویدیو فارسی دیگر)</a></li>
-    <li><a href="https://www.youtube.com/watch?v=wsHqkTCt9xA" target="_blank" rel="noopener noreferrer" style="color: #1a5fb4; text-decoration: underline;">آشنایی با قضایای ناتمامیت گودل و جنبه‌های فلسفی (سخنرانی فارسی)</a></li>
-    <li><a href="https://fa.wikipedia.org/wiki/قضیه_ناتمامیت_گودل" target="_blank" rel="noopener noreferrer" style="color: #1a5fb4; text-decoration: underline;">ویکی‌پدیا فارسی (کامل و دقیق)</a></li>
-    <li><a href="https://en.wikipedia.org/wiki/Gödel%27s_incompleteness_theorems" target="_blank" rel="noopener noreferrer" style="color: #1a5fb4; text-decoration: underline;">ویکی‌پدیا انگلیسی (عمیق‌تر)</a></li>
-    <li><a href="https://www.quantamagazine.org/how-godels-proof-works-20200714/" target="_blank" rel="noopener noreferrer" style="color: #1a5fb4; text-decoration: underline;">Quanta Magazine (توضیح مدرن و روان)</a></li>
+    <li><strong>به‌قدر کافی قوی</strong> باشد (مثلاً بتواند حساب اعداد طبیعی را انجام دهد)</li>
+    <li>و <strong>بی‌تناقض</strong> باشد</li>
   </ul>
 
-  <p>این منابع را حتماً ببینید — بعد از آن، خودتان استاد گودل می‌شوید!</p>
+  <p>آنگاه <strong>همیشه گزاره‌هایی وجود دارند که درست‌اند، اما داخل آن سیستم قابل اثبات نیستند.</strong></p>
+
+  <p>برای اینکه این ایده واقعاً در ذهنت بنشیند، این انیمیشن TED-Ed فوق‌العاده است:</p>
+
+  <p><a href="https://www.youtube.com/watch?v=I4pQbo5MQOs" target="_blank" rel="noopener noreferrer" style="color: #1a5fb4; text-decoration: underline; font-weight: 600;">https://www.youtube.com/watch?v=I4pQbo5MQOs</a></p>
+
+  <p>این ویدیو با داستان، تصویر و روایت نرم نشان می‌دهد:</p>
+
+  <ul>
+    <li>پارادوکس در قلب ریاضیات چیست</li>
+    <li>چرا «درست بودن» همیشه مساوی با «قابل اثبات بودن» نیست</li>
+  </ul>
+
+  <h3>◼ اگر فارسی می‌خواهی (شروع عالی)</h3>
+
+  <p>اگر ترجیح می‌دهی <strong>اولین برخوردت با گودل فارسی باشد</strong>، این نسخه TED با زیرنویس فارسی یکی از بهترین شروع‌هاست:</p>
+
+  <p><a href="https://tedtalks-fa.ir/the_paradox_at_the_heart_of_mathematics_godel_s_incompleteness_theorem/" target="_blank" rel="noopener noreferrer" style="color: #1a5fb4; text-decoration: underline; font-weight: 600;">https://tedtalks-fa.ir/the_paradox_at_the_heart_of_mathematics_godel_s_incompleteness_theorem/</a></p>
+
+  <p>این ویدیو کمک می‌کند:</p>
+
+  <ul>
+    <li>بدون درگیری ذهنی، ایدهٔ اصلی را بگیری</li>
+    <li>بعداً سراغ نسخه‌های عمیق‌تر بروی</li>
+  </ul>
+
+  <h3>۴-۲) جملهٔ مشهور گودل (ایدهٔ شهودی)</h3>
+
+  <p>گودل جمله‌ای ساخت که معنایش شبیه این بود:</p>
+
+  <blockquote>
+    <p>«این گزاره در این سیستم قابل اثبات نیست.»</p>
+  </blockquote>
+
+  <p>اگر سیستم بتواند آن را ثابت کند → تناقض</p>
+
+  <p>اگر نتواند ثابت کند → جمله درست است، ولی سیستم نمی‌تواند آن را ثابت کند</p>
+
+  <p><strong>نتیجه:</strong> سیستم ناتمام است.</p>
+
+  <p>برای فهم عمیق‌تر این ساختار (این بار کاملاً فارسی و تحلیلی)، این ویدیو بسیار توصیه می‌شود:</p>
+
+  <p><a href="https://youtu.be/rGnr5js18X4" target="_blank" rel="noopener noreferrer" style="color: #1a5fb4; text-decoration: underline; font-weight: 600;">https://youtu.be/rGnr5js18X4</a></p>
+
+  <p>این ویدیو:</p>
+
+  <ul>
+    <li>مرحله‌به‌مرحله جلو می‌رود</li>
+    <li>نتیجهٔ تاریخی گودل را توضیح می‌دهد</li>
+    <li>و نشان می‌دهد چرا این کشف فقط ریاضی نبود، بلکه فلسفی بود</li>
+  </ul>
+
+  <h3>۴-۳) قضیهٔ دوم ناتمامیت — ضربهٔ نهایی</h3>
+
+  <p>گودل در قضیهٔ دوم گفت:</p>
+
+  <blockquote>
+    <p>یک سیستم صوریِ قوی، معمولاً <strong>نمی‌تواند سازگاری خودش را با ابزارهای درونی خودش ثابت کند</strong>.</p>
+  </blockquote>
+
+  <p>ترجمهٔ خیلی انسانی:</p>
+
+  <blockquote>
+    <p>برای مطمئن شدن از سالم بودن یک «کتاب قانون»،</p>
+    <p>باید یک قدم بیرون‌تر بایستی.</p>
+  </blockquote>
+
+  <p>اگر می‌خواهی جنبهٔ فلسفی این حرف را عمیق‌تر لمس کنی، این سخنرانی فارسی را ببین:</p>
+
+  <p><a href="https://www.youtube.com/watch?v=wsHqkTCt9xA" target="_blank" rel="noopener noreferrer" style="color: #1a5fb4; text-decoration: underline; font-weight: 600;">https://www.youtube.com/watch?v=wsHqkTCt9xA</a></p>
+
+  <p>این ویدیو بیشتر از ریاضی، به <strong>پیام فلسفی گودل</strong> می‌پردازد:</p>
+
+  <ul>
+    <li>محدودیت عقل صوری</li>
+    <li>مرزهای سیستم‌ها</li>
+    <li>و تفاوت «حقیقت» با «اثبات»</li>
+  </ul>
+
+  <h3>◼ برای مطالعهٔ دقیق و مرجع‌محور</h3>
+
+  <p>اگر بعد از دیدن ویدیوها خواستی <strong>مطالعهٔ خطی و دقیق</strong> داشته باشی، ویکی‌پدیای فارسی مرجع خوبی است:</p>
+
+  <p><a href="https://fa.wikipedia.org/wiki/قضیه_ناتمامیت_گودل" target="_blank" rel="noopener noreferrer" style="color: #1a5fb4; text-decoration: underline; font-weight: 600;">https://fa.wikipedia.org/wiki/قضیه_ناتمامیت_گودل</a></p>
+
+  <p>این صفحه:</p>
+
+  <ul>
+    <li>تعریف رسمی می‌دهد</li>
+    <li>تاریخچه را پوشش می‌دهد</li>
+    <li>و برای ارجاع علمی مناسب است</li>
+  </ul>
+
+  <h3>✦ پل به نظریهٔ جنت‌خواه (خیلی مهم)</h3>
+
+  <p>بعد از فهم گودل، حالا سؤال اصلی این سایت معنا پیدا می‌کند:</p>
+
+  <blockquote>
+    <p>اگر حتی ریاضی با آن دقت و صوری‌بودنش «محدودیت درونی» دارد،</p>
+    <p>پس <strong>دین را دقیقاً در چه سطحی می‌توان یک نظام صوری دانست؟</strong></p>
+  </blockquote>
+
+  <p>جنت‌خواه از زبان «نظام آکسیوماتیک» استفاده می‌کند،</p>
+
+  <p>اما نه برای اینکه دین را به ریاضی تقلیل دهد،</p>
+
+  <p>بلکه برای اینکه نشان دهد:</p>
+
+  <ul>
+    <li>اصول دین مثل آکسیوم‌ها جهت‌دهنده‌اند</li>
+    <li>«کامل بودن» یعنی کامل برای <strong>هدف آزادی واقعی</strong></li>
+    <li>و دین، پاسخ به خلأهایی است که سیستم‌های صرفاً صوری نمی‌توانند پر کنند</li>
+  </ul>
 
   <h2>۵. دین به عنوان نظام صوری آکسیوماتیک — شاهکار جنت‌خواه</h2>
 
