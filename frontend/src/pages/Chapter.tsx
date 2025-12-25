@@ -152,17 +152,11 @@ const ChapterPage: React.FC = () => {
             __html: (() => {
               // First try to get content from i18n content files (enterprise approach)
               const i18nContent = getChapterContent(chapter.number, locale);
-              console.log('[DEBUG] Chapter number:', chapter.number, 'Locale:', locale);
-              console.log('[DEBUG] i18nContent exists:', !!i18nContent);
-              console.log('[DEBUG] i18nContent has links:', i18nContent ? i18nContent.includes('href=') : false);
               if (i18nContent) {
-                console.log('[DEBUG] Using i18n content');
                 return i18nContent;
               }
               // Fallback to API content (for backward compatibility)
-              console.log('[DEBUG] Falling back to API content');
               if (chapter.content) {
-                console.log('[DEBUG] API content has links:', chapter.content.includes('href='));
                 return chapter.content;
               }
               // Final fallback
