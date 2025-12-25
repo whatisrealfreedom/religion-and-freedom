@@ -15,6 +15,8 @@ RUN npm install ajv@^8.17.0 --legacy-peer-deps --save-dev
 # Copy source code (will be mounted as volume in docker-compose)
 COPY frontend/ ./
 
+RUN npm run build
+
 # Default command - can be overridden to run npm run build
 CMD ["tail", "-f", "/dev/null"]
 
