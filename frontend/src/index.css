@@ -91,6 +91,30 @@
   html[data-lang="en"] .prose p {
     text-align-last: left;
   }
+
+  /* Accordion styling for video summaries */
+  .prose details summary {
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .prose details summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .prose details summary:hover {
+    background: linear-gradient(to left, #dbeafe, #bfdbfe) !important;
+  }
+
+  .prose details[open] summary .accordion-arrow {
+    transform: rotate(180deg);
+  }
+
+  .prose details summary:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+    border-radius: 8px;
+  }
 }
 
 @layer components {
