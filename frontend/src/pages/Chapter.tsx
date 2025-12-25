@@ -89,7 +89,7 @@ const ChapterPage: React.FC = () => {
 
   return (
     <article className="min-h-screen py-6 sm:py-8 md:py-12">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.header
           initial={{ opacity: 0, y: 20 }}
@@ -106,7 +106,7 @@ const ChapterPage: React.FC = () => {
           <div className="text-xs sm:text-sm text-primary-600 font-semibold mb-2">
             {t('chapter.chapterLabel')} {chapter.number}
           </div>
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-3 sm:mb-4 leading-tight">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-800 mb-3 sm:mb-4 leading-tight">
             {localizeChapter(locale, chapter.number, { title: chapter.title, description: chapter.description }).title}
           </h1>
           <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed mb-4 sm:mb-6">
@@ -130,10 +130,10 @@ const ChapterPage: React.FC = () => {
           transition={{ delay: 0.2 }}
           className="prose prose-sm sm:prose-base md:prose-lg lg:prose-xl prose-primary max-w-none
             prose-headings:font-bold prose-headings:text-gray-800 prose-headings:leading-tight
-            prose-h1:text-2xl prose-h1:sm:text-3xl prose-h1:md:text-4xl prose-h1:lg:text-5xl
+            prose-h1:text-2xl prose-h1:sm:text-3xl prose-h1:md:text-4xl prose-h1:lg:text-5xl prose-h1:xl:text-6xl
             prose-h2:text-xl prose-h2:sm:text-2xl prose-h2:md:text-3xl prose-h2:lg:text-4xl
             prose-h3:text-lg prose-h3:sm:text-xl prose-h3:md:text-2xl prose-h3:lg:text-3xl
-            prose-p:text-gray-700 prose-p:leading-relaxed prose-p:text-base prose-p:sm:text-lg prose-p:md:text-xl
+            prose-p:text-gray-700 prose-p:leading-loose prose-p:text-base prose-p:sm:text-lg prose-p:md:text-xl prose-p:my-4 prose-p:sm:my-5 prose-p:md:my-6
             prose-a:text-primary-600 prose-a:no-underline hover:prose-a:underline prose-a:font-semibold prose-a:text-sm prose-a:sm:text-base prose-a:md:text-lg
             prose-strong:text-gray-900 prose-strong:font-bold
             prose-blockquote:border-r-4 prose-blockquote:border-primary-500
