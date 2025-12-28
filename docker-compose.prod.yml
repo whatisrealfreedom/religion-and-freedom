@@ -5,12 +5,14 @@ services:
       dockerfile: docker/backend.Dockerfile
     container_name: freedom-backend
     restart: unless-stopped
+    env_file:
+      - .env
     environment:
-      - SERVER_HOST=0.0.0.0
-      - SERVER_PORT=8080
+      # Override ENV to production (can also be set in .env)
       - ENV=production
-      - DB_TYPE=sqlite
+      # Override DB_PATH for Docker volume (can also be set in .env)
       - DB_PATH=/data/freedom.db
+      # Override CORS with production domain
       - CORS_ALLOWED_ORIGINS=https://${DOMAIN_FREEDOM}
     volumes:
       - freedom-db-data:/data
