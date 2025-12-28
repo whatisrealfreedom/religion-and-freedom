@@ -37,6 +37,16 @@ export const messages: Record<Locale, Messages> = {
       chaptersSubtitle: 'سفر کامل به درک آزادی واقعی از طریق 10 فصل جامع و عمیق با تحلیل‌های دقیق',
       quote: '«آزادی واقعی، مالکیت مطلق انسان بر جسم، ذهن، زمان و دارایی خویش است — و دین، تنها نظام پایدار تاریخ برای حفاظت از این مالکیت.»',
       quoteAuthor: '— محمدعلی جنت‌خواه',
+      slogan: {
+        title: 'شعار ما',
+        items: {
+          god: { icon: '🕌', label: 'خدا', description: 'تنها موجودی که بندگی‌اش آزادی می‌آورد' },
+          freedom: { icon: '🕊️', label: 'آزادی', description: 'حقوق مالکیت مطلق بر وجود' },
+          family: { icon: '👨‍👩‍👧‍👦', label: 'خانواده', description: 'سنگر اول دفاع از فرد' },
+          homeland: { icon: '🇮🇷', label: 'میهن', description: 'سرزمین مشترک آزادی' },
+        },
+        text: 'خدا، آزادی، خانواده و میهن',
+      },
     },
     resources: {
       title: '📚 منابع و لینک‌های مفید',
@@ -117,8 +127,18 @@ export const messages: Record<Locale, Messages> = {
       chaptersTitle: 'Freedom Chapters',
       chaptersSubtitle: 'A complete path through 10 chapters, with clear explanations and deep analysis.',
       quote:
-        '“Real freedom is absolute human ownership over body, mind, time, and property — and religion is the most durable system in history for protecting that ownership.”',
+        '"Real freedom is absolute human ownership over body, mind, time, and property — and religion is the most durable system in history for protecting that ownership."',
       quoteAuthor: '— Mohammad Ali Jannatkhah',
+      slogan: {
+        title: 'Our Slogan',
+        items: {
+          god: { icon: '🕌', label: 'God', description: 'The only being whose worship brings freedom' },
+          freedom: { icon: '🕊️', label: 'Freedom', description: 'Absolute property rights over existence' },
+          family: { icon: '👨‍👩‍👧‍👦', label: 'Family', description: 'First line of defense for the individual' },
+          homeland: { icon: '🇮🇷', label: 'Homeland', description: 'Shared land of freedom' },
+        },
+        text: 'God, Freedom, Family and Homeland',
+      },
     },
     resources: {
       title: '📚 Resources & Links',
