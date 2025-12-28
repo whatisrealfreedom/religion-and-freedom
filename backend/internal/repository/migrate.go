@@ -39,12 +39,17 @@ func RunMigrations(db *sql.DB, migrationsPath string) error {
 		_, err = db.Exec(string(sqlContent))
 		if err != nil {
 			// Check if error is about duplicate column/table/index (idempotent errors)
+			// These errors indicate the migration was already applied
 			errStr := strings.ToLower(err.Error())
-			if strings.Contains(errStr, "duplicate column") ||
-				strings.Contains(errStr, "already exists") ||
-				strings.Contains(errStr, "table already exists") ||
-				strings.Contains(errStr, "index already exists") ||
-				strings.Contains(errStr, "unique constraint failed") {
+			isIdempotentError :=
+				// Duplicate column (ALTER TABLE ADD COLUMN when column exists)
+				strings.Contains(errStr, "duplicate column name") ||
+					strings.Contains(errStr, "duplicate column") ||
+					// Table/index already exists (CREATE TABLE/INDEX IF NOT EXISTS already handled, but check anyway)
+					(strings.Contains(errStr, "table") && strings.Contains(errStr, "already exists")) ||
+					(strings.Contains(errStr, "index") && strings.Contains(errStr, "already exists"))
+
+			if isIdempotentError {
 				// This is an idempotent error - migration already applied, continue
 				fmt.Printf("⚠️  Migration %s already applied (idempotent): %v\n", file, err)
 				continue
