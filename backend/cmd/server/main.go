@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"time"
 
 	"github.com/joho/godotenv"
 	"github.com/whatisrealfreedom/freedom-website/internal/config"
@@ -40,26 +41,77 @@ func main() {
 	// Load configuration
 	cfg := config.Load()
 
-	// Initialize database
-	db, err := repository.NewDatabase(cfg)
-	if err != nil {
-		log.Fatalf("Failed to connect to database: %v", err)
+	// Initialize database with retry logic
+	var db repository.Database
+	var dbErr error
+	maxRetries := 3
+	for i := 0; i < maxRetries; i++ {
+		db, dbErr = repository.NewDatabase(cfg)
+		if dbErr == nil {
+			break
+		}
+		log.Printf("⚠️  Database connection attempt %d/%d failed: %v", i+1, maxRetries, dbErr)
+		if i < maxRetries-1 {
+			log.Println("Retrying in 2 seconds...")
+			time.Sleep(2 * time.Second)
+		}
 	}
-	defer db.Close()
+	
+	if dbErr != nil {
+		log.Printf("❌ Failed to connect to database after %d attempts: %v", maxRetries, dbErr)
+		log.Println("⚠️  Server will start but database operations may fail")
+		// Don't fatal - allow server to start for health checks
+		// This prevents 502 errors
+	} else {
+		defer db.Close()
+		log.Println("✅ Database connection established")
+	}
 
-	// Initialize repository
-	repo := repository.NewRepository(db)
+	// Initialize repository (only if db is available)
+	var repo *repository.Repository
+	if db != nil {
+		repo = repository.NewRepository(db)
+		log.Println("✅ Repository initialized")
+	} else {
+		log.Println("⚠️  Repository not initialized - database unavailable")
+		log.Println("⚠️  Server will start but most endpoints will return 503")
+		// Create a minimal repository structure to prevent nil pointer panics
+		// We'll handle nil checks in route handlers
+		repo = nil
+	}
 
 	// Initialize services
-	chapterService := services.NewChapterService(repo.Chapter)
-	resourceService := services.NewResourceService(repo.Resource)
+	var chapterService services.ChapterService
+	var resourceService services.ResourceService
+	if repo != nil {
+		if repo.Chapter != nil {
+			chapterService = services.NewChapterService(repo.Chapter)
+		}
+		if repo.Resource != nil {
+			resourceService = services.NewResourceService(repo.Resource)
+		}
+	}
 	emailService := services.NewEmailService(cfg)
 
 	// Initialize handlers
-	chapterHandler := handlers.NewChapterHandler(chapterService)
-	resourceHandler := handlers.NewResourceHandler(resourceService)
-	healthHandler := handlers.NewHealthHandler()
-	authHandler := handlers.NewAuthHandler(repo.User, emailService, cfg.JWTSecret, cfg.JWTExpiry)
+	var chapterHandler *handlers.ChapterHandler
+	var resourceHandler *handlers.ResourceHandler
+	var authHandler *handlers.AuthHandler
+	var discussionHandler *handlers.DiscussionHandler
+	
+	if chapterService != nil {
+		chapterHandler = handlers.NewChapterHandler(chapterService)
+	}
+	if resourceService != nil {
+		resourceHandler = handlers.NewResourceHandler(resourceService)
+	}
+	healthHandler := handlers.NewHealthHandlerWithDB(db)
+	if repo != nil && repo.User != nil {
+		authHandler = handlers.NewAuthHandler(repo.User, emailService, cfg.JWTSecret, cfg.JWTExpiry)
+	}
+	if repo != nil && repo.Thread != nil && repo.Comment != nil && repo.Vote != nil && repo.Reaction != nil {
+		discussionHandler = handlers.NewDiscussionHandler(repo.Thread, repo.Comment, repo.Vote, repo.Reaction)
+	}
 
 	// Setup router
 	if cfg.Env == "production" {
@@ -81,33 +133,90 @@ func main() {
 		api.GET("/health", healthHandler.Check)
 
 		// Authentication routes (public)
-		auth := api.Group("/auth")
-		{
-			auth.POST("/register", authHandler.Register)
-			auth.POST("/verify-email", authHandler.VerifyEmail)
-			auth.POST("/resend-code", authHandler.ResendVerificationCode)
-			auth.POST("/login", authHandler.Login)
+		if authHandler != nil {
+			auth := api.Group("/auth")
+			{
+				auth.POST("/register", authHandler.Register)
+				auth.POST("/verify-email", authHandler.VerifyEmail)
+				auth.POST("/resend-code", authHandler.ResendVerificationCode)
+				auth.POST("/login", authHandler.Login)
+			}
+
+			// Protected routes
+			protected := api.Group("")
+			protected.Use(middleware.AuthMiddleware())
+			{
+				protected.GET("/me", authHandler.GetMe)
+			}
+		} else {
+			api.POST("/auth/*path", func(c *gin.Context) {
+				c.JSON(503, gin.H{"error": "Database service unavailable"})
+			})
+			api.GET("/me", func(c *gin.Context) {
+				c.JSON(503, gin.H{"error": "Database service unavailable"})
+			})
 		}
 
-		// Protected routes
-		protected := api.Group("")
-		protected.Use(middleware.AuthMiddleware())
-		{
-			protected.GET("/me", authHandler.GetMe)
+		// Chapters (only if handler is available)
+		if chapterHandler != nil {
+			chapters := api.Group("/chapters")
+			{
+				chapters.GET("", chapterHandler.GetAll)
+				chapters.GET("/:id", chapterHandler.GetByID)
+			}
+		} else {
+			api.GET("/chapters", func(c *gin.Context) {
+				c.JSON(503, gin.H{"error": "Database service unavailable"})
+			})
+			api.GET("/chapters/:id", func(c *gin.Context) {
+				c.JSON(503, gin.H{"error": "Database service unavailable"})
+			})
 		}
 
-		// Chapters
-		chapters := api.Group("/chapters")
-		{
-			chapters.GET("", chapterHandler.GetAll)
-			chapters.GET("/:id", chapterHandler.GetByID)
+		// Resources (only if handler is available)
+		if resourceHandler != nil {
+			resources := api.Group("/resources")
+			{
+				resources.GET("", resourceHandler.GetAll)
+				resources.GET("/pdfs", resourceHandler.GetPDFs)
+			}
+		} else {
+			api.GET("/resources", func(c *gin.Context) {
+				c.JSON(503, gin.H{"error": "Database service unavailable"})
+			})
+			api.GET("/resources/pdfs", func(c *gin.Context) {
+				c.JSON(503, gin.H{"error": "Database service unavailable"})
+			})
 		}
 
-		// Resources
-		resources := api.Group("/resources")
-		{
-			resources.GET("", resourceHandler.GetAll)
-			resources.GET("/pdfs", resourceHandler.GetPDFs)
+		// Discussions (public read, protected write)
+		if discussionHandler != nil {
+			discussions := api.Group("/discussions")
+			{
+				discussions.GET("", discussionHandler.GetThreads)
+				discussions.GET("/:id", discussionHandler.GetThread)
+				
+				// Protected routes
+				discussionsProtected := discussions.Group("")
+				discussionsProtected.Use(middleware.AuthMiddleware())
+				{
+					discussionsProtected.POST("", discussionHandler.CreateThread)
+					discussionsProtected.PUT("/:id", discussionHandler.UpdateThread)
+					discussionsProtected.POST("/:id/comments", discussionHandler.CreateComment)
+					discussionsProtected.PUT("/comments/:id", discussionHandler.UpdateComment)
+					discussionsProtected.POST("/:id/vote", discussionHandler.VoteThread)
+					discussionsProtected.POST("/comments/:id/vote", discussionHandler.VoteComment)
+					discussionsProtected.POST("/:id/react", discussionHandler.ReactThread)
+					discussionsProtected.POST("/comments/:id/react", discussionHandler.ReactComment)
+				}
+			}
+		} else {
+			api.GET("/discussions", func(c *gin.Context) {
+				c.JSON(503, gin.H{"error": "Database service unavailable"})
+			})
+			api.GET("/discussions/:id", func(c *gin.Context) {
+				c.JSON(503, gin.H{"error": "Database service unavailable"})
+			})
 		}
 	}
 

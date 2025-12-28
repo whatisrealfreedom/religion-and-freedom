@@ -66,7 +66,13 @@ func RunMigrations(db *sql.DB, migrationsPath string) error {
 					strings.Contains(errStr, "duplicate column") ||
 					// Table/index already exists (CREATE TABLE/INDEX IF NOT EXISTS already handled, but check anyway)
 					(strings.Contains(errStr, "table") && strings.Contains(errStr, "already exists")) ||
-					(strings.Contains(errStr, "index") && strings.Contains(errStr, "already exists"))
+					(strings.Contains(errStr, "index") && strings.Contains(errStr, "already exists")) ||
+					// Trigger already exists
+					(strings.Contains(errStr, "trigger") && strings.Contains(errStr, "already exists")) ||
+					// Constraint already exists
+					(strings.Contains(errStr, "constraint") && strings.Contains(errStr, "already exists")) ||
+					// UNIQUE constraint violation (for idempotent inserts)
+					(strings.Contains(errStr, "unique constraint") || strings.Contains(errStr, "unique constraint failed"))
 
 			if isIdempotentError {
 				// This is an idempotent error - migration already applied, continue
@@ -76,7 +82,8 @@ func RunMigrations(db *sql.DB, migrationsPath string) error {
 
 			// Check for syntax errors - these might indicate deprecated/broken migrations
 			isSyntaxError := strings.Contains(errStr, "syntax error") ||
-				strings.Contains(errStr, "near")
+				strings.Contains(errStr, "near") ||
+				strings.Contains(errStr, "unrecognized token")
 
 			if isSyntaxError && file == "008_add_iran_cradle_freedom_chapter.sql" {
 				// This specific migration is known to be deprecated and has syntax errors in production

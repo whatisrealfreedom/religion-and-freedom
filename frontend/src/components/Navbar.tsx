@@ -93,6 +93,9 @@ const Navbar: React.FC = () => {
             <Link to={withLocalePath(locale, '/resources')} className="text-gray-700 hover:text-primary-600 font-semibold text-sm md:text-base transition-colors px-2 md:px-3 py-2 rounded-lg hover:bg-gray-50">
               {t('nav.resources')}
             </Link>
+            <Link to={withLocalePath(locale, '/discussions')} className="text-gray-700 hover:text-primary-600 font-semibold text-sm md:text-base transition-colors px-2 md:px-3 py-2 rounded-lg hover:bg-gray-50">
+              {isRTL ? 'بحث و گفتگو' : 'Discussions'}
+            </Link>
             <Link to={withLocalePath(locale, '/critics')} className="text-gray-700 hover:text-primary-600 font-semibold text-sm md:text-base transition-colors px-2 md:px-3 py-2 rounded-lg hover:bg-gray-50">
               {t('nav.critics')}
             </Link>
@@ -171,6 +174,13 @@ const Navbar: React.FC = () => {
               onClick={() => setIsOpen(false)}
             >
               {t('nav.resources')}
+            </Link>
+            <Link
+              to={withLocalePath(locale, '/discussions')}
+              className="block px-3 py-2.5 text-gray-700 hover:bg-gray-50 rounded-md text-base font-medium transition-colors"
+              onClick={() => setIsOpen(false)}
+            >
+              {isRTL ? 'بحث و گفتگو' : 'Discussions'}
             </Link>
             <Link
               to={withLocalePath(locale, '/critics')}
