@@ -21,22 +21,31 @@ CREATE INDEX IF NOT EXISTS idx_chapter_translations_chapter_id ON chapter_transl
 CREATE INDEX IF NOT EXISTS idx_chapter_translations_locale ON chapter_translations(locale);
 CREATE INDEX IF NOT EXISTS idx_chapter_translations_slug ON chapter_translations(slug);
 
--- Step 3: Migrate existing data
+-- Step 3: Migrate existing data (idempotent - only insert if doesn't exist)
 -- Copy Persian (fa) data from chapters table
-INSERT INTO chapter_translations (chapter_id, locale, title, slug, description, content)
+INSERT OR IGNORE INTO chapter_translations (chapter_id, locale, title, slug, description, content)
 SELECT id, 'fa', title, slug, description, content
 FROM chapters
-WHERE content IS NOT NULL OR title IS NOT NULL;
+WHERE (content IS NOT NULL OR title IS NOT NULL)
+  AND NOT EXISTS (
+    SELECT 1 FROM chapter_translations ct 
+    WHERE ct.chapter_id = chapters.id AND ct.locale = 'fa'
+  );
 
 -- Copy English (en) data from chapters table (if content_en exists)
-INSERT INTO chapter_translations (chapter_id, locale, title, slug, description, content)
+-- Note: This assumes content_en column exists (added in migration 006)
+INSERT OR IGNORE INTO chapter_translations (chapter_id, locale, title, slug, description, content)
 SELECT id, 'en', 
     title || ' (English)',  -- Temporary title, should be updated manually
     slug || '-en',          -- Temporary slug
     description || ' (English)', -- Temporary description
     content_en
 FROM chapters
-WHERE content_en IS NOT NULL AND content_en != '';
+WHERE content_en IS NOT NULL AND content_en != ''
+  AND NOT EXISTS (
+    SELECT 1 FROM chapter_translations ct 
+    WHERE ct.chapter_id = chapters.id AND ct.locale = 'en'
+  );
 
 -- Step 4: Remove old columns (commented out - uncomment after verifying data migration)
 -- ALTER TABLE chapters DROP COLUMN title;

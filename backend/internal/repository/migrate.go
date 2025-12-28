@@ -33,8 +33,23 @@ func RunMigrations(db *sql.DB, migrationsPath string) error {
 			return fmt.Errorf("failed to read migration %s: %w", file, err)
 		}
 
+		// Execute migration - we'll handle errors gracefully for idempotent migrations
+		// SQLite doesn't support IF NOT EXISTS for ALTER TABLE, so some migrations might fail
+		// if they're run multiple times. We'll log but continue for certain errors.
 		_, err = db.Exec(string(sqlContent))
 		if err != nil {
+			// Check if error is about duplicate column/table/index (idempotent errors)
+			errStr := strings.ToLower(err.Error())
+			if strings.Contains(errStr, "duplicate column") ||
+				strings.Contains(errStr, "already exists") ||
+				strings.Contains(errStr, "table already exists") ||
+				strings.Contains(errStr, "index already exists") ||
+				strings.Contains(errStr, "unique constraint failed") {
+				// This is an idempotent error - migration already applied, continue
+				fmt.Printf("⚠️  Migration %s already applied (idempotent): %v\n", file, err)
+				continue
+			}
+			// For other errors, fail the migration
 			return fmt.Errorf("failed to execute migration %s: %w", file, err)
 		}
 
