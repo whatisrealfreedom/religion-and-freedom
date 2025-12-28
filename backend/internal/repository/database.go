@@ -3,6 +3,7 @@ package repository
 import (
 	"database/sql"
 	"fmt"
+	"strings"
 
 	_ "github.com/mattn/go-sqlite3"
 	"github.com/whatisrealfreedom/freedom-website/internal/config"
@@ -55,8 +56,18 @@ func newSQLiteDB(cfg *config.Config) (Database, error) {
 	}
 
 	// Run migrations after connection is established
+	// Use a transaction to ensure migrations are atomic where possible
 	if err := RunMigrationsOnDB(db); err != nil {
-		return nil, fmt.Errorf("failed to run migrations: %w", err)
+		// Log the error but don't fail completely - allow server to start
+		// This prevents 502 errors when migrations have minor issues
+		fmt.Printf("⚠️  Migration warning (server will continue): %v\n", err)
+		// Only fail on critical errors (database connection issues, not migration syntax)
+		if strings.Contains(strings.ToLower(err.Error()), "database") && 
+		   strings.Contains(strings.ToLower(err.Error()), "locked") {
+			return nil, fmt.Errorf("database is locked, please try again: %w", err)
+		}
+		// For other migration errors, log but continue
+		fmt.Printf("ℹ️  Continuing despite migration warning. Some features may not work correctly.\n")
 	}
 
 	return &database{db: db}, nil

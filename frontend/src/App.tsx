@@ -6,6 +6,8 @@ import Resources from './pages/Resources';
 import Critics from './pages/Critics';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import Discussions from './pages/Discussions';
+import ThreadDetail from './pages/ThreadDetail';
 import LocaleLayout from './i18n/LocaleLayout';
 import ScrollToTop from './components/ScrollToTop';
 
@@ -40,6 +42,8 @@ function App() {
           <Route path="critics" element={<Critics />} />
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
+          <Route path="discussions" element={<Discussions />} />
+          <Route path="discussions/:id" element={<ThreadDetail />} />
         </Route>
 
         {/* Fallback for any unmatched routes */}

@@ -202,6 +202,135 @@ export const authApi = {
   },
 };
 
+// Discussion API Types
+export interface Thread {
+  id: number;
+  user_id: number;
+  title: string;
+  content: string;
+  score: number;
+  comment_count: number;
+  view_count: number;
+  is_pinned: boolean;
+  is_locked: boolean;
+  created_at: string;
+  updated_at: string;
+  edited_at?: string;
+  author?: User;
+  user_vote?: number;
+  user_reactions?: string[];
+}
+
+export interface Comment {
+  id: number;
+  thread_id: number;
+  user_id: number;
+  parent_id?: number;
+  content: string;
+  score: number;
+  depth: number;
+  is_deleted: boolean;
+  created_at: string;
+  updated_at: string;
+  edited_at?: string;
+  author?: User;
+  user_vote?: number;
+  user_reactions?: string[];
+  replies?: Comment[];
+}
+
+export interface ThreadListResponse {
+  threads: Thread[];
+  total: number;
+  page: number;
+  per_page: number;
+}
+
+export interface ThreadDetailResponse {
+  thread: Thread;
+  comments: Comment[];
+}
+
+export interface CreateThreadRequest {
+  title: string;
+  content: string;
+}
+
+export interface UpdateThreadRequest {
+  title: string;
+  content: string;
+}
+
+export interface CreateCommentRequest {
+  content: string;
+  parent_id?: number;
+}
+
+export interface UpdateCommentRequest {
+  content: string;
+}
+
+export interface VoteRequest {
+  vote_type: 1 | -1;
+}
+
+export interface ReactionRequest {
+  reaction_type: 'heart' | 'clap' | 'thumbs_up' | 'thumbs_down';
+}
+
+// Discussion API
+export const discussionApi = {
+  getThreads: async (params?: {
+    sort?: 'newest' | 'oldest' | 'score' | 'comments';
+    page?: number;
+    per_page?: number;
+  }): Promise<ThreadListResponse> => {
+    const response = await api.get('/discussions', { params });
+    return response.data;
+  },
+
+  getThread: async (id: number): Promise<ThreadDetailResponse> => {
+    const response = await api.get(`/discussions/${id}`);
+    return response.data;
+  },
+
+  createThread: async (data: CreateThreadRequest): Promise<Thread> => {
+    const response = await api.post('/discussions', data);
+    return response.data;
+  },
+
+  updateThread: async (id: number, data: UpdateThreadRequest): Promise<Thread> => {
+    const response = await api.put(`/discussions/${id}`, data);
+    return response.data;
+  },
+
+  createComment: async (threadId: number, data: CreateCommentRequest): Promise<Comment> => {
+    const response = await api.post(`/discussions/${threadId}/comments`, data);
+    return response.data;
+  },
+
+  updateComment: async (id: number, data: UpdateCommentRequest): Promise<Comment> => {
+    const response = await api.put(`/discussions/comments/${id}`, data);
+    return response.data;
+  },
+
+  voteThread: async (id: number, voteType: 1 | -1): Promise<void> => {
+    await api.post(`/discussions/${id}/vote`, { vote_type: voteType });
+  },
+
+  voteComment: async (id: number, voteType: 1 | -1): Promise<void> => {
+    await api.post(`/discussions/comments/${id}/vote`, { vote_type: voteType });
+  },
+
+  reactThread: async (id: number, reactionType: 'heart' | 'clap' | 'thumbs_up' | 'thumbs_down'): Promise<void> => {
+    await api.post(`/discussions/${id}/react`, { reaction_type: reactionType });
+  },
+
+  reactComment: async (id: number, reactionType: 'heart' | 'clap' | 'thumbs_up' | 'thumbs_down'): Promise<void> => {
+    await api.post(`/discussions/comments/${id}/react`, { reaction_type: reactionType });
+  },
+};
+
 // Helper function to set auth token
 export const setAuthToken = (token: string) => {
   localStorage.setItem('auth_token', token);
