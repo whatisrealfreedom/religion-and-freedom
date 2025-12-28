@@ -10,6 +10,7 @@ import FireQuoteSection from '../components/FireQuote';
 import { useLocale } from '../i18n/LocaleProvider';
 import { localizeChapter } from '../i18n/contentMaps';
 import { withLocalePath } from '../i18n/localePath';
+import { messages } from '../i18n/messages';
 import { 
   KeyIcon, 
   Cog6ToothIcon, 
@@ -225,7 +226,7 @@ const Home: React.FC = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8 max-w-6xl mx-auto">
-            {Object.entries(t('home.slogan.items', { returnObjects: true }) as any).map(([key, item]: [string, any], index) => (
+            {Object.entries((messages[locale].home?.slogan?.items || {}) as Record<string, any>).map(([key, item]: [string, any], index) => (
               <motion.div
                 key={key}
                 initial={{ opacity: 0, y: 30 }}
