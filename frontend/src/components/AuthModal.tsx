@@ -110,7 +110,24 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, initialTab = 'lo
         window.location.reload();
       }, 1000);
     } catch (err: any) {
-      setLoginError(err.response?.data?.error || (isRTL ? 'ورود ناموفق بود. لطفا دوباره تلاش کنید.' : 'Login failed. Please try again.'));
+      const errorMessage = err.response?.data?.error || (isRTL ? 'ورود ناموفق بود. لطفا دوباره تلاش کنید.' : 'Login failed. Please try again.');
+      
+      // Check if email is not verified
+      if (errorMessage.includes('Email not verified') || errorMessage.includes('email not verified')) {
+        // Switch to verification step using login email
+        setRegisterData({ ...registerData, email: loginData.email });
+        setStep('verify');
+        setLoginError('');
+        // Automatically resend verification code
+        try {
+          await authApi.resendVerificationCode(loginData.email);
+          setRegisterSuccess(isRTL ? 'کد تایید مجدداً ارسال شد. لطفا ایمیل خود را بررسی کنید.' : 'Verification code has been resent. Please check your email.');
+        } catch (resendErr: any) {
+          setVerifyError(resendErr.response?.data?.error || (isRTL ? 'خطا در ارسال مجدد کد' : 'Failed to resend code'));
+        }
+      } else {
+        setLoginError(errorMessage);
+      }
     } finally {
       setLoginLoading(false);
     }
@@ -149,8 +166,10 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, initialTab = 'lo
     setVerifying(true);
 
     try {
+      // Use registerData.email (which might be set from login)
+      const emailToVerify = registerData.email || loginData.email;
       const response = await authApi.verifyEmail({
-        email: registerData.email,
+        email: emailToVerify,
         code: verificationCode,
       });
       setAuthToken(response.token);
@@ -177,7 +196,9 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, initialTab = 'lo
     setVerificationCode('');
 
     try {
-      await authApi.resendVerificationCode(registerData.email);
+      // Use registerData.email (which might be set from login)
+      const emailToResend = registerData.email || loginData.email;
+      await authApi.resendVerificationCode(emailToResend);
       setResendTimer(40); // Start 40 second timer after successful send
     } catch (err: any) {
       setVerifyError(err.response?.data?.error || (isRTL ? 'خطا در ارسال مجدد کد' : 'Failed to resend code'));
@@ -484,8 +505,8 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, initialTab = 'lo
                       </h3>
                       <p className="text-sm text-gray-600">
                         {isRTL 
-                          ? `کد تایید 5 رقمی به ${registerData.email} ارسال شد. لطفا کد را وارد کنید.`
-                          : `A 5-digit verification code has been sent to ${registerData.email}. Please enter the code.`
+                          ? `کد تایید 5 رقمی به ${registerData.email || loginData.email} ارسال شد. لطفا کد را وارد کنید.`
+                          : `A 5-digit verification code has been sent to ${registerData.email || loginData.email}. Please enter the code.`
                         }
                       </p>
                     </div>
