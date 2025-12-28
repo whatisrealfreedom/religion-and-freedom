@@ -25,18 +25,37 @@ func RunMigrations(db *sql.DB, migrationsPath string) error {
 	}
 	sort.Strings(migrationFiles)
 
+	// List of deprecated migrations that should be skipped
+	deprecatedMigrations := map[string]string{
+		"008_add_iran_cradle_freedom_chapter.sql": "This migration has been merged into 002_seed_data.sql. The chapter is now seeded in the initial data.",
+	}
+
 	// Execute each migration
 	for _, file := range migrationFiles {
+		// Skip deprecated migrations
+		if reason, isDeprecated := deprecatedMigrations[file]; isDeprecated {
+			fmt.Printf("⏭️  Skipping deprecated migration %s: %s\n", file, reason)
+			continue
+		}
+
 		path := filepath.Join(migrationsPath, file)
 		sqlContent, err := os.ReadFile(path)
 		if err != nil {
 			return fmt.Errorf("failed to read migration %s: %w", file, err)
 		}
 
+		// Check if migration file starts with DEPRECATED comment
+		contentStr := string(sqlContent)
+		if strings.HasPrefix(strings.TrimSpace(contentStr), "-- DEPRECATED") ||
+			strings.HasPrefix(strings.TrimSpace(contentStr), "-- SKIP") {
+			fmt.Printf("⏭️  Skipping deprecated migration %s (marked in file)\n", file)
+			continue
+		}
+
 		// Execute migration - we'll handle errors gracefully for idempotent migrations
 		// SQLite doesn't support IF NOT EXISTS for ALTER TABLE, so some migrations might fail
 		// if they're run multiple times. We'll log but continue for certain errors.
-		_, err = db.Exec(string(sqlContent))
+		_, err = db.Exec(contentStr)
 		if err != nil {
 			// Check if error is about duplicate column/table/index (idempotent errors)
 			// These errors indicate the migration was already applied
@@ -54,6 +73,17 @@ func RunMigrations(db *sql.DB, migrationsPath string) error {
 				fmt.Printf("⚠️  Migration %s already applied (idempotent): %v\n", file, err)
 				continue
 			}
+
+			// Check for syntax errors - these might indicate deprecated/broken migrations
+			isSyntaxError := strings.Contains(errStr, "syntax error") ||
+				strings.Contains(errStr, "near")
+
+			if isSyntaxError && file == "008_add_iran_cradle_freedom_chapter.sql" {
+				// This specific migration is known to be deprecated and has syntax errors in production
+				fmt.Printf("⏭️  Skipping deprecated migration %s (syntax error - merged into 002_seed_data.sql)\n", file)
+				continue
+			}
+
 			// For other errors, fail the migration
 			return fmt.Errorf("failed to execute migration %s: %w", file, err)
 		}
