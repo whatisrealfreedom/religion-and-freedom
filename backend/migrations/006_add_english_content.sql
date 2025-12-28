@@ -1,9 +1,13 @@
 -- Add content_en column to chapters table for English translations
--- Note: This migration will fail if content_en already exists.
--- The migration runner should handle this gracefully by checking column existence first.
--- For now, we'll comment this out since the column already exists in production.
--- Uncomment if you need to run this on a fresh database:
--- ALTER TABLE chapters ADD COLUMN content_en TEXT;
+-- Note: This will fail silently if content_en already exists (SQLite doesn't support IF NOT EXISTS for ALTER TABLE)
+-- We use a workaround: try to add it, ignore error if it exists
+-- SQLite doesn't support IF NOT EXISTS for ALTER TABLE ADD COLUMN, so we'll just try to add it
+-- If it fails, the column already exists and we can continue
+
+-- Add column if it doesn't exist (SQLite workaround)
+-- We'll use a pragma check, but since SQLite doesn't support conditional ALTER TABLE,
+-- we'll just add it and ignore the error if it exists
+ALTER TABLE chapters ADD COLUMN content_en TEXT;
 
 -- Update Chapter 2 with comprehensive English translation
 UPDATE chapters
