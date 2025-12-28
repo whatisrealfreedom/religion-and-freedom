@@ -7,6 +7,7 @@ import { chapterApi, ChapterSummary } from '../services/api';
 import FreedomBird from '../components/FreedomBird';
 import AchievementBadge from '../components/AchievementBadge';
 import FireQuoteSection from '../components/FireQuote';
+import IranFlag from '../components/IranFlag';
 import { useLocale } from '../i18n/LocaleProvider';
 import { localizeChapter } from '../i18n/contentMaps';
 import { withLocalePath } from '../i18n/localePath';
@@ -236,8 +237,12 @@ const Home: React.FC = () => {
                 className="group"
               >
                 <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-gray-100 hover:border-primary-300 transform hover:-translate-y-2 h-full flex flex-col">
-                  <div className="text-5xl sm:text-6xl mb-4 text-center transform group-hover:scale-110 transition-transform duration-300">
-                    {item.icon}
+                  <div className="text-5xl sm:text-6xl mb-4 text-center transform group-hover:scale-110 transition-transform duration-300 flex items-center justify-center">
+                    {key === 'homeland' ? (
+                      <IranFlag size={80} className="max-w-full h-auto" />
+                    ) : (
+                      <span>{item.icon}</span>
+                    )}
                   </div>
                   <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 text-center">
                     {item.label}

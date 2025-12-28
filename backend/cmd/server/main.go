@@ -16,10 +16,25 @@ import (
 )
 
 func main() {
-	// Load .env file (ignore error if file doesn't exist)
-	// This allows the app to work with environment variables set directly
-	if err := godotenv.Load(); err != nil {
-		log.Println("No .env file found, using environment variables or defaults")
+	// Load .env file from project root
+	// Try multiple locations to find the root .env file
+	envPaths := []string{
+		"../../.env", // Project root (if running from cmd/server)
+		"../.env",    // Project root (if running from backend/)
+		".env",       // Current directory (fallback)
+	}
+
+	envLoaded := false
+	for _, envPath := range envPaths {
+		if err := godotenv.Load(envPath); err == nil {
+			log.Printf("Loaded .env file from: %s", envPath)
+			envLoaded = true
+			break
+		}
+	}
+
+	if !envLoaded {
+		log.Println("No .env file found in project root, using environment variables or defaults")
 	}
 
 	// Load configuration
