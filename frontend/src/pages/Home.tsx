@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { chapterApi, ChapterSummary } from '../services/api';
-import { useProgress } from '../hooks/useProgress';
+// کامنت شده - چون بخش progress غیرفعال است
+// import { useProgress } from '../hooks/useProgress';
 import FreedomBird from '../components/FreedomBird';
 import AchievementBadge from '../components/AchievementBadge';
 import FireQuoteSection from '../components/FireQuote';
@@ -54,7 +55,10 @@ const achievementsEn = [
 const Home: React.FC = () => {
   const [chapters, setChapters] = useState<ChapterSummary[]>([]);
   const [loading, setLoading] = useState(true);
-  const { progress } = useProgress();
+  // کامنت شده - چون بخش progress غیرفعال است
+  // const { progress } = useProgress();
+  // ایجاد یک object dummy برای جلوگیری از خطا (اگر در آینده استفاده شود)
+  const progress = { chaptersRead: [], totalChapters: 10, progressPercent: 0, achievements: [] };
   const { t, isRTL, locale } = useLocale();
   const ForwardIcon = isRTL ? ArrowLeftIcon : ArrowRightIcon;
   const achievements = locale === 'en' ? achievementsEn : achievementsFa;
@@ -194,51 +198,58 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Progress & Achievements Section */}
-      {progress.chaptersRead.length > 0 && (
-        <section className="py-8 sm:py-10 md:py-12 bg-white border-b border-gray-200">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-6 sm:mb-8">
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-3 sm:mb-4">{t('nav.progress')}</h2>
-              <div className="max-w-2xl mx-auto px-2">
-                <div className="flex justify-between items-center mb-2 flex-wrap gap-2">
-                  <span className="text-base sm:text-lg font-semibold text-gray-700">
-                    {progress.chaptersRead.length} از {progress.totalChapters} فصل
-                  </span>
-                  <span className="text-xl sm:text-2xl font-bold text-primary-600">
-                    {Math.round(progress.progressPercent)}%
-                  </span>
-                </div>
-                <div className="w-full bg-gray-200 rounded-full h-3 sm:h-4 overflow-hidden shadow-inner">
-                  <motion.div
-                    className="h-full bg-gradient-to-r from-primary-500 via-primary-600 to-primary-700 rounded-full"
-                    initial={{ width: 0 }}
-                    animate={{ width: `${progress.progressPercent}%` }}
-                    transition={{ duration: 1, ease: "easeOut" }}
-                  />
-                </div>
-              </div>
+      {/* Slogan Section - God, Freedom, Family and Homeland */}
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-primary-50 via-white to-primary-50 border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-8 sm:mb-12"
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary-600 via-primary-700 to-primary-800 bg-clip-text text-transparent mb-4 sm:mb-6">
+              {t('home.slogan.title')}
+            </h2>
+            <div className="inline-block">
+              <motion.div
+                className="text-2xl sm:text-3xl md:text-4xl font-black text-gray-900 px-6 py-3 bg-white rounded-2xl shadow-xl border-4 border-primary-500"
+                initial={{ scale: 0.9 }}
+                whileInView={{ scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+              >
+                {t('home.slogan.text')}
+              </motion.div>
             </div>
+          </motion.div>
 
-            {progress.achievements.length > 0 && (
-              <div className="mt-6 sm:mt-8">
-                <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-4 sm:mb-6 text-center">دستاوردهای شما</h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4">
-                  {achievements.map((achievement) => (
-                    <AchievementBadge
-                      key={achievement.id}
-                      icon={achievement.icon}
-                      title={achievement.title}
-                      description={achievement.description}
-                      unlocked={progress.achievements.includes(achievement.id)}
-                    />
-                  ))}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8 max-w-6xl mx-auto">
+            {Object.entries(t('home.slogan.items', { returnObjects: true }) as any).map(([key, item]: [string, any], index) => (
+              <motion.div
+                key={key}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="group"
+              >
+                <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-gray-100 hover:border-primary-300 transform hover:-translate-y-2 h-full flex flex-col">
+                  <div className="text-5xl sm:text-6xl mb-4 text-center transform group-hover:scale-110 transition-transform duration-300">
+                    {item.icon}
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 text-center">
+                    {item.label}
+                  </h3>
+                  <p className={`text-sm sm:text-base text-gray-600 text-center leading-relaxed ${isRTL ? 'rtl' : 'ltr'}`}>
+                    {item.description}
+                  </p>
                 </div>
-              </div>
-            )}
+              </motion.div>
+            ))}
           </div>
-        </section>
-      )}
+        </div>
+      </section>
 
       {/* Chapters Section */}
       <section className="py-12 sm:py-16 md:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -265,7 +276,9 @@ const Home: React.FC = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
             {chapters.map((chapter, index) => {
               const IconComponent = iconMap[chapter.icon] || KeyIcon;
-              const isRead = progress.chaptersRead.includes(chapter.id);
+              // کامنت شده - چون بخش progress غیرفعال است
+              // const isRead = progress.chaptersRead.includes(chapter.id);
+              const isRead = false; // همیشه false چون progress غیرفعال است
               const localized = localizeChapter(locale, chapter.number, { title: chapter.title, description: chapter.description });
               
               return (
@@ -279,11 +292,12 @@ const Home: React.FC = () => {
                     isRead ? 'ring-2 ring-primary-300 bg-gradient-to-br from-primary-50 to-white' : ''
                   }`}
                 >
-                  {isRead && (
+                  {/* کامنت شده - چون بخش progress غیرفعال است */}
+                  {/* {isRead && (
                     <div className="absolute top-3 left-3 sm:top-4 sm:left-4 bg-primary-500 text-white rounded-full w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center text-xs sm:text-sm font-bold shadow-lg">
                       ✓
                     </div>
-                  )}
+                  )} */}
                   
                   <Link to={withLocalePath(locale, `/chapter/${chapter.id}`)} className="block h-full">
                     <motion.div 

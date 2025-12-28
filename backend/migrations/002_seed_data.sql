@@ -4,11 +4,12 @@ INSERT OR REPLACE INTO chapters (id, number, title, slug, description, content, 
 (2, 2, 'نظام صوری آکسیوماتیک چیست؟', 'axiomatic-formal-system', 'دین به عنوان پایدارترین نظام منطقی تاریخ برای تضمین آزادی', '', 'cogs', 22, 18, 0, 2),
 (3, 3, 'دین، نگهبان واقعی آزادی', 'religion-guardian-freedom', 'چگونه دین واقعی بزرگ‌ترین دشمن دولت‌سالاری و حامی آزادی است', '', 'shield-alt', 18, 14, 0, 3),
 (4, 4, 'کاربرد در ایران معاصر', 'application-contemporary-iran', 'راه‌حل دینی برای پایان تورم، سرکوب و نقض حریم خصوصی', '', 'flag', 25, 20, 0, 4),
-(5, 5, 'تحلیل فلسفی آزادی', 'philosophical-analysis-freedom', 'بررسی عمیق آزادی در فلسفه اسلامی و غربی', '', 'brain', 32, 28, 1, 5),
-(6, 6, 'عدل الهی و حقوق بشر', 'divine-justice-human-rights', 'ارتباط اصل عدل در دین با حقوق مالکیت مطلق', '', 'balance-scale', 27, 22, 0, 6),
-(7, 7, 'جامعه منتظر و آزادی', 'awaiting-society-freedom', 'نقش امامت و مهدویت در جامعه آزاد', '', 'users', 20, 16, 0, 7),
-(8, 8, 'آزادی در جهان مدرن', 'freedom-modern-world', 'کاربرد نظریه در عصر دیجیتال و جهانی‌شدن', '', 'globe', 24, 19, 0, 8),
-(9, 9, 'آینده آزادی', 'future-of-freedom', 'چشم‌انداز جهانی آزادی بر پایه دین واقعی', '', 'rocket', 19, 15, 0, 9);
+(5, 5, 'ایران: مهد حقوق مالکیت و آزادی واقعی', 'iran-cradle-of-freedom-property-rights', 'از اسطوره‌های باستانی تا امروز — چرا ایران، سرزمین دفاع از مالکیت و آزادی است', '', 'flag', 30, 20, 1, 5),
+(6, 6, 'تحلیل فلسفی آزادی', 'philosophical-analysis-freedom', 'بررسی عمیق آزادی در فلسفه اسلامی و غربی', '', 'brain', 32, 28, 1, 6),
+(7, 7, 'عدل الهی و حقوق بشر', 'divine-justice-human-rights', 'ارتباط اصل عدل در دین با حقوق مالکیت مطلق', '', 'balance-scale', 27, 22, 0, 7),
+(8, 8, 'جامعه منتظر و آزادی', 'awaiting-society-freedom', 'نقش امامت و مهدویت در جامعه آزاد', '', 'users', 20, 16, 0, 8),
+(9, 9, 'آزادی در جهان مدرن', 'freedom-modern-world', 'کاربرد نظریه در عصر دیجیتال و جهانی‌شدن', '', 'globe', 24, 19, 0, 9),
+(10, 10, 'آینده آزادی', 'future-of-freedom', 'چشم‌انداز جهانی آزادی بر پایه دین واقعی', '', 'rocket', 19, 15, 0, 10);
 
 -- Insert PDF resources
 INSERT OR REPLACE INTO resources (id, type, number, title, description, file_url, file_size, pages, icon, "order") VALUES
