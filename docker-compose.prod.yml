@@ -29,6 +29,9 @@ services:
     restart: unless-stopped
     depends_on:
       - backend
+    volumes:
+      # Serve PDFs from /files so https://whatisrealfreedom.com/files/*.pdf works
+      - ./files:/files:ro
     networks:
       - freedom-network
       - traefik-network
