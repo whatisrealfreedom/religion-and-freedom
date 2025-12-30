@@ -445,9 +445,18 @@ const Resources: React.FC = () => {
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {pdfs.map((pdf, index) => (
+                (() => {
+                  const href =
+                    pdf.file_url.startsWith('http://') || pdf.file_url.startsWith('https://')
+                      ? pdf.file_url
+                      : pdf.file_url.startsWith('/')
+                        ? pdf.file_url
+                        : `/${pdf.file_url}`;
+
+                  return (
                 <motion.a
                   key={pdf.id}
-                  href={pdf.file_url}
+                  href={href}
                   download
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -480,6 +489,8 @@ const Resources: React.FC = () => {
                     </div>
                   </div>
                 </motion.a>
+                  );
+                })()
               ))}
             </div>
           )}
