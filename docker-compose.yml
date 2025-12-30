@@ -47,6 +47,7 @@ services:
       - "8098:80"
     volumes:
       - frontend-build:/usr/share/nginx/html:ro
+      - ./files:/files:ro
     depends_on:
       - backend
       - frontend-builder
