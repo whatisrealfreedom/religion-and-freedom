@@ -364,31 +364,6 @@ const SpecialAnalysisIran1408: React.FC = () => {
             </div>
           </div>
         </motion.div>
-
-        {/* Footer note */}
-        <div className="mt-8 text-center text-xs text-gray-500">
-          {isRTL ? (
-            <>
-              برای نمایش تصاویر، فایل‌ها را در مسیر <code className="bg-gray-100 px-1 py-0.5 rounded">frontend/public/images</code> قرار دهید:
-              {' '}
-              <code className="bg-gray-100 px-1 py-0.5 rounded">ancient-iran-map.jpg</code>
-              {' '}
-              و
-              {' '}
-              <code className="bg-gray-100 px-1 py-0.5 rounded">cyrus-cylinder.jpg</code>
-            </>
-          ) : (
-            <>
-              To show images, put files in <code className="bg-gray-100 px-1 py-0.5 rounded">frontend/public/images</code> named
-              {' '}
-              <code className="bg-gray-100 px-1 py-0.5 rounded">ancient-iran-map.jpg</code>
-              {' '}
-              and
-              {' '}
-              <code className="bg-gray-100 px-1 py-0.5 rounded">cyrus-cylinder.jpg</code>.
-            </>
-          )}
-        </div>
       </div>
     </div>
   );
