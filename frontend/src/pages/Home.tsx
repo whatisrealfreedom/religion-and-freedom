@@ -347,6 +347,97 @@ const Home: React.FC = () => {
         )}
       </section>
 
+      {/* Beyond Chapters / Special Section */}
+      <section className="py-10 sm:py-14 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mb-6 sm:mb-8"
+        >
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 mb-3">
+            {isRTL ? 'فراتر از فصل‌ها' : 'Beyond the Chapters'}
+          </h2>
+          <p className="text-gray-600 text-base sm:text-lg leading-relaxed max-w-3xl">
+            {isRTL
+              ? 'این بخش‌ها خارج از ساختار فصل‌ها هستند: تحلیل‌های ویژه، بحث و گفتگو، و منابع تکمیلی.'
+              : 'These are outside the chapter structure: special analyses, discussions, and extra resources.'}
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+          {/* Special analysis */}
+          <motion.div
+            initial={{ opacity: 0, y: 18 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.45, delay: 0.05 }}
+            className="bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-xl transition-all"
+          >
+            <Link to={withLocalePath(locale, '/special/iran-1408')} className="block p-6 h-full">
+              <div className="flex items-start gap-3">
+                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary-600 to-primary-800 text-white flex items-center justify-center font-black text-xl">
+                  ✦
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg font-extrabold text-gray-900 mb-1">
+                    {isRTL ? 'تحلیل ویژه: ایران و افق ۱۴۰۸' : 'Special: Iran & the 2029 Horizon'}
+                  </h3>
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    {isRTL
+                      ? 'بازنویسی و تکمیل یک تحلیل درباره آخرالزمان‌باوری سیاسی، گیم‌تئوری و ژئوپولیتیک.'
+                      : 'A structured analysis on apocalyptic political narratives, game theory, and geopolitics.'}
+                  </p>
+                  <div className="mt-4 text-sm font-semibold text-primary-700">
+                    {isRTL ? 'مشاهده صفحه' : 'Open page'} →
+                  </div>
+                </div>
+              </div>
+            </Link>
+          </motion.div>
+
+          {/* Other links */}
+          <motion.div
+            initial={{ opacity: 0, y: 18 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.45, delay: 0.1 }}
+            className="bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-xl transition-all"
+          >
+            <div className="p-6 h-full">
+              <div className="flex items-start gap-3">
+                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-amber-500 to-amber-700 text-white flex items-center justify-center font-black text-xl">
+                  ↗
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg font-extrabold text-gray-900 mb-1">
+                    {isRTL ? 'لینک‌های دیگر' : 'Other links'}
+                  </h3>
+                  <p className="text-sm text-gray-600 leading-relaxed mb-4">
+                    {isRTL ? 'منابع و نقدها را هم از اینجا سریع باز کنید.' : 'Quick access to resources and critiques.'}
+                  </p>
+                  <div className="flex flex-col gap-2">
+                    <Link
+                      to={withLocalePath(locale, '/resources')}
+                      className="text-sm font-semibold text-gray-800 hover:text-primary-700 transition-colors"
+                    >
+                      {isRTL ? 'منابع' : 'Resources'} →
+                    </Link>
+                    <Link
+                      to={withLocalePath(locale, '/critics')}
+                      className="text-sm font-semibold text-gray-800 hover:text-primary-700 transition-colors"
+                    >
+                      {isRTL ? 'نقدها' : 'Critics'} →
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Inspirational Quote Section */}
       <section className="bg-gradient-to-r from-primary-600 via-primary-700 to-primary-800 py-16 sm:py-20 md:py-24 my-12 sm:my-16 md:my-20 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
