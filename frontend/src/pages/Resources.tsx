@@ -448,8 +448,7 @@ const Resources: React.FC = () => {
                 <motion.a
                   key={pdf.id}
                   href={pdf.file_url}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  download
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4 + index * 0.1 }}
