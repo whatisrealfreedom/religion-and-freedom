@@ -367,12 +367,56 @@ const Home: React.FC = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+          {/* Reformists Enemy - خیلی مهم */}
+          <motion.div
+            initial={{ opacity: 0, y: 18, scale: 0.95 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0 }}
+            className="relative bg-gradient-to-br from-red-50 to-red-100 rounded-2xl border-4 border-red-500 shadow-lg hover:shadow-2xl transition-all transform hover:scale-105"
+            style={{ boxShadow: '0 10px 30px rgba(239, 68, 68, 0.3)' }}
+          >
+            <Link to={withLocalePath(locale, '/special/reformists-enemy')} className="block p-6 h-full">
+              <div className="absolute top-1 right-1 sm:top-2 sm:right-2 z-20">
+                <span className="inline-block bg-red-600 text-white text-[7px] sm:text-[8px] font-black px-1 sm:px-1.5 py-0.5 rounded blinking-text whitespace-nowrap" style={{ transform: 'rotate(-15deg)', boxShadow: '0 1px 3px rgba(0,0,0,0.3)' }}>
+                  {isRTL ? '⚠️ خیلی مهم' : '⚠️ IMPORTANT'}
+                </span>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-red-600 to-red-800 text-white flex items-center justify-center font-black text-xl shadow-lg flex-shrink-0">
+                  ⚠️
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg font-extrabold text-red-900 mb-1 flex items-center gap-1.5 flex-wrap">
+                    <span>{isRTL ? 'اصلاحات دشمن' : 'Reformists Enemy of'}</span>
+                    <span className="relative inline-flex items-center">
+                      <span className="absolute -top-4 z-20" style={isRTL ? { left: '50%', transform: 'translateX(-50%) rotate(-15deg)' } : { right: '50%', transform: 'translateX(50%) rotate(-15deg)' }}>
+                        <span className="inline-block bg-red-600 text-white text-[7px] sm:text-[8px] font-black px-1 sm:px-1.5 py-0.5 rounded blinking-text whitespace-nowrap" style={{ boxShadow: '0 1px 3px rgba(0,0,0,0.3)' }}>
+                          {isRTL ? '⚠️ خیلی مهم' : '⚠️ IMPORTANT'}
+                        </span>
+                      </span>
+                      <span>{isRTL ? 'ایران' : 'Iran'}</span>
+                    </span>
+                  </h3>
+                  <p className="text-sm text-red-800 leading-relaxed font-semibold">
+                    {isRTL
+                      ? 'تحلیل عمیق درباره بزرگ‌ترین دشمن ایران و میراثش.'
+                      : 'Deep analysis on Iran\'s greatest enemy and its heritage.'}
+                  </p>
+                  <div className="mt-4 text-sm font-bold text-red-700">
+                    {isRTL ? 'مطالعه فوری' : 'Read Now'} →
+                  </div>
+                </div>
+              </div>
+            </Link>
+          </motion.div>
+
           {/* Special analysis */}
           <motion.div
             initial={{ opacity: 0, y: 18 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.45, delay: 0.05 }}
+            transition={{ duration: 0.45, delay: 0.1 }}
             className="bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-xl transition-all"
           >
             <Link to={withLocalePath(locale, '/special/iran-1408')} className="block p-6 h-full">
