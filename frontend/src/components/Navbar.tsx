@@ -99,6 +99,17 @@ const Navbar: React.FC = () => {
             <Link to={withLocalePath(locale, '/critics')} className="text-gray-700 hover:text-primary-600 font-semibold text-sm md:text-base transition-colors px-2 md:px-3 py-2 rounded-lg hover:bg-gray-50">
               {t('nav.critics')}
             </Link>
+            <Link to={withLocalePath(locale, '/special/reformists-enemy')} className="text-red-600 hover:text-red-700 font-bold text-sm md:text-base transition-colors px-2 md:px-3 py-2 rounded-lg hover:bg-red-50 inline-flex items-center gap-1.5">
+              <span>{isRTL ? 'اصلاحات دشمن' : 'Reformists Enemy'}</span>
+              <span className="relative inline-flex items-center">
+                <span className="absolute -top-3.5 sm:-top-4 z-20" style={isRTL ? { left: '50%', transform: 'translateX(-50%) rotate(-15deg)' } : { right: '50%', transform: 'translateX(50%) rotate(-15deg)' }}>
+                  <span className="inline-block bg-red-600 text-white text-[7px] sm:text-[8px] font-black px-1 sm:px-1.5 py-0.5 rounded blinking-text whitespace-nowrap" style={{ boxShadow: '0 1px 3px rgba(0,0,0,0.3)' }}>
+                    {isRTL ? '⚠️ خیلی مهم' : '⚠️ IMPORTANT'}
+                  </span>
+                </span>
+                <span>{isRTL ? 'ایران' : ''}</span>
+              </span>
+            </Link>
             {isAuthenticated ? (
               <button
                 onClick={handleLogout}
@@ -188,6 +199,23 @@ const Navbar: React.FC = () => {
               onClick={() => setIsOpen(false)}
             >
               {t('nav.critics')}
+            </Link>
+            <Link
+              to={withLocalePath(locale, '/special/reformists-enemy')}
+              className="block px-3 py-2.5 text-red-600 hover:bg-red-50 rounded-md text-base font-bold transition-colors"
+              onClick={() => setIsOpen(false)}
+            >
+              <span className="inline-flex items-center gap-1.5">
+                <span>{isRTL ? 'اصلاحات دشمن' : 'Reformists Enemy'}</span>
+                <span className="relative inline-flex items-center">
+                  <span className="absolute -top-3.5 z-20" style={isRTL ? { left: '50%', transform: 'translateX(-50%) rotate(-15deg)' } : { right: '50%', transform: 'translateX(50%) rotate(-15deg)' }}>
+                    <span className="inline-block bg-red-600 text-white text-[7px] font-black px-1 py-0.5 rounded blinking-text whitespace-nowrap" style={{ boxShadow: '0 1px 3px rgba(0,0,0,0.3)' }}>
+                      {isRTL ? '⚠️ خیلی مهم' : '⚠️ IMPORTANT'}
+                    </span>
+                  </span>
+                  <span>{isRTL ? 'ایران' : ''}</span>
+                </span>
+              </span>
             </Link>
             {isAuthenticated ? (
               <button

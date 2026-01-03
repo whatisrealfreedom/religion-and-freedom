@@ -9,6 +9,7 @@ import Register from './pages/Register';
 import Discussions from './pages/Discussions';
 import ThreadDetail from './pages/ThreadDetail';
 import SpecialAnalysisIran1408 from './pages/SpecialAnalysisIran1408';
+import ReformistsEnemy from './pages/ReformistsEnemy';
 import LocaleLayout from './i18n/LocaleLayout';
 import ScrollToTop from './components/ScrollToTop';
 
@@ -46,6 +47,7 @@ function App() {
           <Route path="discussions" element={<Discussions />} />
           <Route path="discussions/:id" element={<ThreadDetail />} />
           <Route path="special/iran-1408" element={<SpecialAnalysisIran1408 />} />
+          <Route path="special/reformists-enemy" element={<ReformistsEnemy />} />
         </Route>
 
         {/* Fallback for any unmatched routes */}

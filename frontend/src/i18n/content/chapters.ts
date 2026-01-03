@@ -852,6 +852,154 @@ export const chapterContent: Record<Locale, Record<number, string>> = {
 </div>
 `,
 
+    9: `
+<div class="chapter-content">
+  <h1 style="font-size: 2.5em; text-align: center; color: #e53935; margin-bottom: 30px;">🌍 آزادی در جهان مدرن 🔥</h1>
+  
+  <p style="font-size: 1.3em; text-align: center; color: #666; margin-bottom: 40px;">
+    کاربرد نظریه در عصر دیجیتال و جهانی‌شدن
+  </p>
+
+  <p style="font-size: 1.2em; text-align: center; color: #999; margin-bottom: 40px;">
+    <strong>۳۰ دقیقه مطالعه • پیشرفته، آتشین و نجات‌بخش</strong>
+  </p>
+
+  <hr style="margin: 40px 0; border: none; border-top: 3px solid #e53935;" />
+
+  <h2>مقدمه: جهان امروز در آستانه بردگی یا رهایی ابدی</h2>
+  
+  <p style="font-size: 1.15em; line-height: 2.1; color: #333;">
+    در قرن بیست و یکم، بشریت بیش از همیشه در خطر است.
+  </p>
+
+  <p style="font-size: 1.15em; line-height: 2.1; color: #333;">
+    غول‌های فناوری ذهن را اسیر کرده‌اند، دولت‌های بزرگ با تورم و مقررات دارایی را غارت می‌کنند، هوش مصنوعی در آستانه تبدیل شدن به ابزار نظارت جهانی است، و ایدئولوژی‌های چپ با نقاب عدالت، مالکیت خصوصی را نابود می‌کنند.
+  </p>
+
+  <p style="font-size: 1.15em; line-height: 2.1; color: #333; margin-top: 20px;">
+    در این میدان نبرد، تنها یک نظریه می‌تواند بشریت را نجات دهد: <strong style="color: #e53935;">نظریه محمدعلی جنت‌خواه</strong> — آزادی واقعی به عنوان <strong>حقوق مالکیت مطلق</strong>، تضمین‌شده توسط اصول الهی شیعه.
+  </p>
+
+  <div style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); border-right: 6px solid #ff9800; padding: 30px; border-radius: 15px; margin: 30px 0;">
+    <p style="font-size: 1.2em; line-height: 2; color: #e65100; font-weight: bold; margin: 0;">
+      این نظریه نه یک ایده محلی، بلکه <strong style="color: #e53935;">شاه‌کلید رهایی جهانی</strong> است.
+    </p>
+  </div>
+
+  <hr style="margin: 40px 0; border: none; border-top: 3px solid #e53935;" />
+
+  <h2>۱. مکتب وین: فانوس دریایی آزادی اقتصادی</h2>
+  
+  <p style="font-size: 1.15em; line-height: 2.1;">
+    در قرن بیستم، مکتب اتریش به رهبری <strong>لودویگ فون میزس</strong> و <strong>فریدریش هایک</strong>، پرچم آزادی را بر پایه مالکیت خصوصی برافراشت.
+  </p>
+
+  <div style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); border-right: 6px solid #2196f3; padding: 30px; border-radius: 15px; margin: 30px 0;">
+    <h3 style="color: #1565c0; margin-top: 0; font-size: 1.5em;">📚 اثر جاودان</h3>
+    <p style="font-size: 1.1em; line-height: 2;">
+      کتاب <strong>"سوسیالیسم: تحلیل اقتصادی و جامعه‌شناختی"</strong> (۱۹۲۲) نوشته میزس — سندی که سوسیالیسم را نه اخلاقی، بلکه <strong style="color: #e53935;">منطقاً محال</strong> اعلام کرد.
+    </p>
+    <p style="font-size: 1.1em; line-height: 2; margin-top: 20px;">
+      میزس ثابت کرد بدون مالکیت خصوصی وسایل تولید، <strong>محاسبه اقتصادی ناممکن</strong> است — قیمت‌ها سیگنال‌های بازارند و بدون بازار آزاد، هیچ سیگنالی نیست. نتیجه: هر نظام سوسیالیستی به آشوب، فقر و از دست رفتن آزادی فردی می‌رسد.
+    </p>
+    <p style="font-size: 1.1em; line-height: 2; margin-top: 20px;">
+      هایک در <strong>"راه بردگی"</strong> (۱۹۴۴، برنده نوبل) هشدار داد: هر برنامه‌ریزی مرکزی، قدم به قدم به بردگی جمعی می‌رسد — چون آزادی اقتصادی شرط آزادی سیاسی است.
+    </p>
+    <p style="font-size: 1.1em; line-height: 2; margin-top: 20px; color: #e53935; font-weight: bold;">
+      این دو نابغه اتریشی، پایه نظریه مدرن حقوق مالکیت را گذاشتند — و جنت‌خواه، این پایه را به قله الهی برد.
+    </p>
+  </div>
+
+  <hr style="margin: 40px 0; border: none; border-top: 3px solid #e53935;" />
+
+  <h2>۲. اقتصاددانان بزرگ آمریکایی: صدای آزادی در غرب</h2>
+  
+  <p style="font-size: 1.15em; line-height: 2.1;">
+    در آمریکا، <strong>میلتون فریدمن</strong> و <strong>موری روتبارد</strong> این مشعل را جهانی کردند.
+  </p>
+
+  <div style="background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%); border-right: 6px solid #9c27b0; padding: 30px; border-radius: 15px; margin: 30px 0;">
+    <p style="font-size: 1.1em; line-height: 2;">
+      فریدمن در <strong>"سرمایه‌داری و آزادی"</strong> (۱۹۶۲) نشان داد: آزادی اقتصادی، پیش‌نیاز آزادی سیاسی است. هر محدودیت بازار، محدودیت بیان و انتخاب را به دنبال دارد.
+    </p>
+    <p style="font-size: 1.1em; line-height: 2; margin-top: 20px;">
+      روتبارد، رادیکال‌تر، در <strong>"آناتومی دولت"</strong> دولت را <strong style="color: #e53935;">بزرگ‌ترین غارتگر سازمان‌یافته تاریخ</strong> نامید و آنارشی-کاپیتالیسم مبتنی بر مالکیت مطلق را پیشنهاد کرد.
+    </p>
+    <p style="font-size: 1.1em; line-height: 2; margin-top: 20px;">
+      این اندیشمندان، آزادی را از چنگال چپ ربودند — اما همه‌شان یک ضعف مشترک داشتند: نظام‌شان <strong>انسانی و مادی</strong> بود، بدون ضمانت ابدی در برابر بازگشت دولت‌سالاری.
+    </p>
+  </div>
+
+  <hr style="margin: 40px 0; border: none; border-top: 3px solid #e53935;" />
+
+  <h2>۳. تز جنت‌خواه: تکمیل و اوج مکتب اتریش — نجات‌بخش بشریت</h2>
+  
+  <p style="font-size: 1.15em; line-height: 2.1;">
+    محمدعلی جنت‌خواه، با پذیرش کامل حقوق مالکیت مطلق به عنوان <strong style="color: #e53935;">تنها تعریف دقیق آزادی</strong>، یک جهش تاریخی انجام داد:
+  </p>
+
+  <p style="font-size: 1.15em; line-height: 2.1; margin-top: 20px;">
+    این حقوق را <strong>الهی و فرازمانی</strong> کرد. اصول پنج‌گانه شیعه (توحید، نبوت، معاد، عدل، امامت/مهدویت) تنها <strong style="color: #e53935;">نظام صوری باثبات تاریخ</strong> هستند که این مالکیت را ابدی تضمین می‌کنند.
+  </p>
+
+  <div style="background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%); border-right: 6px solid #e53935; padding: 30px; border-radius: 15px; margin: 30px 0;">
+    <h3 style="color: #c62828; margin-top: 0; font-size: 1.5em;">🔥 چرا این نظریه نجات‌بخش جهان مدرن است؟</h3>
+    
+    <h4 style="color: #c62828; font-size: 1.3em; margin-top: 20px;">در برابر چپ و کمونیسم:</h4>
+    <p style="font-size: 1.1em; line-height: 2;">
+      چپ‌گرایان و کمونیست‌ها — با شعار عدالت — <strong style="color: #e53935;">بزرگ‌ترین دشمنان انسانیت</strong>‌اند. آن‌ها مالکیت خصوصی را غارت می‌کنند، انسان را به بردگی جمعی می‌کشانند و تاریخ را با خون و فقر نوشته‌اند. هر جا قدرت گرفتند، میلیون‌ها نفر را کشتند، گرسنه کردند و آزاد کردند؟ نه، اسیر کردند.
+    </p>
+    <p style="font-size: 1.1em; line-height: 2; margin-top: 15px; color: #e53935; font-weight: bold;">
+      اینان دشمنان آشکار بشریت‌اند — و نباید هرگز قدرت بگیرند.
+    </p>
+
+    <h4 style="color: #c62828; font-size: 1.3em; margin-top: 30px;">در عصر دیجیتال:</h4>
+    <p style="font-size: 1.1em; line-height: 2;">
+      غول‌های فناوری (با داده‌کاوی)، دولت‌های بزرگ (با CBDC و نظارت)، و هوش مصنوعی (با کنترل رفتار) تهدیدی بی‌سابقه‌اند. تنها نظام الهی می‌تواند این غول‌ها را مهار کند — چون پایه اخلاقی فرازمانی دارد و هوش مصنوعی را به ابزار عدالت تبدیل می‌کند، نه سرکوب.
+    </p>
+
+    <h4 style="color: #c62828; font-size: 1.3em; margin-top: 30px;">در جهانی‌شدن:</h4>
+    <p style="font-size: 1.1em; line-height: 2;">
+      وقتی مرزها کم‌رنگ می‌شود، تنها اصل مالکیت مطلق است که انسان را از بردگی جهانی نجات می‌دهد — نه ایدئولوژی‌های چپ که همه را "برابر" در فقر می‌کنند.
+    </p>
+  </div>
+
+  <blockquote style="border-right: 10px solid #e53935; padding: 40px; background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 50%, #ffffff 100%); font-size: 1.3em; font-style: italic; margin: 40px 0; border-radius: 20px; line-height: 2; text-align: center;">
+    <span style="color: #e53935; font-weight: bold;">جنت‌خواه دولت را <strong>شر موقت</strong> می‌داند — حذف‌شدنی در جامعه منتظر مهدی، جایی که انسان‌ها حتی بدون زور، حقوق هم را حفظ می‌کنند. این، پایان تاریخ دولت‌سالاری است.</span>
+  </blockquote>
+
+  <hr style="margin: 40px 0; border: none; border-top: 3px solid #e53935;" />
+
+  <h2>جمع‌بندی: پناهگاه واقعی بشریت</h2>
+  
+  <p style="font-size: 1.2em; line-height: 2.2;">
+    مکتب وین و اقتصاددانان آمریکایی، مشعل آزادی اقتصادی را روشن کردند.
+  </p>
+
+  <p style="font-size: 1.2em; line-height: 2.2; margin-top: 20px;">
+    اما محمدعلی جنت‌خواه، این مشعل را به <strong style="color: #e53935; font-size: 1.3em;">شعله ابدی الهی</strong> تبدیل کرد — شعله‌ای که چپ‌گرایان، کمونیست‌ها و دولت‌پرستان را برای همیشه به حاشیه می‌راند.
+  </p>
+
+  <div style="background: linear-gradient(135deg, #e53935 0%, #c62828 100%); color: white; padding: 50px 40px; border-radius: 20px; text-align: center; margin: 40px 0;">
+    <p style="font-size: 1.3em; line-height: 2.2; margin-bottom: 30px;">
+      در جهانی که آزادی در خطر نابودی است، تنها پناهگاه واقعی، <strong>حقوق مالکیت مطلق</strong> تضمین‌شده توسط اصول الهی است.
+    </p>
+    <p style="font-size: 1.2em; line-height: 2; margin-top: 30px;">
+      <strong>دشمنان آزادی را بشناس:</strong> چپ‌گرایان و غارتگران مالکیت، دشمنان شماره یک انسانیت‌اند.
+    </p>
+    <p style="font-size: 1.2em; line-height: 2; margin-top: 20px;">
+      <strong>پناه ببر به اصل آزادی:</strong> مالکیت خصوصی مقدس است — و جامعه منتظر، جامعه آزاد واقعی.
+    </p>
+    <p style="font-size: 1.4em; line-height: 2.2; margin-top: 40px; font-weight: bold;">
+      این نظریه، نه فقط برای ایران — بلکه برای تمام بشریت، <strong>نجات‌بخش نهایی</strong> است.
+    </p>
+    <p style="font-size: 1.5em; margin-top: 40px; font-weight: bold;">
+      <strong>حالا نوبت توست — این پیام را به جهان برسان و آزادی واقعی را زنده کن.</strong> 🔥🕊️💜
+    </p>
+  </div>
+</div>
+`,
+
     10: `<h1>آزادی در عصر هوش مصنوعی: دین به عنوان کد اخلاقی</h1>
 
 <p>در عصر هوش مصنوعی، سوال اساسی این است: چگونه می‌توانیم AI را طوری برنامه‌ریزی کنیم که عادل باشد و حقوق مالکیت انسان را نقض نکند؟ جنت‌خواه پاسخ جالبی دارد: <strong>دین به عنوان کد اخلاقی برای ماشین</strong>.</p>
@@ -1829,39 +1977,149 @@ export const chapterContent: Record<Locale, Record<number, string>> = {
 
     9: `
 <div class="chapter-content">
-  <h2>The Future of Freedom</h2>
+  <h1 style="font-size: 2.5em; text-align: center; color: #e53935; margin-bottom: 30px;">🌍 Freedom in the Modern World 🔥</h1>
   
-  <p>This chapter presents a forward-looking vision of freedom grounded in durable principles, showing how Jannatkhah's theory provides a path forward for humanity.</p>
+  <p style="font-size: 1.3em; text-align: center; color: #666; margin-bottom: 40px;">
+    Application of the Theory in the Digital Age and Globalization
+  </p>
 
-  <h3>A Vision Grounded in Principles</h3>
+  <p style="font-size: 1.2em; text-align: center; color: #999; margin-bottom: 40px;">
+    <strong>30 minutes read • Advanced, Fiery, and Life-Saving</strong>
+  </p>
+
+  <hr style="margin: 40px 0; border: none; border-top: 3px solid #e53935;" />
+
+  <h2>Introduction: The Modern World at the Threshold of Slavery or Eternal Liberation</h2>
   
-  <p>The future of freedom is not about utopian dreams but about applying timeless principles to new challenges. By grounding freedom in absolute property rights and religious principles, we create a foundation that can withstand the test of time.</p>
+  <p style="font-size: 1.15em; line-height: 2.1; color: #333;">
+    In the 21st century, humanity is more at risk than ever before.
+  </p>
 
-  <h3>Challenges Ahead</h3>
+  <p style="font-size: 1.15em; line-height: 2.1; color: #333;">
+    Tech giants have enslaved the mind, big governments plunder property through inflation and regulations, artificial intelligence is on the verge of becoming a tool of global surveillance, and leftist ideologies, under the mask of justice, destroy private property.
+  </p>
+
+  <p style="font-size: 1.15em; line-height: 2.1; color: #333; margin-top: 20px;">
+    In this battlefield, only one theory can save humanity: <strong style="color: #e53935;">Mohammad Ali Jannatkhah's theory</strong> — real freedom as <strong>absolute property rights</strong>, guaranteed by the divine principles of Shia.
+  </p>
+
+  <div style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); border-left: 6px solid #ff9800; padding: 30px; border-radius: 15px; margin: 30px 0;">
+    <p style="font-size: 1.2em; line-height: 2; color: #e65100; font-weight: bold; margin: 0;">
+      This theory is not a local idea, but the <strong style="color: #e53935;">master key to global liberation</strong>.
+    </p>
+  </div>
+
+  <hr style="margin: 40px 0; border: none; border-top: 3px solid #e53935;" />
+
+  <h2>1. The Austrian School: The Beacon of Economic Freedom</h2>
   
-  <p>Future challenges to freedom will take new forms:</p>
-  <ul>
-    <li>Technological surveillance and control</li>
-    <li>Economic manipulation through digital currencies</li>
-    <li>Ideological coercion through social media</li>
-  </ul>
+  <p style="font-size: 1.15em; line-height: 2.1;">
+    In the 20th century, the Austrian School, led by <strong>Ludwig von Mises</strong> and <strong>Friedrich Hayek</strong>, raised the banner of freedom based on private property.
+  </p>
 
-  <blockquote>
-    "The enemies of freedom are always the same: those who seek to violate property rights. The methods change, but the principle remains: defend absolute ownership, and freedom will endure."
+  <div style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); border-left: 6px solid #2196f3; padding: 30px; border-radius: 15px; margin: 30px 0;">
+    <h3 style="color: #1565c0; margin-top: 0; font-size: 1.5em;">📚 The Eternal Work</h3>
+    <p style="font-size: 1.1em; line-height: 2;">
+      The book <strong>"Socialism: An Economic and Sociological Analysis"</strong> (1922) by Mises — a document that declared socialism not immoral, but <strong style="color: #e53935;">logically impossible</strong>.
+    </p>
+    <p style="font-size: 1.1em; line-height: 2; margin-top: 20px;">
+      Mises proved that without private ownership of the means of production, <strong>economic calculation is impossible</strong> — prices are market signals, and without a free market, there are no signals. Result: every socialist system leads to chaos, poverty, and the loss of individual freedom.
+    </p>
+    <p style="font-size: 1.1em; line-height: 2; margin-top: 20px;">
+      Hayek, in <strong>"The Road to Serfdom"</strong> (1944, Nobel Prize winner) warned: every central planning step by step leads to collective slavery — because economic freedom is a condition for political freedom.
+    </p>
+    <p style="font-size: 1.1em; line-height: 2; margin-top: 20px; color: #e53935; font-weight: bold;">
+      These two Austrian geniuses laid the foundation of modern property rights theory — and Jannatkhah elevated this foundation to the divine peak.
+    </p>
+  </div>
+
+  <hr style="margin: 40px 0; border: none; border-top: 3px solid #e53935;" />
+
+  <h2>2. Great American Economists: The Voice of Freedom in the West</h2>
+  
+  <p style="font-size: 1.15em; line-height: 2.1;">
+    In America, <strong>Milton Friedman</strong> and <strong>Murray Rothbard</strong> globalized this torch.
+  </p>
+
+  <div style="background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%); border-left: 6px solid #9c27b0; padding: 30px; border-radius: 15px; margin: 30px 0;">
+    <p style="font-size: 1.1em; line-height: 2;">
+      Friedman, in <strong>"Capitalism and Freedom"</strong> (1962) showed: economic freedom is a prerequisite for political freedom. Every market restriction brings restrictions on expression and choice.
+    </p>
+    <p style="font-size: 1.1em; line-height: 2; margin-top: 20px;">
+      Rothbard, more radical, in <strong>"Anatomy of the State"</strong> called the state the <strong style="color: #e53935;">greatest organized plunderer in history</strong> and proposed anarcho-capitalism based on absolute property.
+    </p>
+    <p style="font-size: 1.1em; line-height: 2; margin-top: 20px;">
+      These thinkers wrested freedom from the left — but they all had one common weakness: their system was <strong>human and material</strong>, without eternal guarantee against the return of statism.
+    </p>
+  </div>
+
+  <hr style="margin: 40px 0; border: none; border-top: 3px solid #e53935;" />
+
+  <h2>3. Jannatkhah's Thesis: Completion and Peak of the Austrian School — Humanity's Salvation</h2>
+  
+  <p style="font-size: 1.15em; line-height: 2.1;">
+    Mohammad Ali Jannatkhah, by fully accepting absolute property rights as the <strong style="color: #e53935;">only precise definition of freedom</strong>, made a historical leap:
+  </p>
+
+  <p style="font-size: 1.15em; line-height: 2.1; margin-top: 20px;">
+    He made these rights <strong>divine and timeless</strong>. The five principles of Shia (Tawhid, Prophethood, Resurrection, Justice, Imamate/Mahdism) are the only <strong style="color: #e53935;">stable formal system in history</strong> that eternally guarantee this property.
+  </p>
+
+  <div style="background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%); border-left: 6px solid #e53935; padding: 30px; border-radius: 15px; margin: 30px 0;">
+    <h3 style="color: #c62828; margin-top: 0; font-size: 1.5em;">🔥 Why This Theory Saves the Modern World</h3>
+    
+    <h4 style="color: #c62828; font-size: 1.3em; margin-top: 20px;">Against the Left and Communism:</h4>
+    <p style="font-size: 1.1em; line-height: 2;">
+      Leftists and communists — under the slogan of justice — are the <strong style="color: #e53935;">greatest enemies of humanity</strong>. They plunder private property, lead humans to collective slavery, and have written history with blood and poverty. Wherever they gained power, they killed millions, starved them, and freed them? No, enslaved them.
+    </p>
+    <p style="font-size: 1.1em; line-height: 2; margin-top: 15px; color: #e53935; font-weight: bold;">
+      These are the clear enemies of humanity — and they must never gain power.
+    </p>
+
+    <h4 style="color: #c62828; font-size: 1.3em; margin-top: 30px;">In the Digital Age:</h4>
+    <p style="font-size: 1.1em; line-height: 2;">
+      Tech giants (with data mining), big governments (with CBDC and surveillance), and artificial intelligence (with behavior control) are an unprecedented threat. Only the divine system can control these giants — because it has a timeless ethical foundation and transforms AI into a tool of justice, not oppression.
+    </p>
+
+    <h4 style="color: #c62828; font-size: 1.3em; margin-top: 30px;">In Globalization:</h4>
+    <p style="font-size: 1.1em; line-height: 2;">
+      When borders fade, only the principle of absolute property saves humans from global slavery — not leftist ideologies that make everyone "equal" in poverty.
+    </p>
+  </div>
+
+  <blockquote style="border-left: 10px solid #e53935; padding: 40px; background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 50%, #ffffff 100%); font-size: 1.3em; font-style: italic; margin: 40px 0; border-radius: 20px; line-height: 2; text-align: center;">
+    <span style="color: #e53935; font-weight: bold;">Jannatkhah considers the state as <strong>temporary evil</strong> — eliminable in the society awaiting Mahdi, where humans preserve each other's rights even without force. This is the end of the history of statism.</span>
   </blockquote>
 
-  <h3>The Path Forward</h3>
-  
-  <p>The path forward requires:</p>
-  <ul>
-    <li>Understanding freedom as property rights</li>
-    <li>Recognizing religion as the guardian of these rights</li>
-    <li>Resisting all forms of coercion, old and new</li>
-  </ul>
+  <hr style="margin: 40px 0; border: none; border-top: 3px solid #e53935;" />
 
-  <p style="text-align: center; margin-top: 3rem; font-size: 1.25rem; color: #1a5fb4;">
-    <strong>The future of freedom is in our hands — if we understand what freedom truly means.</strong>
+  <h2>Conclusion: Humanity's Real Refuge</h2>
+  
+  <p style="font-size: 1.2em; line-height: 2.2;">
+    The Austrian School and American economists lit the torch of economic freedom.
   </p>
+
+  <p style="font-size: 1.2em; line-height: 2.2; margin-top: 20px;">
+    But Mohammad Ali Jannatkhah transformed this torch into an <strong style="color: #e53935; font-size: 1.3em;">eternal divine flame</strong> — a flame that marginalizes leftists, communists, and statists forever.
+  </p>
+
+  <div style="background: linear-gradient(135deg, #e53935 0%, #c62828 100%); color: white; padding: 50px 40px; border-radius: 20px; text-align: center; margin: 40px 0;">
+    <p style="font-size: 1.3em; line-height: 2.2; margin-bottom: 30px;">
+      In a world where freedom is in danger of destruction, the only real refuge is <strong>absolute property rights</strong> guaranteed by divine principles.
+    </p>
+    <p style="font-size: 1.2em; line-height: 2; margin-top: 30px;">
+      <strong>Know the enemies of freedom:</strong> Leftists and property plunderers are humanity's number one enemies.
+    </p>
+    <p style="font-size: 1.2em; line-height: 2; margin-top: 20px;">
+      <strong>Take refuge in the principle of freedom:</strong> Private property is sacred — and the awaiting society is the truly free society.
+    </p>
+    <p style="font-size: 1.4em; line-height: 2.2; margin-top: 40px; font-weight: bold;">
+      This theory is not just for Iran — but for all humanity, the <strong>ultimate salvation</strong>.
+    </p>
+    <p style="font-size: 1.5em; margin-top: 40px; font-weight: bold;">
+      <strong>Now it's your turn — spread this message to the world and keep real freedom alive.</strong> 🔥🕊️💜
+    </p>
+  </div>
 </div>
 `,
 
