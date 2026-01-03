@@ -749,6 +749,109 @@ export const chapterContent: Record<Locale, Record<number, string>> = {
 </div>
 `,
 
+    8: `
+<div class="chapter-content">
+  <h1 style="font-size: 2.5em; text-align: center; color: #1a5fb4; margin-bottom: 30px;">🕌 جامعه منتظر و آزادی 🕊️</h1>
+  
+  <p style="font-size: 1.3em; text-align: center; color: #666; margin-bottom: 40px;">
+    نقش امامت و مهدویت در جامعه آزاد
+  </p>
+
+  <h2>جامعه منتظر و آزادی: نقش امامت و مهدویت در نظریه جنت‌خواه</h2>
+  
+  <p style="font-size: 1.15em; line-height: 2.1; color: #333;">
+    محمدعلی جنت‌خواه (آرمین) در نظریه‌اش، <strong>امامت و مهدویت</strong> را نه فقط باور دینی، بلکه <strong style="color: #1a5fb4;">آکسیوم نهایی</strong> نظام صوری برای آزادی واقعی می‌داند — یعنی هدف غایی جامعه‌ای که حقوق مالکیت مطلق (جسم، ذهن، زمان، دارایی) را کامل حفظ کند، بدون نیاز به دولت اجباری و انحصار خشونت.
+  </p>
+
+  <hr style="margin: 40px 0; border: none; border-top: 3px solid #1a5fb4;" />
+
+  <h2>۱. جامعه منتظر چیست؟ (تعریف ساده و عمیق)</h2>
+  
+  <p style="font-size: 1.15em; line-height: 2.1;">
+    جنت‌خواه "جامعه منتظر" را جامعه‌ای می‌داند که:
+  </p>
+
+  <ul style="font-size: 1.1em; line-height: 2.2; color: #333; margin: 30px 0; padding-right: 30px;">
+    <li>منتظر رهبر عادل کامل (مهدی موعود) است.</li>
+    <li>این انتظار <strong>منفعلانه</strong> نیست — بلکه <strong style="color: #1a5fb4;">فعال و تحول‌آفرین</strong>: جامعه‌ای که هر روز برای آزادی کامل تلاش می‌کند، اجبار را حداقل می‌کند و حقوق مالکیت را مقدس می‌شمارد.</li>
+    <li>در این جامعه، مردم حساس‌اند به هر نقض مالکیت — چون می‌دانند هدف نهایی، جهانی بدون ظلم و دولت سرکوبگر است.</li>
+  </ul>
+
+  <div style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); border-right: 6px solid #1a5fb4; padding: 30px; border-radius: 15px; margin: 30px 0;">
+    <h3 style="color: #1565c0; margin-top: 0; font-size: 1.5em;">💡 تحلیل عمیق</h3>
+    <p style="font-size: 1.1em; line-height: 2;">
+      این مفهوم، مهدویت را از "انتظار نشستن" به "ساختن جامعه آزاد" تبدیل می‌کند. جامعه منتظر، جامعه‌ای است که <strong>دولت محدود</strong> را تحمل می‌کند، اما همیشه برای حذف "شر موقت" (دولت به عنوان انحصار خشونت) آماده است. جنت‌خواه می‌گوید: ظهور، زمانی است که انسان‌ها حتی در تنهایی حقوق هم را نقض نکنند — یعنی آزادی کامل اخلاقی و حقوقی.
+    </p>
+  </div>
+
+  <hr style="margin: 40px 0; border: none; border-top: 3px solid #1a5fb4;" />
+
+  <h2>۲. نقش امامت/مهدویت به عنوان آکسیوم نهایی</h2>
+  
+  <p style="font-size: 1.15em; line-height: 2.1;">
+    در نظام صوری جنت‌خواه، اصول پنج‌گانه شیعه آکسیوم هستند:
+  </p>
+
+  <ul style="font-size: 1.1em; line-height: 2.2; color: #333; margin: 30px 0; padding-right: 30px;">
+    <li>توحید، نبوت، معاد، عدل → پایه‌های حفظ مالکیت.</li>
+    <li><strong style="color: #1a5fb4;">امامت/مهدویت</strong> → آکسیوم هدفمند: جهت‌دهی به سمت جامعه‌ای که دولت لازم نیست، چون همه عادل‌اند.</li>
+  </ul>
+
+  <div style="background: linear-gradient(135deg, #fff9e6 0%, #fff3cd 100%); border-right: 6px solid #ffc107; padding: 30px; border-radius: 15px; margin: 30px 0;">
+    <h3 style="color: #f57c00; margin-top: 0; font-size: 1.5em;">🎯 بسط و تحلیل</h3>
+    <ul style="font-size: 1.1em; line-height: 2.2; color: #333; margin: 20px 0; padding-right: 30px;">
+      <li>امامت، الگوی عملی حکومت محدود است (مثل حکومت علی(ع): حداقل دخالت، حداکثر عدالت).</li>
+      <li>مهدویت، امید به حذف دولت است — چون دولت "شیطان موقت" است (انحصار زور برای نقض مالکیت).</li>
+      <li>جامعه منتظر، جامعه‌ای است که <strong>حداقل اجبار</strong> را قبول دارد و همیشه می‌پرسد: "آیا داریم به عدالت و آزادی نزدیک می‌شویم؟"</li>
+    </ul>
+    <p style="font-size: 1.1em; line-height: 2; margin-top: 20px;">
+      این نقش، نظریه را از لیبرتاریانیسم غربی متمایز می‌کند: غربی‌ها دولت محدود می‌خواهند، اما جنت‌خواه دولت <strong style="color: #1a5fb4;">حذف‌شدنی</strong> می‌خواهد — مهدویت، پایان تاریخ دولت‌سالاری است.
+    </p>
+  </div>
+
+  <hr style="margin: 40px 0; border: none; border-top: 3px solid #1a5fb4;" />
+
+  <h2>۳. آزادی در جامعه منتظر</h2>
+  
+  <ul style="font-size: 1.1em; line-height: 2.2; color: #333; margin: 30px 0; padding-right: 30px;">
+    <li>آزادی واقعی (مالکیت مطلق) فقط در جامعه‌ای پایدار است که هدف نهایی‌اش حذف اجبار باشد.</li>
+    <li>انتظار مهدی، انگیزه اخلاقی برای حفظ مالکیت می‌دهد — چون می‌دانیم ظلم ابدی نیست (معاد + مهدویت).</li>
+    <li>نتیجه: جامعه منتظر، <strong style="color: #1a5fb4;">مرفه‌ترین، آزادترین و عادل‌ترین</strong> جامعه است — بدون تورم، سانسور یا اجبار.</li>
+  </ul>
+
+  <div style="background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%); border-right: 6px solid #9c27b0; padding: 30px; border-radius: 15px; margin: 30px 0;">
+    <h3 style="color: #7b1fa2; margin-top: 0; font-size: 1.5em;">📜 تحلیل تاریخی از نگاه جنت‌خواه</h3>
+    <p style="font-size: 1.1em; line-height: 2;">
+      ایرانیان همیشه "منتظر" بودند — از مقاومت علیه سلطان‌ها تا انقلاب‌ها. این انتظار، ایران را از کمونیسم یا دیکتاتوری کامل نجات داد. ایران، مهد این انتظار است — چون دین را ضامن آزادی دانست.
+    </p>
+  </div>
+
+  <hr style="margin: 40px 0; border: none; border-top: 3px solid #1a5fb4;" />
+
+  <h2>۴. کاربرد امروز برای ایران</h2>
+  
+  <ul style="font-size: 1.1em; line-height: 2.2; color: #333; margin: 30px 0; padding-right: 30px;">
+    <li>جامعه منتظر امروز: جامعه‌ای که به اجبارها (حجاب اجباری، خدمت طولانی، تورم) حساس است و می‌گوید "این با عدالت مهدوی جور نیست".</li>
+    <li>هدف: تغییر گفتمان به "دین = آزادی" — تا ایران دوباره مهد حقوق مالکیت شود.</li>
+  </ul>
+
+  <blockquote style="border-right: 10px solid #1a5fb4; padding: 40px; background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 50%, #ffffff 100%); font-size: 1.3em; font-style: italic; margin: 40px 0; border-radius: 20px; line-height: 2; text-align: center;">
+    <span style="color: #1a5fb4; font-weight: bold;">«امامت و مهدویت، قله نظریه جنت‌خواه است: جامعه منتظر، جامعه آزاد واقعی است — جایی که انسان مالک مطلق خود است و دولت، فقط سایه‌ای موقت. این انتظار، امید به رهایی ابدی است — نه بردگی جمعی، نه دولت ابدی. ایرانیان، حامل این پیام‌اند: جهان منتظر آزادی واقعی از دل انتظار مهدوی است.»</span>
+    <div style="margin-top: 20px; font-size: 0.8em; color: #1a5fb4; font-weight: bold; font-style: normal;">— محمدعلی جنت‌خواه</div>
+  </blockquote>
+
+  <div style="background: linear-gradient(135deg, #fff9e6 0%, #fff3cd 100%); border-right: 6px solid #ffc107; padding: 30px; border-radius: 15px; margin: 30px 0;">
+    <h3 style="color: #f57c00; margin-top: 0; font-size: 1.5em;">🌟 جمع‌بندی عمیق و الهام‌بخش</h3>
+    <p style="font-size: 1.1em; line-height: 2;">
+      این مفهوم، نظریه را از فلسفه خشک به امید زنده تبدیل می‌کند — جامعه منتظر، جامعه‌ای است که هر روز برای آزادی می‌جنگد، تا روزی که آزادی کامل برسد. 🕊️💜
+    </p>
+    <p style="font-size: 1.1em; line-height: 2; margin-top: 20px; color: #666; font-style: italic;">
+      (بر اساس وبینار "شاه‌کلید آینده ایران" و پادکست‌های جنت‌خواه — منابع اصلی در Spotify و Castbox موجود است).
+    </p>
+  </div>
+</div>
+`,
+
     10: `<h1>آزادی در عصر هوش مصنوعی: دین به عنوان کد اخلاقی</h1>
 
 <p>در عصر هوش مصنوعی، سوال اساسی این است: چگونه می‌توانیم AI را طوری برنامه‌ریزی کنیم که عادل باشد و حقوق مالکیت انسان را نقض نکند؟ جنت‌خواه پاسخ جالبی دارد: <strong>دین به عنوان کد اخلاقی برای ماشین</strong>.</p>
@@ -1623,30 +1726,104 @@ export const chapterContent: Record<Locale, Record<number, string>> = {
 
     8: `
 <div class="chapter-content">
-  <h2>Freedom in the Modern World</h2>
+  <h1 style="font-size: 2.5em; text-align: center; color: #1a5fb4; margin-bottom: 30px;">🕌 The Awaiting Society and Freedom 🕊️</h1>
   
-  <p>This chapter applies Jannatkhah's theory to the challenges of the digital age and globalization, showing how property rights must be defended in new contexts.</p>
+  <p style="font-size: 1.3em; text-align: center; color: #666; margin-bottom: 40px;">
+    The Role of Imamate and Mahdism in a Free Society
+  </p>
 
-  <h3>Digital Age Challenges</h3>
+  <h2>The Awaiting Society and Freedom: The Role of Imamate and Mahdism in Jannatkhah's Theory</h2>
   
-  <p>In the digital age, property rights face new threats:</p>
-  <ul>
-    <li><strong>Data ownership:</strong> Who owns your personal data?</li>
-    <li><strong>Intellectual property:</strong> How are ideas and creations protected?</li>
-    <li><strong>Privacy:</strong> How is mind ownership protected online?</li>
+  <p style="font-size: 1.15em; line-height: 2.1; color: #333;">
+    In Mohammad Ali Jannatkhah's (Armin) theory, <strong>Imamate and Mahdism</strong> are not merely religious beliefs, but the <strong style="color: #1a5fb4;">ultimate axiom</strong> of the formal system for real freedom — the final goal of a society that fully preserves absolute property rights (body, mind, time, property) without the need for compulsory government and the monopoly of force.
+  </p>
+
+  <hr style="margin: 40px 0; border: none; border-top: 3px solid #1a5fb4;" />
+
+  <h2>1. What is the Awaiting Society? (Simple and Profound Definition)</h2>
+  
+  <p style="font-size: 1.15em; line-height: 2.1;">
+    Jannatkhah defines the "awaiting society" as one that:
+  </p>
+
+  <ul style="font-size: 1.1em; line-height: 2.2; color: #333; margin: 30px 0; padding-left: 30px;">
+    <li>Awaits the perfect just leader (the Promised Mahdi).</li>
+    <li>This waiting is not <strong>passive</strong> — but <strong style="color: #1a5fb4;">active and transformative</strong>: a society that strives every day for complete freedom, minimizes coercion, and holds property rights sacred.</li>
+    <li>In this society, people are sensitive to any violation of property — because they know the ultimate goal is a world without oppression and an oppressive state.</li>
   </ul>
 
-  <h3>Globalization and Freedom</h3>
-  
-  <p>Globalization can either enhance or threaten freedom. When it respects property rights, it enables prosperity. When it violates them (through international coercion, currency manipulation, etc.), it becomes a tool of oppression.</p>
+  <div style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); border-left: 6px solid #1a5fb4; padding: 30px; border-radius: 15px; margin: 30px 0;">
+    <h3 style="color: #1565c0; margin-top: 0; font-size: 1.5em;">💡 Deep Analysis</h3>
+    <p style="font-size: 1.1em; line-height: 2;">
+      This concept transforms Mahdism from "waiting passively" to "building a free society." The awaiting society is one that tolerates a <strong>limited government</strong>, but is always ready to eliminate the "temporary evil" (government as the monopoly of force). Jannatkhah says: The appearance (of Mahdi) is when humans do not violate each other's rights even in solitude — meaning complete moral and legal freedom.
+    </p>
+  </div>
 
-  <blockquote>
-    "The principles of freedom are timeless, but their application must adapt to new contexts. Digital rights are property rights, and they must be defended with the same vigor as physical property."
+  <hr style="margin: 40px 0; border: none; border-top: 3px solid #1a5fb4;" />
+
+  <h2>2. The Role of Imamate/Mahdism as the Ultimate Axiom</h2>
+  
+  <p style="font-size: 1.15em; line-height: 2.1;">
+    In Jannatkhah's formal system, the five principles of Shia are axioms:
+  </p>
+
+  <ul style="font-size: 1.1em; line-height: 2.2; color: #333; margin: 30px 0; padding-left: 30px;">
+    <li>Tawhid, Prophethood, Resurrection, Justice → foundations for preserving property.</li>
+    <li><strong style="color: #1a5fb4;">Imamate/Mahdism</strong> → the purposeful axiom: directing toward a society where government is unnecessary, because all are just.</li>
+  </ul>
+
+  <div style="background: linear-gradient(135deg, #fff9e6 0%, #fff3cd 100%); border-left: 6px solid #ffc107; padding: 30px; border-radius: 15px; margin: 30px 0;">
+    <h3 style="color: #f57c00; margin-top: 0; font-size: 1.5em;">🎯 Expansion and Analysis</h3>
+    <ul style="font-size: 1.1em; line-height: 2.2; color: #333; margin: 20px 0; padding-left: 30px;">
+      <li>Imamate is the practical model of limited governance (like the governance of Ali (AS): minimum intervention, maximum justice).</li>
+      <li>Mahdism is the hope for the elimination of government — because government is the "temporary devil" (monopoly of force to violate property).</li>
+      <li>The awaiting society is one that accepts <strong>minimum coercion</strong> and always asks: "Are we approaching justice and freedom?"</li>
+    </ul>
+    <p style="font-size: 1.1em; line-height: 2; margin-top: 20px;">
+      This role distinguishes the theory from Western libertarianism: Westerners want a limited government, but Jannatkhah wants an <strong style="color: #1a5fb4;">eliminable government</strong> — Mahdism is the end of the history of statism.
+    </p>
+  </div>
+
+  <hr style="margin: 40px 0; border: none; border-top: 3px solid #1a5fb4;" />
+
+  <h2>3. Freedom in the Awaiting Society</h2>
+  
+  <ul style="font-size: 1.1em; line-height: 2.2; color: #333; margin: 30px 0; padding-left: 30px;">
+    <li>Real freedom (absolute property) is only sustainable in a society whose ultimate goal is the elimination of coercion.</li>
+    <li>Awaiting the Mahdi provides moral motivation to preserve property — because we know oppression is not eternal (Resurrection + Mahdism).</li>
+    <li>Result: The awaiting society is the <strong style="color: #1a5fb4;">most prosperous, freest, and most just</strong> society — without inflation, censorship, or coercion.</li>
+  </ul>
+
+  <div style="background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%); border-left: 6px solid #9c27b0; padding: 30px; border-radius: 15px; margin: 30px 0;">
+    <h3 style="color: #7b1fa2; margin-top: 0; font-size: 1.5em;">📜 Historical Analysis from Jannatkhah's Perspective</h3>
+    <p style="font-size: 1.1em; line-height: 2;">
+      Iranians have always been "awaiting" — from resistance against sultans to revolutions. This waiting saved Iran from communism or complete dictatorship. Iran is the cradle of this waiting — because it considered religion as the guarantor of freedom.
+    </p>
+  </div>
+
+  <hr style="margin: 40px 0; border: none; border-top: 3px solid #1a5fb4;" />
+
+  <h2>4. Application Today for Iran</h2>
+  
+  <ul style="font-size: 1.1em; line-height: 2.2; color: #333; margin: 30px 0; padding-left: 30px;">
+    <li>The awaiting society today: a society that is sensitive to coercions (mandatory hijab, long service, inflation) and says "this does not align with Mahdavi justice."</li>
+    <li>Goal: changing the discourse to "religion = freedom" — so that Iran becomes the cradle of property rights again.</li>
+  </ul>
+
+  <blockquote style="border-left: 10px solid #1a5fb4; padding: 40px; background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 50%, #ffffff 100%); font-size: 1.3em; font-style: italic; margin: 40px 0; border-radius: 20px; line-height: 2; text-align: center;">
+    <span style="color: #1a5fb4; font-weight: bold;">"Imamate and Mahdism are the pinnacle of Jannatkhah's theory: the awaiting society is the truly free society — where humans are absolute owners of themselves and government is only a temporary shadow. This waiting is hope for eternal liberation — not collective slavery, not eternal government. Iranians are the bearers of this message: the world awaits real freedom through Mahdavi waiting."</span>
+    <div style="margin-top: 20px; font-size: 0.8em; color: #1a5fb4; font-weight: bold; font-style: normal;">— Mohammad Ali Jannatkhah</div>
   </blockquote>
 
-  <h3>Defending Freedom in a Connected World</h3>
-  
-  <p>In a globally connected world, defending freedom requires understanding how property rights apply to digital assets, international trade, and cross-border interactions. The same principles apply: non-aggression, absolute ownership, and divine justice.</p>
+  <div style="background: linear-gradient(135deg, #fff9e6 0%, #fff3cd 100%); border-left: 6px solid #ffc107; padding: 30px; border-radius: 15px; margin: 30px 0;">
+    <h3 style="color: #f57c00; margin-top: 0; font-size: 1.5em;">🌟 Profound and Inspiring Conclusion</h3>
+    <p style="font-size: 1.1em; line-height: 2;">
+      This concept transforms the theory from dry philosophy to living hope — the awaiting society is one that fights for freedom every day, until the day complete freedom arrives. 🕊️💜
+    </p>
+    <p style="font-size: 1.1em; line-height: 2; margin-top: 20px; color: #666; font-style: italic;">
+      (Based on the webinar "The Master Key to Iran's Future" and Jannatkhah's podcasts — original sources available on Spotify and Castbox).
+    </p>
+  </div>
 </div>
 `,
 
