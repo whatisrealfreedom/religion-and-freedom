@@ -15,10 +15,9 @@ const FreedomBird: React.FC<FreedomBirdProps> = ({ size = 'md', animated = true 
 
   return (
     <motion.div
-      className={`${sizeClasses[size]} relative`}
+      className={`${sizeClasses[size]} relative flex items-center justify-center`}
       animate={animated ? {
-        y: [-5, 5, -5],
-        rotate: [-2, 2, -2],
+        y: [-3, 3, -3],
         transition: {
           duration: 3,
           repeat: Infinity,
@@ -26,96 +25,207 @@ const FreedomBird: React.FC<FreedomBirdProps> = ({ size = 'md', animated = true 
         },
       } : {}}
     >
+      {/* Modern Logo: White Dove with Key - Freedom Symbol */}
       <svg
-        viewBox="0 0 100 100"
+        viewBox="0 0 140 140"
         className="w-full h-full"
         xmlns="http://www.w3.org/2000/svg"
       >
-        {/* Bird Body */}
-        <motion.ellipse
-          cx="50"
-          cy="55"
-          rx="18"
-          ry="12"
-          fill="currentColor"
-          className="text-primary-500"
-          initial={{ scale: 0.9 }}
-          animate={{ scale: [0.9, 1, 0.9] }}
-          transition={{ duration: 2, repeat: Infinity }}
-        />
-        
-        {/* Bird Head */}
-        <circle
-          cx="65"
-          cy="50"
-          r="10"
-          fill="currentColor"
-          className="text-primary-600"
-        />
-        
-        {/* Beak */}
-        <polygon
-          points="75,50 82,48 75,52"
-          fill="currentColor"
-          className="text-primary-700"
-        />
-        
-        {/* Eye */}
-        <circle
-          cx="67"
-          cy="48"
-          r="2"
-          fill="white"
-        />
-        
-        {/* Wings - Left */}
-        <motion.path
-          d="M 35 55 Q 20 40, 15 50 Q 20 60, 35 55"
-          fill="currentColor"
-          className="text-primary-400"
-          opacity="0.9"
-          animate={{
-            d: [
-              "M 35 55 Q 20 40, 15 50 Q 20 60, 35 55",
-              "M 35 55 Q 25 35, 20 45 Q 25 65, 35 55",
-              "M 35 55 Q 20 40, 15 50 Q 20 60, 35 55",
-            ],
+        {/* White Dove - Clear and Prominent */}
+        <motion.g
+          animate={animated ? {
+            rotate: [0, -2, 2, 0],
+          } : {}}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+            ease: "easeInOut",
           }}
-          transition={{ duration: 1.5, repeat: Infinity }}
-        />
-        
-        {/* Wings - Right */}
-        <motion.path
-          d="M 35 55 Q 50 40, 55 50 Q 50 60, 35 55"
-          fill="currentColor"
-          className="text-primary-300"
-          opacity="0.8"
-          animate={{
-            d: [
-              "M 35 55 Q 50 40, 55 50 Q 50 60, 35 55",
-              "M 35 55 Q 45 35, 50 45 Q 45 65, 35 55",
-              "M 35 55 Q 50 40, 55 50 Q 50 60, 35 55",
-            ],
+        >
+          {/* Dove Body - White/Egg */}
+          <ellipse
+            cx="70"
+            cy="80"
+            rx="22"
+            ry="16"
+            fill="white"
+            stroke="#e0e7ff"
+            strokeWidth="2"
+          />
+          
+          {/* Dove Head - White Circle */}
+          <circle
+            cx="85"
+            cy="75"
+            r="14"
+            fill="white"
+            stroke="#e0e7ff"
+            strokeWidth="2"
+          />
+          
+          {/* Dove Eye */}
+          <circle
+            cx="87"
+            cy="73"
+            r="2.5"
+            fill="#3b82f6"
+          />
+          <circle
+            cx="88"
+            cy="72"
+            r="1"
+            fill="white"
+          />
+          
+          {/* Dove Beak - Orange/Gold */}
+          <polygon
+            points="98,75 105,73 98,77"
+            fill="#f59e0b"
+          />
+          
+          {/* Wings - Left (Upward) */}
+          <motion.path
+            d="M 48 80 Q 30 55, 25 70 Q 30 90, 48 85"
+            fill="white"
+            stroke="#e0e7ff"
+            strokeWidth="2"
+            opacity="0.95"
+            animate={animated ? {
+              d: [
+                "M 48 80 Q 30 55, 25 70 Q 30 90, 48 85",
+                "M 48 80 Q 28 50, 22 70 Q 28 95, 48 85",
+                "M 48 80 Q 30 55, 25 70 Q 30 90, 48 85",
+              ],
+            } : {}}
+            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+          />
+          
+          {/* Wings - Right (Upward) */}
+          <motion.path
+            d="M 92 80 Q 110 55, 115 70 Q 110 90, 92 85"
+            fill="white"
+            stroke="#e0e7ff"
+            strokeWidth="2"
+            opacity="0.95"
+            animate={animated ? {
+              d: [
+                "M 92 80 Q 110 55, 115 70 Q 110 90, 92 85",
+                "M 92 80 Q 112 50, 118 70 Q 112 95, 92 85",
+                "M 92 80 Q 110 55, 115 70 Q 110 90, 92 85",
+              ],
+            } : {}}
+            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
+          />
+          
+          {/* Tail Feathers */}
+          <path
+            d="M 48 92 Q 40 100, 35 95 Q 42 98, 48 96"
+            fill="white"
+            stroke="#e0e7ff"
+            strokeWidth="1.5"
+            opacity="0.9"
+          />
+        </motion.g>
+
+        {/* Key - Golden/Yellow for contrast */}
+        <motion.g
+          animate={animated ? {
+            rotate: [0, 5, -5, 0],
+            scale: [1, 1.05, 1],
+          } : {}}
+          transition={{
+            duration: 3,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 0.5,
           }}
-          transition={{ duration: 1.5, repeat: Infinity, delay: 0.3 }}
-        />
-        
-        {/* Tail */}
-        <motion.path
-          d="M 32 55 Q 25 60, 20 55"
-          stroke="currentColor"
-          strokeWidth="3"
-          fill="none"
-          className="text-primary-600"
-          animate={{
-            pathLength: [0.5, 1, 0.5],
-          }}
-          transition={{ duration: 1, repeat: Infinity }}
-        />
+          style={{ transformOrigin: '70px 110px' }}
+        >
+          {/* Key Head (Circle) - Gold */}
+          <circle
+            cx="70"
+            cy="110"
+            r="12"
+            fill="#fbbf24"
+            stroke="#f59e0b"
+            strokeWidth="1.5"
+          />
+          
+          {/* Key Teeth */}
+          <rect
+            x="67"
+            y="106"
+            width="6"
+            height="8"
+            rx="1.5"
+            fill="#fbbf24"
+          />
+          
+          {/* Key Shaft */}
+          <rect
+            x="68.5"
+            y="115"
+            width="3"
+            height="18"
+            rx="1.5"
+            fill="#fbbf24"
+          />
+          
+          {/* Key Bottom (Handle) - Gold */}
+          <circle
+            cx="70"
+            cy="136"
+            r="6"
+            fill="#fbbf24"
+            stroke="#f59e0b"
+            strokeWidth="1.5"
+          />
+        </motion.g>
+
+        {/* Sparkles - Light Blue/White */}
+        {animated && (
+          <>
+            <motion.circle
+              cx="35"
+              cy="45"
+              r="2.5"
+              fill="#93c5fd"
+              opacity="0.9"
+              animate={{
+                scale: [0.5, 1.2, 0.5],
+                opacity: [0.4, 0.9, 0.4],
+              }}
+              transition={{ duration: 2, repeat: Infinity, delay: 0 }}
+            />
+            <motion.circle
+              cx="105"
+              cy="45"
+              r="2"
+              fill="#bfdbfe"
+              opacity="0.8"
+              animate={{
+                scale: [0.4, 1, 0.4],
+                opacity: [0.3, 0.8, 0.3],
+              }}
+              transition={{ duration: 2, repeat: Infinity, delay: 1 }}
+            />
+            <motion.circle
+              cx="50"
+              cy="30"
+              r="1.5"
+              fill="#dbeafe"
+              opacity="0.7"
+              animate={{
+                scale: [0.3, 0.8, 0.3],
+                opacity: [0.2, 0.7, 0.2],
+              }}
+              transition={{ duration: 1.5, repeat: Infinity, delay: 0.5 }}
+            />
+          </>
+        )}
       </svg>
     </motion.div>
   );
 };
 
 export default FreedomBird;
-

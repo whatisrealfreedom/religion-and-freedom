@@ -60,7 +60,7 @@ const Navbar: React.FC = () => {
             to={base}
             className={`flex items-center space-x-2 sm:space-x-3 ${isRTL ? 'space-x-reverse' : ''} group`}
           >
-            <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-gradient-to-br from-primary-500 via-primary-600 to-primary-700 rounded-xl sm:rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 rounded-xl sm:rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 ring-2 ring-white/20">
               <FreedomBird size="sm" animated />
             </div>
             <div className="hidden xs:block">
