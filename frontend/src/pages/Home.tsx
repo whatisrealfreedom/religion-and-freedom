@@ -482,6 +482,119 @@ const Home: React.FC = () => {
         </div>
       </section>
 
+      {/* 28 Mordad Section (Below Beyond Chapters) */}
+      <section className="pb-10 sm:pb-14 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mb-6 sm:mb-8"
+        >
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 mb-3">
+            {isRTL ? 'کودتای ۲۸ مرداد: حقیقت یا تحریف؟' : '28 Mordad: Truth or Distortion?'}
+          </h2>
+          <p className="text-gray-600 text-base sm:text-lg leading-relaxed max-w-3xl">
+            {isRTL
+              ? 'یک پرونده مستقل و فصل‌بندی‌شده: شکستن روایت‌های ساده‌ساز، خواندن سندها، و ترجمه تاریخ به «درس‌های آزادی واقعی و حقوق مالکیت».'
+              : 'A standalone dossier: map narratives, read documents, and translate history into lessons for real freedom.'}
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+          {/* Main 28 Mordad Card */}
+          <motion.div
+            initial={{ opacity: 0, y: 18, scale: 0.98 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.45, delay: 0 }}
+            className="relative overflow-hidden rounded-2xl border-4 border-emerald-600 shadow-lg hover:shadow-2xl transition-all transform hover:scale-[1.03]"
+            style={{ boxShadow: '0 10px 30px rgba(16, 185, 129, 0.22)' }}
+          >
+            <div className="absolute inset-0 pointer-events-none" style={{ background: 'linear-gradient(135deg, rgba(34,197,94,0.10) 0%, rgba(255,255,255,0.88) 45%, rgba(239,68,68,0.10) 100%)' }} />
+            <div className="absolute -top-20 -right-20 w-72 h-72 bg-emerald-400/20 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute -bottom-20 -left-20 w-72 h-72 bg-rose-400/20 rounded-full blur-3xl pointer-events-none" />
+
+            <Link to={withLocalePath(locale, '/28mordad')} className="relative block p-6 h-full">
+              <div className="flex items-start gap-3">
+                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-emerald-600 to-emerald-800 text-white flex items-center justify-center font-black text-xl shadow-lg flex-shrink-0">
+                  ۲۸
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg font-extrabold text-gray-900 mb-1">
+                    {isRTL ? 'کودتای ۲۸ مرداد: حقیقت یا تحریف؟' : '28 Mordad: Truth or Distortion?'}
+                  </h3>
+                  <p className="text-sm text-gray-700 leading-relaxed font-semibold">
+                    {isRTL
+                      ? '۶ فصل + جدول روایت‌ها + تایم‌لاین. از زمینه تاریخی تا نقش مصدق و درس آزادی واقعی.'
+                      : '6 chapters + narrative map + timeline.'}
+                  </p>
+                  <div className="mt-4 text-sm font-bold text-emerald-800">
+                    {isRTL ? 'ورود به پرونده' : 'Open dossier'} →
+                  </div>
+                </div>
+              </div>
+            </Link>
+          </motion.div>
+
+          {/* Quick Start: Chapter 1 */}
+          <motion.div
+            initial={{ opacity: 0, y: 18 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.45, delay: 0.06 }}
+            className="bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-xl transition-all"
+          >
+            <Link to={withLocalePath(locale, '/28mordad/1')} className="block p-6 h-full">
+              <div className="flex items-start gap-3">
+                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-emerald-600 to-emerald-800 text-white flex items-center justify-center font-black text-xl">
+                  ۱
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg font-extrabold text-gray-900 mb-1">
+                    {isRTL ? 'شروع سریع: زمینه تاریخی' : 'Quick start: Context'}
+                  </h3>
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    {isRTL ? 'چرا ۲۸ مرداد رخ داد؟ زمینه را می‌چینیم.' : 'Build context before labeling.'}
+                  </p>
+                  <div className="mt-4 text-sm font-semibold text-primary-700">
+                    {isRTL ? 'مطالعه فصل ۱' : 'Open chapter 1'} →
+                  </div>
+                </div>
+              </div>
+            </Link>
+          </motion.div>
+
+          {/* Quick Start: Chapter 2 */}
+          <motion.div
+            initial={{ opacity: 0, y: 18 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.45, delay: 0.12 }}
+            className="bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-xl transition-all"
+          >
+            <Link to={withLocalePath(locale, '/28mordad/2')} className="block p-6 h-full">
+              <div className="flex items-start gap-3">
+                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-indigo-600 to-indigo-800 text-white flex items-center justify-center font-black text-xl">
+                  ۲
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg font-extrabold text-gray-900 mb-1">
+                    {isRTL ? 'محور اصلی: نقش مصدق' : 'Core: Mossadegh'}
+                  </h3>
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    {isRTL ? 'نقد اسطوره و نسبتِ دموکراسی با نهادها.' : 'Myth vs institutions.'}
+                  </p>
+                  <div className="mt-4 text-sm font-semibold text-primary-700">
+                    {isRTL ? 'مطالعه فصل ۲' : 'Open chapter 2'} →
+                  </div>
+                </div>
+              </div>
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Inspirational Quote Section */}
       <section className="bg-gradient-to-r from-primary-600 via-primary-700 to-primary-800 py-16 sm:py-20 md:py-24 my-12 sm:my-16 md:my-20 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">

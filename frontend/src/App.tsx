@@ -10,6 +10,8 @@ import Discussions from './pages/Discussions';
 import ThreadDetail from './pages/ThreadDetail';
 import SpecialAnalysisIran1408 from './pages/SpecialAnalysisIran1408';
 import ReformistsEnemy from './pages/ReformistsEnemy';
+import TwentyEightMordad from './pages/TwentyEightMordad';
+import TwentyEightMordadChapter from './pages/TwentyEightMordadChapter';
 import LocaleLayout from './i18n/LocaleLayout';
 import ScrollToTop from './components/ScrollToTop';
 
@@ -48,6 +50,8 @@ function App() {
           <Route path="discussions/:id" element={<ThreadDetail />} />
           <Route path="special/iran-1408" element={<SpecialAnalysisIran1408 />} />
           <Route path="special/reformists-enemy" element={<ReformistsEnemy />} />
+          <Route path="28mordad" element={<TwentyEightMordad />} />
+          <Route path="28mordad/:chapter" element={<TwentyEightMordadChapter />} />
         </Route>
 
         {/* Fallback for any unmatched routes */}
