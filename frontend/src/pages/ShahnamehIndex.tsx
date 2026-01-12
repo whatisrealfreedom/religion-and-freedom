@@ -47,7 +47,7 @@ const stories: Story[] = [
     enSubtitle: 'The Demon King',
     category: 'epic',
     icon: '🐍',
-    description: 'داستان ضحاک و هزاره ظلم و ستم - دوازده بخش کامل',
+    description: 'داستان جمشید و ضحاک و هزاره ظلم و ستم - شانزده بخش کامل (جمشید + ضحاک)',
     sections: {
       text: true,
       analysis: true,
@@ -55,8 +55,8 @@ const stories: Story[] = [
       references: true,
       commentary: true,
     },
-    pages: 120,
-    readingTime: 180,
+    pages: 150,
+    readingTime: 220,
     featured: true,
   },
   {
