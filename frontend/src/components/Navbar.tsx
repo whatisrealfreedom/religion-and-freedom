@@ -96,6 +96,9 @@ const Navbar: React.FC = () => {
             <Link to={withLocalePath(locale, '/discussions')} className="text-gray-700 hover:text-primary-600 font-semibold text-sm md:text-base transition-colors px-2 md:px-3 py-2 rounded-lg hover:bg-gray-50">
               {isRTL ? 'بحث و گفتگو' : 'Discussions'}
             </Link>
+            <Link to={withLocalePath(locale, '/shahnameh')} className="text-amber-700 hover:text-amber-800 font-bold text-sm md:text-base transition-colors px-2 md:px-3 py-2 rounded-lg hover:bg-amber-50">
+              {isRTL ? 'شاهنامه' : 'Shahnameh'}
+            </Link>
             <Link to={withLocalePath(locale, '/critics')} className="text-gray-700 hover:text-primary-600 font-semibold text-sm md:text-base transition-colors px-2 md:px-3 py-2 rounded-lg hover:bg-gray-50">
               {t('nav.critics')}
             </Link>
@@ -192,6 +195,13 @@ const Navbar: React.FC = () => {
               onClick={() => setIsOpen(false)}
             >
               {isRTL ? 'بحث و گفتگو' : 'Discussions'}
+            </Link>
+            <Link
+              to={withLocalePath(locale, '/shahnameh')}
+              className="block px-3 py-2.5 text-amber-700 hover:bg-amber-50 rounded-md text-base font-bold transition-colors"
+              onClick={() => setIsOpen(false)}
+            >
+              {isRTL ? 'شاهنامه' : 'Shahnameh'}
             </Link>
             <Link
               to={withLocalePath(locale, '/critics')}

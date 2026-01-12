@@ -595,6 +595,130 @@ const Home: React.FC = () => {
         </div>
       </section>
 
+      {/* Shahnameh Section */}
+      <section className="pb-10 sm:pb-14 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mb-6 sm:mb-8"
+        >
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 mb-3">
+            {isRTL ? 'شاهنامه فردوسی: گنجینه ادبیات فارسی' : 'Shahnameh by Ferdowsi: Treasure of Persian Literature'}
+          </h2>
+          <p className="text-gray-600 text-base sm:text-lg leading-relaxed max-w-3xl">
+            {isRTL
+              ? 'سفر به اعماق اسطوره‌ها و حماسه‌های ایرانی. در این بخش، داستان‌های شاهنامه را با تحلیل عمیق، تصاویر زیبا، و منابع معتبر تجربه کنید. هر داستان چندین بخش دارد: متن اصلی، تحلیل و تفسیر، تصاویر و نگاره‌ها، و منابع و رفرنس‌ها.'
+              : 'Journey into the depths of Iranian myths and epics. Experience Shahnameh stories with deep analysis, beautiful images, and reliable sources. Each story has multiple sections: original text, analysis and commentary, images and illustrations, and references.'}
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+          {/* Main Shahnameh Card */}
+          <motion.div
+            initial={{ opacity: 0, y: 18, scale: 0.98 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.45, delay: 0 }}
+            className="relative overflow-hidden rounded-2xl border-4 border-amber-600 shadow-lg hover:shadow-2xl transition-all transform hover:scale-[1.03]"
+            style={{ boxShadow: '0 10px 30px rgba(245, 158, 11, 0.22)' }}
+          >
+            <div className="absolute inset-0 pointer-events-none" style={{ background: 'linear-gradient(135deg, rgba(251,191,36,0.10) 0%, rgba(255,255,255,0.88) 45%, rgba(249,115,22,0.10) 100%)' }} />
+            <div className="absolute -top-20 -right-20 w-72 h-72 bg-amber-400/20 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute -bottom-20 -left-20 w-72 h-72 bg-orange-400/20 rounded-full blur-3xl pointer-events-none" />
+
+            <Link to={withLocalePath(locale, '/shahnameh')} className="relative block p-6 h-full">
+              <div className="flex items-start gap-3">
+                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-amber-600 to-orange-700 text-white flex items-center justify-center font-black text-xl shadow-lg flex-shrink-0">
+                  📜
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg font-extrabold text-gray-900 mb-1">
+                    {isRTL ? 'شاهنامه فردوسی' : 'Shahnameh by Ferdowsi'}
+                  </h3>
+                  <p className="text-sm text-gray-700 leading-relaxed font-semibold">
+                    {isRTL
+                      ? 'داستان‌های حماسی با تحلیل، تصاویر، و منابع کامل. هر داستان چندین بخش دارد: متن، تحلیل، نگاره‌ها، و رفرنس‌ها.'
+                      : 'Epic stories with analysis, images, and complete references. Each story has multiple sections: text, analysis, illustrations, and references.'}
+                  </p>
+                  <div className="mt-4 text-sm font-bold text-amber-800">
+                    {isRTL ? 'ورود به بخش شاهنامه' : 'Enter Shahnameh section'} →
+                  </div>
+                </div>
+              </div>
+            </Link>
+          </motion.div>
+
+          {/* Quick Start: First Story */}
+          <motion.div
+            initial={{ opacity: 0, y: 18 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.45, delay: 0.06 }}
+            className="bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-xl transition-all"
+          >
+            <Link to={withLocalePath(locale, '/shahnameh/feraydun')} className="block p-6 h-full">
+              <div className="flex items-start gap-3">
+                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-amber-600 to-orange-700 text-white flex items-center justify-center font-black text-xl">
+                  👑
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg font-extrabold text-gray-900 mb-1">
+                    {isRTL ? 'شروع سریع: فریدون' : 'Quick start: Fereydun'}
+                  </h3>
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    {isRTL ? 'داستان فریدون و نابودی ضحاک' : 'The story of Fereydun and the fall of Zahhak'}
+                  </p>
+                  <div className="mt-4 text-sm font-semibold text-primary-700">
+                    {isRTL ? 'مطالعه داستان' : 'Read story'} →
+                  </div>
+                </div>
+              </div>
+            </Link>
+          </motion.div>
+
+          {/* Info Card */}
+          <motion.div
+            initial={{ opacity: 0, y: 18 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.45, delay: 0.12 }}
+            className="bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-xl transition-all"
+          >
+            <div className="p-6 h-full">
+              <div className="flex items-start gap-3">
+                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-600 to-indigo-700 text-white flex items-center justify-center font-black text-xl">
+                  ⚔️
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg font-extrabold text-gray-900 mb-1">
+                    {isRTL ? 'داستان‌های برجسته' : 'Featured Stories'}
+                  </h3>
+                  <p className="text-sm text-gray-600 leading-relaxed mb-4">
+                    {isRTL ? 'رستم و سهراب، سیاوش، فریدون و بسیاری داستان‌های دیگر' : 'Rostam and Sohrab, Siyavash, Fereydun and many more'}
+                  </p>
+                  <div className="text-xs text-gray-500 space-y-1">
+                    <div className="flex items-center gap-2">
+                      <span>📚</span>
+                      <span>{isRTL ? 'تحلیل عمیق' : 'Deep analysis'}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span>🖼️</span>
+                      <span>{isRTL ? 'نگاره‌های زیبا' : 'Beautiful illustrations'}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span>📖</span>
+                      <span>{isRTL ? 'منابع معتبر' : 'Reliable sources'}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Inspirational Quote Section */}
       <section className="bg-gradient-to-r from-primary-600 via-primary-700 to-primary-800 py-16 sm:py-20 md:py-24 my-12 sm:my-16 md:my-20 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
