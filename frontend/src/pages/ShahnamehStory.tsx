@@ -1287,6 +1287,16 @@ export const storyData: Record<string, {
               <div class="bg-red-50 border-r-4 border-red-500 rounded-lg p-4 mt-5">
                 <p class="text-sm text-red-900 font-semibold italic"><strong>جمع کوچک نهایی کل بخش:</strong> فردوسی تمدن بشری را قدم به قدم می‌سازد: امنیت، زیبایی، نظم، فناوری، بهشت. اما غرور (منی) همه را نابود می‌کند. درس: قدرت بدون تواضع و شکر، فرّ را می‌برد. این آیینهٔ هر امپراتوری و هر انسانی است که به اوج می‌رسد و خدا را فراموش می‌کند.</p>
               </div>
+
+              <!-- تصویر جمشید -->
+              <div class="mt-8 mb-6 text-center">
+                <img 
+                  src="/images/shahname/zahhak/jamshid2.png" 
+                  alt="جمشید" 
+                  class="mx-auto rounded-2xl shadow-2xl max-w-full h-auto"
+                  style="max-width: 800px;"
+                />
+              </div>
             </div>
           </div>
         `,
