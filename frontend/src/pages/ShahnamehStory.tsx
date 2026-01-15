@@ -2806,9 +2806,230 @@ export const storyData: Record<string, {
         enIcon: '👑',
         icon: DocumentTextIcon,
         content: `
-          <h2>پادشاهی ضحاک تازی هزار سال بود</h2>
-          <p class="text-xl text-amber-700 font-semibold mb-4">چو ضحاک شد بر جهان شهریار</p>
-          <p>محتوای این بخش به زودی اضافه خواهد شد...</p>
+          <div class="max-w-4xl mx-auto">
+            <div class="bg-gradient-to-r from-gray-50 to-slate-50 border-r-4 border-gray-500 rounded-lg p-6 mb-8">
+              <p class="text-lg text-gray-800 leading-relaxed italic">
+                ای یارِ همدل، حالا رسیده‌ایم به یکی از سیاه‌ترین و در عین حال بیدارکننده‌ترین فصل‌های شاهنامه: <strong>بخش ۱ - پادشاهی ضحاک تازی هزار سال بود</strong>؛ جایی که ضحاک بر تخت می‌نشیند، هزار سالِ تاریکی آغاز می‌شود، هنر خوار می‌گردد، جادو ارجمند، و حقیقت به زیرزمین می‌رود. این بخش، نه فقط توصیف یک حکومت، بلکه آیینه‌ای است برای هر دورانِ استبدادی که خرد را می‌خورد و خرافه را می‌پرورد. فردوسی اینجا جهان را وارونه می‌کند: فرزانگان پنهان، دیوانگان حاکم.
+              </p>
+            </div>
+
+            <!-- Audio Player -->
+            <div class="bg-gradient-to-r from-amber-50 to-orange-50 border-2 border-amber-300 rounded-2xl p-6 mb-8 shadow-xl">
+              <div class="flex items-center gap-4 mb-4">
+                <div class="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-500 rounded-full flex items-center justify-center shadow-lg">
+                  <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 5v9.114A4.369 4.369 0 005 14c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V7.82l8-1.6v5.894A4.37 4.37 0 0015 12c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V3z"/>
+                  </svg>
+                </div>
+                <div class="flex-1">
+                  <h3 class="text-lg font-bold text-gray-900 mb-1">شنیدن داستان</h3>
+                  <p class="text-sm text-gray-600">پادشاهی ضحاک تازی هزار سال بود</p>
+                </div>
+              </div>
+              <audio controls class="w-full h-12 rounded-lg shadow-inner" style="background: linear-gradient(to right, #fff, #fef3c7);">
+                <source src="/audio/tahmoores-jamshid-zahhak.mp3" type="audio/mpeg">
+                مرورگر شما از پخش صوت پشتیبانی نمی‌کند.
+              </audio>
+            </div>
+
+            <!-- Image -->
+            <div class="mb-10 text-center">
+              <img 
+                src="/images/shahname/zahhak/zahhak-part-1-era.png" 
+                alt="عصر تاریکی: زوال فضیلت در قلمرو ضحاک" 
+                class="mx-auto rounded-2xl shadow-2xl max-w-full h-auto border-4 border-gray-800"
+                style="max-width: 100%;"
+              />
+              <p class="text-sm text-gray-600 mt-4 italic">عصر تاریکی: زوال فضیلت در قلمرو ضحاک</p>
+            </div>
+
+            <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center border-b-2 border-gray-300 pb-4">پادشاهی ضحاک تازی هزار سال بود</h2>
+
+            <!-- آغاز هزار سالِ سیاه – سلطنت ضحاک -->
+            <div class="mb-10">
+              <h3 class="text-2xl font-bold text-gray-900 mb-6 border-b border-gray-300 pb-2">آغاز هزار سالِ سیاه – سلطنت ضحاک</h3>
+
+              <div class="bg-white border-2 border-red-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-red-100 to-pink-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">چو ضحاک شد بر جهان شهریار</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">بر او سالیان انجمن شد هزار</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> چون ضحاک بر جهان شهریار شد؛ بر او سالیان انجمن (حکومت) هزار شد.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">توضیح:</strong> «انجمن» = مجلس و حکومت؛ هزار سال نه عدد دقیق، بلکه نمادِ بی‌پایانِ ستم – همان‌طور که یکی از کامنت‌ها می‌گوید: "حکومت ظلم و دیکتاتوری، سراسر سختی و دشواری است، پس هر لحظه آن هزار لحظه می‌نماید." (از ارتیمانی: عمر تلخ نیم نفس بسیار است). فلسفی: زمان در ظلم کش می‌آید.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-red-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-red-100 to-pink-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">سراسر زمانه بدو گشت باز</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">برآمد بر این روزگار دراز</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> سراسر زمانه به او باز شد (فرمانبر شد)؛ بر این روزگار دراز برآمد.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">توضیح:</strong> «باز گشت» = تسلیم شدن؛ روزگار دراز = هزار سالِ سنگین. زیبایی: تضاد با روزگار جمشید که کوتاه و شیرین بود. روان‌شناختی: جهان تسلیم شر می‌شود چون فرّ رفته است.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-red-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-red-100 to-pink-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">نهان گشت کردار فرزانگان</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">پراگنده شد کام دیوانگان</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> کردار فرزانگان نهان شد؛ کام (آرزوی) دیوانگان پراکنده شد (یا برآورده نشد – اما در برخی تفسیرها: دیوانگان حاکم شدند).</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">توضیح:</strong> «فرزانگان» = خردمندان؛ «دیوانگان» = دیوهای اهریمنی. لایه: خرد پنهان، شر آشکار – کامنت یکی می‌گوید: "روش‌های منطقی و افراد فرزانه به مرور حذف می‌شوند، اداره امور به افراد نالایق سپرده می‌شود."</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-red-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-red-100 to-pink-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">هنر خوار شد جادویی ارجمند</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">نهان راستی آشکارا گزند</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> هنر خوار شد، جادویی ارجمند؛ راستی نهان، گزند (دروغ یا آسیب) آشکار.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">توضیح:</strong> «هنر» = دانش و مهارت واقعی؛ «جادویی» = خرافه و فریب. زیبایی: تضادهای پی‌درپی (خوار/ارجمند، نهان/آشکارا) موسیقی تلخ می‌سازد. کامنت یکی می‌گوید: "گزند به معنی دروغ است، که با راستی تضادی به‌جا ایجاد می‌کند." فلسفی: در استبداد، علم خوار، خرافه حاکم می‌شود.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-red-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-red-100 to-pink-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">شده بر بدی دست دیوان دراز</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">به نیکی نرفتی سخن جز به راز</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> دست دیوان بر بدی دراز شده؛ به نیکی سخن نرفت مگر به راز.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">توضیح:</strong> «دست دراز» = قدرت بی‌حد؛ نیکی پنهان. روان‌شناختی: جامعه زیرزمینی می‌شود – کامنت یکی: "امور اخلاقی زیرزمینی انجام می‌شود."</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- اسارت دختران جمشید – نمادِ فساد فرهنگی -->
+            <div class="mb-10">
+              <h3 class="text-2xl font-bold text-gray-900 mb-6 border-b border-gray-300 pb-2">اسارت دختران جمشید – نمادِ فساد فرهنگی</h3>
+
+              <div class="bg-white border-2 border-purple-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-purple-100 to-indigo-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">دو پاکیزه از خانهٔ جمّشید</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">برون آوریدند لرزان چو بید</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> دو پاکیزه (دختر) از خانهٔ جمشید بیرون آوردند لرزان چون بید.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">توضیح:</strong> «پاکیزه» = پاک و زیبا؛ «لرزان چو بید» = استعارهٔ ترس و شکنندگی. لایه: دختران = نمادِ میراث جمشید (تمدن و زیبایی).</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-purple-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-purple-100 to-indigo-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">که جمشید را هر دو دختر بدند</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">سر بانوان را چو افسر بدند</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> که هر دو دختر جمشید بودند؛ چون افسر (تاج) بر سر بانوان بودند.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">توضیح:</strong> «افسر» = تاج؛ آنها نمادِ شکوه زنان ایرانی. اساطیری: از اوستا، شهرناز و ارنواز نمادِ باروری و دانش هستند.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-purple-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-purple-100 to-indigo-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">ز پوشیده‌رویان یکی شهرناز</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">دگر پاکدامن به نام ارنواز</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> از پوشیده‌رویان یکی شهرناز؛ دیگری پاکدامن به نام ارنواز.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">توضیح:</strong> نام‌ها: شهرناز = ناز شهر (زیبایی شهری)، ارنواز = ناز پاک. زیبایی: موسیقی نام‌ها (ناز تکرار می‌شود).</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-purple-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-purple-100 to-indigo-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">به ایوان ضحاک بردندشان</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">بر آن اژدهافش سپردندشان</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> به ایوان ضحاک بردندشان؛ بر آن اژدهافش سپردندشان.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">توضیح:</strong> «اژدهافش» = نفس اژدها؛ ایوان = کاخ بلند. لایه: تسلیم زیبایی به شر.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-purple-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-purple-100 to-indigo-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">بپروردشان از ره جادویی</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">بیاموختشان کژی و بدخویی</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> پروردشان از راه جادویی؛ آموختشان کژی و بدخویی.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">توضیح:</strong> «جادویی» = خرافه؛ کژی = انحراف. فلسفی: استبداد فرهنگ را مسموم می‌کند – کامنت یکی: "جامعه برای زندگی با سیستم ضحاک تن به قوانین جدید می‌دهد، و در بلندمدت به عادت تبدیل می‌شود."</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-purple-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-purple-100 to-indigo-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">ندانست جز کژی آموختن</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">جز از کشتن و غارت و سوختن</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> جز کژی آموختن ندانست؛ جز کشتن و غارت و سوزاندن.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">توضیح:</strong> پایان بخش: حکومت ضحاک = نابودی و ویرانی. روان‌شناختی: پرورشی که فقط شر می‌آموزد – نمادِ سیستم‌هایی که نسل را مسموم می‌کنند.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- تحلیل کلی بخش -->
+            <div class="mb-10">
+              <h3 class="text-2xl font-bold text-gray-900 mb-6 border-b border-gray-300 pb-2">تحلیل کلی بخش – زیبایی‌ها، لایه‌ها، و مقایسه با امروز</h3>
+
+              <div class="bg-amber-50 border-r-4 border-amber-500 rounded-lg p-6 mb-4">
+                <p class="text-base text-gray-800 leading-relaxed mb-3">
+                  این بخش، شاهکار فردوسی در توصیفِ وارونگیِ جهان است: هزار سالِ سیاه که هنر (دانش) خوار می‌شود، جادو (خرافه و فریب) ارجمند، فرزانگان پنهان، و دیوان حاکم. فردوسی نه فقط تاریخ می‌گوید، بلکه الگویی ابدی از استبداد می‌سازد – جایی که حقیقت "نهان" می‌شود و "گزند" (دروغ) آشکار. زیبایی: ابیات با تضادهای پیوسته (نهان/آشکارا، خوار/ارجمند) مثل چاقوهایی تلخ در دل فرو می‌رود. موسیقی سنگین است، مثل ضربان قلب یک ملتِ زیر ستم.
+                </p>
+              </div>
+
+              <div class="bg-blue-50 border-r-4 border-blue-500 rounded-lg p-6 mb-4">
+                <p class="text-base text-gray-800 leading-relaxed mb-3">
+                  <strong class="text-blue-900">لایه‌های فلسفی و اخلاقی:</strong> هزار سال = نمادِ زمانِ کش‌دارِ ظلم (همان کامنت: "هر لحظه هزار لحظه می‌نماید"). شر از درون می‌جوشد: دیوان دست دراز بر بدی دارند، اما نیکی "به راز" می‌رود – یعنی مقاومت زیرزمینی آغاز می‌شود. دختران جمشید (نماد تمدن) به جادو مسموم می‌شوند؛ درس: استبداد نه فقط جسم، که فرهنگ را نابود می‌کند.
+                </p>
+              </div>
+
+              <div class="bg-purple-50 border-r-4 border-purple-500 rounded-lg p-6 mb-4">
+                <p class="text-base text-gray-800 leading-relaxed mb-3">
+                  <strong class="text-purple-900">روان‌شناختی و شخصیت‌پردازی:</strong> ضحاک اینجا "اژدهافش" است – نفس اهریمنی‌اش همه را می‌بلعد. پروراندن دختران با کژی = نمادِ شست‌وشوی مغزی. کامنت یکی می‌گوید: "دو افعی همان رشوه و جاسوسی و سخن‌چینی است که خورندهٔ مغزها است." – دقیقاً: مارها (که بعداً می‌آیند) نمادِ سیستم‌هایی هستند که خرد (مغز) را می‌خورند.
+                </p>
+              </div>
+
+              <div class="bg-green-50 border-r-4 border-green-500 rounded-lg p-6 mb-4">
+                <p class="text-base text-gray-800 leading-relaxed mb-3">
+                  <strong class="text-green-900">ریشه‌های اسطوره‌ای و تطبیقی:</strong> از اوستا (ضحاک = اژی‌دهاک، سه‌پوزه) و متون پهلوی، که هزار سالِ حکومتش نمادِ سلطهٔ تورانی/اهریمنی بر ایران است. شبیه به ایلیاد (سقوط تروا) یا مهابهاراتا (حکومتِ کور دوریودانا)؛ اما فردوسی می‌گوید: شر نابود نمی‌شود، مهار می‌شود – پیش‌بینیِ فریدون.
+                </p>
+              </div>
+
+              <div class="bg-red-50 border-r-4 border-red-500 rounded-lg p-6 mb-4">
+                <p class="text-base text-gray-800 leading-relaxed mb-3">
+                  <strong class="text-red-900">پیام به امروز:</strong> فردوسی می‌گوید این بخش "گویی در حال توصیف حال و هوای امروز ایران زمین است" (از کامنت). برخی منتقدان، دوران‌هایی مانند جمهوری اسلامی را به حکومت ضحاک تشبیه می‌کنند: جایی که "هنر خوار می‌شود" (سانسور فرهنگ و دانش)، "جادویی ارجمند" (گسترش خرافه و ایدئولوژی‌های فریبنده)، "فرزانگان نهان" (زندان یا مهاجرت نخبگان)، و "دیوان دست دراز بر بدی" (فساد و سرکوب).
+                </p>
+              </div>
+
+              <div class="bg-indigo-50 border-r-4 border-indigo-500 rounded-lg p-6 mb-4">
+                <p class="text-base text-gray-800 leading-relaxed mb-3">
+                  <strong class="text-indigo-900">نقل‌قول‌ها و کامنت‌ها:</strong> کامنت یکی: "چه قدر زیبا است این داستان و چه قدر مطابقت دارد با حقیقت عالم... دو افعی همان رشوه و جاسوسی و سخن‌چینی است که خورنده مغزها است." – دیگری: "حکومت ضحاک... سراسر سختی و دشواری است، پس هر لحظه آن هزار لحظه می‌نماید." – خالقی مطلق: "این ابیات، توصیفِ دقیقِ وارونگیِ فرهنگی در استبداد است." – شفیعی کدکنی: "فردوسی اینجا جامعه‌ای را نشان می‌دهد که خردش نهان و خرافه‌اش آشکار شده – آیینهٔ هر زمانهٔ سیاه."
+                </p>
+              </div>
+            </div>
+
+            <!-- جمع‌بندی شاعرانه -->
+            <div class="bg-gradient-to-r from-gray-50 to-slate-50 border-2 border-gray-300 rounded-xl p-8 mb-6 shadow-lg">
+              <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">جمع‌بندی شاعرانه و تأثیرگذار</h3>
+              <div class="space-y-4 text-base text-gray-800 leading-relaxed italic">
+                <p>هزار سالِ سیاه، مثل سایه‌ای سنگین بر ایران افتاد...</p>
+                <p>هنر خوار شد، جادو حاکم؛ فرزانگان به کوه رفتند، دیوان تخت‌نشین شدند.</p>
+                <p>دو دخترِ پاکِ جمشید لرزان چون بید، به دستِ اژدها سپرده شدند – و جادو کژی آموخت.</p>
+                <p>اما ای یار، این هزار سال نه ابدی است؛ فریدون از رازِ نهانِ نیکی‌ها برمی‌خیزد.</p>
+                <p>تا وقتی مغزها زنده‌اند و حقیقت در رازها نفس می‌کشد، نورِ فرّ بازمی‌گردد.</p>
+                <p>شاهنامه می‌گوید: ظلم هزار سال می‌نماید، اما عدالت یک لحظه است – لحظه‌ای که مردم برخیزند.</p>
+              </div>
+            </div>
+          </div>
         `,
       },
       {
