@@ -14,6 +14,7 @@ import TwentyEightMordad from './pages/TwentyEightMordad';
 import TwentyEightMordadChapter from './pages/TwentyEightMordadChapter';
 import ShahnamehIndex from './pages/ShahnamehIndex';
 import ShahnamehStory from './pages/ShahnamehStory';
+import JamshidReign from './pages/shahnameh/sections/JamshidReign';
 import LocaleLayout from './i18n/LocaleLayout';
 import ScrollToTop from './components/ScrollToTop';
 
@@ -54,8 +55,9 @@ function App() {
           <Route path="special/reformists-enemy" element={<ReformistsEnemy />} />
           <Route path="28mordad" element={<TwentyEightMordad />} />
           <Route path="28mordad/:chapter" element={<TwentyEightMordadChapter />} />
-          <Route path="shahnameh" element={<ShahnamehIndex />} />
-          <Route path="shahnameh/:storyId" element={<ShahnamehStory />} />
+                <Route path="shahnameh" element={<ShahnamehIndex />} />
+                <Route path="shahnameh/:storyId" element={<ShahnamehStory />} />
+                <Route path="shahnameh/jamshid/reign" element={<JamshidReign />} />
         </Route>
 
         {/* Fallback for any unmatched routes */}
