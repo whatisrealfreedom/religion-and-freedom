@@ -14,7 +14,7 @@ import TwentyEightMordad from './pages/TwentyEightMordad';
 import TwentyEightMordadChapter from './pages/TwentyEightMordadChapter';
 import ShahnamehIndex from './pages/ShahnamehIndex';
 import ShahnamehStory from './pages/ShahnamehStory';
-import JamshidReign from './pages/shahnameh/sections/JamshidReign';
+import ShahnamehSection from './pages/shahnameh/sections/ShahnamehSection';
 import LocaleLayout from './i18n/LocaleLayout';
 import ScrollToTop from './components/ScrollToTop';
 
@@ -57,7 +57,9 @@ function App() {
           <Route path="28mordad/:chapter" element={<TwentyEightMordadChapter />} />
                 <Route path="shahnameh" element={<ShahnamehIndex />} />
                 <Route path="shahnameh/:storyId" element={<ShahnamehStory />} />
-                <Route path="shahnameh/jamshid/reign" element={<JamshidReign />} />
+                <Route path="shahnameh/:storyId/:sectionSlug" element={<ShahnamehSection />} />
+                {/* Legacy route for Jamshid Reign - redirect to new structure */}
+                <Route path="shahnameh/jamshid/reign" element={<Navigate to="/fa/shahnameh/zahhak/700-years-jamshid" replace />} />
         </Route>
 
         {/* Fallback for any unmatched routes */}

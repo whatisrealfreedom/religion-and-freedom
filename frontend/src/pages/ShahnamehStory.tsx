@@ -13,6 +13,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { Link, Navigate, useParams } from 'react-router-dom';
 import { useLocale } from '../i18n/LocaleProvider';
 import { withLocalePath } from '../i18n/localePath';
+import { getSlugForSection } from './shahnameh/sections/sectionSlugs';
 
 type SectionData = {
   id: string;
@@ -25,7 +26,7 @@ type SectionData = {
 };
 
 // دیتای placeholder - بعداً می‌تواند از API یا فایل i18n بیاید
-const storyData: Record<string, {
+export const storyData: Record<string, {
   faTitle: string;
   enTitle: string;
   faSubtitle: string;
@@ -1642,7 +1643,11 @@ const ShahnamehStory: React.FC = () => {
 
   const story = useMemo(() => storyData[storyId || ''], [storyId]);
 
-  // Set default active section to first section
+  // Redirect to first section if no section is specified
+  // This is handled by checking if we're on the base story page
+  // If so, redirect to the first section
+
+  // Set default active section to first section for display purposes
   useEffect(() => {
     if (story && story.sections.length > 0 && !activeSectionId) {
       setActiveSectionId(story.sections[0].id);
@@ -1656,6 +1661,12 @@ const ShahnamehStory: React.FC = () => {
 
   if (!story) {
     return <Navigate to={withLocalePath(validLocale, '/shahnameh')} replace />;
+  }
+
+  // Redirect to first section if on base story page
+  if (story.sections.length > 0) {
+    const firstSectionSlug = getSlugForSection(story.sections[0].id);
+    return <Navigate to={withLocalePath(validLocale, `/shahnameh/${storyId}/${firstSectionSlug}`)} replace />;
   }
 
   const sections = story.sections;
@@ -1744,41 +1755,20 @@ const ShahnamehStory: React.FC = () => {
                     {isRTL ? 'بخش‌ها' : 'Sections'}
                   </div>
                   {sections.map((section) => {
+                    const sectionSlug = getSlugForSection(section.id);
+                    const sectionUrl = withLocalePath(validLocale, `/shahnameh/${storyId}/${sectionSlug}`);
                     const isActive = activeSectionId === section.id;
                     const IconComponent = section.icon;
-                    
-                    // اگر section jamshid-1 باشد، به صفحه جدا برو
-                    if (section.id === 'jamshid-1') {
-                      return (
-                        <Link
-                          key={section.id}
-                          to={withLocalePath(validLocale, '/shahnameh/jamshid/reign')}
-                          className={`w-full flex items-start gap-2 px-3 py-2.5 rounded-lg text-right transition-all ${
-                            'bg-gray-50 hover:bg-gray-100 text-gray-700'
-                          }`}
-                        >
-                          <span className="text-base flex-shrink-0 mt-0.5">{isRTL ? section.faIcon : section.enIcon}</span>
-                          <span className="flex-1 text-xs font-medium leading-relaxed min-w-0 line-clamp-2 text-gray-700">
-                            {isRTL ? section.faTitle : section.enTitle}
-                          </span>
-                        </Link>
-                      );
-                    }
 
                     return (
-                      <motion.button
+                      <Link
                         key={section.id}
-                        onClick={() => {
-                          setActiveSectionId(section.id);
-                          setSidebarOpen(false);
-                        }}
+                        to={sectionUrl}
                         className={`w-full flex items-start gap-2 px-3 py-2.5 rounded-lg text-right transition-all ${
                           isActive
                             ? 'bg-gradient-to-r from-amber-500 to-orange-500 text-white shadow-lg'
                             : 'bg-gray-50 hover:bg-gray-100 text-gray-700'
                         }`}
-                        whileHover={{ scale: 1.01 }}
-                        whileTap={{ scale: 0.99 }}
                       >
                         <span className="text-base flex-shrink-0 mt-0.5">{isRTL ? section.faIcon : section.enIcon}</span>
                         <span className={`flex-1 text-xs font-medium leading-relaxed min-w-0 line-clamp-2 ${isActive ? 'text-white' : 'text-gray-700'}`}>
@@ -1791,7 +1781,7 @@ const ShahnamehStory: React.FC = () => {
                             className="w-1.5 h-1.5 bg-white rounded-full flex-shrink-0 mt-1"
                           />
                         )}
-                      </motion.button>
+                      </Link>
                     );
                   })}
                 </nav>
@@ -1890,8 +1880,8 @@ const ShahnamehStory: React.FC = () => {
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  <button
-                    onClick={() => setActiveSectionId(prevSection.id)}
+                  <Link
+                    to={withLocalePath(validLocale, `/shahnameh/${storyId}/${getSlugForSection(prevSection.id)}`)}
                     className="flex items-center gap-3 px-6 py-4 bg-white rounded-xl shadow-lg border-2 border-gray-200 hover:border-amber-400 transition-all font-semibold text-gray-700 hover:text-amber-700"
                   >
                     <BackIcon className="w-5 h-5" />
@@ -1901,7 +1891,7 @@ const ShahnamehStory: React.FC = () => {
                         {isRTL ? prevSection.faTitle : prevSection.enTitle}
                       </div>
                     </div>
-                  </button>
+                  </Link>
                 </motion.div>
               ) : (
                 <div />
@@ -1912,8 +1902,8 @@ const ShahnamehStory: React.FC = () => {
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  <button
-                    onClick={() => setActiveSectionId(nextSection.id)}
+                  <Link
+                    to={withLocalePath(validLocale, `/shahnameh/${storyId}/${getSlugForSection(nextSection.id)}`)}
                     className="flex items-center gap-3 px-6 py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-xl shadow-lg hover:shadow-xl transition-all font-semibold"
                   >
                     <div className="text-left">
@@ -1923,7 +1913,7 @@ const ShahnamehStory: React.FC = () => {
                       </div>
                     </div>
                     <ForwardIcon className="w-5 h-5" />
-                  </button>
+                  </Link>
                 </motion.div>
               ) : (
                 <motion.div
