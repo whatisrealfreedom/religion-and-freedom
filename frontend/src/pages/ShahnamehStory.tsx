@@ -1876,34 +1876,560 @@ export const storyData: Record<string, {
         enIcon: '🐍',
         icon: DocumentTextIcon,
         content: `
-          <h2>پادشاهیِ هزارسالهٔ ضحاک – عصرِ سیاه و ستمِ بی‌پایان</h2>
-          <p class="text-xl text-amber-700 font-semibold mb-4">چو ابلیس پیوسته دید آن سخن</p>
+          <div class="max-w-4xl mx-auto">
+            <div class="bg-gradient-to-r from-gray-50 to-slate-50 border-r-4 border-gray-500 rounded-lg p-6 mb-8">
+              <p class="text-lg text-gray-800 leading-relaxed italic">
+                ای یارِ همدل، حالا که آماده‌ایم برای یکی از تاریک‌ترین و در عین حال درخشان‌ترین لحظه‌های شاهنامه برویم: <strong>بخش رویش مار بر شانه‌های ضحاک</strong> – جایی که ضحاک از یک شاهزادهٔ ساده‌دل به اژدهای ماردوش تبدیل می‌شود، و فردوسی با این تصویر، نمادِ ابدیِ <strong>قدرتِ فاسد</strong> و <strong>تغذیهٔ شر از مغزِ انسان</strong> را خلق می‌کند.
+              </p>
+            </div>
 
-          <p class="text-lg text-gray-700 leading-relaxed mb-4">
-            ضحاک با دیدنِ ضعفِ ایران، از بزرگانِ ناراضیِ جمشید نامه گرفت و با سپاهی بزرگ حمله کرد. جمشید صد سال گریخت؛ از کوه به دشت، از دشت به بیابان، اما سرانجام در ساحلِ دریای چین (یا چینِ شرقی) به دام افتاد.
-          </p>
+            <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center border-b-2 border-gray-300 pb-4">داستان رویش مار بر شانه‌های ضحاک</h2>
 
-          <p class="text-lg text-gray-700 leading-relaxed mb-4">
-            ضحاک دستور داد با <strong>اره</strong> از کمر نصفش کنند – زیرا شمشیر بر او کار نمی‌کرد (نمادِ اینکه غرور او را آسیب‌ناپذیر اما بی‌فرّ کرده بود). جمشید با درد و ننگ جان سپرد.
-          </p>
+            <!-- ادامهٔ فریب ابلیس – پیمان جدید -->
+            <div class="mb-10">
+              <h3 class="text-2xl font-bold text-gray-900 mb-6 border-b border-gray-300 pb-2">ادامهٔ فریب ابلیس – پیمان جدید</h3>
 
-          <p class="text-lg text-gray-700 leading-relaxed mb-4">
-            ضحاک تاج، تخت، گنج و کاخِ جمشید را گرفت. دو دخترِ خوب‌رویِ جمشید – <strong>ارنواز</strong> و <strong>شهرناز</strong> – را به اسارت برد، با جادو و طلسم رامشان کرد و به زنی گرفت.
-          </p>
+              <div class="bg-white border-2 border-purple-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-purple-100 to-indigo-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">چو ابلیس پیوسته دید آن سخن</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">یکی بند بد را نو افگند بن</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> چون ابلیس دید سخن پیشین چسبیده، بند جدیدی از بدی افکند بر پایهٔ آن.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">توضیح:</strong> «بند بد» = دام جدید شر؛ ابلیس مثل ماهیگیری است که قلاب را محکم‌تر می‌کند. تکرار «پیوسته دید» موسیقیِ پنهان فریب را می‌سازد.</p>
+                </div>
+              </div>
 
-          <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">هزار سال حکومت کرد؛ هزار سالِ سنگین، سیاه و خونین:</h3>
-          <ul class="list-disc list-inside space-y-3 mb-6 text-gray-700 leading-relaxed pr-4">
-            <li>راستی پنهان شد</li>
-            <li>خرد به کوه و بیابان گریخت</li>
-            <li>هنر خوار گردید</li>
-            <li>جادو و خرافه ارجمند شد</li>
-            <li>دیوان بر تخت نشستند</li>
-            <li>هر شب مغزِ دو جوان برای مارها قربانی می‌شد؛ آینده و فکرِ یک ملت را می‌جویدند</li>
-          </ul>
+              <div class="bg-white border-2 border-purple-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-purple-100 to-indigo-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">بدو گفت گر سوی من تافتی</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">ز گیتی همه کام دل یافتی</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> گفت: اگر به سوی من روی آوری، همه کام دلت از جهان به دست می‌آوری.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">توضیح:</strong> وعدهٔ لذت بی‌پایان؛ کلاسیک‌ترین دام شیطان: قدرت مطلق.</p>
+                </div>
+              </div>
 
-          <p class="text-lg text-gray-700 leading-relaxed mb-4">
-            جهان در ترس و سکوتِ مرگبار فرو رفته بود...
-          </p>
+              <div class="bg-white border-2 border-purple-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-purple-100 to-indigo-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">اگر همچنین نیز پیمان کنی</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">نپیچی ز گفتار و فرمان کنی</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> اگر دوباره پیمان کنی و از گفتار و فرمانم نپیچی...</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-purple-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-purple-100 to-indigo-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">جهان سربه‌سر پادشاهی تو راست</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">دد و مردم و مرغ و ماهی تو راست</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> جهان سربه‌سر پادشاهی توست؛ دد و مردم و مرغ و ماهی فرمانبر تو.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">توضیح:</strong> اوج طمع: سلطه بر همهٔ هستی؛ تضاد با فرّ ایزدی جمشید که از خدا بود، اینجا از ابلیس است.</p>
+                </div>
+              </div>
+
+              <div class="bg-purple-50 border-r-4 border-purple-500 rounded-lg p-4 mt-5">
+                <p class="text-sm text-purple-900 font-semibold italic"><strong>جمع کوچک:</strong> ابلیس پیمان را تمدید می‌کند؛ ضحاک دوباره سوگند می‌خورد – آغازِ تبدیل به ابزارِ شر مطلق.</p>
+              </div>
+            </div>
+
+            <!-- ورود آشپز اهریمنی – پرورش با خون -->
+            <div class="mb-10">
+              <h3 class="text-2xl font-bold text-gray-900 mb-6 border-b border-gray-300 pb-2">ورود آشپز اهریمنی – پرورش با خون</h3>
+
+              <div class="bg-white border-2 border-red-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-red-100 to-pink-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">چو این کرده شد ساز دیگر گرفت</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">یکی چاره کرد از شگفتی شگفت</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> این کار تمام شد، ساز دیگری گرفت؛ چاره‌ای از شگفتی‌های شگفت ساخت.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-red-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-red-100 to-pink-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">جوانی برآراست از خویشتن</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">سخنگوی و بینا دل و رایزن</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> جوانی از خود آراست؛ سخنگو، بینادل و رایزن.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">توضیح:</strong> ابلیس خودش را جوان خوش‌سیما و خردمند می‌کند – تکرار فریب اولیه.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-red-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-red-100 to-pink-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">همیدون به ضحاک بنهاد روی</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">نبودش به جز آفرین گفت و گوی</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> به سوی ضحاک آمد؛ جز آفرین و ستایش چیزی نگفت.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-red-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-red-100 to-pink-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">بدو گفت اگر شاه را در خورم</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">یکی نامور پاک خوالیگرم</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> گفت: اگر شایستهٔ شاه باشم، خوالیگر (آشپز) نامور و پاک هستم.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">توضیح:</strong> «خوالیگر» = آشپز؛ «پاک» = ظاهر پاک، اما باطن اهریمنی.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-red-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-red-100 to-pink-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">چو بشنید ضحاک بنواختش</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">ز بهر خورش جایگه ساختش</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> ضحاک شنید و نواختش؛ برای خورش (غذا) جایگاهی ساخت.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-red-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-red-100 to-pink-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">کلید خورش خانهٔ پادشا</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">بدو داد دستور فرمانروا</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> کلید آشپزخانهٔ پادشاه را به او داد؛ دستور فرمانروایی.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">لایه:</strong> اعتماد کامل؛ ضحاک خودش در را به شر باز می‌کند.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-red-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-red-100 to-pink-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">فراوان نبود آن زمان پرورش</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">که کمتر بد از خوردنی‌ها خورش</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> پرورش (تغذیه) فراوان نبود؛ خورش کمتر از خوردنی‌ها بود.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-red-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-red-100 to-pink-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">ز هر گوشت از مرغ و از چارپای</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">خورشگر بیاورد یک یک به جای</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> از هر گوشت مرغ و چارپا، خورشگر یکی‌یکی آورد.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-red-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-red-100 to-pink-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">به خونش بپرورد بر سان شیر</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">بدان تا کند پادشا را دلیر</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> با خونشان پرورد مانند شیر؛ تا شاه را دلیر کند.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">لایه:</strong> خون = نماد خشونت؛ تغذیهٔ تدریجی برای تبدیل به هیولا.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-red-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-red-100 to-pink-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">سخن هر چه گویدش فرمان کند</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">به فرمان او دل گروگان کند</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> هر چه بگوید فرمان کند؛ دل را گروگان او کند.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">توضیح:</strong> ضحاک کاملاً تسلیم می‌شود؛ روان‌شناختی: اعتیاد به لذت غذا = اعتیاد به شر.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- روزهای تغذیه – پیشرفت تدریجی -->
+            <div class="mb-10">
+              <h3 class="text-2xl font-bold text-gray-900 mb-6 border-b border-gray-300 pb-2">روزهای تغذیه – پیشرفت تدریجی</h3>
+
+              <div class="bg-white border-2 border-amber-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-amber-100 to-yellow-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">خورش زردهٔ خایه دادش نخست</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">بدان داشتش یک زمان تندرست</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> نخست خورش زردهٔ تخم‌مرغ داد؛ مدتی تندرست داشت.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-amber-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-amber-100 to-yellow-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">بخورد و بر او آفرین کرد سخت</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">مزه یافت خواندش ورا نیک‌بخت</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> خورد و سخت آفرین کرد؛ مزه یافت و او را نیک‌بخت خواند.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-amber-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-amber-100 to-yellow-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">چنین گفت ابلیس نیرنگ‌ساز</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">که شادان زی ای شاه گردنفراز</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> ابلیس نیرنگ‌ساز گفت: شادان زی ای شاه گردن‌فراز.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-amber-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-amber-100 to-yellow-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">که فردات از آن گونه سازم خورش</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">کز او باشدت سربه‌سر پرورش</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> فردا خورش چنان سازم که سربه‌سر پرورش تو باشد.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-amber-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-amber-100 to-yellow-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">برفت و همه شب سگالش گرفت</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">که فردا ز خوردن چه سازد شگفت</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> رفت و شب را به اندیشهٔ شگفتی فردا گذراند.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-amber-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-amber-100 to-yellow-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">خورش‌ها ز کبک و تذرو سپید</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">بسازید و آمد دلی پر امید</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> خورش از کبک و تذرو سپید ساخت و آمد دل پر امید.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-amber-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-amber-100 to-yellow-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">شه تازیان چون به نان دست برد</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">سر کم خرد مهر او را سپرد</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> شاه تازیان چون به نان دست برد، سر کم‌خرد مهر او را سپرد.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-amber-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-amber-100 to-yellow-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">سیم روز خوان را به مرغ و بره</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">بیاراستش گونه گون یک‌سره</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> روز سوم خوان را با مرغ و بره آراست گونه‌گون.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-amber-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-amber-100 to-yellow-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">به روز چهارم چو بنهاد خوان</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">خورش ساخت از پشت گاو جوان</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> روز چهارم خورش از پشت گاو جوان ساخت.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-amber-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-amber-100 to-yellow-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">بدو اندرون زعفران و گلاب</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">همان سالخورده می و مشک ناب</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> با زعفران و گلاب، می سالخورده و مشک ناب.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-amber-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-amber-100 to-yellow-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">چو ضحاک دست اندر آورد و خورد</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">شگفت آمدش زان هشیوار مرد</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> ضحاک دست برد و خورد؛ از آن هشیوار مرد شگفت آمد.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">لایه:</strong> پیشرفت تدریجی لذت؛ از ساده به پیچیده – نمادِ اعتیاد و سقوط اخلاقی.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- آرزوی بوسه – لحظهٔ سرنوشت‌ساز -->
+            <div class="mb-10">
+              <h3 class="text-2xl font-bold text-gray-900 mb-6 border-b border-gray-300 pb-2">آرزوی بوسه – لحظهٔ سرنوشت‌ساز</h3>
+
+              <div class="bg-white border-2 border-red-300 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-red-200 to-pink-200 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">بدو گفت بنگر که از آرزوی</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">چه خواهی بگو با من ای نیک‌خوی</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> گفت: ببین از آرزو چه خواهی، بگو ای نیک‌خوی.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-red-300 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-red-200 to-pink-200 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">خورشگر بدو گفت کای پادشا</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">همیشه بزی شاد و فرمانروا</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> خورشگر گفت: ای پادشاه، همیشه شاد و فرمانروا باش.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-red-300 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-red-200 to-pink-200 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">مرا دل سراسر پر از مهر تو است</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">همه توشهٔ جانم از چهر تو است</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> دلم پر از مهر توست؛ توشهٔ جانم از چهرهٔ توست.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-red-300 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-red-200 to-pink-200 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">یکی حاجتستم به نزدیک شاه</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">و گرچه مرا نیست این پایگاه</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> یک حاجت دارم نزد شاه، گرچه پایگاهش ندارم.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-red-300 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-red-200 to-pink-200 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">که فرمان دهد تا سر کتف اوی</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">ببوسم بدو بر نهم چشم و روی</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> فرمان دهد تا سر کتفش را ببوسم و چشم و روی بر نهم.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-red-300 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-red-200 to-pink-200 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">چو ضحاک بشنید گفتار اوی</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">نهانی ندانست بازار اوی</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> ضحاک شنید و نهان ندانست بازار (نیت) او را.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-red-300 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-red-200 to-pink-200 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">بدو گفت دارم من این کام تو</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">بلندی بگیرد از این نام تو</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> گفت: این کام تو را دارم؛ نامت از این بلند می‌شود.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-red-300 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-red-200 to-pink-200 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">بفرمود تا دیو چون جفت او</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">همی بوسه داد از بر سفت او</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> فرمان داد تا دیو مانند جفت (همسر) بوسه دهد از بر سفت (شانهٔ سخت) او.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">لایه:</strong> «چون جفت او» = ایهام جنسی/عاشقانه؛ بوسهٔ اهریمنی نمادِ تسلیم کامل به شر.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-red-300 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-red-200 to-pink-200 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">ببوسید و شد بر زمین ناپدید</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">کس اندر جهان این شگفتی ندید</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> بوسید و بر زمین ناپدید شد؛ کسی چنین شگفتی ندید.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-red-300 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-red-200 to-pink-200 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">دو مار سیه از دو کتفش برست</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">غمی گشت و از هر سویی چاره جست</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> دو مار سیاه از دو کتفش برست؛ غمگین شد و از هر سو چاره جست.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-red-300 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-red-200 to-pink-200 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">سرانجام ببرید هر دو ز کفت</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">سزد گر بمانی بدین در شگفت</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> سرانجام هر دو را از کتف برید؛ سزد که در این شگفت بمانی.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-red-300 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-red-200 to-pink-200 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">چو شاخ درخت آن دو مار سیاه</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">برآمد دگر باره از کتف شاه</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> مانند شاخ درخت، دو مار سیاه دوباره از کتف شاه رویید.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">لایه:</strong> «شاخ درخت» = استعارهٔ رشد طبیعی و غیرقابل توقف؛ شر وقتی ریشه دواند، قطع نمی‌شود.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- درماندگی پزشکان – چارهٔ نهایی ابلیس -->
+            <div class="mb-10">
+              <h3 class="text-2xl font-bold text-gray-900 mb-6 border-b border-gray-300 pb-2">درماندگی پزشکان – چارهٔ نهایی ابلیس</h3>
+
+              <div class="bg-white border-2 border-gray-300 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-gray-100 to-slate-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">پزشکان فرزانه گرد آمدند</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">همه یک به یک داستان‌ها زدند</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> پزشکان فرزانه گرد آمدند؛ یکی‌یکی داستان زدند.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-gray-300 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-gray-100 to-slate-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">ز هر گونه نیرنگ‌ها ساختند</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">مر آن درد را چاره نشناختند</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> نیرنگ‌ها ساختند؛ چارهٔ درد را نشناختند.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-gray-300 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-gray-100 to-slate-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">به سان پزشکی پس ابلیس تفت</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">به فرزانگی نزد ضحاک رفت</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> ابلیس تفت (سریع) به شکل پزشک به نزد ضحاک رفت.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-gray-300 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-gray-100 to-slate-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">بدو گفت کاین بودنی کار بود</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">بمان تا چه گردد نباید درود</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> گفت: این کار بودنی (سرنوشت) است؛ بمان تا چه شود، نباید درود (دعا برای مرگ زود).</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-gray-300 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-gray-100 to-slate-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">خورش ساز و آرامشان ده به خورد</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">نباید جز این چاره‌ای نیز کرد</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> خورش ساز و آرامشان ده به خورد؛ جز این چاره نیست.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-gray-300 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-gray-100 to-slate-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">به جز مغز مردم مده‌شان خورش</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">مگر خود بمیرند از این پرورش</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> جز مغز مردم خورش مده؛ مگر خود از این پرورش بمیرند.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-gray-300 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-gray-100 to-slate-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">نگر تا که ابلیس از این گفت‌وگوی</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">چه کرد و چه خواست اندر این جستجوی</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> بنگر ابلیس از این گفت‌وگو چه کرد و چه خواست در این جستجو.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-gray-300 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-gray-100 to-slate-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">مگر تا یکی چاره سازد نهان</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">که پردخته گردد ز مردم جهان</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> مگر چاره‌ای نهان سازد تا جهان از مردم پرداخته (خالی) شود.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">لایه:</strong> پایان بخش: مغز انسان = خرد و آینده؛ تغذیهٔ مارها = نابودی فکر و نسل.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- تحلیل کلی بخش -->
+            <div class="mb-10">
+              <h3 class="text-2xl font-bold text-gray-900 mb-6 border-b border-gray-300 pb-2">تحلیل کلی بخش – زیبایی‌ها و لایه‌ها</h3>
+
+              <div class="bg-amber-50 border-r-4 border-amber-500 rounded-lg p-6 mb-4">
+                <p class="text-base text-gray-800 leading-relaxed mb-3">
+                  <strong class="text-amber-900">۱. زیبایی ادبی:</strong> فردوسی با پیشرفت تدریجی غذا (از تخم‌مرغ به پشت گاو + می و مشک) موسیقیِ اعتیاد می‌سازد؛ ریتم ابیات تندتر می‌شود تا لحظهٔ بوسه. تضاد ظاهر پاک (آشپز نیک‌خواه) و باطن شر = اوج بلاغت.
+                </p>
+              </div>
+
+              <div class="bg-blue-50 border-r-4 border-blue-500 rounded-lg p-6 mb-4">
+                <p class="text-base text-gray-800 leading-relaxed mb-3">
+                  <strong class="text-blue-900">۲. فلسفی / اخلاقی:</strong> شر تدریجی است؛ ضحاک اول تردید داشت، اما لذت و قدرت او را می‌بلعد. مارها = نمادِ شرِ درونی که قطع نمی‌شود (روان‌شناختی: عادت‌های بد). مغز مردم = خرد جمعی؛ استبداد فکر را می‌خورد.
+                </p>
+              </div>
+
+              <div class="bg-purple-50 border-r-4 border-purple-500 rounded-lg p-6 mb-4">
+                <p class="text-base text-gray-800 leading-relaxed mb-3">
+                  <strong class="text-purple-900">۳. روان‌شناختی:</strong> ضحاک قربانیِ اعتیاد به قدرت می‌شود؛ پزشکان درمانده = علم بدون اخلاق ناتوان است. ابلیس پزشک = نمادِ ایدئولوژی‌های فاسد که شر را «سرنوشت» جلوه می‌دهند.
+                </p>
+              </div>
+
+              <div class="bg-green-50 border-r-4 border-green-500 rounded-lg p-6 mb-4">
+                <p class="text-base text-gray-800 leading-relaxed mb-3">
+                  <strong class="text-green-900">۴. اسطوره‌ای:</strong> موتیف مار روی شانه در اساطیر هندواروپایی (مثل مارهای کادموس یونان)؛ اما در شاهنامه، مارها خارجی نیستند، از بوسهٔ تسلیم می‌رویند – شر از انتخاب انسان.
+                </p>
+              </div>
+
+              <div class="bg-red-50 border-r-4 border-red-500 rounded-lg p-6 mb-4">
+                <p class="text-base text-gray-800 leading-relaxed mb-3">
+                  <strong class="text-red-900">۵. پیام امروز:</strong> هر قدرت فاسدی که برای بقا «مغز» جوانان (آینده، فکر، آزادی) را می‌جود، ضحاک است. پزشکان درمانده = نخبگان تسلیم؛ چارهٔ نهایی ابلیس = ایدئولوژی‌هایی که نسل‌کشی را توجیه می‌کنند.
+                </p>
+              </div>
+
+              <div class="bg-indigo-50 border-r-4 border-indigo-500 rounded-lg p-6 mb-4">
+                <p class="text-base text-gray-800 leading-relaxed mb-3">
+                  <strong class="text-indigo-900">۶. نقل بزرگان:</strong> خالقی مطلق: «این بخش، شاهکارِ توصیفِ سقوط اخلاقی است.» اسلامی ندوشن: «مارها نمادِ حرص قدرت‌اند که هر چه قطع کنی، دوباره می‌رویند.»
+                </p>
+              </div>
+            </div>
+
+            <!-- جمع‌بندی شاعرانه -->
+            <div class="bg-gradient-to-r from-gray-50 to-slate-50 border-2 border-gray-300 rounded-xl p-8 mb-6 shadow-lg">
+              <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">جمع‌بندی شاعرانه</h3>
+              <div class="space-y-4 text-base text-gray-800 leading-relaxed italic">
+                <p>دو بوسهٔ کوچک، دو مار سیاه...</p>
+                <p>و جهان هزار سال در تاریکی فرو رفت.</p>
+                <p>ضحاک فکر کرد کام دل یافت، اما کامِ دلِ ابلیس بود.</p>
+                <p>مارها رشد کردند، چون شر وقتی ریشه دواند، نه با تیغ، که با مغزِ انسان تغذیه می‌شود.</p>
+                <p>ای یار، تا مغز جوانان زنده است، مارها گرسنه می‌مانند.</p>
+                <p>اما اگر فراموش کنیم... دوباره رویش می‌کنند.</p>
+              </div>
+            </div>
+          </div>
         `,
       },
       {
