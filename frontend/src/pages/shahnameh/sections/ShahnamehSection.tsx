@@ -15,6 +15,7 @@ const ShahnamehSection: React.FC = () => {
   }>();
   const { isRTL } = useLocale();
   const validLocale = (locale === 'fa' || locale === 'en') ? locale : 'fa';
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   // Get section ID from slug
   const sectionId = getSectionIdForSlug(sectionSlug || '');
@@ -37,7 +38,6 @@ const ShahnamehSection: React.FC = () => {
   const prevSection = currentIndex > 0 ? story.sections[currentIndex - 1] : null;
   const ForwardIcon = isRTL ? ArrowLeftIcon : ArrowRightIcon;
   const BackIcon = isRTL ? ArrowRightIcon : ArrowLeftIcon;
-  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50">
