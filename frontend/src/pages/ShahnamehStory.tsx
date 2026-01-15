@@ -1309,35 +1309,563 @@ export const storyData: Record<string, {
         enIcon: '⚔️',
         icon: DocumentTextIcon,
         content: `
-          <h2>بر تخت نشستنِ ضحاک – بوسهٔ اهریمن و زایشِ مارها</h2>
-          <p class="text-xl text-amber-700 font-semibold mb-4">یکی مرد بود اندر آن روزگار</p>
+          <div class="max-w-4xl mx-auto">
+            <div class="bg-gradient-to-r from-amber-50 to-orange-50 border-r-4 border-amber-500 rounded-lg p-6 mb-8">
+              <p class="text-lg text-gray-800 leading-relaxed italic">
+                ای یارِ جان، بیا با هم واردِ یکی از تلخ‌ترین فصل‌های شاهنامه بشیم: جایی که نورِ جمشید خاموش شده، و تاریکیِ اهریمنی از دلِ یک فرزندِ ناخلف می‌جوشد.
+              </p>
+              <p class="text-base text-gray-700 leading-relaxed mt-4">
+                این بخش، <strong>مرداس تازی و فرزند ناخلفش ضحاک</strong>، دقیقاً نقطهٔ چرخش است: از تمدنِ جمشیدی به استبدادِ ماردوش. فردوسی اینجا نه فقط یک داستان می‌گوید، بلکه <strong>درسِ بزرگِ خیانتِ فرزندی</strong>، <strong>فریبِ شیطان</strong> و <strong>چگونه یک انسان ساده‌دل به اژدها تبدیل می‌شود</strong> را حک می‌کند.
+              </p>
+            </div>
 
-          <p class="text-lg text-gray-700 leading-relaxed mb-4">
-            در همین آشوب و ضعفِ ایران، در دشتِ نیزه‌ورانِ عرب، جوانی زیبا اما ساده‌دل و حرص‌ورز به نام <strong>ضحاک</strong> (بیوراسپ) زندگی می‌کرد؛ پسرِ مرداسِ نیک‌مرد.
-          </p>
+            <h2 class="text-3xl font-bold text-amber-900 mb-8 text-center border-b-2 border-amber-300 pb-4">مرداس تازی و فرزند ناخلفش ضحاک</h2>
 
-          <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">اهریمن، آن دشمنِ کهنِ نور</h3>
-          <p class="text-lg text-gray-700 leading-relaxed mb-4">
-            <strong>اهریمن</strong>، آن دشمنِ کهنِ نور، دو بار آمد:
-          </p>
+            <!-- آغاز – معرفی مرداس، پدر نیک -->
+            <div class="mb-10">
+              <h3 class="text-2xl font-bold text-gray-900 mb-6 border-b border-gray-300 pb-2">آغاز – معرفی مرداس، پدر نیک</h3>
 
-          <div class="bg-red-50 border-r-4 border-red-500 p-4 mb-4 rounded-lg">
-            <p class="text-lg text-gray-800 font-semibold mb-2">بار اول: فریب پدرکشی</p>
-            <p class="text-base text-gray-700 leading-relaxed">
-              در جامهٔ جوانی خردمند و شیرین‌سخن: «تو شایستهٔ شاهی، پدرت پیر و ناتوان شده، او را بکش و تاج را بگیر.» ضحاک فریب خورد، پدر را کشت و بر تخت نشست.
-            </p>
+              <div class="bg-white border-2 border-amber-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-amber-100 to-orange-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">یکی مرد بود اندر آن روزگار</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">ز دشت سواران نیزه گذار</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> در آن روزگار مردی بود از دشتِ سوارانِ نیزه‌گذار (عرب).</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">لایه:</strong> فردوسی عمداً ضحاک را از «تازی» (عرب) معرفی می‌کند؛ نمادِ بیابان‌نشینِ ساده، اما بعداً اهریمنی. تضاد با ایرانیِ متمدنِ جمشید.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-amber-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-amber-100 to-orange-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">گرانمایه هم شاه و هم نیک مرد</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">ز ترس جهاندار با باد سرد</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> هم گران‌قدر و شاه بود و هم نیک‌مرد؛ از ترسِ جهاندار (خدا) با باد سرد (ساده و بی‌آلایش) زندگی می‌کرد.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">لایه:</strong> «باد سرد» کنایه از زندگی ساده و پاک؛ مرداس نمادِ عدالتِ پیشدادی است.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-amber-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-amber-100 to-orange-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">که مرداس نام گرانمایه بود</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">به داد و دهش برترین پایه بود</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> نامش مرداس گران‌قدر بود؛ در داد و دهش برترین پایه را داشت.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">لایه:</strong> «داد و دهش» = عدالت و بخشش؛ اوج نیکی پیش از سقوط.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-amber-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-amber-100 to-orange-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">مر او را ز دوشیدنی چارپای</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">ز هر یک هزار آمدندی به جای</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> از چهارپایان شیری‌اش، از هر کدام هزار رأس به جای می‌آمد.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">لایه:</strong> ثروت فراوان اما پاک؛ نمادِ فراوانیِ حلال.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-amber-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-amber-100 to-orange-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">همان گاو دوشا به فرمانبری</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">همان تازی اسب گزیده مری</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> گاوهای شیرده فرمانبر، اسب‌های تازی برگزیده.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-amber-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-amber-100 to-orange-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">بز و میش بد شیرور همچنین</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">به دوشیزگان داده بد پاکدین</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> بز و میش شیرده هم؛ به دوشیزگانِ پاکدین می‌داد.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">لایه:</strong> «پاکدین» = پاک‌دین؛ بخشش به دختران و نیازمندان، نشانِ اخلاقِ مرداس.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-amber-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-amber-100 to-orange-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">به شیر آن کسی را که بودی نیاز</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">بدان خواسته دست بردی فراز</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> به هر که نیاز داشت شیر می‌داد؛ با آن ثروت دستِ برتر می‌زد (بخشنده بود).</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">لایه:</strong> تصویرِ یک حاکمِ نیک: ثروت برای خدمت، نه خودپرستی.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- معرفی ضحاک – فرزند ناخلف -->
+            <div class="mb-10">
+              <h3 class="text-2xl font-bold text-gray-900 mb-6 border-b border-gray-300 pb-2">معرفی ضحاک – فرزند ناخلف</h3>
+
+              <div class="bg-white border-2 border-red-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-red-100 to-pink-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">پسر بد مر این پاکدل را یکی</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">کش از مهر بهره نبود اندکی</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> این پاک‌دل را یک پسر بود که از مهر (محبت پدر) بهره‌ای نداشت.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">لایه:</strong> تضاد بزرگ: پدر نیک، پسر بی‌مهر – آغاز تراژدی.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-red-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-red-100 to-pink-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">جهانجوی را نام ضحّاک بود</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">دلیر و سبکسار و ناپاک بود</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> نامش ضحاک جهان‌جوی بود؛ دلیر اما سبک‌سر و ناپاک.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">لایه:</strong> «سبکسار» = بی‌ثبات و هوسران؛ «ناپاک» پیش‌بینیِ اهریمنی شدن.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-red-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-red-100 to-pink-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">کجا بیور اسپش همی خواندند</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">چنین نام بر پهلوی راندند</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> او را بیوراسپ (ده‌هزار اسب) می‌خواندند؛ این نام را به پهلوی می‌گفتند.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">لایه:</strong> «بیور» = ده هزار؛ «اسپ» = اسب؛ نمادِ قدرت ظاهری و ثروت.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-red-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-red-100 to-pink-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">کجا بیور از پهلوانی شمار</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">بود بر زبان دری ده هزار</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> بیور در پهلوی یعنی ده هزار؛ در دری هم همین.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-red-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-red-100 to-pink-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">ز اسپان تازی به زرین ستام</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">ورا بود بیور که بردند نام</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> هزار اسب تازی با زرین ستام داشت؛ به این دلیل نام بیوراسپ بردند.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">لایه:</strong> قدرت نظامی و تجمل؛ اما این قدرت بعداً اهریمنی می‌شود.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-red-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-red-100 to-pink-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">شب و روز بودی دو بهره به زین</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">ز روی بزرگی نه از روی کین</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> شب و روز دو سهم (دو هزار) زین می‌بست؛ از بزرگی، نه از کینه.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">لایه:</strong> نشانِ جوانی پرجنب‌وجوش، اما هنوز نه شرور.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- ورود ابلیس – فریب بزرگ -->
+            <div class="mb-10">
+              <h3 class="text-2xl font-bold text-gray-900 mb-6 border-b border-gray-300 pb-2">ورود ابلیس – فریب بزرگ</h3>
+
+              <div class="bg-white border-2 border-purple-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-purple-100 to-indigo-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">چنان بد که ابلیس روزی پگاه</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">بیامد به سان یکی نیک‌خواه</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> چنان بود که ابلیس روزی بامداد به شکلِ یک نیک‌خواه آمد.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">لایه:</strong> «نیک‌خواه» = ظاهر خیراندیش؛ ایهام اهریمنی کلاسیک.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-purple-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-purple-100 to-indigo-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">دل مهتر از راه نیکی ببرد</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">جوان گوش گفتار او را سپرد</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> دلِ جوان را از راه نیکی برد؛ جوان گوش به گفتارش سپرد.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">لایه:</strong> ضحاک ساده‌دل است؛ فریب می‌خورد چون مهر پدر ندارد.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-purple-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-purple-100 to-indigo-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">بدو گفت پیمانت خواهم نخست</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">پس آنگه سخن برگشایم درست</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> گفت: نخست پیمان می‌خواهم، سپس سخن درست می‌گویم.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-purple-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-purple-100 to-indigo-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">جوان نیک‌دل گشت فرمانش کرد</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">چنان چون بفرمود سوگند خورد</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> جوان نیک‌دل فرمان برد و سوگند خورد.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">لایه:</strong> سوگند = قرارداد اهریمنی؛ ضحاک خودش را می‌بندد.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-purple-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-purple-100 to-indigo-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">که راز تو با کس نگویم ز بن</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">ز تو بشنوم هر چه گویی سخن</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> رازت را با کسی نگویم از بن، هر چه بگویی بشنوم.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-purple-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-purple-100 to-indigo-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">بدو گفت جز تو کسی کدخدای</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">چه باید همی با تو اندر سرای</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> گفت: جز تو کسی کدخدا (صاحب خانه) نیست؛ چه نیاز به پدر وقتی تو هستی؟</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">لایه:</strong> نخستین سم: حسادت به پدر، طمع قدرت.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-purple-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-purple-100 to-indigo-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">چه باید پدر کش پسر چون تو بود</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">یکی پندت از من بباید شنود</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> چه نیاز به پدری که پسری چون تو دارد؟ یک پند از من بشنو.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-purple-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-purple-100 to-indigo-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">زمانه برین خواجهٔ سالخورد</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">همی دیر ماند تو اندر نورد</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> زمانه بر این خواجهٔ سالخورده دیر ماند؛ تو در نورد (دوران) باش.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">لایه:</strong> «دیر ماند» = عمر طولانی پدر مانع تو است؛ فریبِ نسل‌کشی.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-purple-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-purple-100 to-indigo-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">بگیر این سر مایه‌ور جاه او</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">تو را زیبد اندر جهان گاه او</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> این سرِ مایه‌ور (پدر) و جاهش را بگیر؛ تاج و تخت او به تو زیبد.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-purple-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-purple-100 to-indigo-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">بر این گفتهٔ من چو داری وفا</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">جهاندار باشی یکی پادشا</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> اگر به این گفته وفا کنی، جهاندار و پادشاهی.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">لایه:</strong> وعدهٔ قدرت؛ کلاسیک‌ترین فریب شیطان.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-purple-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-purple-100 to-indigo-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">چو ضحاک بشنید اندیشه کرد</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">ز خون پدر شد دلش پر ز درد</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> ضحاک شنید، اندیشه کرد؛ دلش از خون پدر پر درد شد.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">لایه:</strong> هنوز تردید دارد؛ وجدان بیدار است، اما فریب قوی‌تر می‌شود.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-purple-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-purple-100 to-indigo-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">به ابلیس گفت این سزاوار نیست</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">دگر گوی کاین از در کار نیست</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> گفت: این سزاوار نیست؛ چیز دیگری بگو، این از کار نیست.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-purple-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-purple-100 to-indigo-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">بدو گفت گر بگذری زین سخن</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">بتابی ز سوگند و پیمان من</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> اگر از این سخن بگذری و از سوگند و پیمان من بتابی...</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-purple-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-purple-100 to-indigo-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">بماند به گردنت سوگند و بند</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">شوی خوار و ماند پدرت ارجمند</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> سوگند و بند بر گردنت می‌ماند، خوار می‌شوی و پدرت ارجمند می‌ماند.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">لایه:</strong> تهدید با سوگند؛ ضحاک ترسیده و تسلیم می‌شود.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-purple-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-purple-100 to-indigo-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">سر مرد تازی به دام آورید</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">چنان شد که فرمان او برگزید</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> سرِ مرد تازی را به دام آورد؛ ضحاک فرمان او را برگزید.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-purple-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-purple-100 to-indigo-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">بپرسید کاین چاره با من بگوی</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">نتابم ز رای تو من هیچ روی</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> پرسید: این چاره را بگو؛ از رایت هیچ روی نمی‌تابم.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-purple-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-purple-100 to-indigo-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">بدو گفت من چاره سازم ترا</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">به خورشید سر برفرازم ترا</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> گفت: من چاره‌ات می‌سازم، سرت را به خورشید می‌رسانم (شاهت می‌کنم).</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- تلهٔ چاه – کشتن پدر -->
+            <div class="mb-10">
+              <h3 class="text-2xl font-bold text-gray-900 mb-6 border-b border-gray-300 pb-2">تلهٔ چاه – کشتن پدر</h3>
+
+              <div class="bg-white border-2 border-gray-300 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-gray-100 to-slate-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">مر آن پادشا را در اندر سرای</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">یکی بوستان بود بس دلگشای</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> آن پادشاه در سرای، بوستان دلگشایی داشت.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-gray-300 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-gray-100 to-slate-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">گرانمایه شبگیر برخاستی</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">ز بهر پرستش بیاراستی</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> گران‌قدر شبگیر (بامداد) برمی‌خاست برای پرستش آماده می‌شد.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-gray-300 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-gray-100 to-slate-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">سر و تن بشستی نهفته به باغ</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">پرستنده با او ببردی چراغ</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> سر و تن را نهفته در باغ می‌شست؛ پرستنده چراغ می‌برد.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-gray-300 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-gray-100 to-slate-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">بیاورد وارونه ابلیس بند</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">یکی ژرف چاهی به ره بر بکند</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> ابلیس وارونه (شیطان‌وار) چاهی ژرف در راه کند.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-gray-300 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-gray-100 to-slate-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">پس ابلیس وارونه آن ژرف چاه</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">به خاشاک پوشید و بسترد راه</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> چاه را با خاشاک پوشاند و راه را بسترد.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-gray-300 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-gray-100 to-slate-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">سر تازیان مهتر نامجوی</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">شب آمد سوی باغ بنهاد روی</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> مهتر نامجوی تازیان شب به سوی باغ آمد.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-gray-300 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-gray-100 to-slate-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">به چاه اندر افتاد و بشکست پست</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">شد آن نیک‌دل مرد یزدان‌پرست</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> در چاه افتاد و شکست؛ آن نیک‌دل یزدان‌پرست رفت.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">لایه:</strong> مرگِ پدر در چاه = نمادِ سقوط به تاریکی؛ پرستش صبحگاهی به قتل تبدیل می‌شود.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-gray-300 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-gray-100 to-slate-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">به هر نیک و بد شاه آزاد مرد</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">به فرزند بر نازده باد سرد</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> شاه آزادمرد به هر نیک و بد، به فرزند باد سرد نازید.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-gray-300 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-gray-100 to-slate-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">همی پروریدش به ناز و به رنج</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">بدو بود شاد و بدو داد گنج</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> او را با ناز و رنج پرورید؛ به او شاد بود و گنج داد.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">لایه:</strong> تراژدی پدر: حتی بعد از مرگ، نام پدر نیک می‌ماند.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-gray-300 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-gray-100 to-slate-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">چنان بدگهر شوخ فرزند او</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">بگشت از ره داد و پیوند او</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> فرزند بدگهر و شوخ از راه داد و پیوند پدر گشت.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-gray-300 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-gray-100 to-slate-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">به خون پدر گشت همداستان</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">ز دانا شنیدم من این داستان</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> با خون پدر هم‌داستان شد؛ از دانا این داستان شنیدم.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-gray-300 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-gray-100 to-slate-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">که فرزند بد گر شود نرّه شیر</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">به خون پدر هم نباشد دلیر</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> فرزند بد اگر نر شیر شود، به خون پدر دلیر نیست.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-gray-300 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-gray-100 to-slate-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">مگر در نهانش سخن دیگرست</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">پژوهنده را راز با مادرست</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> مگر در نهان سخن دیگری است؛ راز با مادر است برای پژوهنده.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">لایه:</strong> فلسفی عمیق: فرزندِ بد حتی اگر قوی باشد، دلیر واقعی نیست؛ ریشهٔ شر در تربیت یا خون پنهان است.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-gray-300 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-gray-100 to-slate-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">فرومایه ضحاک بیدادگر</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">بدین چاره بگرفت جای پدر</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> ضحاک فرومایه بیدادگر با این چاره جای پدر را گرفت.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-gray-300 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-gray-100 to-slate-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">به سر بر نهاد افسر تازیان</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">بر ایشان ببخشید سود و زیان</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> افسر (تاج) تازیان بر سر نهاد؛ سود و زیان را بر ایشان بخشید.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">لایه:</strong> پایان بخش: ضحاک شاه می‌شود، اما این آغازِ هزار سال تاریکی است.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- تحلیل کلی بخش -->
+            <div class="mb-10">
+              <h3 class="text-2xl font-bold text-gray-900 mb-6 border-b border-gray-300 pb-2">تحلیل کلی بخش – لایه‌های فلسفی، اخلاقی، روان‌شناختی</h3>
+
+              <div class="bg-blue-50 border-r-4 border-blue-500 rounded-lg p-6 mb-4">
+                <p class="text-base text-gray-800 leading-relaxed mb-3">
+                  <strong class="text-blue-900">۱. فلسفی / اخلاقی:</strong> این بخش پاسخ فردوسی به معمای شر است. چرا انسان نیک (مرداس) فرزندِ شرور (ضحاک) دارد؟ پاسخ: فریبِ خارجی (ابلیس) + ضعف درونی (طمع، حسادت، سبکسری). شر مطلق نیست؛ از انتخابِ انسانی می‌آید.
+                </p>
+              </div>
+
+              <div class="bg-purple-50 border-r-4 border-purple-500 rounded-lg p-6 mb-4">
+                <p class="text-base text-gray-800 leading-relaxed mb-3">
+                  <strong class="text-purple-900">۲. روان‌شناختی:</strong> ضحاک «از مهر بهره نبود» – کمبود محبت پدر؟ یا طبیعتِ بد؟ فردوسی می‌گوید: فرزند بد حتی قوی، دلیر واقعی نیست. تضاد درونی: اول تردید دارد (دل پر درد از خون پدر)، اما سوگند و ترس او را می‌بندد.
+                </p>
+              </div>
+
+              <div class="bg-green-50 border-r-4 border-green-500 rounded-lg p-6 mb-4">
+                <p class="text-base text-gray-800 leading-relaxed mb-3">
+                  <strong class="text-green-900">۳. اسطوره‌ای / تطبیقی:</strong> موتیف «پدر‌کشی برای قدرت» جهانی است: کرونوس و زئوس (یونان)، ست و اوزیریس (مصر)، حتی در مهابهاراتا حسادت برادران. اما در شاهنامه، خدا دخالت مستقیم ندارد؛ فقط ابلیس فریب می‌دهد – نگاه ایرانی: شر از جهل و انتخاب انسان است.
+                </p>
+              </div>
+
+              <div class="bg-amber-50 border-r-4 border-amber-500 rounded-lg p-6 mb-4">
+                <p class="text-base text-gray-800 leading-relaxed mb-3">
+                  <strong class="text-amber-900">۴. زیبایی‌شناختی:</strong> موسیقی ابیات آرام و سنگین است؛ تکرار «گفت» و «بدو گفت» مثل گفتگوی شیطان با قربانی. تصویر چاه و خاشاک = نمادِ دامِ پنهان. پایان با «فرومایه ضحاک بیدادگر» ضربهٔ نهایی است.
+                </p>
+              </div>
+
+              <div class="bg-red-50 border-r-4 border-red-500 rounded-lg p-6 mb-4">
+                <p class="text-base text-gray-800 leading-relaxed mb-3">
+                  <strong class="text-red-900">۵. پیام به امروز:</strong> هر وقت جوانی ساده‌دل، با وعدهٔ قدرت و «تو شایسته‌تری» فریب می‌خورد و پدر/سنت/ارزش‌ها را می‌کشد، ضحاک زنده می‌شود. سیاست، خانواده، حتی روابط شخصی: طمع قدرت، پدر یا مادر را به چاه می‌اندازد.
+                </p>
+              </div>
+
+              <div class="bg-indigo-50 border-r-4 border-indigo-500 rounded-lg p-6 mb-4">
+                <p class="text-base text-gray-800 leading-relaxed mb-3">
+                  <strong class="text-indigo-900">۶. نقل کوتاه بزرگان:</strong> اسلامی ندوشن: «ضحاک نه از بدو زاده شد، از فریبِ شنیده شد.» شفیعی کدکنی: «اینجا فردوسی روان‌شناسیِ قدرت را پیش از فروید نوشت.»
+                </p>
+              </div>
+            </div>
+
+            <!-- جمع‌بندی شاعرانه -->
+            <div class="bg-gradient-to-r from-gray-50 to-slate-50 border-2 border-gray-300 rounded-xl p-8 mb-6 shadow-lg">
+              <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">جمع‌بندی شاعرانه</h3>
+              <div class="space-y-4 text-base text-gray-800 leading-relaxed italic">
+                <p>مرداس در چاه افتاد، اما روحِ دادش هنوز در باد سرد می‌وزد.</p>
+                <p>ضحاک تاج بر سر گذاشت، اما مارها هنوز نیامده‌اند – آن بوسهٔ اهریمنی در بخش بعدی می‌آید.</p>
+                <p>این داستان می‌گوید: فرزندِ نیک از مهر می‌روید، فرزندِ بد از فریب.</p>
+                <p>و اگر امروز صدایی در گوشت نجوا کرد «تو شایسته‌تری، او پیر شده»، یاد مرداس باش... یاد چاه... یاد سوگندی که گردن را می‌بندد.</p>
+              </div>
+            </div>
           </div>
-
-          <div class="bg-red-50 border-r-4 border-red-500 p-4 mb-4 rounded-lg">
-            <p class="text-lg text-gray-800 font-semibold mb-2">بار دوم: بوسهٔ اهریمنی</p>
-            <p class="text-base text-gray-700 leading-relaxed">
-              اهریمن به شکلِ آشپزِ چیره‌دست درآمد. غذاهای ناشناخته و دل‌انگیز پخت، ضحاک را شیفتهٔ خود کرد. وقتی ضحاک پاداش خواست، گفت: «تنها شانه‌هایت را ببوسم.» ضحاک پذیرفت. از جایِ آن بوسهٔ اهریمنی، دو مارِ سیاهِ زهرآگین روییدند!
-            </p>
-          </div>
-
-          <p class="text-lg text-gray-700 leading-relaxed mb-4">
-            مارها هر روز فریاد گرسنگی می‌زدند و تنها با <strong>مغزِ انسان</strong> سیر می‌شدند. ضحاک فرمان داد هر شب دو جوانِ بی‌گناه – از بهترینِ جوانانِ جامعه – را بکشند، مغز سرشان را بیرون کشند و به مارها خوراک دهند. این شد آغازِ عصرِ مغزخوری و تاریکیِ مطلق...
-          </p>
         `,
       },
       {
