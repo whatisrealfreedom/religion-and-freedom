@@ -2440,29 +2440,362 @@ export const storyData: Record<string, {
         enIcon: '⚰️',
         icon: DocumentTextIcon,
         content: `
-          <h2>سقوطِ جمشید – غرورِ شاه و خاموش شدنِ فرّ ایزدی</h2>
-          <p class="text-xl text-amber-700 font-semibold mb-4">از آن پس برآمد ز ایران خروش</p>
+          <div class="max-w-4xl mx-auto">
+            <div class="bg-gradient-to-r from-gray-50 to-slate-50 border-r-4 border-gray-500 rounded-lg p-6 mb-8">
+              <p class="text-lg text-gray-800 leading-relaxed italic">
+                ای یارِ همدل، حالا رسیده‌ایم به یکی از تلخ‌ترین و در عین حال عمیق‌ترین لحظه‌های شاهنامه: <strong>بخش ۴ - سقوط جمشید</strong>؛ جایی که فرّ ایزدی می‌رود، جهان تیره می‌شود، و تختِ خورشیدوارِ جمشید به دستِ اژدهای ماردوش می‌افتد. این بخش، نه فقط پایانِ یک پادشاه، بلکه پایانِ یک عصرِ طلایی است – و فردوسی با این ابیات، درسِ بزرگِ غرور و ناسپاسی را بر دل می‌کوبد.
+              </p>
+            </div>
 
-          <div class="bg-yellow-50 border-r-4 border-yellow-500 p-6 mb-6 rounded-lg">
-            <p class="text-lg text-gray-800 font-semibold mb-3">اما...</p>
-            <p class="text-base text-gray-700 leading-relaxed mb-3">
-              وقتی انسان به قله می‌رسد، گاهی فراموش می‌کند که پایه‌اش خاک است. جمشید مغرور شد. در میانِ درباریان فریاد زد:
-            </p>
-            <blockquote class="text-lg text-gray-900 font-semibold italic my-4 pr-4 border-r-4 border-yellow-600">
-              «جهان را من آراستم، هنر از من پدید آمد،<br/>
-              خور و خواب و آرامتان از من است،<br/>
-              بزرگی و دیهیم و شاهی مراست،<br/>
-              کیست که جز من کسی پادشاست؟»
-            </blockquote>
+            <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center border-b-2 border-gray-300 pb-4">سقوط جمشید</h2>
+
+            <!-- آغاز سقوط – خروش ایران و رفتن فرّ -->
+            <div class="mb-10">
+              <h3 class="text-2xl font-bold text-gray-900 mb-6 border-b border-gray-300 pb-2">آغاز سقوط – خروش ایران و رفتن فرّ</h3>
+
+              <div class="bg-white border-2 border-red-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-red-100 to-pink-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">از آن پس برآمد ز ایران خروش</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">پدید آمد از هر سویی جنگ و جوش</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> از آن پس از ایران خروش برخاست؛ از هر سو جنگ و آشوب پدید آمد.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">توضیح:</strong> «خروش» = فریاد اعتراض؛ فردوسی جهان را ناگهان آشفته نشان می‌دهد – نتیجهٔ مستقیم غرور جمشید. تضاد با آرامش پیشین.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-red-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-red-100 to-pink-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">سیه گشت رخشنده روز سپید</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">گسستند پیوند از جمّشید</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> روز سپید و درخشان سیاه شد؛ پیوندها از جمشید گسسته شد.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">توضیح:</strong> «رخشنده روز سپید» = نمادِ عصر طلایی؛ سیه شدن = استعارهٔ آشوب و تاریکی اخلاقی. گسستن پیوند = از دست دادن وفاداری مردم.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-red-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-red-100 to-pink-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">بر او تیره شد فرّهٔ ایزدی</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">به کژی گرایید و نابخردی</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> فرّ ایزدی بر او تیره شد؛ به کژی و نابخردی گرایید.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">توضیح:</strong> لحظهٔ کلیدی: فرّ ایزدی (نور الهی پادشاهی) رفتن = مشروعیت الهی از بین می‌رود. «کژی» = انحراف از راست؛ نابخردی = نتیجهٔ غرور.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-red-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-red-100 to-pink-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">پدید آمد از هر سویی خسروی</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">یکی نامجویی ز هر پهلُوی</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> از هر سو شاهزادگان پدید آمدند؛ نام‌جویان از هر پهلو (جهت).</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">توضیح:</strong> «خسروی» = شاهزاده؛ «پهلو» = کنایه از اطراف جهان؛ جهان پر از مدعیان قدرت می‌شود – هرج‌ومرج پس از سقوط فرّ.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-red-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-red-100 to-pink-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">سپه کرده و جنگ را ساخته</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">دل از مهر جمشید پرداخته</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> سپاه ساخته و جنگ آماده کرده؛ دل از مهر جمشید خالی کرده‌اند.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">توضیح:</strong> «پرداخته» = تهی شده؛ مردم دیگر عاشق جمشید نیستند – غرور، عشق را می‌کشد.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-red-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-red-100 to-pink-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">یکایک ز ایران برآمد سپاه</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">سوی تازیان برگرفتند راه</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> یکی‌یکی سپاه از ایران برخاست؛ راه به سوی تازیان (عرب‌ها) گرفتند.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">توضیح:</strong> ایرانیان خود به سوی ضحاک می‌روند – نمادِ خیانت داخلی به قدرت خارجی.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-red-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-red-100 to-pink-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">شنودند کان‌جا یکی مهتر است</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">پر از هول شاه اژدها پیکر است</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> شنیدند که آنجا مهتری هست؛ شاه اژدها پیکر پر از هول (ترسناک).</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">توضیح:</strong> «اژدها پیکر» = پیش‌بینیِ آیندهٔ ضحاک؛ مردم از ترس یا طمع به سوی او می‌روند.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-red-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-red-100 to-pink-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">سواران ایران همه شاه‌جوی</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">نهادند یک‌سر به ضحاک روی</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> سواران ایران همه شاه‌جوی؛ یک‌سر به سوی ضحاک روی نهادند.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">توضیح:</strong> «شاه‌جوی» = جویای شاه؛ یک‌سر = متحد؛ خیانت جمعی مردم.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-red-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-red-100 to-pink-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">به شاهی بر او آفرین خواندند</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">ورا شاه ایران زمین خواندند</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> بر شاهی او آفرین خواندند؛ او را شاه ایران‌زمین خواندند.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">توضیح:</strong> لحظهٔ رسمی سقوط جمشید؛ مردم تاج را به ضحاک می‌دهند.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-red-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-red-100 to-pink-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">کی اژدهافش بیامد چو باد</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">به ایران زمین تاج بر سر نهاد</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> اژدهافش (ضحاک) چون باد آمد؛ تاج بر سر ایران نهاد.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">توضیح:</strong> «اژدهافش» = لقب پیش از مارها؛ سرعت باد = ناگهانی بودن سقوط.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-red-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-red-100 to-pink-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">از ایران و از تازیان لشکری</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">گزین کرد گرد از همه کشوری</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> از ایران و تازیان لشکری گزین کرد؛ از همه کشورها گرد آورد.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">توضیح:</strong> سپاهِ ترکیبی؛ نمادِ امپراتوریِ استبدادی چندملیتی.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-red-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-red-100 to-pink-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">سوی تخت جمشید بنهاد روی</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">چو انگشتری کرد گیتی بروی</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> به سوی تخت جمشید روی نهاد؛ گیتی را چون انگشتری بر او کرد (تسلط کامل).</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">توضیح:</strong> «چو انگشتری» = استعارهٔ سلطهٔ مطلق؛ تخت جمشید = نماد تمدن، حالا در دست شر.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- فرار و مرگ جمشید – صد سال پنهان‌کاری -->
+            <div class="mb-10">
+              <h3 class="text-2xl font-bold text-gray-900 mb-6 border-b border-gray-300 pb-2">فرار و مرگ جمشید – صد سال پنهان‌کاری</h3>
+
+              <div class="bg-white border-2 border-gray-300 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-gray-100 to-slate-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">چو جمشید را بخت شد کندرو</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">به تنگ اندر آمد جهاندار نو</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> چون بخت جمشید کندرو (کند) شد؛ جهاندار نو (ضحاک) به تنگ آمد (نزدیک شد).</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">توضیح:</strong> «بخت کندرو» = بخت کند؛ «جهاندار نو» = ضحاک جدید.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-gray-300 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-gray-100 to-slate-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">برفت و بدو داد تخت و کلاه</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">بزرگی و دیهیم و گنج و سپاه</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> رفت و تخت و کلاه و بزرگی و دیهیم و گنج و سپاه را به او داد.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">توضیح:</strong> تسلیم کامل؛ جمشید فرار می‌کند، اما تخت را واگذار می‌کند – نمادِ از دست دادن فرّ.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-gray-300 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-gray-100 to-slate-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">چو صد سالش اندر جهان کس ندید</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">بر او نام شاهی و او ناپدید</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> صد سال در جهان کسی او را ندید؛ نام شاهی بر او بود اما ناپدید.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">توضیح:</strong> صد سال پنهان‌کاری؛ نمادِ طولانی بودنِ درد سقوط.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-gray-300 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-gray-100 to-slate-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">صدم سال روزی به دریای چین</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">پدید آمد آن شاه ناپاک دین</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> صدمین سال روزی به دریای چین پدید آمد آن شاه ناپاک‌دین.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">توضیح:</strong> «دریای چین» = مرز شرقی؛ «ناپاک دین» = از دست دادن پاکی دینی/اخلاقی.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-gray-300 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-gray-100 to-slate-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">نهان گشته بود از بد اژدها</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">نیامد به فرجام هم ز او رها</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> از بد اژدها نهان شده بود؛ اما از او رها نشد.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">توضیح:</strong> فرار بی‌فایده؛ سرنوشت او را می‌گیرد.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-gray-300 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-gray-100 to-slate-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">چو ضحاکش آورد ناگه به چنگ</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">یکایک ندادش زمانی درنگ</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> چون ضحاک ناگهان به چنگش آورد؛ لحظه‌ای درنگ نکرد.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-gray-300 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-gray-100 to-slate-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">به ارّه‌ش سراسر به دو نیم کرد</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">جهان را از او پاک بی‌بیم کرد</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> با اره سراسر به دو نیم کرد؛ جهان را از او پاک و بی‌بیم کرد.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">توضیح:</strong> مرگ با اره = نمادِ وحشیانه‌ترین شکنجه؛ چرا اره؟ چون شمشیر بر او کار نمی‌کرد (فرّ رفته بود، اما هنوز جادویی داشت). جهان بی‌بیم = پایان عصر جمشید.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- تأمل فلسفی فردوسی – درس غرور -->
+            <div class="mb-10">
+              <h3 class="text-2xl font-bold text-gray-900 mb-6 border-b border-gray-300 pb-2">تأمل فلسفی فردوسی – درس غرور</h3>
+
+              <div class="bg-white border-2 border-amber-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-amber-100 to-yellow-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">شد آن تخت شاهی و آن دستگاه</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">زمانه ربودش چو بیجاده کاه</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> آن تخت شاهی و دستگاه رفت؛ زمانه آن را چون بیجاده (علف خشک) ربود.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">توضیح:</strong> «بیجاده کاه» = استعارهٔ بی‌ارزش شدن؛ شکوه زودگذر.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-amber-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-amber-100 to-yellow-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">از او بیش بر تخت شاهی که بود</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">بر آن رنج بردن چه آمدش سود</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> بیش از او کسی بر تخت شاهی نبود؛ این همه رنج بردن چه سودی داشت؟</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">توضیح:</strong> پرسش تلخ: غرور چه فایده‌ای داشت؟</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-amber-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-amber-100 to-yellow-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">گذشته بر او سالیان هفتصد</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">پدید آوریده همه نیک و بد</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> هفتصد سال بر او گذشته؛ همه نیک و بد پدید آوریده.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">توضیح:</strong> هفتصد سال = نمادِ عصر کامل؛ نیک و بد = غرور همه را خراب کرد.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-amber-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-amber-100 to-yellow-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">چه باید همه زندگانی دراز</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">چو گیتی نخواهد گشادنت راز</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> چه نیاز به زندگانی دراز؛ وقتی گیتی رازت را نمی‌گشاید.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">توضیح:</strong> فلسفی: عمر طولانی بدون حکمت بی‌فایده است.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-amber-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-amber-100 to-yellow-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">همی پروراندت با شهد و نوش</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">جز آواز نرمت نیاید به گوش</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> با شهد و نوش پروراندت؛ جز آواز نرم چیزی به گوشت نمی‌آید.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-amber-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-amber-100 to-yellow-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">یکی نغز بازی برون آورد</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">به دلت اندرون درد و خون آورد</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> یک بازی نغز بیرون آورد؛ به دلت درد و خون آورد.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">توضیح:</strong> جهان مثل بازیگر است؛ ابتدا نوازش، سپس ضربه.</p>
+                </div>
+              </div>
+
+              <div class="bg-white border-2 border-amber-200 rounded-xl p-6 mb-6 shadow-lg">
+                <div class="bg-gradient-to-r from-amber-100 to-yellow-100 rounded-lg p-5 mb-4">
+                  <p class="text-2xl font-bold text-gray-900 leading-relaxed text-center mb-2">دلم سیر شد زین سرای سپنج</p>
+                  <p class="text-xl font-semibold text-gray-800 text-center">خدایا مرا زود بِرْهان ز رنج</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 mt-4">
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> دلم از این سرای سپنج (فانی) سیر شد؛ خدایا مرا زود از رنج برهان.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">توضیح:</strong> پایان بخش با دعای فردوسی؛ «سپنج» = گذرا؛ نگاه عرفانی به دنیا.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- تحلیل کلی بخش -->
+            <div class="mb-10">
+              <h3 class="text-2xl font-bold text-gray-900 mb-6 border-b border-gray-300 pb-2">تحلیل کلی بخش – زیبایی‌ها و لایه‌ها</h3>
+
+              <div class="bg-amber-50 border-r-4 border-amber-500 rounded-lg p-6 mb-4">
+                <p class="text-base text-gray-800 leading-relaxed mb-3">
+                  <strong class="text-amber-900">۱. زیبایی ادبی:</strong> ریتم ابیات از خروش و آشوب شروع می‌شود و به تأمل آرام و دعا پایان می‌یابد – مثل یک تراژدی سینمایی. استعاره‌های قوی: روز سپید سیاه شدن، تخت چون انگشتری، مرگ با اره.
+                </p>
+              </div>
+
+              <div class="bg-blue-50 border-r-4 border-blue-500 rounded-lg p-6 mb-4">
+                <p class="text-base text-gray-800 leading-relaxed mb-3">
+                  <strong class="text-blue-900">۲. فلسفی / اخلاقی:</strong> سقوط فرّ ایزدی = نتیجهٔ ناسپاسی و غرور. جهان گذراست؛ حتی هفتصد سال شکوه، اگر با منی همراه باشد، به کاه تبدیل می‌شود.
+                </p>
+              </div>
+
+              <div class="bg-purple-50 border-r-4 border-purple-500 rounded-lg p-6 mb-4">
+                <p class="text-base text-gray-800 leading-relaxed mb-3">
+                  <strong class="text-purple-900">۳. روان‌شناختی:</strong> جمشید از اوج به فرار و مرگ؛ مردم از عشق به خیانت – نشان می‌دهد قدرت بدون عدالت، عشق مردم را از دست می‌دهد.
+                </p>
+              </div>
+
+              <div class="bg-red-50 border-r-4 border-red-500 rounded-lg p-6 mb-4">
+                <p class="text-base text-gray-800 leading-relaxed mb-3">
+                  <strong class="text-red-900">۴. پیام امروز:</strong> هر حاکمی که غرور کند و فرّ (مشروعیت) را از دست دهد، مردم به سوی هر اژدهایی می‌روند. مرگ با اره = نمادِ پایانِ ننگین استبداد.
+                </p>
+              </div>
+
+              <div class="bg-indigo-50 border-r-4 border-indigo-500 rounded-lg p-6 mb-4">
+                <p class="text-base text-gray-800 leading-relaxed mb-3">
+                  <strong class="text-indigo-900">۵. نقل بزرگان:</strong> شفیعی کدکنی: «این ابیات، یکی از تلخ‌ترین توصیف‌های تاریخ ادب پارسی از سقوط یک تمدن است.» دولات‌آبادی: «جمشید می‌میرد، اما درسش زنده می‌ماند: غرور، فرّ را می‌برد.»
+                </p>
+              </div>
+            </div>
+
+            <!-- جمع‌بندی شاعرانه -->
+            <div class="bg-gradient-to-r from-gray-50 to-slate-50 border-2 border-gray-300 rounded-xl p-8 mb-6 shadow-lg">
+              <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">جمع‌بندی شاعرانه</h3>
+              <div class="space-y-4 text-base text-gray-800 leading-relaxed italic">
+                <p>صد سال پنهان شد، اما چاهِ سرنوشت او را رها نکرد.</p>
+                <p>تختِ خورشیدوار به دستِ اژدها افتاد؛</p>
+                <p>اما فردوسی می‌گوید: این پایان نیست، آغازِ تاریکی است.</p>
+                <p>هفتصد سال ساخت، با یک «منم» همه را به باد داد.</p>
+                <p>ای یار، تا فرّ در دلمان زنده است، غرور را دور کنیم.</p>
+                <p>وگرنه روز سپیدمان سیاه می‌شود... و اره‌ای در انتظار.</p>
+              </div>
+            </div>
           </div>
-
-          <p class="text-lg text-gray-700 leading-relaxed mb-4">
-            در همان لحظه، <strong>فرّ ایزدی</strong> – آن نورِ الهی که ریشهٔ مشروعیتِ پادشاهی بود – از او روی گرداند. ناگهان آسمان تیره شد، زمین لرزید، بیماری بازگشت، مرگ دوباره درِ خانه‌ها را کوبید، دیوان سر برآوردند، مردم بیمار و ناتوان و پراکنده شدند.
-          </p>
-
-          <p class="text-lg text-gray-700 leading-relaxed mb-4">
-            جمشید دیگر آن شاهِ تابان نبود؛ فقط سایه‌ای از گذشته، شاهی بدونِ نورِ آسمانی...
-          </p>
         `,
       },
       {
