@@ -13,7 +13,7 @@ env:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -26,7 +26,7 @@ jobs:
           # Wait a moment to ensure git checkout is fully complete
           # This prevents "file changed as we read it" warnings from git metadata updates
           sleep 1
-          
+
           # Create tar archive excluding large files and build artifacts
           # Note: "file changed as we read it" warning can occur in CI when:
           # - Git is still updating file timestamps/metadata after checkout
@@ -118,7 +118,7 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
             cd /home/${{ secrets.SERVER_USERNAME }}/freedom-website
-            
+
             # Copy .env.prod from existing location
             # Configure ENV_SOURCE_PATH in GitHub Secrets if needed
             ENV_SOURCE_PATH="${ENV_SOURCE_PATH:-/home/${{ secrets.SERVER_USERNAME }}/freedom/.env.prod}"
@@ -130,7 +130,7 @@ jobs:
               echo "⚠️  Please create .env file manually with DOMAIN_FREEDOM and TRAEFIK_NETWORK"
               exit 1
             fi
-            
+
             # Load environment variables from .env
             if [ -f .env ]; then
               set -a
@@ -141,31 +141,31 @@ jobs:
               echo "❌ .env not found!"
               exit 1
             fi
-            
+
             # Export environment variables for docker-compose
             export DOMAIN_FREEDOM=${DOMAIN_FREEDOM}
             export TRAEFIK_NETWORK=${TRAEFIK_NETWORK:-traefik-network}
-            
+
             # Build images
             echo "🔨 Building images..."
             docker-compose -f docker-compose.prod.yml build
-            
+
             # Start containers
             echo "🚀 Starting containers..."
             docker-compose -f docker-compose.prod.yml up -d
-            
+
             # Wait for backend to be ready
             echo "⏳ Waiting for backend to start..."
             sleep 5
-            
+
             # Check status
             echo "📊 Container status:"
             docker-compose -f docker-compose.prod.yml ps
-            
+
             # Check logs
             echo "📋 Recent logs:"
             docker-compose -f docker-compose.prod.yml logs --tail=20
-            
+
             # Clean up old images
             echo "🧹 Cleaning up old images..."
             docker image prune -f
