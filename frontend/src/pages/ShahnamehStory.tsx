@@ -2879,10 +2879,18 @@ export const storyData: Record<string, {
                   <p class="text-sm text-gray-600">از دوران طهمورث تا زمان ضحاک</p>
                 </div>
               </div>
-              <audio controls class="w-full h-12 rounded-lg shadow-inner" style="background: linear-gradient(to right, #fff, #fef3c7);">
-                <source src="/audio/tahmoores-jamshid-zahhak.mp3" type="audio/mpeg">
-                مرورگر شما از پخش صوت پشتیبانی نمی‌کند.
-              </audio>
+              <div class="w-full overflow-hidden rounded-xl border border-amber-200 bg-white shadow-inner">
+                <div class="relative w-full" style="padding-top: 56.25%;">
+                  <iframe
+                    class="absolute inset-0 h-full w-full"
+                    src="https://www.youtube-nocookie.com/embed/tvkrONpRQ9I?rel=0"
+                    title="از دوران طهمورث تا زمان ضحاک"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
             </div>
 
             <!-- Image -->
