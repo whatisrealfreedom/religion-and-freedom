@@ -57,7 +57,25 @@ jobs:
           echo "✅ Archive created successfully"
           set -e  # Re-enable exit on error
 
-      - name: Copy files to server
+      - name: Prepare server directory
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USERNAME }}
+          key: ${{ secrets.SERVER_SSH_KEY }}
+          script: |
+            mkdir -p /home/${{ secrets.SERVER_USERNAME }}/freedom-website
+
+      - name: Check archive size
+        run: |
+          ARCHIVE_SIZE=$(stat -f%z deploy.tar.gz 2>/dev/null || stat -c%s deploy.tar.gz 2>/dev/null)
+          ARCHIVE_SIZE_MB=$((ARCHIVE_SIZE / 1024 / 1024))
+          echo "📦 Archive size: ${ARCHIVE_SIZE_MB}MB (${ARCHIVE_SIZE} bytes)"
+          if [ $ARCHIVE_SIZE_MB -gt 500 ]; then
+            echo "⚠️  Archive is very large, this might cause timeout issues"
+          fi
+
+      - name: Copy archive to server
         uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.SERVER_HOST }}
@@ -67,6 +85,9 @@ jobs:
           target: "/home/${{ secrets.SERVER_USERNAME }}/freedom-website"
           strip_components: 0
           rm: false
+          debug: true
+          timeout: 300
+          command_timeout: 300
 
       - name: Extract files on server
         uses: appleboy/ssh-action@v1.0.3
@@ -76,8 +97,18 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
             cd /home/${{ secrets.SERVER_USERNAME }}/freedom-website
-            tar -xzf deploy.tar.gz
-            rm deploy.tar.gz
+            if [ -f deploy.tar.gz ]; then
+              echo "✅ Archive found, extracting..."
+              tar -xzf deploy.tar.gz || (echo "❌ Extraction failed" && exit 1)
+              rm deploy.tar.gz
+              echo "✅ Files extracted successfully"
+              ls -la | head -20
+            else
+              echo "❌ deploy.tar.gz not found in target directory!"
+              echo "Contents of directory:"
+              ls -la
+              exit 1
+            fi
 
       - name: Deploy on server
         uses: appleboy/ssh-action@v1.0.3
