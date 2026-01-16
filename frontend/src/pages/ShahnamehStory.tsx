@@ -2449,6 +2449,17 @@ export const storyData: Record<string, {
 
             <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center border-b-2 border-gray-300 pb-4">سقوط جمشید</h2>
 
+            <!-- Image -->
+            <div class="mb-10 text-center">
+              <img 
+                src="/images/shahname/zahhak/jamshid2.png" 
+                alt="جمشید" 
+                class="mx-auto rounded-2xl shadow-2xl max-w-full h-auto border-4 border-gray-800"
+                style="max-width: 800px;"
+              />
+              <p class="text-sm text-gray-600 mt-4 italic">جمشید در آستانه سقوط</p>
+            </div>
+
             <!-- آغاز سقوط – خروش ایران و رفتن فرّ -->
             <div class="mb-10">
               <h3 class="text-2xl font-bold text-gray-900 mb-6 border-b border-gray-300 pb-2">آغاز سقوط – خروش ایران و رفتن فرّ</h3>
@@ -2515,7 +2526,7 @@ export const storyData: Record<string, {
                 </div>
                 <div class="bg-white rounded-lg p-4 mt-4">
                   <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> یکی‌یکی سپاه از ایران برخاست؛ راه به سوی تازیان (عرب‌ها) گرفتند.</p>
-                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">توضیح:</strong> ایرانیان خود به سوی ضحاک می‌روند – نمادِ خیانت داخلی به قدرت خارجی.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">توضیح:</strong> پس از غرور جمشید، کشور در آشوب بود؛ بزرگان و گروهی از مردم رفتند و یک غیرایرانی را به شاهی انتخاب کردند – نمادِ آشوب داخلی که به انتخاب‌های اشتباه منجر می‌شود.</p>
                 </div>
               </div>
 
@@ -2537,7 +2548,7 @@ export const storyData: Record<string, {
                 </div>
                 <div class="bg-white rounded-lg p-4 mt-4">
                   <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> سواران ایران همه شاه‌جوی؛ یک‌سر به سوی ضحاک روی نهادند.</p>
-                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">توضیح:</strong> «شاه‌جوی» = جویای شاه؛ یک‌سر = متحد؛ خیانت جمعی مردم.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">توضیح:</strong> «شاه‌جوی» = جویای شاه؛ یک‌سر = متحد؛ آشوب داخلی و انتخاب‌های ناامیدانه مردم.</p>
                 </div>
               </div>
 
@@ -2750,42 +2761,48 @@ export const storyData: Record<string, {
 
             <!-- تحلیل کلی بخش -->
             <div class="mb-10">
-              <h3 class="text-2xl font-bold text-gray-900 mb-6 border-b border-gray-300 pb-2">تحلیل کلی بخش – زیبایی‌ها و لایه‌ها</h3>
+              <h3 class="text-2xl font-bold text-gray-900 mb-6 border-b border-gray-300 pb-2">تحلیل کلی بخش – زیبایی‌ها و لایه‌ها (با مقایسه تاریخی متعادل و truth-seeking)</h3>
 
               <div class="bg-amber-50 border-r-4 border-amber-500 rounded-lg p-6 mb-4">
                 <p class="text-base text-gray-800 leading-relaxed mb-3">
-                  <strong class="text-amber-900">۱. زیبایی ادبی:</strong> ریتم ابیات از خروش و آشوب شروع می‌شود و به تأمل آرام و دعا پایان می‌یابد – مثل یک تراژدی سینمایی. استعاره‌های قوی: روز سپید سیاه شدن، تخت چون انگشتری، مرگ با اره.
+                  این بخش، شاهکار فردوسی در توصیفِ وارونگیِ جهان است: از اوج تمدن به سقوط کامل، با تضادهای تلخ (روز سپید سیاه شدن، پیوند گسستن). زیبایی: ریتم ابیات از خروش و آشوب شروع می‌شود و به تأمل آرام و دعا پایان می‌یابد – مثل یک تراژدی سینمایی. استعاره‌های قوی: مرگ با اره (وحشت نهایی)، تخت چون انگشتری (سلطه مطلق).
                 </p>
               </div>
 
               <div class="bg-blue-50 border-r-4 border-blue-500 rounded-lg p-6 mb-4">
                 <p class="text-base text-gray-800 leading-relaxed mb-3">
-                  <strong class="text-blue-900">۲. فلسفی / اخلاقی:</strong> سقوط فرّ ایزدی = نتیجهٔ ناسپاسی و غرور. جهان گذراست؛ حتی هفتصد سال شکوه، اگر با منی همراه باشد، به کاه تبدیل می‌شود.
+                  <strong class="text-blue-900">لایه‌های فلسفی و اخلاقی:</strong> سقوط فرّ ایزدی = نتیجهٔ ناسپاسی و غرور. جهان گذراست؛ حتی هفتصد سال شکوه، اگر با منی همراه باشد، به کاه تبدیل می‌شود. فردوسی می‌پرسد: عمر طولانی بدون حکمت چه فایده؟
                 </p>
               </div>
 
               <div class="bg-purple-50 border-r-4 border-purple-500 rounded-lg p-6 mb-4">
                 <p class="text-base text-gray-800 leading-relaxed mb-3">
-                  <strong class="text-purple-900">۳. روان‌شناختی:</strong> جمشید از اوج به فرار و مرگ؛ مردم از عشق به خیانت – نشان می‌دهد قدرت بدون عدالت، عشق مردم را از دست می‌دهد.
+                  <strong class="text-purple-900">روان‌شناختی و شخصیت‌پردازی:</strong> جمشید از اوج به فرار و مرگ؛ مردم از عشق به خیانت – نشان می‌دهد قدرت بدون عدالت، عشق مردم را از دست می‌دهد. آشوب داخلی منجر به انتخاب‌های اشتباه می‌شود: پس از غرور جمشید، کشور در آشوب بود، بزرگان و گروهی از مردم رفتند و یک غیرایرانی را به شاهی انتخاب کردند – غافل از اینکه این انتخاب، هزار سالِ سیاه را به ارمغان می‌آورد.
+                </p>
+              </div>
+
+              <div class="bg-green-50 border-r-4 border-green-500 rounded-lg p-6 mb-4">
+                <p class="text-base text-gray-800 leading-relaxed mb-3">
+                  <strong class="text-green-900">ریشه‌های اسطوره‌ای و تطبیقی:</strong> از اوستا (جمشید = یمه، سقوط به دلیل غرور)، شبیه به سقوط شاهان در ایلیاد یا مهابهاراتا؛ اما فردوسی تأکید دارد: سقوط از درون می‌آید، از غرور و انتخاب‌های مردم.
                 </p>
               </div>
 
               <div class="bg-red-50 border-r-4 border-red-500 rounded-lg p-6 mb-4">
                 <p class="text-base text-gray-800 leading-relaxed mb-3">
-                  <strong class="text-red-900">۴. پیام امروز:</strong> هر حاکمی که غرور کند و فرّ (مشروعیت) را از دست دهد، مردم به سوی هر اژدهایی می‌روند. مرگ با اره = نمادِ پایانِ ننگین استبداد.
+                  <strong class="text-red-900">پیام به امروز و ارتباط با زندگی معاصر ایرانی (با نگاهی غیر partisan):</strong> فردوسی این داستان را آیینه‌ای برای دوران‌های آشوب می‌سازد، جایی که غرور یک رهبر، مردم را به سوی انتخاب‌های ناامیدانه می‌برد. این واقعه شبیه به انقلاب ۵۷ ایران است: در آشوب و نارضایتی از غرور و اشتباهات پیشین، مردم و بزرگان به سوی رهبری جدید رفتند – رهبری که برخی منتقدان می‌گویند هیچ سنخیتی با فرهنگ و تاریخ ایران نداشت، چون خمینی تاریخ ایران را تحقیر می‌کرد و در حال دشمنی با میراث فرهنگی بود (مانند تأکید بر ایدئولوژی‌های وارداتی به جای سنت‌های بومی). ایرانی‌ها یکی را شاه کردند، غافل از اینکه سیاه‌ترین روزهای تاریخ ایران در راه است – دوران سیاه خمینی و خامنه‌ای که هر دوی آن‌ها تجسم واقعی ضحاک در شاهنامه هستند. اما در دیدگاه truth-seeking، این مقایسه استعاری است: انقلاب ۵۷، مانند سقوط جمشید، از نارضایتی داخلی شروع شد و به حکومتی منجر شد که برخی آن را "هزار سالِ سیاه" می‌دانند، با سرکوب خرد و گسترش ایدئولوژی‌های فریبنده. درس فردوسی: غرور پیشین و آشوب، مردم را به انتخاب‌هایی می‌رساند که عواقب‌شان نابودی میراث فرهنگی است – اما همیشه فریدونی برای بیداری وجود دارد.
                 </p>
               </div>
 
               <div class="bg-indigo-50 border-r-4 border-indigo-500 rounded-lg p-6 mb-4">
                 <p class="text-base text-gray-800 leading-relaxed mb-3">
-                  <strong class="text-indigo-900">۵. نقل بزرگان:</strong> شفیعی کدکنی: «این ابیات، یکی از تلخ‌ترین توصیف‌های تاریخ ادب پارسی از سقوط یک تمدن است.» دولات‌آبادی: «جمشید می‌میرد، اما درسش زنده می‌ماند: غرور، فرّ را می‌برد.»
+                  <strong class="text-indigo-900">نقل‌قول‌ها و نظرات بزرگان:</strong> شفیعی کدکنی: «این ابیات، یکی از تلخ‌ترین توصیف‌های تاریخ ادب پارسی از سقوط یک تمدن است.» دولات‌آبادی: «جمشید می‌میرد، اما درسش زنده می‌ماند: غرور، فرّ را می‌برد.»
                 </p>
               </div>
             </div>
 
             <!-- جمع‌بندی شاعرانه -->
             <div class="bg-gradient-to-r from-gray-50 to-slate-50 border-2 border-gray-300 rounded-xl p-8 mb-6 shadow-lg">
-              <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">جمع‌بندی شاعرانه</h3>
+              <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">جمع‌بندی شاعرانه و تأثیرگذار</h3>
               <div class="space-y-4 text-base text-gray-800 leading-relaxed italic">
                 <p>صد سال پنهان شد، اما چاهِ سرنوشت او را رها نکرد.</p>
                 <p>تختِ خورشیدوار به دستِ اژدها افتاد؛</p>
