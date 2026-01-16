@@ -23,8 +23,15 @@ jobs:
 
       - name: Prepare files for deployment
         run: |
+          # Wait a moment to ensure git checkout is fully complete
+          # This prevents "file changed as we read it" warnings from git metadata updates
+          sleep 1
+          
           # Create tar archive excluding large files and build artifacts
-          # Note: "file changed as we read it" warning is harmless in CI
+          # Note: "file changed as we read it" warning can occur in CI when:
+          # - Git is still updating file timestamps/metadata after checkout
+          # - File system caching delays in virtualized environments
+          # This warning is harmless - the archive is still valid
           set +e  # Don't exit on error
           tar --exclude='.git' \
             --exclude='node_modules' \
