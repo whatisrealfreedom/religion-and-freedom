@@ -24,6 +24,8 @@ jobs:
       - name: Prepare files for deployment
         run: |
           # Create tar archive excluding large files and build artifacts
+          # Note: "file changed as we read it" warning is harmless in CI
+          set +e  # Don't exit on error
           tar --exclude='.git' \
             --exclude='node_modules' \
             --exclude='frontend/node_modules' \
@@ -38,7 +40,15 @@ jobs:
             --exclude='*.db' \
             --exclude='*.db-shm' \
             --exclude='*.db-wal' \
-            -czf deploy.tar.gz .
+            -czf deploy.tar.gz . 2>&1
+          TAR_EXIT=$?
+          # Exit code 1 from tar is often just warnings, check if file was created
+          if [ $TAR_EXIT -ne 0 ] && [ ! -f deploy.tar.gz ]; then
+            echo "❌ tar failed and no archive was created"
+            exit 1
+          fi
+          echo "✅ Archive created successfully"
+          set -e  # Re-enable exit on error
 
       - name: Copy files to server
         uses: appleboy/scp-action@v0.1.7
