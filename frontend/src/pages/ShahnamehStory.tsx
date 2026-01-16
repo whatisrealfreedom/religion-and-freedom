@@ -2908,8 +2908,17 @@ export const storyData: Record<string, {
                   <p class="text-xl font-semibold text-gray-800 text-center">بر او سالیان انجمن شد هزار</p>
                 </div>
                 <div class="bg-white rounded-lg p-4 mt-4">
-                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> چون ضحاک بر جهان شهریار شد؛ بر او سالیان انجمن (حکومت) هزار شد.</p>
-                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">توضیح:</strong> «انجمن» = مجلس و حکومت؛ هزار سال نه عدد دقیق، بلکه نمادِ بی‌پایانِ ستم – همان‌طور که یکی از کامنت‌ها می‌گوید: "حکومت ظلم و دیکتاتوری، سراسر سختی و دشواری است، پس هر لحظه آن هزار لحظه می‌نماید." (از ارتیمانی: عمر تلخ نیم نفس بسیار است). فلسفی: زمان در ظلم کش می‌آید.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی روان:</strong> وقتی ضحاک بر جهان شاه شد، روزگارِ فرمانروایی‌اش «هزار سال» به درازا کشید.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed mb-3"><strong class="text-blue-800">توضیح عمیق:</strong></p>
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2">
+                    <strong>«انجمن» یعنی چه؟</strong> در فارسیِ کهن، «انجمن» فقط «جمع» نیست؛ گاهی کنایه از <strong>مجلسِ شاهی و دستگاهِ حکومت</strong> است. یعنی: ضحاک نه فقط شاه شد، بلکه «نظامِ سلطه» دورش شکل گرفت.
+                  </p>
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2">
+                    <strong>هزار سال چرا؟</strong> فردوسی اغلب با عددها «نماد» می‌سازد. «هزار» اینجا یعنی <strong>حکومتی که پایانش پیدا نیست</strong> و آن‌قدر تلخ است که زمان را کش می‌آورد: در ظلم، یک روز مثل هزار روز می‌گذرد.
+                  </p>
+                  <p class="text-sm text-gray-700 leading-relaxed">
+                    <strong>منظور فردوسی:</strong> از همین بیتِ اول، فضای داستان روشن می‌شود: با آمدنِ ضحاک، فقط یک نفر عوض نمی‌شود؛ <strong>جهان وارد یک «دوران» می‌شود</strong>—دورانی که معیارها و ارزش‌ها را وارونه می‌کند.
+                  </p>
                 </div>
               </div>
 
@@ -2919,8 +2928,17 @@ export const storyData: Record<string, {
                   <p class="text-xl font-semibold text-gray-800 text-center">برآمد بر این روزگار دراز</p>
                 </div>
                 <div class="bg-white rounded-lg p-4 mt-4">
-                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> سراسر زمانه به او باز شد (فرمانبر شد)؛ بر این روزگار دراز برآمد.</p>
-                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">توضیح:</strong> «باز گشت» = تسلیم شدن؛ روزگار دراز = هزار سالِ سنگین. زیبایی: تضاد با روزگار جمشید که کوتاه و شیرین بود. روان‌شناختی: جهان تسلیم شر می‌شود چون فرّ رفته است.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی روان:</strong> همهٔ روزگار رو به او برگشت و با او «هم‌سو» شد؛ و این عصرِ بلند و سنگین آغاز شد.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed mb-3"><strong class="text-blue-800">توضیح عمیق:</strong></p>
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2">
+                    <strong>«بدو گشت باز» یعنی چه؟</strong> «باز گشتن» در اینجا یعنی <strong>رو آوردن و برگشتنِ دل‌ها و کارها</strong> به سمتِ شاه: یا از ترس، یا از طمع، یا از بی‌پناهی. یعنی جامعه آرام‌آرام با نظمِ تازه «سازگار» می‌شود.
+                  </p>
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2">
+                    <strong>روزگارِ دراز:</strong> فردوسی می‌گوید این، فقط یک واقعه نیست؛ <strong>یک روندِ طولانی</strong> است. وقتی جامعه با شر «عادت» کند، برگشت سخت می‌شود و زمان کشدار.
+                  </p>
+                  <p class="text-sm text-gray-700 leading-relaxed">
+                    <strong>منظور فردوسی:</strong> سقوط فقط با شمشیر اتفاق نمی‌افتد؛ با <strong>تسلیمِ تدریجیِ زمانه</strong> هم رخ می‌دهد.
+                  </p>
                 </div>
               </div>
 
@@ -2930,8 +2948,20 @@ export const storyData: Record<string, {
                   <p class="text-xl font-semibold text-gray-800 text-center">پراگنده شد کام دیوانگان</p>
                 </div>
                 <div class="bg-white rounded-lg p-4 mt-4">
-                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> کردار فرزانگان نهان شد؛ کام (آرزوی) دیوانگان پراکنده شد (یا برآورده نشد – اما در برخی تفسیرها: دیوانگان حاکم شدند).</p>
-                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">توضیح:</strong> «فرزانگان» = خردمندان؛ «دیوانگان» = دیوهای اهریمنی. لایه: خرد پنهان، شر آشکار – کامنت یکی می‌گوید: "روش‌های منطقی و افراد فرزانه به مرور حذف می‌شوند، اداره امور به افراد نالایق سپرده می‌شود."</p>
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی روان:</strong> کار و کردارِ خردمندان پنهان شد؛ و خواسته و میلِ دیوانگان همه‌جا پخش و غالب شد.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed mb-3"><strong class="text-blue-800">توضیح عمیق:</strong></p>
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2">
+                    <strong>فرزانگان کیستند؟</strong> «فرزانه» یعنی <strong>خردمند و اهلِ تدبیر</strong>—دانشمند، حکیم، دادور، معلم؛ کسانی که جامعه را با عقل می‌گردانند.
+                  </p>
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2">
+                    <strong>دیوانگان یعنی چه؟</strong> اینجا «دیوانگان» صرفاً «دیوانهٔ روانی» نیست؛ یعنی <strong>نیروهای اهریمنی/بی‌خِرَد</strong>—آدم‌های فرصت‌طلب، دروغ‌گو، خشونت‌ورز، چاپلوس.
+                  </p>
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2">
+                    <strong>«پراگنده شد کام…»</strong> یعنی میل و فرمانِ این گروه، <strong>همه‌جا نفوذ کرد</strong>: معیارها عوض شد، پست‌ها دستِ نالایق افتاد، و خردمندان برای زنده ماندن «پنهان» شدند.
+                  </p>
+                  <p class="text-sm text-gray-700 leading-relaxed">
+                    <strong>منظور فردوسی:</strong> استبداد فقط سرکوب نیست؛ <strong>جابجاییِ جایگاه‌ها</strong>ست: خرد به سایه می‌رود، بی‌خردی به صدر.
+                  </p>
                 </div>
               </div>
 
@@ -2992,8 +3022,17 @@ export const storyData: Record<string, {
                   <p class="text-xl font-semibold text-gray-800 text-center">برون آوریدند لرزان چو بید</p>
                 </div>
                 <div class="bg-white rounded-lg p-4 mt-4">
-                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> دو پاکیزه (دختر) از خانهٔ جمشید بیرون آوردند لرزان چون بید.</p>
-                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">توضیح:</strong> «پاکیزه» = پاک و زیبا؛ «لرزان چو بید» = استعارهٔ ترس و شکنندگی. لایه: دختران = نمادِ میراث جمشید (تمدن و زیبایی).</p>
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی روان:</strong> دو دخترِ پاک و گرامیِ جمشید را از خانه بیرون کشیدند؛ آن‌چنان ترسان که مثلِ بید می‌لرزیدند.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed mb-3"><strong class="text-blue-800">توضیح عمیق:</strong></p>
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2">
+                    <strong>«پاکیزه» فقط «تمیز» نیست</strong>؛ یعنی <strong>نجیب، بی‌آلایش، و دارای شأن</strong>. فردوسی از همان واژه، جایگاهِ اخلاقی/فرهنگیِ این دو زن را می‌سازد.
+                  </p>
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2">
+                    <strong>«لرزان چو بید»</strong> تصویرِ شاهکارِ روان‌شناسی است: بید، درختی است که با نسیم هم می‌لرزد. یعنی ترسِ این دو نفر، ترسِ «یک لحظه» نیست؛ ترسِ <strong>فروپاشیِ امنیت</strong> است.
+                  </p>
+                  <p class="text-sm text-gray-700 leading-relaxed">
+                    <strong>منظور فردوسی:</strong> وقتی استبداد می‌آید، فقط تخت نمی‌افتد؛ <strong>خانه و حریم</strong> هم می‌شکند. این بیت، سقوطِ «حرمت» را نشان می‌دهد.
+                  </p>
                 </div>
               </div>
 
@@ -3003,8 +3042,17 @@ export const storyData: Record<string, {
                   <p class="text-xl font-semibold text-gray-800 text-center">سر بانوان را چو افسر بدند</p>
                 </div>
                 <div class="bg-white rounded-lg p-4 mt-4">
-                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> که هر دو دختر جمشید بودند؛ چون افسر (تاج) بر سر بانوان بودند.</p>
-                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">توضیح:</strong> «افسر» = تاج؛ آنها نمادِ شکوه زنان ایرانی. اساطیری: از اوستا، شهرناز و ارنواز نمادِ باروری و دانش هستند.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی روان:</strong> این دو، دخترانِ جمشید بودند و میانِ زنان، چون تاج بر سر—برترین و گرامی‌ترین.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed mb-3"><strong class="text-blue-800">توضیح عمیق:</strong></p>
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2">
+                    <strong>«افسر» چیست؟</strong> «افسر» در فارسی کهن یعنی <strong>تاج</strong>. «سرِ بانوان را چو افسر» یعنی: در میانِ زنان، <strong>مایهٔ آبرو و زینت و سرآمدی</strong> بودند—نه فقط زیبا، بلکه نمادِ شأنِ یک خاندان.
+                  </p>
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2">
+                    فردوسی اینجا یک نکتهٔ مهم می‌گوید: استبداد، فقط مردانِ سیاست را نمی‌زند؛ <strong>سراغ نمادهای فرهنگی و شرافت اجتماعی</strong> هم می‌رود.
+                  </p>
+                  <p class="text-sm text-gray-700 leading-relaxed">
+                    <strong>منظور فردوسی:</strong> با بردنِ «تاجِ بانوان»، یعنی با شکستنِ شأنِ این دو زن، ضحاک دارد <strong>آبروی یک تمدن</strong> را نشانه می‌گیرد.
+                  </p>
                 </div>
               </div>
 
@@ -3014,8 +3062,17 @@ export const storyData: Record<string, {
                   <p class="text-xl font-semibold text-gray-800 text-center">دگر پاکدامن به نام ارنواز</p>
                 </div>
                 <div class="bg-white rounded-lg p-4 mt-4">
-                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> از پوشیده‌رویان یکی شهرناز؛ دیگری پاکدامن به نام ارنواز.</p>
-                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">توضیح:</strong> نام‌ها: شهرناز = ناز شهر (زیبایی شهری)، ارنواز = ناز پاک. زیبایی: موسیقی نام‌ها (ناز تکرار می‌شود).</p>
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی روان:</strong> از میانِ آن زنانِ نجیب، یکی «شهرناز» بود و دیگری «ارنواز»—پاکدامن و شریف.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed mb-3"><strong class="text-blue-800">توضیح عمیق:</strong></p>
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2">
+                    <strong>«پوشیده‌رویان»</strong> در زبانِ فردوسی یعنی <strong>زنانِ نجیب و آبرومند</strong> (کنایه از حریم‌داری و حرمت اجتماعی)، نه صرفاً «پوشش ظاهری».
+                  </p>
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2">
+                    <strong>«پاکدامن»</strong> یعنی صاحبِ <strong>عفت و استواریِ اخلاقی</strong>—فردوسی عمداً این صفت را می‌آورد تا تضاد بسازد: پاکیِ این دو زن در برابرِ «جادویی» و «کژی» ضحاک.
+                  </p>
+                  <p class="text-sm text-gray-700 leading-relaxed">
+                    <strong>منظور فردوسی:</strong> نام‌بردن و وصف‌کردن، یعنی این دو «شخصیت‌های نمادین»اند: نمادِ <strong>حرمت، نجابت، و میراثِ فرهنگیِ جمشید</strong>.
+                  </p>
                 </div>
               </div>
 
@@ -3025,8 +3082,17 @@ export const storyData: Record<string, {
                   <p class="text-xl font-semibold text-gray-800 text-center">بر آن اژدهافش سپردندشان</p>
                 </div>
                 <div class="bg-white rounded-lg p-4 mt-4">
-                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> به ایوان ضحاک بردندشان؛ بر آن اژدهافش سپردندشان.</p>
-                  <p class="text-sm text-gray-700 leading-relaxed"><strong class="text-blue-800">توضیح:</strong> «اژدهافش» = نفس اژدها؛ ایوان = کاخ بلند. لایه: تسلیم زیبایی به شر.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی روان:</strong> آن‌ها را به ایوان و دربارِ ضحاک بردند و به آن «اژدهافش» سپردند.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed mb-3"><strong class="text-blue-800">توضیح عمیق:</strong></p>
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2">
+                    <strong>«ایوان» چیست؟</strong> «ایوان» در ادبِ فارسی، فقط یک معماری نیست؛ نمادِ <strong>قدرتِ رسمی و دستگاهِ سلطنت</strong> است. یعنی این کار، یک ربایشِ پنهانی نیست؛ «قانونی‌شده» و در چشمِ دربار اتفاق می‌افتد.
+                  </p>
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2">
+                    <strong>«اژدهافش» یعنی چه؟</strong> «فَش» یعنی نشان/خوی. «اژدهافش» یعنی <strong>اژدهاخو، اژدهاصفت</strong>—لقبی که فردوسی برای نشان دادنِ هیبت و درندگیِ ضحاک می‌آورد (حتی پیش از آنکه مارها در روایت برجسته شوند).
+                  </p>
+                  <p class="text-sm text-gray-700 leading-relaxed">
+                    <strong>منظور فردوسی:</strong> این بیت می‌گوید شر وقتی حکومت می‌شود، <strong>با تشریفاتِ دربار</strong> هم ظلم می‌کند؛ ظلم «نرمال» می‌شود.
+                  </p>
                 </div>
               </div>
 
@@ -3036,7 +3102,7 @@ export const storyData: Record<string, {
                   <p class="text-xl font-semibold text-gray-800 text-center">بیاموختشان کژی و بدخویی</p>
                 </div>
                 <div class="bg-white rounded-lg p-4 mt-4">
-                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی:</strong> پروردشان از راه جادویی؛ آموختشان کژی و بدخویی.</p>
+                  <p class="text-sm text-gray-700 leading-relaxed mb-2"><strong class="text-red-800">معنی روان:</strong> با افسون و نیرنگ تربیتشان کرد و به جای راستی، کج‌راهی و خویِ بد به آن‌ها آموخت.</p>
                   <p class="text-sm text-gray-700 leading-relaxed mb-3"><strong class="text-blue-800">توضیح عمیق:</strong></p>
                   <p class="text-sm text-gray-700 leading-relaxed mb-2">
                     <strong>جادویی چیست؟</strong> در فرهنگ ایرانی، «جادو» (از ریشهٔ اوستایی «یاتو») به معنای فریب، نیرنگ و خرافه است – نه جادوی نمایشی، بلکه فریب‌کاری و ایدئولوژی‌های دروغین. ضحاک که خود از ابلیس (شیطان) پرورش یافته، حالا دختران جمشید را با همین روش‌های اهریمنی تربیت می‌کند: به آن‌ها جادو و جنبل (خرافات و باورهای نادرست) می‌آموزد، تا ذهنشان را از حقیقت دور کند.
