@@ -201,7 +201,6 @@ const JamshidReign: React.FC = () => {
         پنجاه سال دوم – جامه و زیبایی
       </h3>
       
-      
       <!-- بیت 1 -->
       <div class="bg-gradient-to-r from-amber-50 to-amber-100 rounded-lg p-5 border-r-4 border-amber-500 shadow-sm">
         <div class="mb-3">
