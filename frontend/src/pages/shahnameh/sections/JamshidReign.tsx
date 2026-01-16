@@ -262,7 +262,6 @@ const JamshidReign: React.FC = () => {
         طبقه‌بندی حرفه‌ها و طبقات (پنجاه سال سوم و چهارم)
       </h3>
       
-      
       <!-- بیت 1 -->
       <div class="bg-gradient-to-r from-amber-50 to-amber-100 rounded-lg p-5 border-r-4 border-amber-500 shadow-sm">
         <div class="mb-3">
