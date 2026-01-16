@@ -102,6 +102,19 @@ jobs:
               tar -xzf deploy.tar.gz || (echo "❌ Extraction failed" && exit 1)
               rm deploy.tar.gz
               echo "✅ Files extracted successfully"
+              
+              # Ensure git remote is set correctly (SSH, not HTTPS)
+              # This prevents the remote from being overwritten if .git was included somehow
+              if [ -d .git ]; then
+                echo "🔧 Setting git remote to SSH..."
+                git remote set-url origin git@github.com:whatisrealfreedom/religion-and-freedom.git || \
+                git remote add origin git@github.com:whatisrealfreedom/religion-and-freedom.git
+                echo "✅ Git remote configured:"
+                git remote -v
+              else
+                echo "ℹ️  No .git directory found (this is expected - .git is excluded from archive)"
+              fi
+              
               ls -la | head -20
             else
               echo "❌ deploy.tar.gz not found in target directory!"
