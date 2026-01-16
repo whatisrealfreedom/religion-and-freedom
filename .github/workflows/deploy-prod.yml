@@ -21,107 +21,26 @@ jobs:
       - name: Setup Docker Buildx
         uses: docker/setup-buildx-action@v3
 
-      - name: Prepare files for deployment
-        run: |
-          # Wait a moment to ensure git checkout is fully complete
-          # This prevents "file changed as we read it" warnings from git metadata updates
-          sleep 1
-
-          # Create tar archive excluding large files and build artifacts
-          # Note: "file changed as we read it" warning can occur in CI when:
-          # - Git is still updating file timestamps/metadata after checkout
-          # - File system caching delays in virtualized environments
-          # This warning is harmless - the archive is still valid
-          set +e  # Don't exit on error
-          tar --exclude='.git' \
-            --exclude='node_modules' \
-            --exclude='frontend/node_modules' \
-            --exclude='frontend/build' \
-            --exclude='backend/cmd/server/server' \
-            --exclude='backend/server' \
-            --exclude='data' \
-            --exclude='.env*' \
-            --exclude='.DS_Store' \
-            --exclude='__pycache__' \
-            --exclude='*.pyc' \
-            --exclude='*.db' \
-            --exclude='*.db-shm' \
-            --exclude='*.db-wal' \
-            -czf deploy.tar.gz . 2>&1
-          TAR_EXIT=$?
-          # Exit code 1 from tar is often just warnings, check if file was created
-          if [ $TAR_EXIT -ne 0 ] && [ ! -f deploy.tar.gz ]; then
-            echo "❌ tar failed and no archive was created"
-            exit 1
-          fi
-          echo "✅ Archive created successfully"
-          set -e  # Re-enable exit on error
-
-      - name: Prepare server directory
-        uses: appleboy/ssh-action@v1.0.3
-        with:
-          host: ${{ secrets.SERVER_HOST }}
-          username: ${{ secrets.SERVER_USERNAME }}
-          key: ${{ secrets.SERVER_SSH_KEY }}
-          script: |
-            mkdir -p /home/${{ secrets.SERVER_USERNAME }}/freedom-website
-
-      - name: Check archive size
-        run: |
-          ARCHIVE_SIZE=$(stat -f%z deploy.tar.gz 2>/dev/null || stat -c%s deploy.tar.gz 2>/dev/null)
-          ARCHIVE_SIZE_MB=$((ARCHIVE_SIZE / 1024 / 1024))
-          echo "📦 Archive size: ${ARCHIVE_SIZE_MB}MB (${ARCHIVE_SIZE} bytes)"
-          if [ $ARCHIVE_SIZE_MB -gt 500 ]; then
-            echo "⚠️  Archive is very large, this might cause timeout issues"
-          fi
-
-      - name: Copy archive to server
+      - name: Copy files to server
         uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SERVER_USERNAME }}
           key: ${{ secrets.SERVER_SSH_KEY }}
-          source: "deploy.tar.gz"
+          source: "."
           target: "/home/${{ secrets.SERVER_USERNAME }}/freedom-website"
           strip_components: 0
           rm: false
-          debug: true
-          timeout: 300s
-          command_timeout: 10m
-
-      - name: Extract files on server
-        uses: appleboy/ssh-action@v1.0.3
-        with:
-          host: ${{ secrets.SERVER_HOST }}
-          username: ${{ secrets.SERVER_USERNAME }}
-          key: ${{ secrets.SERVER_SSH_KEY }}
-          script: |
-            cd /home/${{ secrets.SERVER_USERNAME }}/freedom-website
-            if [ -f deploy.tar.gz ]; then
-              echo "✅ Archive found, extracting..."
-              tar -xzf deploy.tar.gz || (echo "❌ Extraction failed" && exit 1)
-              rm deploy.tar.gz
-              echo "✅ Files extracted successfully"
-              
-              # Ensure git remote is set correctly (SSH, not HTTPS)
-              # This prevents the remote from being overwritten if .git was included somehow
-              if [ -d .git ]; then
-                echo "🔧 Setting git remote to SSH..."
-                git remote set-url origin git@github.com:whatisrealfreedom/religion-and-freedom.git || \
-                git remote add origin git@github.com:whatisrealfreedom/religion-and-freedom.git
-                echo "✅ Git remote configured:"
-                git remote -v
-              else
-                echo "ℹ️  No .git directory found (this is expected - .git is excluded from archive)"
-              fi
-              
-              ls -la | head -20
-            else
-              echo "❌ deploy.tar.gz not found in target directory!"
-              echo "Contents of directory:"
-              ls -la
-              exit 1
-            fi
+          exclude: |
+            **/.git
+            **/node_modules
+            **/.env*
+            **/data
+            **/frontend/build
+            **/.DS_Store
+            **/__pycache__
+            **/*.pyc
+            **/backend/cmd/server/server
 
       - name: Deploy on server
         uses: appleboy/ssh-action@v1.0.3
