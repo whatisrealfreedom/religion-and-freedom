@@ -86,8 +86,8 @@ jobs:
           strip_components: 0
           rm: false
           debug: true
-          timeout: 300
-          command_timeout: 300
+          timeout: 300s
+          command_timeout: 10m
 
       - name: Extract files on server
         uses: appleboy/ssh-action@v1.0.3
