@@ -2840,7 +2840,7 @@ export const storyData: Record<string, {
                 </div>
                 <div class="flex-1">
                   <h3 class="text-lg font-bold text-gray-900 mb-1">شنیدن داستان</h3>
-                  <p class="text-sm text-gray-600">پادشاهی ضحاک تازی هزار سال بود</p>
+                  <p class="text-sm text-gray-600">از دوران طهمورث تا زمان ضحاک</p>
                 </div>
               </div>
               <audio controls class="w-full h-12 rounded-lg shadow-inner" style="background: linear-gradient(to right, #fff, #fef3c7);">
