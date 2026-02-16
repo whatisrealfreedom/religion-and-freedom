@@ -1,13 +1,13 @@
 # Build stage
-FROM golang:1.23-alpine AS builder
+FROM golang:1.24-alpine AS builder
 
 WORKDIR /app
 
 # Install build dependencies
 RUN apk add --no-cache git gcc musl-dev
 
-# Set GOTOOLCHAIN to auto to allow downloading required Go version
-ENV GOTOOLCHAIN=auto
+# Use Go from image only (no toolchain download in Docker)
+ENV GOTOOLCHAIN=local
 
 # Copy go mod files
 COPY backend/go.mod backend/go.sum* ./

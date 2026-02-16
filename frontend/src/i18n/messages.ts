@@ -28,7 +28,7 @@ export const messages: Record<Locale, Messages> = {
     home: {
       heroTitleTop: 'سفر به سوی',
       heroTitleBottom: 'آزادی واقعی',
-      heroSubtitle: 'نظریه‌ای انقلابی از محمدعلی جنت‌خواه که دین و آزادی را برای همیشه آشتی می‌دهد',
+      heroSubtitle: '',
       heroCta: 'شروع سفر آزادی',
       statsChapters: 'فصل جامع',
       statsFreedom: 'آزادی',
@@ -36,7 +36,7 @@ export const messages: Record<Locale, Messages> = {
       chaptersTitle: 'فصول آزادی',
       chaptersSubtitle: 'سفر کامل به درک آزادی واقعی از طریق 10 فصل جامع و عمیق با تحلیل‌های دقیق',
       quote: '«آزادی واقعی، مالکیت مطلق انسان بر جسم، ذهن، زمان و دارایی خویش است — و دین، تنها نظام پایدار تاریخ برای حفاظت از این مالکیت.»',
-      quoteAuthor: '— محمدعلی جنت‌خواه',
+      quoteAuthor: '',
       slogan: {
         title: 'شعار ما',
         items: {
@@ -51,7 +51,7 @@ export const messages: Record<Locale, Messages> = {
     resources: {
       title: '📚 منابع و لینک‌های مفید',
       subtitle: 'مجموعه کامل منابع برای مطالعه عمیق‌تر درباره آزادی، دین و حقوق مالکیت',
-      videosTitle: 'ویدیوهای محمدعلی جنت‌خواه',
+      videosTitle: 'ویدیوهای نظریه آزادی',
       videosSubtitle: 'وبینارها، تحلیل‌ها و صحبت‌های کامل',
       watchOnYoutube: 'تماشا در YouTube',
       usefulLinksTitle: 'لینک‌های مفید',
@@ -59,7 +59,7 @@ export const messages: Record<Locale, Messages> = {
       thinkersTitle: 'اندیشمندان لیبرتارین',
       thinkersSubtitle: 'بزرگان فلسفه آزادی و اقتصاد اتریشی',
       pdfTitle: 'PDF های نظریه آزادی',
-      pdfSubtitle: 'فایل‌های کامل 9 فصل نظریه جنت‌خواه',
+      pdfSubtitle: 'فایل‌های کامل 9 فصل نظریه آزادی',
       downloadPdf: 'دانلود PDF',
       ctaTitle: '📖 مطالعه برای آزادی',
       ctaText: 'این منابع، راهنمای شما برای درک عمیق‌تر آزادی واقعی هستند. هر کدام را با دقت بخوانید و تحلیل کنید.',
@@ -118,8 +118,7 @@ export const messages: Record<Locale, Messages> = {
     home: {
       heroTitleTop: 'Journey to',
       heroTitleBottom: 'Real Freedom',
-      heroSubtitle:
-        'A bold framework by Mohammad Ali Jannatkhah: reconciling religion and freedom through absolute human ownership.',
+      heroSubtitle: '',
       heroCta: 'Start the Journey',
       statsChapters: 'Chapters',
       statsFreedom: 'Freedom',
@@ -128,7 +127,7 @@ export const messages: Record<Locale, Messages> = {
       chaptersSubtitle: 'A complete path through 10 chapters, with clear explanations and deep analysis.',
       quote:
         '"Real freedom is absolute human ownership over body, mind, time, and property — and religion is the most durable system in history for protecting that ownership."',
-      quoteAuthor: '— Mohammad Ali Jannatkhah',
+      quoteAuthor: '',
       slogan: {
         title: 'Our Slogan',
         items: {
@@ -143,7 +142,7 @@ export const messages: Record<Locale, Messages> = {
     resources: {
       title: '📚 Resources & Links',
       subtitle: 'A curated library to go deeper: chapters, PDFs, videos, and recommended thinkers.',
-      videosTitle: 'Jannatkhah on YouTube',
+      videosTitle: 'Freedom Theory Videos',
       videosSubtitle: 'Full talks, interviews, and deep dives',
       watchOnYoutube: 'Watch on YouTube',
       usefulLinksTitle: 'Useful links',

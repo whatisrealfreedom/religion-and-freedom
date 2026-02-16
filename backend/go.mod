@@ -2,8 +2,6 @@ module github.com/whatisrealfreedom/freedom-website
 
 go 1.24.0
 
-toolchain go1.24.6
-
 require (
 	github.com/gin-gonic/gin v1.11.0
 	github.com/mattn/go-sqlite3 v1.14.32

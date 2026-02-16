@@ -16,13 +16,11 @@ export const chapterContent: Record<Locale, Record<number, string>> = {
     1: `<div class="chapter-content">
   <h2>پیش‌زمینه و ریشه نظریه «آزادی واقعی = حقوق مالکیت مطلق»</h2>
 
-  <p>این مفهوم هسته اصلی نظریه محمدعلی جنت‌خواه (آرمین) است که از سال‌های حدود ۲۰۲۰ به بعد، در وبینارها، پادکست‌ها و نوشته‌هایش شکل گرفت. جنت‌خواه، کارآفرین سابق (موسس سایت طرفداری) و تحلیلگر سیاسی-اقتصادی، پس از تجربیات شخصی (از جمله بازداشت‌ها به دلیل بیان دیدگاه‌ها) و مطالعه عمیق فلسفه غربی (لیبرتاریانیسم، حقوق مالکیت لاک و نوزیک) و اصول شیعه، به این نتیجه رسید که آزادی‌های سیاسی رایج (مثل لیبرالیسم یا سوسیالیسم) پر از تناقض و ناپایدارند.</p>
+  <p>این مفهوم در دههٔ اخیر در وبینارها، پادکست‌ها و نوشته‌های مختلف مطرح شده است. یکی از مهم‌ترین صورتبندی‌های آن را محمدعلی جنت‌خواه در وبینار «شاه‌کلید آینده ایران» (حدود ۲۰۲۱-۲۰۲۲) ارائه داده و در پادکست‌ها و مصاحبه‌های بعدی گسترش داده است — جایی که آزادی برای اولین بار به طور سیستماتیک به <strong>حقوق مالکیت مطلق</strong> تعریف شد. این تعریف از تجربیات واقعی جامعه ایران (تورم، سانسور، اجبارها) الهام گرفته شده؛ جایی که دولت و ایدئولوژی‌ها مدام مالکیت فرد را نقض می‌کنند.</p>
 
-  <p>ریشه اولیه در <strong>وبینار معروف ۴ ساعته</strong> او با عنوان «شاه‌کلید آینده ایران: نظریه‌ای نو درباره آزادی و دین» (حدود ۲۰۲۱-۲۰۲۲) است، جایی که برای اولین بار آزادی را به طور سیستماتیک به <strong>حقوق مالکیت مطلق</strong> تعریف کرد. او در پادکست‌ها و مصاحبه‌های بعدی (مثل اسپاتیفای و اپل پادکست) این ایده را گسترش داد و گفت که این تعریف از تجربیات واقعی جامعه ایران (تورم، سانسور، اجبارها) الهام گرفته شده — جایی که دولت و ایدئولوژی‌ها مدام مالکیت فرد را نقض می‌کنند.</p>
+  <p>این نظریه «راه سوم» را پیشنهاد می‌دهد: نه دولت‌سالاری چپ، نه هرج‌ومرج آنارشیستی — بلکه یک نظام پایدار مبتنی بر اصول دینی برای حفاظت ابدی از مالکیت فرد.</p>
 
-  <p>در نوشته‌ها و استوری‌هایش (که اغلب در تلگرام و اینستاگرام آرشیو می‌شود)، تأکید می‌کند که این نظریه «راه سوم» است: نه دولت‌سالاری چپ، نه هرج‌ومرج آنارشیستی — بلکه یک نظام پایدار مبتنی بر اصول دینی برای حفاظت ابدی از مالکیت فرد.</p>
-
-  <p>این تعریف، نقطه شروع تمام نظریه‌اش است و بعداً به نظام صوری آکسیوماتیک دین متصل می‌شود.</p>
+  <p>این تعریف، نقطهٔ شروع نظریه است و بعداً به نظام صوری آکسیوماتیک دین متصل می‌شود.</p>
 
   <hr />
 
@@ -36,11 +34,11 @@ export const chapterContent: Record<Locale, Record<number, string>> = {
 
   <h2>مقدمه (خوراک اولیه برای جذب)</h2>
 
-  <p>خیلی‌ها آزادی را شعار می‌دانند: آزادی بیان، آزادی انتخاب، آزادی سیاسی. اما جنت‌خواه می‌پرسد: اگر دولتی پولت را با تورم بدزدد، ذهنت را سانسور کند، بدنت را اجبار کند یا زمانت را با قوانین ظالمانه بگیرد، واقعاً آزاد هستی؟</p>
+  <p>خیلی‌ها آزادی را شعار می‌دانند: آزادی بیان، آزادی انتخاب، آزادی سیاسی. اما پرسش این است: اگر دولتی پولت را با تورم بدزدد، ذهنت را سانسور کند، بدنت را اجبار کند یا زمانت را با قوانین ظالمانه بگیرد، واقعاً آزاد هستی؟</p>
 
   <h2>آزادی واقعی چیست؟</h2>
 
-  <p>جنت‌خواه آزادی را از مفهوم مبهم و سیاسی به یک اصل حقوقی دقیق و قابل دفاع تبدیل می‌کند: <strong>مالکیت مطلق و پایدار بر خود</strong>. این نه لیبرالیسم غربی با تناقض‌هایش (که اغلب به دولت بزرگ منجر می‌شود)، نه آنارشی با آشوب و خشونت — بلکه یک تعریف بدیهی و الهی که انسان را مالک واقعی زندگی‌اش می‌کند.</p>
+  <p>این نظریه آزادی را از مفهوم مبهم و سیاسی به یک اصل حقوقی دقیق و قابل دفاع تبدیل می‌کند: <strong>مالکیت مطلق و پایدار بر خود</strong>. این نه لیبرالیسم غربی با تناقض‌هایش (که اغلب به دولت بزرگ منجر می‌شود)، نه آنارشی با آشوب و خشونت — بلکه یک تعریف بدیهی و الهی که انسان را مالک واقعی زندگی‌اش می‌کند.</p>
 
   <p>این تعریف، قرن‌ها جستجوی بشر برای اراده آزاد را پاسخ می‌دهد: آزادی بدون ترس از سلب مالکیت.</p>
 
@@ -77,7 +75,7 @@ export const chapterContent: Record<Locale, Record<number, string>> = {
   <blockquote>
     «این تعریف، آزادی را از شعارهای توخالی به یک اصل قضایی، فلسفی و الهی قابل دفاع تبدیل می‌کند. هر نظام سیاسی — حتی اگر پرچم آزادی بر دوش داشته باشد — که حتی یکی از این چهار مالکیت را نقض کند، ضدآزادی و ضدانسانی است.»
     <br />
-    <strong>— محمدعلی جنت‌خواه</strong>
+    <strong>— از جمله محمدعلی جنت‌خواه، از منابع اصلی این نظریه</strong>
   </blockquote>
 
   <h2>تحلیل عمیق و چندبعدی</h2>
@@ -1089,13 +1087,11 @@ export const chapterContent: Record<Locale, Record<number, string>> = {
     1: `<div class="chapter-content">
   <h2>Background and Origins of the Theory: &ldquo;True Freedom = Absolute Property Rights&rdquo;</h2>
 
-  <p>This concept forms the core of Mohammad Ali Jannatkhah's (Armin) theory, which took shape around 2020 onward in his webinars, podcasts, and writings. Jannatkhah, a former entrepreneur (founder of the Tarafdari sports website) and political-economic analyst, arrived at this insight after personal experiences (including arrests for expressing views) and deep study of Western philosophy (libertarianism, property rights in Locke and Nozick) alongside Shia principles. He concluded that conventional political freedoms (e.g., liberalism or socialism) are riddled with contradictions and instability.</p>
+  <p>This concept has been articulated in webinars, podcasts, and writings over the past decade. One of its most important formulations was presented by Mohammad Ali Jannatkhah in the webinar &ldquo;The Master Key to Iran's Future&rdquo; (circa 2021–2022), and further developed in subsequent podcasts and interviews—where freedom was first systematically defined as <strong>absolute property rights</strong>. This definition draws inspiration from real societal experiences in Iran (inflation, censorship, coercions)—where government and ideologies continually violate individual ownership.</p>
 
-  <p>The initial roots lie in his renowned 4-hour webinar titled &ldquo;The Master Key to Iran's Future: A New Theory on Freedom and Religion&rdquo; (circa 2021–2022), where he systematically redefined freedom as <strong>absolute property rights</strong> for the first time. He expanded this in subsequent podcasts and interviews (e.g., on Spotify and Apple Podcasts), noting that the definition draws inspiration from real societal experiences in Iran (inflation, censorship, coercions)—where government and ideologies continually violate individual ownership.</p>
+  <p>This theory proposes a &ldquo;third way&rdquo;: neither left-wing statism nor anarchic chaos—but a stable system grounded in divine principles for the eternal protection of individual ownership.</p>
 
-  <p>In his writings and stories (often archived on Telegram and Instagram), he emphasizes that this theory offers a &ldquo;third way&rdquo;: neither left-wing statism nor anarchic chaos—but a stable system grounded in divine principles for the eternal protection of individual ownership.</p>
-
-  <p>This definition serves as the starting point of his entire theory, later connecting to the formal axiomatic system of religion.</p>
+  <p>This definition serves as the starting point of the theory, later connecting to the formal axiomatic system of religion.</p>
 
   <hr />
 
@@ -1109,11 +1105,11 @@ export const chapterContent: Record<Locale, Record<number, string>> = {
 
   <h2>Introduction (Initial Hook for Engagement)</h2>
 
-  <p>Many view freedom as mere slogans: freedom of expression, choice, or politics. But Jannatkhah poses a profound question: If a government steals your wealth through inflation, censors your mind, coerces your body, or seizes your time with oppressive laws—are you truly free?</p>
+  <p>Many view freedom as mere slogans: freedom of expression, choice, or politics. But the question is: If a government steals your wealth through inflation, censors your mind, coerces your body, or seizes your time with oppressive laws—are you truly free?</p>
 
   <h2>What is True Freedom?</h2>
 
-  <p>Jannatkhah transforms freedom from a vague, political abstraction into a precise, defensible legal and philosophical principle: <strong>absolute and enduring ownership over oneself</strong>. This is neither Western liberalism with its inherent contradictions (often leading to expansive government), nor anarchy with its chaos and violence—but a self-evident, divine definition that renders humans the true owners of their lives.</p>
+  <p>This theory transforms freedom from a vague, political abstraction into a precise, defensible legal and philosophical principle: <strong>absolute and enduring ownership over oneself</strong>. This is neither Western liberalism with its inherent contradictions (often leading to expansive government), nor anarchy with its chaos and violence—but a self-evident, divine definition that renders humans the true owners of their lives.</p>
 
   <p>This definition answers humanity's centuries-long quest for free will: freedom without fear of dispossession.</p>
 
@@ -1150,7 +1146,7 @@ export const chapterContent: Record<Locale, Record<number, string>> = {
   <blockquote>
     &ldquo;This definition elevates freedom from empty slogans to a defensible judicial, philosophical, and divine principle. Any political system—even one waving the banner of freedom—that violates even one of these four ownerships is anti-freedom and anti-human.&rdquo;
     <br />
-    <strong>&mdash; Mohammad Ali Jannatkhah</strong>
+    <strong>&mdash; Including Mohammad Ali Jannatkhah, one of the main sources of this theory</strong>
   </blockquote>
 
   <h2>In-Depth and Multidimensional Analysis</h2>

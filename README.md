@@ -4,7 +4,7 @@
 
 ## 🌟 درباره پروژه | About the Project
 
-این وب‌سایت، یک پروژه جامع و تعاملی برای ارائه نظریه انقلابی **محمدعلی جنت‌خواه** درباره آزادی واقعی و ارتباط آن با دین است. این سایت با هدف ترویج درک عمیق‌تر از مفهوم آزادی، حقوق مالکیت مطلق و نقش دین به عنوان نگهبان آزادی ساخته شده است.
+این وب‌سایت، یک پروژه جامع و تعاملی برای ارائه نظریه انقلابی درباره آزادی واقعی و ارتباط آن با دین است. این سایت با هدف ترویج درک عمیق‌تر از مفهوم آزادی، حقوق مالکیت مطلق و نقش دین به عنوان نگهبان آزادی ساخته شده است.
 
 ---
 
@@ -12,7 +12,7 @@
 
 ### فارسی | Persian
 
-**آزادی واقعی چیست؟** این سوالی است که برای قرن‌ها ذهن بشر را به خود مشغول کرده است. محمدعلی جنت‌خواه با ارائه نظریه‌ای نوآورانه، آزادی را به عنوان **حقوق مالکیت مطلق** بر چهار حوزه اساسی تعریف می‌کند:
+**آزادی واقعی چیست؟** این سوالی است که برای قرن‌ها ذهن بشر را به خود مشغول کرده است. در این نظریه نوآورانه، آزادی به عنوان **حقوق مالکیت مطلق** بر چهار حوزه اساسی تعریف می‌شود:
 
 1. **مالکیت جسم** - هیچ‌کس حق اجبار یا دخالت در بدن تو را ندارد
 2. **مالکیت ذهن** - آزادی باور، سخن و اندیشه
@@ -27,7 +27,7 @@
 
 ### English
 
-**What is real freedom?** This is a question that has occupied the human mind for centuries. Mohammad Ali Jannatkhah presents an innovative theory that defines freedom as **absolute property rights** over four fundamental domains:
+**What is real freedom?** This is a question that has occupied the human mind for centuries. This innovative theory defines freedom as **absolute property rights** over four fundamental domains:
 
 1. **Body Ownership** - No one has the right to coerce or interfere with your body
 2. **Mind Ownership** - Freedom of belief, speech, and thought
@@ -200,7 +200,7 @@ freedom-website/
 ### منابع | Resources
 
 - 📄 9 فایل PDF کامل
-- 🎥 ویدیوهای YouTube از جنت‌خواه
+- 🎥 ویدیوهای YouTube درباره نظریه آزادی
 - 🔗 لینک به اندیشمندان لیبرتارین (روتبارد، میزس، هایک و...)
 - 📚 کتاب صوتی "اخلاق آزادی" روتبارد
 
@@ -226,7 +226,6 @@ This project is open source and available under the MIT License.
 
 ## 🙏 قدردانی | Acknowledgments
 
-- **محمدعلی جنت‌خواه** - برای نظریه انقلابی آزادی
 - تمام اندیشمندان آزادی که راه را هموار کردند
 - جامعه توسعه‌دهندگان open source
 

@@ -122,14 +122,16 @@ const Home: React.FC = () => {
               <span className="block text-yellow-300 drop-shadow-lg">{t('home.heroTitleBottom')}</span>
             </motion.h1>
             
-            <motion.p 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.5 }}
-              className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-blue-50 mb-8 sm:mb-10 md:mb-12 max-w-4xl mx-auto leading-relaxed font-light px-4"
-            >
-              {t('home.heroSubtitle')}
-            </motion.p>
+            {t('home.heroSubtitle') && (
+              <motion.p 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.5 }}
+                className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-blue-50 mb-8 sm:mb-10 md:mb-12 max-w-4xl mx-auto leading-relaxed font-light px-4"
+              >
+                {t('home.heroSubtitle')}
+              </motion.p>
+            )}
 
             {/* Main CTA Button */}
             {chapters.length > 0 && (
