@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Bars3Icon, GlobeAltIcon, XMarkIcon } from '@heroicons/react/24/outline';
+import { Bars3Icon, ChevronDownIcon, GlobeAltIcon, XMarkIcon, BookOpenIcon, DocumentTextIcon, UserGroupIcon, SparklesIcon, CalendarDaysIcon, ChartBarIcon } from '@heroicons/react/24/outline';
 import FreedomBird from './FreedomBird';
 // کامنت شده - چون بخش progress غیرفعال است
 // import { useProgress } from '../hooks/useProgress';
@@ -14,11 +14,21 @@ const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
+  const [isMegaMenuMobileOpen, setIsMegaMenuMobileOpen] = useState(false);
+  const megaMenuCloseTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   // کامنت شده - چون بخش progress غیرفعال است
   // const { progress } = useProgress();
   const { locale, setLocale, t, isRTL } = useLocale();
   const navigate = useNavigate();
   const location = useLocation();
+
+  // Cleanup mega menu timer on unmount
+  useEffect(() => {
+    return () => {
+      if (megaMenuCloseTimer.current) clearTimeout(megaMenuCloseTimer.current);
+    };
+  }, []);
 
   // Check if user is authenticated
   useEffect(() => {
@@ -90,17 +100,158 @@ const Navbar: React.FC = () => {
             <Link to={base} className="text-gray-700 hover:text-primary-600 font-semibold text-sm md:text-base transition-colors px-2 md:px-3 py-2 rounded-lg hover:bg-gray-50">
               {t('nav.home')}
             </Link>
-            <Link to={withLocalePath(locale, '/resources')} className="text-gray-700 hover:text-primary-600 font-semibold text-sm md:text-base transition-colors px-2 md:px-3 py-2 rounded-lg hover:bg-gray-50">
-              {t('nav.resources')}
-            </Link>
+
+            {/* Mega menu trigger */}
+            <div
+              className="relative"
+              onMouseEnter={() => {
+                if (megaMenuCloseTimer.current) {
+                  clearTimeout(megaMenuCloseTimer.current);
+                  megaMenuCloseTimer.current = null;
+                }
+                setIsMegaMenuOpen(true);
+              }}
+              onMouseLeave={() => {
+                megaMenuCloseTimer.current = setTimeout(() => setIsMegaMenuOpen(false), 200);
+              }}
+            >
+              <button
+                type="button"
+                className={`inline-flex items-center gap-1 text-gray-700 hover:text-primary-600 font-semibold text-sm md:text-base transition-colors px-2 md:px-3 py-2 rounded-lg hover:bg-gray-50 ${isMegaMenuOpen ? 'text-primary-600 bg-gray-50' : ''}`}
+                aria-expanded={isMegaMenuOpen}
+                aria-haspopup="true"
+              >
+                <span>{t('nav.sections')}</span>
+                <ChevronDownIcon className={`w-4 h-4 transition-transform ${isMegaMenuOpen ? 'rotate-180' : ''}`} />
+              </button>
+
+              {/* Invisible bridge - eliminates gap between button and panel for smooth hover */}
+              {isMegaMenuOpen && (
+                <div
+                  className="absolute top-full left-0 right-0 h-6"
+                  style={{ width: 'max(100%, 400px)', minHeight: '48px' }}
+                  aria-hidden
+                />
+              )}
+
+              {/* Mega menu panel - full width below nav */}
+              {isMegaMenuOpen && (
+                <div className="fixed left-0 right-0 top-20 z-50 px-4 md:px-6 lg:px-8">
+                  <div className="mx-auto max-w-7xl bg-white border border-gray-200 rounded-2xl shadow-2xl overflow-hidden">
+                    <div className={`grid grid-cols-5 gap-0 ${isRTL ? 'direction-rtl' : ''}`}>
+                    {/* شاهنامه */}
+                    <div className="p-6 border-e border-gray-200">
+                      <Link
+                        to={withLocalePath(locale, '/shahnameh')}
+                        className="flex items-center gap-3 mb-4 text-amber-700 hover:text-amber-800 font-bold text-lg"
+                        onClick={() => setIsMegaMenuOpen(false)}
+                      >
+                        <div className="w-10 h-10 rounded-xl bg-amber-100 flex items-center justify-center">
+                          <BookOpenIcon className="w-5 h-5 text-amber-700" />
+                        </div>
+                        {t('nav.shahnameh')}
+                      </Link>
+                      <ul className="space-y-2">
+                        <li>
+                          <Link to={withLocalePath(locale, '/shahnameh/feraydun')} className="text-gray-600 hover:text-primary-600 text-sm block py-1" onClick={() => setIsMegaMenuOpen(false)}>
+                            {isRTL ? 'فریدون' : 'Fereydun'}
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to={withLocalePath(locale, '/shahnameh')} className="text-gray-600 hover:text-primary-600 text-sm block py-1" onClick={() => setIsMegaMenuOpen(false)}>
+                            {isRTL ? 'همه داستان‌ها' : 'All stories'}
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
+                    {/* منابع */}
+                    <div className="p-6 border-e border-gray-200">
+                      <Link
+                        to={withLocalePath(locale, '/resources')}
+                        className="flex items-center gap-3 mb-4 text-primary-700 hover:text-primary-800 font-bold text-lg"
+                        onClick={() => setIsMegaMenuOpen(false)}
+                      >
+                        <div className="w-10 h-10 rounded-xl bg-primary-100 flex items-center justify-center">
+                          <DocumentTextIcon className="w-5 h-5 text-primary-700" />
+                        </div>
+                        {t('nav.resources')}
+                      </Link>
+                      <p className="text-gray-500 text-sm">
+                        {isRTL ? 'PDF، ویدیو، لینک‌ها و اندیشمندان' : 'PDFs, videos, links & thinkers'}
+                      </p>
+                    </div>
+                    {/* منتقدان */}
+                    <div className="p-6 border-e border-gray-200">
+                      <Link
+                        to={withLocalePath(locale, '/critics')}
+                        className="flex items-center gap-3 mb-4 text-gray-800 hover:text-primary-600 font-bold text-lg"
+                        onClick={() => setIsMegaMenuOpen(false)}
+                      >
+                        <div className="w-10 h-10 rounded-xl bg-gray-100 flex items-center justify-center">
+                          <UserGroupIcon className="w-5 h-5 text-gray-700" />
+                        </div>
+                        {t('nav.critics')}
+                      </Link>
+                      <p className="text-gray-500 text-sm">
+                        {isRTL ? 'نقدهای رایج و پاسخ‌ها' : 'Common critiques & responses'}
+                      </p>
+                    </div>
+                    {/* عرفان و دین */}
+                    <div className="p-6 border-e border-gray-200">
+                      <Link
+                        to={withLocalePath(locale, '/highlights/erfan-din')}
+                        className="flex items-center gap-3 mb-4 text-indigo-700 hover:text-indigo-800 font-bold text-lg"
+                        onClick={() => setIsMegaMenuOpen(false)}
+                      >
+                        <div className="w-10 h-10 rounded-xl bg-indigo-100 flex items-center justify-center">
+                          <SparklesIcon className="w-5 h-5 text-indigo-700" />
+                        </div>
+                        {t('nav.erfan')}
+                      </Link>
+                      <p className="text-gray-500 text-sm">
+                        {isRTL ? 'هایلایت‌های عرفان و دین' : 'Highlights: Erfan & religion'}
+                      </p>
+                    </div>
+                    {/* پرونده و تحلیل: ۲۸ مرداد + ایران ۱۴۰۸ */}
+                    <div className="p-6">
+                      <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">
+                        {isRTL ? 'پرونده و تحلیل' : 'Dossier & Analysis'}
+                      </p>
+                      <ul className="space-y-3">
+                        <li>
+                          <Link
+                            to={withLocalePath(locale, '/28mordad')}
+                            className="flex items-center gap-3 text-emerald-700 hover:text-emerald-800 font-bold"
+                            onClick={() => setIsMegaMenuOpen(false)}
+                          >
+                            <div className="w-9 h-9 rounded-lg bg-emerald-100 flex items-center justify-center flex-shrink-0">
+                              <CalendarDaysIcon className="w-4 h-4 text-emerald-700" />
+                            </div>
+                            {t('nav.mordad28')}
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={withLocalePath(locale, '/special/iran-1408')}
+                            className="flex items-center gap-3 text-slate-700 hover:text-primary-600 font-bold"
+                            onClick={() => setIsMegaMenuOpen(false)}
+                          >
+                            <div className="w-9 h-9 rounded-lg bg-slate-100 flex items-center justify-center flex-shrink-0">
+                              <ChartBarIcon className="w-4 h-4 text-slate-600" />
+                            </div>
+                            {t('nav.iran1408')}
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+              )}
+            </div>
+
             <Link to={withLocalePath(locale, '/discussions')} className="text-gray-700 hover:text-primary-600 font-semibold text-sm md:text-base transition-colors px-2 md:px-3 py-2 rounded-lg hover:bg-gray-50">
               {isRTL ? 'بحث و گفتگو' : 'Discussions'}
-            </Link>
-            <Link to={withLocalePath(locale, '/shahnameh')} className="text-amber-700 hover:text-amber-800 font-bold text-sm md:text-base transition-colors px-2 md:px-3 py-2 rounded-lg hover:bg-amber-50">
-              {isRTL ? 'شاهنامه' : 'Shahnameh'}
-            </Link>
-            <Link to={withLocalePath(locale, '/critics')} className="text-gray-700 hover:text-primary-600 font-semibold text-sm md:text-base transition-colors px-2 md:px-3 py-2 rounded-lg hover:bg-gray-50">
-              {t('nav.critics')}
             </Link>
             <Link to={withLocalePath(locale, '/special/reformists-enemy')} className="text-red-600 hover:text-red-700 font-bold text-sm md:text-base transition-colors px-2 md:px-3 py-2 rounded-lg hover:bg-red-50 inline-flex items-center gap-1.5">
               <span>{isRTL ? 'اصلاحات دشمن' : 'Reformists Enemy'}</span>
@@ -182,33 +333,33 @@ const Navbar: React.FC = () => {
             >
               {t('nav.home')}
             </Link>
-            <Link
-              to={withLocalePath(locale, '/resources')}
-              className="block px-3 py-2.5 text-gray-700 hover:bg-gray-50 rounded-md text-base font-medium transition-colors"
-              onClick={() => setIsOpen(false)}
-            >
-              {t('nav.resources')}
-            </Link>
+            {/* Mobile: Sections expandable */}
+            <div className="border-b border-gray-100 pb-1">
+              <button
+                type="button"
+                onClick={() => setIsMegaMenuMobileOpen(!isMegaMenuMobileOpen)}
+                className="w-full flex items-center justify-between px-3 py-2.5 text-gray-700 hover:bg-gray-50 rounded-md text-base font-semibold transition-colors"
+              >
+                <span>{t('nav.sections')}</span>
+                <ChevronDownIcon className={`w-5 h-5 transition-transform ${isMegaMenuMobileOpen ? 'rotate-180' : ''}`} />
+              </button>
+              {isMegaMenuMobileOpen && (
+                <div className="pl-4 mt-1 space-y-0.5">
+                  <Link to={withLocalePath(locale, '/shahnameh')} className="block px-3 py-2 text-amber-700 hover:bg-amber-50 rounded-md text-sm font-bold" onClick={() => { setIsOpen(false); setIsMegaMenuMobileOpen(false); }}>{t('nav.shahnameh')}</Link>
+                  <Link to={withLocalePath(locale, '/resources')} className="block px-3 py-2 text-gray-600 hover:bg-gray-50 rounded-md text-sm" onClick={() => { setIsOpen(false); setIsMegaMenuMobileOpen(false); }}>{t('nav.resources')}</Link>
+                  <Link to={withLocalePath(locale, '/critics')} className="block px-3 py-2 text-gray-600 hover:bg-gray-50 rounded-md text-sm" onClick={() => { setIsOpen(false); setIsMegaMenuMobileOpen(false); }}>{t('nav.critics')}</Link>
+                  <Link to={withLocalePath(locale, '/highlights/erfan-din')} className="block px-3 py-2 text-indigo-700 hover:bg-indigo-50 rounded-md text-sm font-medium" onClick={() => { setIsOpen(false); setIsMegaMenuMobileOpen(false); }}>{t('nav.erfan')}</Link>
+                  <Link to={withLocalePath(locale, '/28mordad')} className="block px-3 py-2 text-emerald-700 hover:bg-emerald-50 rounded-md text-sm font-medium" onClick={() => { setIsOpen(false); setIsMegaMenuMobileOpen(false); }}>{t('nav.mordad28')}</Link>
+                  <Link to={withLocalePath(locale, '/special/iran-1408')} className="block px-3 py-2 text-slate-700 hover:bg-slate-50 rounded-md text-sm" onClick={() => { setIsOpen(false); setIsMegaMenuMobileOpen(false); }}>{t('nav.iran1408')}</Link>
+                </div>
+              )}
+            </div>
             <Link
               to={withLocalePath(locale, '/discussions')}
               className="block px-3 py-2.5 text-gray-700 hover:bg-gray-50 rounded-md text-base font-medium transition-colors"
               onClick={() => setIsOpen(false)}
             >
               {isRTL ? 'بحث و گفتگو' : 'Discussions'}
-            </Link>
-            <Link
-              to={withLocalePath(locale, '/shahnameh')}
-              className="block px-3 py-2.5 text-amber-700 hover:bg-amber-50 rounded-md text-base font-bold transition-colors"
-              onClick={() => setIsOpen(false)}
-            >
-              {isRTL ? 'شاهنامه' : 'Shahnameh'}
-            </Link>
-            <Link
-              to={withLocalePath(locale, '/critics')}
-              className="block px-3 py-2.5 text-gray-700 hover:bg-gray-50 rounded-md text-base font-medium transition-colors"
-              onClick={() => setIsOpen(false)}
-            >
-              {t('nav.critics')}
             </Link>
             <Link
               to={withLocalePath(locale, '/special/reformists-enemy')}
