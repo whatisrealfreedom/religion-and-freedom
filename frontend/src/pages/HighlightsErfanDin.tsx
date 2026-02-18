@@ -59,25 +59,38 @@ function parseMarkdownHeaders(text: string): React.ReactNode {
   const result: React.ReactNode[] = [];
   
   lines.forEach((line, index) => {
-    // Check if line is a header (**text**)
-    const headerMatch = line.match(/^\*\*(.+?)\*\*$/);
+    // Check if line starts with a header (**text**)
+    // Match **text** at the start of line (may have text after)
+    const headerMatch = line.match(/^\*\*(.+?)\*\*(.*)$/);
     if (headerMatch) {
+      const headerText = headerMatch[1];
+      const restOfLine = headerMatch[2].trim();
+      
       // It's a header - render as h4
       result.push(
-        <h4 key={index} className="text-lg font-bold text-gray-800 mt-4 mb-2 first:mt-0">
-          {headerMatch[1]}
+        <h4 key={`header-${index}`} className="text-lg font-bold text-gray-800 mt-4 mb-2 first:mt-0">
+          {headerText}
         </h4>
       );
+      
+      // If there's text after the header on the same line, render it as a paragraph
+      if (restOfLine) {
+        result.push(
+          <p key={`para-after-${index}`} className="mb-3">
+            {restOfLine}
+          </p>
+        );
+      }
     } else if (line.trim()) {
       // Regular paragraph
       result.push(
-        <p key={index} className="mb-3 last:mb-0">
+        <p key={`para-${index}`} className="mb-3 last:mb-0">
           {line}
         </p>
       );
     } else {
       // Empty line
-      result.push(<br key={index} />);
+      result.push(<br key={`br-${index}`} />);
     }
   });
   
