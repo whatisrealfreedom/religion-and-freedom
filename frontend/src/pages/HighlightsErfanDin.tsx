@@ -173,8 +173,15 @@ const HighlightsErfanDin: React.FC = () => {
     navigate(withLocalePath(locale, `/highlights/erfan-din/${slideNum}`), { replace: true });
   };
 
-  const goPrev = () => updateSlide(currentIndex - 1);
-  const goNext = () => updateSlide(currentIndex + 1);
+  const goPrev = () => {
+    const newIndex = currentIndex - 1;
+    if (newIndex >= 0) updateSlide(newIndex);
+  };
+  
+  const goNext = () => {
+    const newIndex = currentIndex + 1;
+    if (newIndex < totalSlides) updateSlide(newIndex);
+  };
 
   // Sync with URL parameter changes (e.g., browser back/forward)
   useEffect(() => {
@@ -187,21 +194,21 @@ const HighlightsErfanDin: React.FC = () => {
       // If no slideNumber in URL but we're not on first slide, update URL
       navigate(withLocalePath(locale, `/highlights/erfan-din/${currentIndex + 1}`), { replace: true });
     }
-  }, [slideNumber, totalSlides, locale, navigate]);
+  }, [slideNumber, totalSlides, locale, navigate, currentIndex]);
 
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
       if (e.key === 'ArrowLeft') {
-        if (isRTL) setCurrentIndex((i) => (i < totalSlides - 1 ? i + 1 : i));
-        else setCurrentIndex((i) => (i > 0 ? i - 1 : i));
+        if (isRTL) goNext();
+        else goPrev();
       } else if (e.key === 'ArrowRight') {
-        if (isRTL) setCurrentIndex((i) => (i > 0 ? i - 1 : i));
-        else setCurrentIndex((i) => (i < totalSlides - 1 ? i + 1 : i));
+        if (isRTL) goPrev();
+        else goNext();
       }
     };
     window.addEventListener('keydown', handleKey);
     return () => window.removeEventListener('keydown', handleKey);
-  }, [totalSlides, isRTL]);
+  }, [currentIndex, totalSlides, isRTL]);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 via-indigo-50/20 to-white">
