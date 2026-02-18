@@ -76,7 +76,7 @@ function parseMarkdownHeaders(text: string): React.ReactNode {
       // If there's text after the header on the same line, render it as a paragraph
       if (restOfLine) {
         result.push(
-          <p key={`para-after-${index}`} className="mb-3">
+          <p key={`para-after-${index}`} className="mb-3 leading-loose text-justify">
             {restOfLine}
           </p>
         );
@@ -109,7 +109,7 @@ function parseMarkdownHeaders(text: string): React.ReactNode {
       }
       
       result.push(
-        <p key={`para-${index}`} className="mb-3 last:mb-0">
+        <p key={`para-${index}`} className="mb-3 last:mb-0 leading-loose text-justify">
           {parts.length > 0 ? parts : line}
         </p>
       );
@@ -312,7 +312,7 @@ const HighlightsErfanDin: React.FC = () => {
 
             {/* Intro */}
             {slide.intro && (
-              <p className="text-gray-600 leading-relaxed">{slide.intro}</p>
+              <p className="text-gray-600 leading-loose text-justify">{slide.intro}</p>
             )}
 
             {/* Slide image (if exists) */}
@@ -331,7 +331,7 @@ const HighlightsErfanDin: React.FC = () => {
               <h3 className="text-xs font-semibold text-indigo-600 uppercase tracking-wider mb-4">
                 {t.mainText}
               </h3>
-              <p className="text-lg sm:text-xl text-gray-800 leading-loose whitespace-pre-line font-medium">
+              <p className="text-lg sm:text-xl text-gray-800 leading-loose text-justify whitespace-pre-line font-medium">
                 {slide.text}
               </p>
             </div>
@@ -347,7 +347,7 @@ const HighlightsErfanDin: React.FC = () => {
               {slide.simpleExplanation ? (
                 <div>
                   <p className="text-xs text-gray-500 mb-3 italic">{t.simpleExplanationNote}</p>
-                  <div className="text-gray-700 leading-relaxed whitespace-pre-line">
+                  <div className="text-gray-700 leading-loose text-justify whitespace-pre-line">
                     {parseMarkdownHeaders(slide.simpleExplanation)}
                   </div>
                 </div>
@@ -384,7 +384,7 @@ const HighlightsErfanDin: React.FC = () => {
                 <h3 className="text-sm font-semibold text-indigo-700 uppercase tracking-wider mb-3">
                   {t.conclusion}
                 </h3>
-                <p className="text-gray-700 leading-relaxed whitespace-pre-line">{slide.conclusion}</p>
+                <p className="text-gray-700 leading-loose text-justify whitespace-pre-line">{slide.conclusion}</p>
               </div>
             )}
 
