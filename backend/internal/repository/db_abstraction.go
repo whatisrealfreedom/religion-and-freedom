@@ -2,7 +2,6 @@ package repository
 
 import (
 	"fmt"
-	"github.com/whatisrealfreedom/freedom-website/internal/config"
 )
 
 // DBType represents the database type
