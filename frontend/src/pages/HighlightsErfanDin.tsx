@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -166,22 +166,36 @@ const HighlightsErfanDin: React.FC = () => {
   const totalSlides = erfanDinSlides.length;
 
   // Update URL when slide changes
-  const updateSlide = (newIndex: number) => {
+  const updateSlide = useCallback((newIndex: number) => {
     const clampedIndex = Math.max(0, Math.min(newIndex, totalSlides - 1));
     setCurrentIndex(clampedIndex);
     const slideNum = clampedIndex + 1; // 1-based for URL
     navigate(withLocalePath(locale, `/highlights/erfan-din/${slideNum}`), { replace: true });
-  };
+  }, [totalSlides, locale, navigate]);
 
-  const goPrev = () => {
-    const newIndex = currentIndex - 1;
-    if (newIndex >= 0) updateSlide(newIndex);
-  };
+  const goPrev = useCallback(() => {
+    setCurrentIndex((prev) => {
+      const newIndex = prev - 1;
+      if (newIndex >= 0) {
+        const slideNum = newIndex + 1;
+        navigate(withLocalePath(locale, `/highlights/erfan-din/${slideNum}`), { replace: true });
+        return newIndex;
+      }
+      return prev;
+    });
+  }, [locale, navigate]);
   
-  const goNext = () => {
-    const newIndex = currentIndex + 1;
-    if (newIndex < totalSlides) updateSlide(newIndex);
-  };
+  const goNext = useCallback(() => {
+    setCurrentIndex((prev) => {
+      const newIndex = prev + 1;
+      if (newIndex < totalSlides) {
+        const slideNum = newIndex + 1;
+        navigate(withLocalePath(locale, `/highlights/erfan-din/${slideNum}`), { replace: true });
+        return newIndex;
+      }
+      return prev;
+    });
+  }, [totalSlides, locale, navigate]);
 
   // Sync with URL parameter changes (e.g., browser back/forward)
   useEffect(() => {
@@ -208,7 +222,7 @@ const HighlightsErfanDin: React.FC = () => {
     };
     window.addEventListener('keydown', handleKey);
     return () => window.removeEventListener('keydown', handleKey);
-  }, [currentIndex, totalSlides, isRTL]);
+  }, [goPrev, goNext, isRTL]);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 via-indigo-50/20 to-white">
