@@ -290,6 +290,17 @@ const HighlightsErfanDin: React.FC = () => {
               <p className="text-gray-600 leading-relaxed">{slide.intro}</p>
             )}
 
+            {/* Slide image (if exists) */}
+            {slide.imageUrl && (
+              <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-4 sm:p-6 overflow-hidden">
+                <img 
+                  src={slide.imageUrl} 
+                  alt={slide.title || `Slide ${slide.pageNumber}`}
+                  className="w-full h-auto rounded-lg object-contain"
+                />
+              </div>
+            )}
+
             {/* Main text */}
             <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6 sm:p-8">
               <h3 className="text-xs font-semibold text-indigo-600 uppercase tracking-wider mb-4">
