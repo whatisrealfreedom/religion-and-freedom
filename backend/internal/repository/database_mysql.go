@@ -1,3 +1,6 @@
+//go:build mysql || all
+// +build mysql all
+
 package repository
 
 import (

@@ -1,3 +1,6 @@
+//go:build postgres || all
+// +build postgres all
+
 package repository
 
 import (
