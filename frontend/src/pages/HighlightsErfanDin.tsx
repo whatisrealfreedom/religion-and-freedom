@@ -53,6 +53,37 @@ const content = {
   },
 };
 
+// Parse markdown-style headers (**text**) into HTML headers
+function parseMarkdownHeaders(text: string): React.ReactNode {
+  const lines = text.split('\n');
+  const result: React.ReactNode[] = [];
+  
+  lines.forEach((line, index) => {
+    // Check if line is a header (**text**)
+    const headerMatch = line.match(/^\*\*(.+?)\*\*$/);
+    if (headerMatch) {
+      // It's a header - render as h4
+      result.push(
+        <h4 key={index} className="text-lg font-bold text-gray-800 mt-4 mb-2 first:mt-0">
+          {headerMatch[1]}
+        </h4>
+      );
+    } else if (line.trim()) {
+      // Regular paragraph
+      result.push(
+        <p key={index} className="mb-3 last:mb-0">
+          {line}
+        </p>
+      );
+    } else {
+      // Empty line
+      result.push(<br key={index} />);
+    }
+  });
+  
+  return <>{result}</>;
+}
+
 function SectionBlock({
   title,
   children,
@@ -217,7 +248,9 @@ const HighlightsErfanDin: React.FC = () => {
               {slide.simpleExplanation ? (
                 <div>
                   <p className="text-xs text-gray-500 mb-3 italic">{t.simpleExplanationNote}</p>
-                  <p className="text-gray-700 leading-relaxed whitespace-pre-line">{slide.simpleExplanation}</p>
+                  <div className="text-gray-700 leading-relaxed whitespace-pre-line">
+                    {parseMarkdownHeaders(slide.simpleExplanation)}
+                  </div>
                 </div>
               ) : (
                 <p className="text-gray-400 italic">{t.placeholder}</p>
