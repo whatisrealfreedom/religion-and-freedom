@@ -59,7 +59,7 @@ function App() {
                 <Route path="shahnameh" element={<ShahnamehIndex />} />
                 <Route path="shahnameh/:storyId" element={<ShahnamehStory />} />
                 <Route path="shahnameh/:storyId/:sectionSlug" element={<ShahnamehSection />} />
-                <Route path="highlights/erfan-din" element={<HighlightsErfanDin />} />
+                <Route path="highlights/erfan-din/:slideNumber?" element={<HighlightsErfanDin />} />
                 {/* Legacy route for Jamshid Reign - redirect to new structure */}
                 <Route path="shahnameh/jamshid/reign" element={<Navigate to="/fa/shahnameh/zahhak/700-years-jamshid" replace />} />
         </Route>

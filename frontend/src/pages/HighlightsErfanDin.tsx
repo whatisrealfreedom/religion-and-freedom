@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   ArrowLeftIcon,
@@ -152,13 +152,42 @@ function SectionBlock({
 
 const HighlightsErfanDin: React.FC = () => {
   const { locale, isRTL } = useLocale();
+  const { slideNumber } = useParams<{ slideNumber?: string }>();
+  const navigate = useNavigate();
   const t = content[locale];
-  const [currentIndex, setCurrentIndex] = useState(0);
+  
+  // Initialize currentIndex from URL parameter or default to 0
+  const initialIndex = slideNumber ? 
+    Math.max(0, Math.min(parseInt(slideNumber, 10) - 1, erfanDinSlides.length - 1)) : 
+    0;
+  
+  const [currentIndex, setCurrentIndex] = useState(initialIndex);
   const slide: ErfanDinSlide = erfanDinSlides[currentIndex];
   const totalSlides = erfanDinSlides.length;
 
-  const goPrev = () => setCurrentIndex((i) => (i > 0 ? i - 1 : i));
-  const goNext = () => setCurrentIndex((i) => (i < totalSlides - 1 ? i + 1 : i));
+  // Update URL when slide changes
+  const updateSlide = (newIndex: number) => {
+    const clampedIndex = Math.max(0, Math.min(newIndex, totalSlides - 1));
+    setCurrentIndex(clampedIndex);
+    const slideNum = clampedIndex + 1; // 1-based for URL
+    navigate(withLocalePath(locale, `/highlights/erfan-din/${slideNum}`), { replace: true });
+  };
+
+  const goPrev = () => updateSlide(currentIndex - 1);
+  const goNext = () => updateSlide(currentIndex + 1);
+
+  // Sync with URL parameter changes (e.g., browser back/forward)
+  useEffect(() => {
+    if (slideNumber) {
+      const slideIndex = parseInt(slideNumber, 10) - 1;
+      if (slideIndex >= 0 && slideIndex < totalSlides && slideIndex !== currentIndex) {
+        setCurrentIndex(slideIndex);
+      }
+    } else if (currentIndex !== 0) {
+      // If no slideNumber in URL but we're not on first slide, update URL
+      navigate(withLocalePath(locale, `/highlights/erfan-din/${currentIndex + 1}`), { replace: true });
+    }
+  }, [slideNumber, totalSlides, locale, navigate]);
 
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
@@ -208,7 +237,7 @@ const HighlightsErfanDin: React.FC = () => {
             {erfanDinSlides.map((_, i) => (
               <button
                 key={i}
-                onClick={() => setCurrentIndex(i)}
+                onClick={() => updateSlide(i)}
                 className={`w-2 h-2 rounded-full transition-colors ${
                   i === currentIndex ? 'bg-indigo-600 scale-125' : 'bg-gray-300 hover:bg-gray-400'
                 }`}
