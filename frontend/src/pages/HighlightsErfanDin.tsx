@@ -82,10 +82,35 @@ function parseMarkdownHeaders(text: string): React.ReactNode {
         );
       }
     } else if (line.trim()) {
-      // Regular paragraph
+      // Regular paragraph - check for **text** patterns within the line and render them as bold
+      const parts: React.ReactNode[] = [];
+      let lastIndex = 0;
+      const boldRegex = /\*\*(.+?)\*\*/g;
+      let match;
+      let keyCounter = 0;
+      
+      while ((match = boldRegex.exec(line)) !== null) {
+        // Add text before the match
+        if (match.index > lastIndex) {
+          parts.push(line.substring(lastIndex, match.index));
+        }
+        // Add the bold text
+        parts.push(
+          <strong key={`bold-${index}-${keyCounter++}`} className="font-semibold text-gray-800">
+            {match[1]}
+          </strong>
+        );
+        lastIndex = match.index + match[0].length;
+      }
+      
+      // Add remaining text after last match
+      if (lastIndex < line.length) {
+        parts.push(line.substring(lastIndex));
+      }
+      
       result.push(
         <p key={`para-${index}`} className="mb-3 last:mb-0">
-          {line}
+          {parts.length > 0 ? parts : line}
         </p>
       );
     } else {
