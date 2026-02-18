@@ -4,10 +4,10 @@ go 1.24.0
 
 require (
 	github.com/gin-gonic/gin v1.11.0
-	github.com/go-sql-driver/mysql v1.9.3
+	github.com/go-sql-driver/mysql v1.9.3 // Optional: only needed with build tag "mysql"
 	github.com/golang-jwt/jwt/v5 v5.3.0
 	github.com/joho/godotenv v1.5.1
-	github.com/lib/pq v1.11.2
+	github.com/lib/pq v1.11.2 // Optional: only needed with build tag "postgres"
 	github.com/mattn/go-sqlite3 v1.14.32
 	github.com/stretchr/testify v1.11.1
 	golang.org/x/crypto v0.46.0
