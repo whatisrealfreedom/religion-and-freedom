@@ -30,10 +30,8 @@ func NewDatabase(cfg *config.Config) (Database, error) {
 	case "sqlite":
 		return newSQLiteDB(cfg)
 	case "mysql":
-		globalDialect = &mysqlDialect{}
 		return newMySQLDB(cfg) // Only compiled if build tag "mysql" or "all" is set
 	case "postgres", "postgresql":
-		globalDialect = &postgresDialect{}
 		return newPostgresDB(cfg) // Only compiled if build tag "postgres" or "all" is set
 	default:
 		return nil, fmt.Errorf("unsupported database type: %s", cfg.DBType)
