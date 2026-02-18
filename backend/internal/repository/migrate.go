@@ -120,6 +120,8 @@ func RunMigrationsOnDB(db *sql.DB) error {
 		fmt.Sprintf("migrations/%s", dbType),      // migrations/mysql/, migrations/postgres/, migrations/sqlite/
 		fmt.Sprintf("backend/migrations/%s", dbType),
 		fmt.Sprintf("./migrations/%s", dbType),
+		"/root/migrations",                        // Docker container path
+		"/root/migrations/%s",                     // Docker container with DB type
 		"migrations",                              // Fallback: generic migrations directory
 		"/app/migrations",
 		"./migrations",
