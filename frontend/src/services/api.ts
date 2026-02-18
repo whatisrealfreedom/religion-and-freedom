@@ -223,7 +223,9 @@ export interface Thread {
 
 export interface Comment {
   id: number;
-  thread_id: number;
+  thread_id?: number; // Optional for polymorphic comments
+  commentable_type?: string; // For polymorphic comments
+  commentable_id?: number | string; // For polymorphic comments
   user_id: number;
   parent_id?: number;
   content: string;
@@ -328,6 +330,36 @@ export const discussionApi = {
 
   reactComment: async (id: number, reactionType: 'heart' | 'clap' | 'thumbs_up' | 'thumbs_down'): Promise<void> => {
     await api.post(`/discussions/comments/${id}/react`, { reaction_type: reactionType });
+  },
+};
+
+// Polymorphic Comments API - برای کامنت‌های عمومی (اسلاید عرفان، شاهنامه، و...)
+export const commentApi = {
+  getComments: async (commentableType: string, commentableId: number | string): Promise<Comment[]> => {
+    const response = await api.get(`/comments/${commentableType}/${commentableId}`);
+    return response.data.data || response.data || [];
+  },
+
+  createComment: async (
+    commentableType: string,
+    commentableId: number | string,
+    data: CreateCommentRequest
+  ): Promise<Comment> => {
+    const response = await api.post(`/comments/${commentableType}/${commentableId}`, data);
+    return response.data.data || response.data;
+  },
+
+  updateComment: async (id: number, data: UpdateCommentRequest): Promise<Comment> => {
+    const response = await api.put(`/comment/${id}`, data);
+    return response.data.data || response.data;
+  },
+
+  voteComment: async (id: number, voteType: 1 | -1): Promise<void> => {
+    await api.post(`/comment/${id}/vote`, { vote_type: voteType });
+  },
+
+  reactComment: async (id: number, reactionType: 'heart' | 'clap' | 'thumbs_up' | 'thumbs_down'): Promise<void> => {
+    await api.post(`/comment/${id}/react`, { reaction_type: reactionType });
   },
 };
 

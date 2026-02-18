@@ -70,6 +70,8 @@ func main() {
 	// Initialize repository (only if db is available)
 	var repo *repository.Repository
 	if db != nil {
+		// Set global dialect for database-agnostic operations
+		// This is set in newSQLiteDB/newMySQLDB/newPostgresDB, but ensure it's available
 		repo = repository.NewRepository(db)
 		log.Println("✅ Repository initialized")
 	} else {
@@ -98,7 +100,8 @@ func main() {
 	var resourceHandler *handlers.ResourceHandler
 	var authHandler *handlers.AuthHandler
 	var discussionHandler *handlers.DiscussionHandler
-	
+	var commentHandler *handlers.CommentHandler
+
 	if chapterService != nil {
 		chapterHandler = handlers.NewChapterHandler(chapterService)
 	}
@@ -111,6 +114,9 @@ func main() {
 	}
 	if repo != nil && repo.Thread != nil && repo.Comment != nil && repo.Vote != nil && repo.Reaction != nil {
 		discussionHandler = handlers.NewDiscussionHandler(repo.Thread, repo.Comment, repo.Vote, repo.Reaction)
+	}
+	if repo != nil && repo.ContentComment != nil {
+		commentHandler = handlers.NewCommentHandler(repo.ContentComment)
 	}
 
 	// Setup router
@@ -217,6 +223,29 @@ func main() {
 			api.GET("/discussions/:id", func(c *gin.Context) {
 				c.JSON(503, gin.H{"error": "Database service unavailable"})
 			})
+		}
+
+		// Polymorphic comments (content: erfan_slide, shahnameh_story, etc.)
+		if commentHandler != nil {
+			comments := api.Group("/comments")
+			{
+				comments.GET("/:type/:id", commentHandler.GetComments)
+				commentsProtected := comments.Group("")
+				commentsProtected.Use(middleware.AuthMiddleware())
+				{
+					commentsProtected.POST("/:type/:id", commentHandler.CreateComment)
+				}
+			}
+			
+			// Single comment operations (use singular "comment" to avoid route conflict)
+			comment := api.Group("/comment")
+			commentProtected := comment.Group("")
+			commentProtected.Use(middleware.AuthMiddleware())
+			{
+				commentProtected.PUT("/:id", commentHandler.UpdateComment)
+				commentProtected.POST("/:id/vote", commentHandler.VoteComment)
+				commentProtected.POST("/:id/react", commentHandler.ReactComment)
+			}
 		}
 	}
 

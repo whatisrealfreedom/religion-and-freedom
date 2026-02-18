@@ -102,17 +102,31 @@ func RunMigrations(db *sql.DB, migrationsPath string) error {
 }
 
 // RunMigrationsOnDB runs migrations on an existing database connection
+// This function is now database-aware and will use the appropriate migration directory
+// based on the database type (sqlite/mysql/postgres)
 func RunMigrationsOnDB(db *sql.DB) error {
-	// Try multiple paths for migrations
+	// Detect database type from global dialect
+	var dbType string
+	if globalDialect != nil {
+		dbType = string(globalDialect.GetDBType())
+	} else {
+		// Fallback: try to detect from connection string or default to sqlite
+		dbType = "sqlite"
+	}
+
+	// Try multiple paths for migrations based on database type
+	var migrationsPath string
 	possiblePaths := []string{
-		"migrations",
+		fmt.Sprintf("migrations/%s", dbType),      // migrations/mysql/, migrations/postgres/, migrations/sqlite/
+		fmt.Sprintf("backend/migrations/%s", dbType),
+		fmt.Sprintf("./migrations/%s", dbType),
+		"migrations",                              // Fallback: generic migrations directory
 		"/app/migrations",
 		"./migrations",
 		"backend/migrations",
 		"./backend/migrations",
 	}
 
-	var migrationsPath string
 	for _, path := range possiblePaths {
 		if _, err := os.Stat(path); err == nil {
 			migrationsPath = path
@@ -123,6 +137,8 @@ func RunMigrationsOnDB(db *sql.DB) error {
 	if migrationsPath == "" {
 		return fmt.Errorf("migrations directory not found (tried: %v)", possiblePaths)
 	}
+
+	fmt.Printf("📁 Using migrations directory: %s (database: %s)\n", migrationsPath, dbType)
 
 	if err := RunMigrations(db, migrationsPath); err != nil {
 		return err

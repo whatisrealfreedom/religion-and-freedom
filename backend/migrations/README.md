@@ -12,6 +12,8 @@ This directory contains SQL migration files that are executed in alphabetical or
 - **006_add_english_content.sql**: Adds `content_en` column and English translations
 - **007_create_users.sql**: Creates users and related tables (languages, currencies, countries)
 - **009_refactor_to_i18n_standard.sql**: Creates `chapter_translations` table for future i18n refactoring (not currently used)
+- **010_create_discussions.sql**: Creates discussions/threads system (threads, comments, votes, reactions)
+- **011_create_content_comments.sql**: Creates polymorphic comments system for content (erfan_slide, shahnameh_story, etc.)
 
 ## Idempotent Migrations
 
@@ -38,10 +40,37 @@ The migration runner (`backend/internal/repository/migrate.go`) includes error h
 3. Use `CREATE TABLE IF NOT EXISTS`, `INSERT OR IGNORE`, etc.
 4. Test the migration locally before deploying
 
+## Running Migrations
+
+### Automatic (Recommended)
+Migrations run automatically when the backend starts. The migration runner:
+- Finds migrations in `backend/migrations/` directory
+- Runs them in alphabetical order
+- Logs each migration with ✅ (success) or ⚠️ (already applied/idempotent)
+
+### Manual (If Needed)
+If you need to run migrations manually:
+
+**Option 1: Using SQLite directly**
+```bash
+sqlite3 data/freedom.db < backend/migrations/011_create_content_comments.sql
+```
+
+**Option 2: Using the helper script**
+```bash
+cd backend
+./scripts/run_migration.sh                    # Run all migrations
+./scripts/run_migration.sh 011_create_content_comments.sql  # Run specific migration
+```
+
+**Option 3: Restart the backend**
+Simply restart the backend server - migrations will run automatically on startup.
+
 ## Notes
 
 - Migrations run in alphabetical order
 - Each migration runs in a transaction (SQLite default)
 - If a migration fails, the backend won't start
 - The migration runner logs all executed migrations with ✅ or ⚠️
+- Migrations are idempotent - safe to run multiple times
 

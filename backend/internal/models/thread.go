@@ -130,3 +130,23 @@ type ThreadDetailResponse struct {
 	Comments []*Comment `json:"comments"` // Flat list, will be nested on frontend
 }
 
+// ContentComment is a polymorphic comment (erfan_slide, shahnameh_story, etc.)
+// API returns same shape as Comment; frontend uses commentable_type and commentable_id when present.
+type ContentComment struct {
+	ID              int64      `json:"id" db:"id"`
+	CommentableType string     `json:"commentable_type" db:"commentable_type"`
+	CommentableID   string     `json:"commentable_id" db:"commentable_id"`
+	UserID          int64      `json:"user_id" db:"user_id"`
+	ParentID        *int64     `json:"parent_id,omitempty" db:"parent_id"`
+	Content         string     `json:"content" db:"content"`
+	Score           int        `json:"score" db:"score"`
+	Depth           int        `json:"depth" db:"depth"`
+	IsDeleted       bool       `json:"is_deleted" db:"is_deleted"`
+	CreatedAt       time.Time  `json:"created_at" db:"created_at"`
+	UpdatedAt       time.Time  `json:"updated_at" db:"updated_at"`
+	EditedAt        *time.Time `json:"edited_at,omitempty" db:"edited_at"`
+	Author          *User      `json:"author,omitempty"`
+	UserVote        *int       `json:"user_vote,omitempty"`
+	UserReactions   []string   `json:"user_reactions,omitempty"`
+	Replies         []*ContentComment `json:"replies,omitempty"`
+}

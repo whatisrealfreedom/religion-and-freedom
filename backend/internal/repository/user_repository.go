@@ -108,7 +108,10 @@ func (r *userRepository) Create(user *models.User) error {
 	user.ID = id
 
 	// Force checkpoint for WAL mode to ensure data is persisted
-	_, _ = r.db.Exec("PRAGMA wal_checkpoint(TRUNCATE)")
+	// SQLite-specific: WAL checkpoint (only for SQLite)
+	if globalDialect != nil && globalDialect.GetDBType() == DBTypeSQLite {
+		_, _ = r.db.Exec("PRAGMA wal_checkpoint(TRUNCATE)")
+	}
 
 	return nil
 }
@@ -407,7 +410,10 @@ func (r *userRepository) VerifyEmail(userID int64) error {
 	}
 
 	// Force checkpoint for WAL mode to ensure data is persisted
-	_, _ = r.db.Exec("PRAGMA wal_checkpoint(TRUNCATE)")
+	// SQLite-specific: WAL checkpoint (only for SQLite)
+	if globalDialect != nil && globalDialect.GetDBType() == DBTypeSQLite {
+		_, _ = r.db.Exec("PRAGMA wal_checkpoint(TRUNCATE)")
+	}
 
 	return nil
 }
@@ -426,7 +432,10 @@ func (r *userRepository) CreateVerificationCode(userID int64, email, code string
 	}
 
 	// Force checkpoint for WAL mode to ensure data is persisted
-	_, _ = r.db.Exec("PRAGMA wal_checkpoint(TRUNCATE)")
+	// SQLite-specific: WAL checkpoint (only for SQLite)
+	if globalDialect != nil && globalDialect.GetDBType() == DBTypeSQLite {
+		_, _ = r.db.Exec("PRAGMA wal_checkpoint(TRUNCATE)")
+	}
 
 	return nil
 }
@@ -493,7 +502,10 @@ func (r *userRepository) MarkVerificationCodeAsUsed(codeID int64) error {
 	}
 
 	// Force checkpoint for WAL mode to ensure data is persisted
-	_, _ = r.db.Exec("PRAGMA wal_checkpoint(TRUNCATE)")
+	// SQLite-specific: WAL checkpoint (only for SQLite)
+	if globalDialect != nil && globalDialect.GetDBType() == DBTypeSQLite {
+		_, _ = r.db.Exec("PRAGMA wal_checkpoint(TRUNCATE)")
+	}
 
 	return nil
 }

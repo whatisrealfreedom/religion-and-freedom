@@ -9,6 +9,11 @@ import (
 	"github.com/whatisrealfreedom/freedom-website/internal/config"
 )
 
+var (
+	// Global dialect - set when database is initialized
+	globalDialect DBDialect
+)
+
 // Database interface for abstraction
 type Database interface {
 	Close() error
@@ -24,15 +29,21 @@ func NewDatabase(cfg *config.Config) (Database, error) {
 	switch cfg.DBType {
 	case "sqlite":
 		return newSQLiteDB(cfg)
-	case "postgres":
-		// TODO: implement PostgreSQL
-		return nil, fmt.Errorf("postgres not yet implemented")
+	case "mysql":
+		globalDialect = &mysqlDialect{}
+		return newMySQLDB(cfg)
+	case "postgres", "postgresql":
+		globalDialect = &postgresDialect{}
+		return newPostgresDB(cfg)
 	default:
 		return nil, fmt.Errorf("unsupported database type: %s", cfg.DBType)
 	}
 }
 
 func newSQLiteDB(cfg *config.Config) (Database, error) {
+	// Set global dialect for SQLite
+	globalDialect = &sqliteDialect{}
+	
 	// Open database with proper settings for data persistence
 	// _sync=NORMAL ensures data is written to disk (safer than OFF, faster than FULL)
 	// _foreign_keys=1 enables foreign key constraints
@@ -51,6 +62,7 @@ func newSQLiteDB(cfg *config.Config) (Database, error) {
 	}
 
 	// Ensure WAL mode is properly set and perform a checkpoint
+	// These are SQLite-specific and won't run for other databases
 	if _, err := db.Exec("PRAGMA journal_mode=WAL; PRAGMA synchronous=NORMAL; PRAGMA foreign_keys=ON;"); err != nil {
 		return nil, fmt.Errorf("failed to set SQLite pragmas: %w", err)
 	}
